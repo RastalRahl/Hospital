@@ -1,0 +1,9 @@
+{
+  "command": "python -m pytest -q",
+  "method": "Captured full-suite subprocess output; count parsed from pytest summary",
+  "exit_code": 0,
+  "old_test_count": 17,
+  "passed": 39,
+  "status": "PASS",
+  "output_path": "test_results.txt"
+}

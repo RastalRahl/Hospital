@@ -1,0 +1,245 @@
+{
+  "id": "hospital_glass_partition_back_01",
+  "status": "reference_only_d0_contract",
+  "rectangle_convention": "[left, top, right, bottom)",
+  "authority": {
+    "geometry": "Architecture v2",
+    "canonical_png": "references/architecture/rastalr_architecture_v2/glass_partition_1x.png",
+    "sha256": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6",
+    "planning": "Attached audit scope human-approved by current user; original proposal labels retained as history"
+  },
+  "expected": {
+    "logical_grid_native_px": 32,
+    "logical_footprint_tiles": [
+      1,
+      1
+    ],
+    "native_dimensions_px": [
+      32,
+      28
+    ],
+    "source_scale": 8,
+    "topology_role": "EW straight boundary, back-facing full glass presentation",
+    "projection": "rectangular-grid RPG oblique",
+    "topology_contact_ground_cell": [
+      0,
+      12,
+      32,
+      20
+    ],
+    "frame_regions_native": {
+      "left_post": [
+        0,
+        0,
+        4,
+        28
+      ],
+      "right_post": [
+        28,
+        0,
+        32,
+        28
+      ],
+      "top_rail": [
+        4,
+        0,
+        28,
+        5
+      ],
+      "bottom_rail": [
+        4,
+        23,
+        28,
+        28
+      ]
+    },
+    "glass_region_native": [
+      4,
+      5,
+      28,
+      23
+    ],
+    "contact_regions_native": {
+      "base": [
+        0,
+        23,
+        32,
+        28
+      ],
+      "left": [
+        0,
+        0,
+        4,
+        28
+      ],
+      "right_terminal": [
+        28,
+        0,
+        32,
+        28
+      ]
+    },
+    "frame_alpha": {
+      "range_inclusive": [
+        255,
+        255
+      ],
+      "all_required_pixels": true
+    },
+    "glass_alpha": {
+      "range_inclusive": [
+        1,
+        254
+      ],
+      "transparent_zero_regions": [],
+      "policy": "All pane pixels must transmit the level; alpha 0 is an accidental hole in this unbroken D1 pane. Fully clear glass would need an explicit region contract revision.",
+      "scaffold_alpha_values": [
+        150,
+        210
+      ],
+      "future_appearance": "Tint/highlights require human review; repeats must match the chosen single-layer alpha, never accumulate it."
+    },
+    "normalization_mode": "architecture_grid_preserving",
+    "normalization_rules": [
+      "exact integer scale",
+      "nearest-neighbor only",
+      "no trim",
+      "no padding",
+      "no warp",
+      "no baked background"
+    ]
+  },
+  "observed": {
+    "method": "PNG dimensions; alpha predicate 0<a<255 bounding box; histogram over actual pixels",
+    "canonical_dimensions_px": [
+      32,
+      28
+    ],
+    "visual_envelope_native": [
+      0,
+      0,
+      32,
+      28
+    ],
+    "glass_alpha_bbox_native": [
+      4,
+      5,
+      28,
+      23
+    ],
+    "alpha_histogram": {
+      "150": 421,
+      "210": 11,
+      "255": 464
+    }
+  },
+  "derived": {
+    "source_dimensions_px": [
+      256,
+      224
+    ],
+    "source_logical_grid_px": 256,
+    "frame_regions_source": {
+      "left_post": [
+        0,
+        0,
+        32,
+        224
+      ],
+      "right_post": [
+        224,
+        0,
+        256,
+        224
+      ],
+      "top_rail": [
+        32,
+        0,
+        224,
+        40
+      ],
+      "bottom_rail": [
+        32,
+        184,
+        224,
+        224
+      ]
+    },
+    "glass_region_source": [
+      32,
+      40,
+      224,
+      184
+    ],
+    "visual_envelope_source": [
+      0,
+      0,
+      256,
+      224
+    ],
+    "anchor": {
+      "name": "grid_wall_baseline_center",
+      "logical_cell_native": [
+        16,
+        20
+      ],
+      "image_native": [
+        16,
+        28
+      ],
+      "image_source": [
+        128,
+        224
+      ],
+      "render_origin_relative_to_cell_native": [
+        0,
+        -8
+      ],
+      "render_origin_relative_to_cell_source": [
+        0,
+        -64
+      ],
+      "render_origin_relative_to_anchor_native": [
+        -16,
+        -28
+      ],
+      "derivation": "D0 explicit baseline mapping: lower exclusive edge meets ground strip exclusive y=20. Same boundary baseline as full back carrier (origin y=-32, height 52); glass origin y=-8, height 28. This numeric mapping is derived, not pre-existing PNG metadata."
+    },
+    "repeat": {
+      "stride_native": 32,
+      "strategy": "left-owned post; terminal right post",
+      "nonterminal_extension_native": [
+        28,
+        0,
+        32,
+        28
+      ],
+      "extension_source_column_native": 27,
+      "method": "On a reference copy only, extend last interior column through the nonterminal right-post strip. Next panel retains its left post. Do not overlap or shorten stride.",
+      "left_neighbor": "Left post always owned by this cell; previous cell omits its right post",
+      "right_neighbor": "Extend rails and pane to right boundary when neighbor exists; retain right post only at run end",
+      "internal_post_width_native": 4,
+      "terminal_post_width_native": 4,
+      "production_representation": "One logical asset with adjacency-aware frame/pane components or terminal/nonterminal implementation views; never count these separately"
+    }
+  },
+  "structural_failures": [
+    "wrong dimensions/origin/stride",
+    "required frame/contact pixel not opaque",
+    "pane alpha 0 or 255",
+    "shared post wider than canonical 4 px",
+    "missing pane or rail at join",
+    "more than one translucent layer per pane pixel",
+    "alpha changes on repetition"
+  ],
+  "human_visual_review": {
+    "status": "not performed by a human in D0",
+    "required": [
+      "appearance/tint and visibility",
+      "upper-left light/pixel density",
+      "frame material continuity",
+      "junction occlusion and endpoint treatment",
+      "later D1 artwork approval"
+    ]
+  }
+}

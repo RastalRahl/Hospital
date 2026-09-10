@@ -1,0 +1,351 @@
+{
+  "document": "RastalR Architecture Gap Audit and Proposed Continuation",
+  "version": "1.0",
+  "date": "2026-09-10",
+  "status": "proposal_not_approved_not_an_ingestion_batch",
+  "audited_repository": "RastalRahl/Hospital",
+  "audited_commit": "a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be",
+  "audit_scope": "Read-only inventory, documentation, reference-contract, and selected validator-source review. Not a fresh execution of every validation/test or a reapproval of artwork.",
+  "current_inventory": {
+    "project_logical_assets": 220,
+    "project_approved": 220,
+    "project_needs_human_review": 0,
+    "architecture_logical_assets": 28,
+    "foundation_floor_assets": 8,
+    "foundation_wall_assets": 12,
+    "doors_openings_logical_assets": 8,
+    "doors_openings_additional_implementation_components": 5
+  },
+  "original_plan_finding": "The committed Architecture Master Plan v1.0 inspected defines A1, A2, and B. An itemized locked D/E list and a binding 45-asset quota were not found in the inspected planning documents. Earlier conversation describes D/E only broadly.",
+  "counting_policy": "Count independently useful logical assets/states, not masks, exports, previews, or implementation PNG components. Candidate orientations only earn new records if actually useful and non-duplicative.",
+  "proposed_scope": {
+    "D": [
+      {
+        "unit": "D1",
+        "name": "Clear glass partition, back-facing straight",
+        "proposed_id": "hospital_glass_partition_back_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": [
+          32,
+          28
+        ],
+        "purpose": "Make a genuinely transparent, repeatable divider from the canonical 28 px glass-partition reference.",
+        "constraint": "Reference dimensions exist; repeat joins, support points, and alpha contract still require validation.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D2",
+        "name": "Clear glass partition, left-side boundary",
+        "proposed_id": "hospital_glass_partition_left_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Allow glass partitions to turn into a depth-running wall on the left.",
+        "constraint": "Derive camera-aware geometry from topology; do not rotate the back-facing PNG.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D3",
+        "name": "Clear glass partition, right-side boundary",
+        "proposed_id": "hospital_glass_partition_right_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Provide the separately rendered right-side boundary with consistent upper-left light.",
+        "constraint": "Derive geometry and lighting independently; no automatic mirrored artwork.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D4",
+        "name": "Clear glass partition, front cutaway",
+        "proposed_id": "hospital_glass_partition_front_cutaway_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Close a glass enclosure on its foreground side without hiding the room.",
+        "constraint": "Define reduced-height presentation explicitly; do not assume the full-height/back sprite applies.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D5",
+        "name": "Internal observation window",
+        "proposed_id": "hospital_observation_window_01",
+        "proposed_footprint_tiles": [
+          2,
+          1
+        ],
+        "native_canvas_reference_or_proposal": [
+          64,
+          52
+        ],
+        "purpose": "A sealed viewing window in a solid clinical wall; not a door.",
+        "constraint": "Proposed two-cell back-wall carrier; frame and glass are separate alpha roles. No baked second room.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D6",
+        "name": "Patient-room exterior window",
+        "proposed_id": "hospital_patient_room_window_01",
+        "proposed_footprint_tiles": [
+          2,
+          1
+        ],
+        "native_canvas_reference_or_proposal": [
+          64,
+          52
+        ],
+        "purpose": "An exterior-facing sash-and-sill window, visibly different from an interior observation pane.",
+        "constraint": "Proposed two-cell carrier. Make any daylight/background insert optional rather than part of modular geometry.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D7",
+        "name": "Wall-integrated service hatch",
+        "proposed_id": "hospital_service_hatch_01",
+        "proposed_footprint_tiles": [
+          2,
+          1
+        ],
+        "native_canvas_reference_or_proposal": [
+          64,
+          52
+        ],
+        "purpose": "A wall opening with a transfer sill for a pharmacy/reception counter.",
+        "constraint": "Not another freestanding reception desk. Determine protruding sill envelope and reuse existing counters where appropriate.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D8",
+        "name": "Low solid partition, back-facing straight",
+        "proposed_id": "hospital_low_partition_back_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "A visibly lower, permanent divider for a nurses station or waiting zone.",
+        "constraint": "Height requires a new explicit contract; do not silently replace canonical full-height walls.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D9",
+        "name": "Low solid partition, left-side boundary",
+        "proposed_id": "hospital_low_partition_left_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Turn a low solid divider into the depth axis.",
+        "constraint": "Conditional on a genuinely distinct rendered module. Reuse existing parts if the derived presentation is identical.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "D10",
+        "name": "Low solid partition, right-side boundary",
+        "proposed_id": "hospital_low_partition_right_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Complete low-divider enclosures with the corresponding right-side presentation.",
+        "constraint": "Conditional on a genuinely distinct rendered module. No duplicate inventory for an identical existing part.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      }
+    ],
+    "E": [
+      {
+        "unit": "E1",
+        "name": "Structural column / pier",
+        "proposed_id": "hospital_structural_column_01",
+        "proposed_footprint_tiles": [
+          1,
+          1
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Provide a freestanding structural support and a deliberate visual termination where useful.",
+        "constraint": "Does not substitute for proving ordinary wall junctions. Grid anchor and wall-height relation must be explicit.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "E2",
+        "name": "Elevator entrance, closed",
+        "proposed_id": "hospital_elevator_closed_01",
+        "proposed_footprint_tiles": [
+          2,
+          1
+        ],
+        "native_canvas_reference_or_proposal": [
+          64,
+          52
+        ],
+        "purpose": "Provide a recognizable vertical-circulation entrance with an elevator-specific surround and call control.",
+        "constraint": "Not C6 relabeled. Any text/display glyphs are deterministic; carrier size is proposed, not validated.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "E3",
+        "name": "Elevator entrance, open",
+        "proposed_id": "hospital_elevator_open_01",
+        "proposed_footprint_tiles": [
+          2,
+          1
+        ],
+        "native_canvas_reference_or_proposal": [
+          64,
+          52
+        ],
+        "purpose": "The matching open-cabin state of E2.",
+        "constraint": "Preserve E2 frame and origin. Cabin backing is a declared visual component, not evidence of engine functionality.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "E4",
+        "name": "Stairs ascending",
+        "proposed_id": "hospital_stairs_up_01",
+        "proposed_footprint_tiles": [
+          2,
+          3
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "Allow a layout to communicate access to an upper floor.",
+        "constraint": "Footprint is provisional. Requires a new elevation/landing scaffold, collision guidance, and camera proof.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      },
+      {
+        "unit": "E5",
+        "name": "Stairs descending",
+        "proposed_id": "hospital_stairs_down_01",
+        "proposed_footprint_tiles": [
+          2,
+          3
+        ],
+        "native_canvas_reference_or_proposal": null,
+        "purpose": "A distinct descending/stairwell view for access to a lower floor.",
+        "constraint": "Not a flipped ascending image. Opening, edge protection, landings, and draw order require validation.",
+        "status": "proposed_not_approved",
+        "logical_count_budget": 1
+      }
+    ]
+  },
+  "planning_totals": {
+    "core_new_asset_budget": 15,
+    "architecture_total_if_all_15_are_distinct_and_approved": 43,
+    "project_total_after_these_15_if_no_other_changes": 235,
+    "prior_approximate_architecture_goal": 45,
+    "unallocated_budget_relative_to_prior_goal": 2,
+    "important": "Do not manufacture assets to hit 45. D9/D10 may be reused instead of newly counted; demonstrated adapters/orientation needs can change the final scope."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "type": "planning",
+      "finding": "D/E scope needs a real persistent document, not a count-based reconstruction from chat history.",
+      "action": "Review and adopt or amend this proposal before production."
+    },
+    {
+      "id": "F2",
+      "type": "validation_integrity",
+      "finding": "The C5 validator main() writes deviation_source_px=0, drift=none, matches_spec=True, reconstruction result=pass and clipping=False as report literals. It computes alpha/component values but does not independently measure each of those art-geometry claims.",
+      "evidence": "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/tools/validate_architecture_master_c5_v1.py",
+      "action": "Separate assumed/spec coordinates from measured evidence and human review. Add failure-producing checks and deliberate bad fixtures before new material families."
+    },
+    {
+      "id": "F3",
+      "type": "glass_contract",
+      "finding": "Canonical Architecture v2 names a 28 px transparent glass partition, not a new 52 px opaque wall.",
+      "evidence": "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/references/architecture/rastalr_architecture_v2/architecture_v2_spec.json",
+      "action": "Use the 32x28 reference as D1 starting point; specify contact geometry and alpha treatment separately."
+    },
+    {
+      "id": "F4",
+      "type": "rendering_contract",
+      "finding": "C7 intentionally retains an opaque recessed backing. A visually open image is not automatically a see-through opening into an adjacent room. C2/C5 components are lower projection portions, not full independent animated leaves.",
+      "evidence": "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/references/architecture/master_validation_C7_v1/architecture_C7_validation_report.md",
+      "action": "Preserve approved sources. Document static use and alpha/draw-order behavior; do not advertise unimplemented animation or see-through capability."
+    },
+    {
+      "id": "F5",
+      "type": "coverage",
+      "finding": "Current visible architecture inventory covers floors, solid wall directions and back-facing opening states. Full production behavior for ends/L/T/cross junctions and side/front openings is not established merely by a straight corridor montage.",
+      "action": "Exercise existing assets and topology first. Add only connection pieces shown necessary by those tests."
+    },
+    {
+      "id": "F6",
+      "type": "housekeeping",
+      "finding": "Batch 12 QA Markdown still has an awaiting-human-review headline and contains its human-approval section twice; the JSON final status is approved.",
+      "evidence": "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/metadata/architecture_doors_openings_batch_12_qa.md",
+      "action": "Correct summary generation idempotently without changing approval decisions or artwork."
+    },
+    {
+      "id": "F7",
+      "type": "repository_visibility",
+      "finding": "Repository metadata reported visibility=public at audit time.",
+      "action": "Owner should confirm that public exposure of source and production art is intentional; no visibility setting changed by this audit."
+    }
+  ],
+  "D0_readiness_gate": {
+    "purpose": "Small contract and evidence setup before D1; not a new artwork batch or a broad rewrite.",
+    "preserve": "All 220 approved logical assets, existing source files, PNG hashes, historical provenance, and approval decisions.",
+    "geometry_convention": "Explicit half-open [left,top,right,bottom) rectangles, native/source scale relationship, contact regions, render origins, and separate footprints.",
+    "required_tests": [
+      "Repeat D1 scaffold without doubled mullions or alpha darkening at shared joins.",
+      "Show known colored shapes/props behind the glass and verify expected alpha behavior.",
+      "Build small L, T, cross and connected-two-room scenes using existing approved architecture plus reference-only proposed geometry.",
+      "Fail deliberately shifted overlay/contact edge and removed connector fixtures.",
+      "Treat visual continuity as reviewed or measured evidence, never unconditional pass literals."
+    ],
+    "reporting": "Expected versus observed versus human-reviewed fields must be distinguished. Preserve old evidence; append limitations/corrections rather than silently rewriting history.",
+    "output_scope": "Reference-only D1 geometry contract, reproducible scaffold/overlay/masks, focused tests, and a compact review montage. No new inventory records.",
+    "model_recommendation": {
+      "surface": "Codex",
+      "model": "GPT-6 Astra if available",
+      "effort": "High for this contract/QA task; Medium for later bounded extraction/promotion",
+      "new_chat": "New thread on the same Hospital repository after scope approval"
+    }
+  },
+  "deferred_or_reused": [
+    "More floor recolors",
+    "Repeated freestanding privacy curtains/screens or reception counters",
+    "Standalone topology masks counted as assets",
+    "A second generic wide doorway",
+    "Automatic side/front variants of every C1-C8 state",
+    "Exterior facades, entrance canopies, roads, roofs and vehicles",
+    "Abandoned/damaged architecture states",
+    "Game behavior or animation implied by static images"
+  ],
+  "sources": [
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/metadata/catalog.csv",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/metadata/manifest.json",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/docs/ARCHITECTURE.md",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/references/architecture/master_validation_v1/sources/architecture_master_plan_v1.json",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/references/architecture/rastalr_architecture_v2/architecture_v2_spec.json",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/metadata/architecture_doors_openings_batch_12_qa.md",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/tools/validate_architecture_master_c5_v1.py",
+    "https://github.com/RastalRahl/Hospital/blob/a48cc2ce0ce5c104b679ea8b225f9c2c8787f4be/references/architecture/master_validation_C7_v1/architecture_C7_validation_report.md"
+  ]
+}

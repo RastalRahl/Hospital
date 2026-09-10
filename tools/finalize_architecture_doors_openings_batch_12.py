@@ -10,6 +10,7 @@ from pathlib import Path
 from PIL import Image
 
 from rastalr_pipeline import core
+from rastalr_pipeline.approval_report import approved_markdown
 from build_architecture_doors_openings_batch_12 import _compose_wall_run, _labelled_board, _save
 
 
@@ -117,9 +118,8 @@ def _write_approval_records(assets: list[dict], reviewed_at: str) -> None:
         for component_report, component in zip(report["components"], asset.get("components", []), strict=True):
             component_report["approved_production_path"] = component["final_path"]
     (core.ROOT / QA_JSON_PATH).write_text(json.dumps(qa, indent=2) + "\n", encoding="utf-8")
-    with (core.ROOT / QA_MD_PATH).open("a", encoding="utf-8", newline="\n") as file:
-        file.write("\n## Human visual approval\n\n")
-        file.write(f"**APPROVED.** Human visual review recorded `PASS` on `{reviewed_at}` against `{REVIEW_ARTIFACT}`. All eight logical assets were promoted with their five implementation components; components remain non-logical and are absent from the catalog.\n")
+    markdown_path = core.ROOT / QA_MD_PATH
+    markdown_path.write_text(approved_markdown(markdown_path.read_text(encoding="utf-8"), qa), encoding="utf-8")
 
 
 def _write_approved_bundle(assets: list[dict]) -> None:

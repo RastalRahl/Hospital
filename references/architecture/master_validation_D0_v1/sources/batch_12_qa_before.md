@@ -1,6 +1,6 @@
 # Architecture Doors & Openings — Production Batch 12 QA
 
-Status: **APPROVED** — technical QA and human visual review complete.
+Status: **PASS — technical QA complete; all eight logical assets await human visual review.**
 
 ## Logical inventory
 
@@ -35,4 +35,8 @@ All eight actual normalized candidates reconstructed cleanly in both five-cell o
 
 ## Human visual approval
 
-Human visual review recorded `PASS` on `2026-09-10T17:02:43.150439+00:00` against `previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png`. All eight logical assets were promoted with their five implementation components; components remain non-logical and are absent from the catalog.
+**APPROVED.** Human visual review recorded `PASS` on `2026-09-10T17:02:43.150439+00:00` against `previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png`. All eight logical assets were promoted with their five implementation components; components remain non-logical and are absent from the catalog.
+
+## Human visual approval
+
+**APPROVED.** Human visual review recorded `PASS` on `2026-09-10T17:02:43.150439+00:00` against `previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png`. All eight logical assets were promoted with their five implementation components; components remain non-logical and are absent from the catalog.
