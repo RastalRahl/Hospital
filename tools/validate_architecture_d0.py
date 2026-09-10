@@ -20,8 +20,11 @@ from rastalr_pipeline.snapshot import compare_snapshots
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "references/architecture/master_validation_D0_v1"
 CANON = ROOT / "references/architecture/rastalr_architecture_v2"
-# Explicitly authorized by the D1 validation task. Existing hashes remain locked.
-AUTHORIZED_REFERENCE_ADDITIONS = ("references/architecture/master_validation_D1_v1/",)
+# Explicitly authorized D1/D2 reference additions. Existing hashes remain locked.
+AUTHORIZED_REFERENCE_ADDITIONS = (
+    "references/architecture/master_validation_D1_v1/",
+    "references/architecture/master_validation_D2_v1/",
+)
 
 
 def read_json(path):

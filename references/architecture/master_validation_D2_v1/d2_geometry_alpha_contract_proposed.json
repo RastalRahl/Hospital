@@ -1,0 +1,368 @@
+{
+  "id": "hospital_glass_partition_side_left_01",
+  "status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "rectangle_convention": "[left, top, right, bottom)",
+  "scope": "One reference-only proposal. No final art, approval, ingestion, or inventory entry.",
+  "canonical_requirements": {
+    "logical_grid_px": 32,
+    "source_scale": 8,
+    "orientation": "NS depth boundary at room left/west; room interior is east/right; +y goes south/toward viewer",
+    "ground_strip": [
+      12,
+      0,
+      20,
+      32
+    ],
+    "projection": "rectangular-grid RPG oblique",
+    "normalization": "architecture_grid_preserving",
+    "transform_policy": "integer translation and exact 8x nearest-neighbor only; no rotation, transpose, warp, trim or safety padding"
+  },
+  "measured_authority": {
+    "method": "Loaded PNG dimensions, mode, nonzero alpha bounds and histogram; semantic region roles are separately inferred/proposed",
+    "canonical_side_dimensions": [
+      20,
+      32
+    ],
+    "canonical_back_dimensions": [
+      32,
+      60
+    ],
+    "canonical_back_visible_envelope": [
+      0,
+      0,
+      32,
+      52
+    ],
+    "canonical_glass_dimensions": [
+      32,
+      28
+    ],
+    "topology_ns_alpha_bbox": [
+      12,
+      0,
+      20,
+      32
+    ],
+    "canonical_side_alpha_histogram": {
+      "255": 640
+    },
+    "approved_side_placement": "Batch 11 left module source crop [96,416,256,672) /8 = [12,52,32,84); review builder places side images at (12,52+32*r). Metadata anchor is wall_center, without a unique D2 numeric anchor."
+  },
+  "proposed_choices": {
+    "logical_footprint_tiles": [
+      1,
+      1
+    ],
+    "native_dimensions": [
+      32,
+      32
+    ],
+    "visual_envelope": [
+      12,
+      0,
+      26,
+      32
+    ],
+    "planning_id_note": "Current user-specified side_left ID supersedes the earlier audit's hospital_glass_partition_left_01 spelling; purpose and one-cell planning footprint remain the same.",
+    "carrier_reason": "Retain one full logical cell for direct topology registration and explicit exterior alpha; its transparent regions are declared cell space, not post-export safety padding.",
+    "side_compression_rule": "Choose linear scaling of the canonical extra visible width by D1/back visible heights, rounded to nearest native pixel. The canonical back PNG canvas is 32x60 but its measured visible envelope is 32x52. This is a presentation heuristic proposed for human review, not a recovered physical camera equation.",
+    "long_rail_width": 2,
+    "endpoint_support_depth": 4,
+    "frame_reason": "4 px depth supports retain D1 family support cadence; two 2 px longitudinal rails leave a readable 10 px pane within the narrower side band. These are new side-facing choices, not a rotated D1.",
+    "pane_alpha": 150,
+    "pane_reason": "Use canonical/D0 base glass alpha 150. No 210 gleam is required in a flat geometry scaffold.",
+    "frame_rgba": [
+      39,
+      55,
+      70,
+      255
+    ],
+    "glass_rgba": [
+      158,
+      205,
+      216,
+      150
+    ],
+    "height_interpretation": "Same nominal installed 28 px partition family as D1; the side view encodes reduced height as a narrower shallow band. It does not demonstrate a continuous 28 px elevation projection at a corner."
+  },
+  "derived": {
+    "canonical_extra_side_width": 12,
+    "scaled_extra_side_width_unrounded": 6.461538461538462,
+    "proposed_extra_side_width": 6,
+    "visible_side_width": 14,
+    "calculation": "20 - 8 = 12; round(12 * 28 / 52) = 6; 8 + 6 = 14 visible pixels; carrier stays 32x32",
+    "source_dimensions": [
+      256,
+      256
+    ],
+    "source_visual_envelope": [
+      96,
+      0,
+      208,
+      256
+    ],
+    "logical_cell_anchor": [
+      16,
+      16
+    ],
+    "image_anchor": [
+      16,
+      16
+    ],
+    "render_origin_relative_to_cell": [
+      0,
+      0
+    ],
+    "anchor_reason": "Cell-centered NS topology axis x=16; registered full-cell carrier makes image and cell coordinates identical. Numeric anchor is proposed, not pre-existing D2 metadata.",
+    "north_endpoint_logical": [
+      16,
+      0
+    ],
+    "south_endpoint_logical": [
+      16,
+      32
+    ],
+    "north_endpoint_image": [
+      16,
+      0
+    ],
+    "south_endpoint_image": [
+      16,
+      32
+    ],
+    "d1_installed_baseline_mapping": {
+      "name": "grid_wall_baseline_center",
+      "logical_cell_native": [
+        16,
+        20
+      ],
+      "image_native": [
+        16,
+        28
+      ],
+      "image_source": [
+        128,
+        224
+      ],
+      "render_origin_relative_to_cell_native": [
+        0,
+        -8
+      ],
+      "render_origin_relative_to_cell_source": [
+        0,
+        -64
+      ],
+      "render_origin_relative_to_anchor_native": [
+        -16,
+        -28
+      ],
+      "derivation": "D0 explicit baseline mapping: lower exclusive edge meets ground strip exclusive y=20. Same boundary baseline as full back carrier (origin y=-32, height 52); glass origin y=-8, height 28. This numeric mapping is derived, not pre-existing PNG metadata."
+    }
+  },
+  "regions": {
+    "main": {
+      "frame": {
+        "west_rail": [
+          12,
+          0,
+          14,
+          32
+        ],
+        "east_rail": [
+          24,
+          0,
+          26,
+          32
+        ],
+        "north_support": [
+          14,
+          0,
+          24,
+          4
+        ],
+        "south_support": [
+          14,
+          28,
+          24,
+          32
+        ]
+      },
+      "pane": [
+        14,
+        4,
+        24,
+        28
+      ],
+      "exterior": [
+        [
+          0,
+          0,
+          12,
+          32
+        ],
+        [
+          26,
+          0,
+          32,
+          32
+        ]
+      ],
+      "contact": {
+        "north": [
+          12,
+          0,
+          26,
+          4
+        ],
+        "south_terminal": [
+          12,
+          28,
+          26,
+          32
+        ]
+      }
+    },
+    "repeat": {
+      "frame": {
+        "west_rail": [
+          12,
+          0,
+          14,
+          32
+        ],
+        "east_rail": [
+          24,
+          0,
+          26,
+          32
+        ],
+        "north_support": [
+          14,
+          0,
+          24,
+          4
+        ]
+      },
+      "pane": [
+        14,
+        4,
+        24,
+        32
+      ],
+      "exterior": [
+        [
+          0,
+          0,
+          12,
+          32
+        ],
+        [
+          26,
+          0,
+          32,
+          32
+        ]
+      ],
+      "contact": {
+        "north": [
+          12,
+          0,
+          26,
+          4
+        ],
+        "south_west": [
+          12,
+          28,
+          14,
+          32
+        ],
+        "south_east": [
+          24,
+          28,
+          26,
+          32
+        ]
+      }
+    }
+  },
+  "alpha_policy": {
+    "frame": 255,
+    "pane": 150,
+    "exterior": 0,
+    "undeclared_zero_holes": "failure",
+    "opaque_glass": "failure"
+  },
+  "repeat": {
+    "direction": [
+      0,
+      1
+    ],
+    "stride": [
+      0,
+      32
+    ],
+    "views_are_mutually_exclusive": true,
+    "representation": "One future logical asset; terminal main and nonterminal implementation views, no independent inventory entries",
+    "ownership": "Every cell owns its north support. The last cell also owns its south support. Nonterminal cells extend the pane to y=32; longitudinal rails continue unchanged.",
+    "derivation": "Side support intervals are measured along depth y, not across D1 x. The explicit side pane/frame rectangles define the extension; row 27 can be extended through rows 28..31 only within x=14..24. No D1 pixels are transformed.",
+    "allowed_view_difference": [
+      14,
+      28,
+      24,
+      32
+    ]
+  },
+  "corner_proposal": {
+    "location": "Room north-west: D1 eastward from shared base endpoint, D2 southward along west boundary",
+    "endpoint_rule": "D1 left baseline endpoint and D2 north endpoint coincide. This is a base-edge registration; D1 centerline is 4 px north of its baseline edge.",
+    "ownership": "D1 retains its validated left post. D2 owns its north support below the shared baseline. No extra visible post, column or cover is added.",
+    "draw_order": [
+      "separate approved floor background",
+      "unchanged D1 run",
+      "D2 run"
+    ],
+    "deliberate_visible_occlusion": "none; footprints of the rendered layers touch but do not overlap",
+    "ground_elbow_component": {
+      "rectangle_relative_to_D2_cell": [
+        12,
+        -8,
+        16,
+        0
+      ],
+      "role": "proposed topology-only completion of missing 4x8 quadrant; not visible artwork",
+      "source": "canonical topology_se corner (east and south arms at a room north-west corner)"
+    },
+    "unresolved": "D1 head rail is 28 px above the shared base, whereas the shallow D2 north support begins at the base. Ground/base contact does not establish upper-rail/elevation continuity. Human geometry decision required; no visible repair is proposed."
+  },
+  "human_review": {
+    "approval": false,
+    "required": [
+      "14 px band and 2 px rails readability",
+      "same-family height interpretation",
+      "unresolved D1/D2 head-rail transition",
+      "topology-only elbow completion"
+    ]
+  },
+  "sources_sha256": {
+    "docs/ARCHITECTURE.md": "f17330c2dd54d1a3feb594b281f933ebaa7f2d3620910d00346178de52bbe1c5",
+    "docs/ART_DIRECTION.md": "681ff206bbbf1a0cf3dc2a2794814e82ff67badb11a52c33a39fad39d1e877f0",
+    "references/camera/rastalr_camera_reference_v1.png": "663eab7790538b91a1433e277c273b188bb22030281e3e110f6b12fe9b960a29",
+    "references/architecture/rastalr_architecture_v2/architecture_v2_spec.json": "4ae9b6dce918aef68e2541c0cc03b83527b68d4efeb5fe52d1787c5e596605f0",
+    "references/architecture/rastalr_architecture_v2/side_wall_left_1x.png": "c0a9fc9ad6a8ccd55f787f33f4480f7810adddb6915d62bffd84142267163c69",
+    "references/architecture/rastalr_architecture_v2/back_wall_1x.png": "f72c0049f47c147bbf3288f82cfbfe5162efc796238d63ba70f22ae59aed1e26",
+    "references/architecture/rastalr_architecture_v2/topology_ns.png": "90e3e2bae350d87a092e53b73295c1a6f79fa46c947116407a5e150d153e0a03",
+    "references/architecture/rastalr_architecture_v2/topology_se.png": "71435bf37774d5b291860eed46407f4e51450796f4b7155c5c83781d80b219bf",
+    "references/architecture/rastalr_architecture_v2/topology_nw.png": "22b5d28157b628233d0e4d5548c7a6079038db960067324b304ab213a177b506",
+    "references/architecture/rastalr_architecture_v2/glass_partition_1x.png": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6",
+    "metadata/production_batch_11_architecture_foundation.json": "dbf5b7d74f83df4a088f3a63df88288c95d6080d4823c1804cd8ace3a98dba8b",
+    "tools/build_architecture_foundation_batch_11_review.py": "e2644d9aed879d6d752a06e8e1499774cea2e69dd213c4af9e9451eecd7364c4",
+    "references/architecture/master_validation_D0_v1/sources/rastalr_architecture_gap_audit_scope_v1.json": "2af91c4a8bdcad7a7f4e7d08a6df3b16f9022fed3c197d0c390b810aea8cfcc7",
+    "references/architecture/master_validation_D0_v1/d0_technical_report.md": "0fbffadcd6a81ec6c392a30b807b2c9087811bd72a4dcd120aa3d2ca6aa2e27d",
+    "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json": "4e45d342cee783d44acb1d91d04c16b2fb60303042ed9a4cd4cf40fc727dd0f2",
+    "references/architecture/master_validation_D1_v1/d1_validation_report.json": "cda3df394c2296e79cadc53eced4c124def8113d62a94776f6129973ceb34215",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png": "0362cbf1b4d8ac3a605a7e39a98288ad6f6a20ec7d860239da8fb22a0894f28e",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png": "ebe91b5d154720a7fd561b952391abf075cf4adc2db28a7454b88060f6aa6dab"
+  }
+}

@@ -1,0 +1,2663 @@
+{
+  "contract_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "technical_conformance": "PASS",
+  "files": {
+    "main": {
+      "checks": {
+        "mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Read reloaded native PNG mode",
+          "units": "mode",
+          "pass": true
+        },
+        "dimensions": {
+          "expected": [
+            32,
+            32
+          ],
+          "observed": [
+            32,
+            32
+          ],
+          "method": "Read reloaded native PNG size",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Read saved 8x PNG mode",
+          "units": "mode",
+          "pass": true
+        },
+        "source_dimensions": {
+          "expected": [
+            256,
+            256
+          ],
+          "observed": [
+            256,
+            256
+          ],
+          "method": "Read 8x PNG size",
+          "units": "source_px",
+          "pass": true
+        },
+        "exact_8x_blocks": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read all source pixels against native 8x8 blocks",
+          "units": "pixels",
+          "pass": true
+        },
+        "native_roundtrip": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare all native RGBA after nearest-neighbor round-trip",
+          "units": "pixels",
+          "pass": true
+        },
+        "visible_envelope": {
+          "expected": [
+            12,
+            0,
+            26,
+            32
+          ],
+          "observed": [
+            12,
+            0,
+            26,
+            32
+          ],
+          "method": "Compute nonzero-alpha bounds",
+          "units": "native_px",
+          "pass": true
+        },
+        "west_rail": {
+          "expected": {
+            "rectangle": [
+              12,
+              0,
+              14,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "east_rail": {
+          "expected": {
+            "rectangle": [
+              24,
+              0,
+              26,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "north_support": {
+          "expected": {
+            "rectangle": [
+              14,
+              0,
+              24,
+              4
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "south_support": {
+          "expected": {
+            "rectangle": [
+              14,
+              28,
+              24,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane": {
+          "expected": {
+            "rectangle": [
+              14,
+              4,
+              24,
+              28
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 240
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior_0": {
+          "expected": {
+            "rectangle": [
+              0,
+              0,
+              12,
+              32
+            ],
+            "alpha_range_inclusive": [
+              0,
+              0
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 0,
+            "alpha_max": 0,
+            "violations": 0,
+            "sample_count": 384
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior_1": {
+          "expected": {
+            "rectangle": [
+              26,
+              0,
+              32,
+              32
+            ],
+            "alpha_range_inclusive": [
+              0,
+              0
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 0,
+            "alpha_max": 0,
+            "violations": 0,
+            "sample_count": 192
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "observed_alpha_histogram": {
+        "0": 576,
+        "255": 208,
+        "150": 240
+      },
+      "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+    },
+    "repeat": {
+      "checks": {
+        "mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Read reloaded native PNG mode",
+          "units": "mode",
+          "pass": true
+        },
+        "dimensions": {
+          "expected": [
+            32,
+            32
+          ],
+          "observed": [
+            32,
+            32
+          ],
+          "method": "Read reloaded native PNG size",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Read saved 8x PNG mode",
+          "units": "mode",
+          "pass": true
+        },
+        "source_dimensions": {
+          "expected": [
+            256,
+            256
+          ],
+          "observed": [
+            256,
+            256
+          ],
+          "method": "Read 8x PNG size",
+          "units": "source_px",
+          "pass": true
+        },
+        "exact_8x_blocks": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read all source pixels against native 8x8 blocks",
+          "units": "pixels",
+          "pass": true
+        },
+        "native_roundtrip": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare all native RGBA after nearest-neighbor round-trip",
+          "units": "pixels",
+          "pass": true
+        },
+        "visible_envelope": {
+          "expected": [
+            12,
+            0,
+            26,
+            32
+          ],
+          "observed": [
+            12,
+            0,
+            26,
+            32
+          ],
+          "method": "Compute nonzero-alpha bounds",
+          "units": "native_px",
+          "pass": true
+        },
+        "west_rail": {
+          "expected": {
+            "rectangle": [
+              12,
+              0,
+              14,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "east_rail": {
+          "expected": {
+            "rectangle": [
+              24,
+              0,
+              26,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "north_support": {
+          "expected": {
+            "rectangle": [
+              14,
+              0,
+              24,
+              4
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane": {
+          "expected": {
+            "rectangle": [
+              14,
+              4,
+              24,
+              32
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 280
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior_0": {
+          "expected": {
+            "rectangle": [
+              0,
+              0,
+              12,
+              32
+            ],
+            "alpha_range_inclusive": [
+              0,
+              0
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 0,
+            "alpha_max": 0,
+            "violations": 0,
+            "sample_count": 384
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior_1": {
+          "expected": {
+            "rectangle": [
+              26,
+              0,
+              32,
+              32
+            ],
+            "alpha_range_inclusive": [
+              0,
+              0
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 0,
+            "alpha_max": 0,
+            "violations": 0,
+            "sample_count": 192
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "observed_alpha_histogram": {
+        "0": 576,
+        "255": 168,
+        "150": 280
+      },
+      "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+    }
+  },
+  "repeats": {
+    "1": {
+      "geometry": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              32
+            ],
+            "observed": [
+              32,
+              32
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                32
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 240,
+            "observed": 240,
+            "method": "Toggle light/dark background at independent pane coordinates",
+            "units": "pixels",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare frame RGB on different backgrounds",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 60,
+            "observed": 60,
+            "method": "Toggle separate yellow object behind pane",
+            "units": "pixels",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare all composites to integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "2": {
+      "geometry": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": true
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": true,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 520,
+            "observed": 520,
+            "method": "Toggle light/dark background at independent pane coordinates",
+            "units": "pixels",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare frame RGB on different backgrounds",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 120,
+            "observed": 120,
+            "method": "Toggle separate yellow object behind pane",
+            "units": "pixels",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare all composites to integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "4": {
+      "geometry": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              128
+            ],
+            "observed": [
+              32,
+              128
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ],
+              [
+                0,
+                64
+              ],
+              [
+                0,
+                96
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ],
+              [
+                0,
+                64
+              ],
+              [
+                0,
+                96
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                64,
+                68
+              ],
+              [
+                96,
+                100
+              ],
+              [
+                124,
+                128
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                64,
+                68
+              ],
+              [
+                96,
+                100
+              ],
+              [
+                124,
+                128
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": true
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "contact_2": {
+            "expected": {
+              "rectangle": [
+                12,
+                64,
+                26,
+                68
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "contact_3": {
+            "expected": {
+              "rectangle": [
+                12,
+                96,
+                26,
+                100
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": true,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 1080,
+            "observed": 1080,
+            "method": "Toggle light/dark background at independent pane coordinates",
+            "units": "pixels",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare frame RGB on different backgrounds",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 240,
+            "observed": 240,
+            "method": "Toggle separate yellow object behind pane",
+            "units": "pixels",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare all composites to integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "contexts": {
+    "original": {
+      "checks": {
+        "anchored_run": {
+          "checks": {
+            "origin": {
+              "expected": [
+                32,
+                64
+              ],
+              "observed": [
+                32,
+                64
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "relative_origin": {
+          "expected": [
+            0,
+            0
+          ],
+          "observed": [
+            0,
+            0
+          ],
+          "method": "Compute actual image origin relative to logical-cell origin",
+          "units": "native_px",
+          "pass": true
+        },
+        "depth_endpoints": {
+          "expected": [
+            64,
+            128
+          ],
+          "observed": [
+            64,
+            128
+          ],
+          "method": "Compare loaded carrier ends to adjacent solid-wall endpoints",
+          "units": "native_px",
+          "pass": true
+        },
+        "upper_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                44,
+                32
+              ],
+              "observed": [
+                44,
+                32
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "lower_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                44,
+                128
+              ],
+              "observed": [
+                44,
+                128
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "upper_solid": {
+          "expected": {
+            "rectangle": [
+              44,
+              63,
+              58,
+              64
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "upper_glass": {
+          "expected": {
+            "rectangle": [
+              44,
+              64,
+              58,
+              65
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "lower_glass": {
+          "expected": {
+            "rectangle": [
+              44,
+              127,
+              58,
+              128
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "lower_solid": {
+          "expected": {
+            "rectangle": [
+              44,
+              128,
+              58,
+              129
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "observed": {
+        "cell_origin": [
+          32,
+          64
+        ],
+        "render_origin": [
+          32,
+          64
+        ],
+        "solid_origins": [
+          [
+            44,
+            32
+          ],
+          [
+            44,
+            128
+          ]
+        ]
+      },
+      "visual_limit": "Visible band reduces from 20 to proposed 14 px (6 px inward-face setback); readability and height interpretation require human review"
+    },
+    "relocated": {
+      "checks": {
+        "anchored_run": {
+          "checks": {
+            "origin": {
+              "expected": [
+                64,
+                96
+              ],
+              "observed": [
+                64,
+                96
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "relative_origin": {
+          "expected": [
+            0,
+            0
+          ],
+          "observed": [
+            0,
+            0
+          ],
+          "method": "Compute actual image origin relative to logical-cell origin",
+          "units": "native_px",
+          "pass": true
+        },
+        "depth_endpoints": {
+          "expected": [
+            96,
+            160
+          ],
+          "observed": [
+            96,
+            160
+          ],
+          "method": "Compare loaded carrier ends to adjacent solid-wall endpoints",
+          "units": "native_px",
+          "pass": true
+        },
+        "upper_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                76,
+                64
+              ],
+              "observed": [
+                76,
+                64
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "lower_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                76,
+                160
+              ],
+              "observed": [
+                76,
+                160
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "upper_solid": {
+          "expected": {
+            "rectangle": [
+              76,
+              95,
+              90,
+              96
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "upper_glass": {
+          "expected": {
+            "rectangle": [
+              76,
+              96,
+              90,
+              97
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "lower_glass": {
+          "expected": {
+            "rectangle": [
+              76,
+              159,
+              90,
+              160
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "lower_solid": {
+          "expected": {
+            "rectangle": [
+              76,
+              160,
+              90,
+              161
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 14
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "observed": {
+        "cell_origin": [
+          64,
+          96
+        ],
+        "render_origin": [
+          64,
+          96
+        ],
+        "solid_origins": [
+          [
+            76,
+            64
+          ],
+          [
+            76,
+            160
+          ]
+        ]
+      },
+      "visual_limit": "Visible band reduces from 20 to proposed 14 px (6 px inward-face setback); readability and height interpretation require human review"
+    }
+  },
+  "local_corner": {
+    "base_and_topology_checks": {
+      "checks": {
+        "base_endpoint": {
+          "expected": [
+            64,
+            64
+          ],
+          "observed": [
+            64,
+            64
+          ],
+          "method": "Compare computed D1 left base endpoint (loaded origin+height) to D2 north endpoint (cell origin+NS axis)",
+          "units": "native_px",
+          "pass": true
+        },
+        "d1_baseline": {
+          "expected": [
+            64,
+            64
+          ],
+          "observed": [
+            64,
+            64
+          ],
+          "method": "Read D1 render origin plus actual height",
+          "units": "native_px",
+          "pass": true
+        },
+        "rendered_overlap_pixels": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Count all pixels covered by both rendered layers",
+          "units": "pixels",
+          "pass": true
+        },
+        "glass_overlap_pixels": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Count two translucent glass contributions",
+          "units": "pixels",
+          "pass": true
+        },
+        "adjacent_frame_pairs": {
+          "expected": 10,
+          "observed": 10,
+          "method": "Read opaque edge pairs across y=64 at x=64..73",
+          "units": "pixel_pairs",
+          "pass": true
+        },
+        "topology_after_proposed_component": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare canonical SE alpha to ground union plus separate missing-region mask",
+          "units": "pixels",
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    "visual_connection_status": "UNRESOLVED_UPPER_RAIL_TRANSITION",
+    "observed": {
+      "D1_origin": [
+        64,
+        36
+      ],
+      "D2_origin": [
+        48,
+        64
+      ],
+      "D1_base_endpoint_computed": [
+        64,
+        64
+      ],
+      "D2_north_endpoint_computed": [
+        64,
+        64
+      ],
+      "D1_post_top_y": 36,
+      "D2_north_support_y": 64,
+      "head_transition_gap_px": 28,
+      "missing_ground_pixels_before_component": 32,
+      "ground_component_bbox": [
+        60,
+        56,
+        64,
+        64
+      ],
+      "rendered_overlap_pixels": 0,
+      "hidden_connection_pixels": 0
+    },
+    "interpretation": "Base-frame adjacency and supplemented ground topology are feasible. They do not prove a continuous upper rail: the shallow side support begins 28 px below D1's head. No visible connector/column/cover was added; the separate 4x8 component is ground logic only.",
+    "ownership": "D1 keeps its original post; D2 owns the north support; floor then D1 then D2; zero deliberate opaque occlusion"
+  },
+  "negative_controls": {
+    "repeat_displacement_1px": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                33
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": false
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 24,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 10,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 10,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                33,
+                37
+              ],
+              [
+                61,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": false
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 14,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "intended_check": "origins",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "broken_contact": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": true
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 1,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "intended_check": "frame",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "opaque_glass": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 520,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": false
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "intended_check": "pane",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "pane_hole": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": true
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "intended_check": "pane",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "doubled_support": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 40,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 40,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": false
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "intended_check": "support_spans",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "overlapping_glass": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              64
+            ],
+            "observed": [
+              32,
+              64
+            ],
+            "method": "Read assembled image size",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual depth placements",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 240,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": false
+          },
+          "exterior": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Read alpha against independent proposed-region predicate",
+            "units": "pixels",
+            "pass": true
+          },
+          "single_translucent_layer": {
+            "expected": 0,
+            "observed": 240,
+            "method": "Count actual translucent draw contributions at required pane pixels",
+            "units": "pixels",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque runs along depth at x=18",
+            "units": "native_px",
+            "pass": true
+          },
+          "contact_1": {
+            "expected": {
+              "rectangle": [
+                12,
+                32,
+                26,
+                36
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+      },
+      "intended_check": "single_translucent_layer",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "anchor_mismatch_1px": {
+      "validation": {
+        "checks": {
+          "anchored_run": {
+            "checks": {
+              "origin": {
+                "expected": [
+                  32,
+                  64
+                ],
+                "observed": [
+                  33,
+                  64
+                ],
+                "method": "Read placement metadata",
+                "units": "native_px",
+                "pass": false
+              },
+              "pixel_mismatches": {
+                "expected": 0,
+                "observed": 232,
+                "method": "Compare rendered crop to unchanged component",
+                "units": "pixels",
+                "pass": false
+              }
+            },
+            "pass": false
+          },
+          "relative_origin": {
+            "expected": [
+              0,
+              0
+            ],
+            "observed": [
+              1,
+              0
+            ],
+            "method": "Compute actual image origin relative to logical-cell origin",
+            "units": "native_px",
+            "pass": false
+          },
+          "depth_endpoints": {
+            "expected": [
+              64,
+              128
+            ],
+            "observed": [
+              64,
+              128
+            ],
+            "method": "Compare loaded carrier ends to adjacent solid-wall endpoints",
+            "units": "native_px",
+            "pass": true
+          },
+          "upper_wall_unchanged": {
+            "checks": {
+              "origin": {
+                "expected": [
+                  44,
+                  32
+                ],
+                "observed": [
+                  44,
+                  32
+                ],
+                "method": "Read placement metadata",
+                "units": "native_px",
+                "pass": true
+              },
+              "pixel_mismatches": {
+                "expected": 0,
+                "observed": 0,
+                "method": "Compare rendered crop to unchanged component",
+                "units": "pixels",
+                "pass": true
+              }
+            },
+            "pass": true
+          },
+          "lower_wall_unchanged": {
+            "checks": {
+              "origin": {
+                "expected": [
+                  44,
+                  128
+                ],
+                "observed": [
+                  44,
+                  128
+                ],
+                "method": "Read placement metadata",
+                "units": "native_px",
+                "pass": true
+              },
+              "pixel_mismatches": {
+                "expected": 0,
+                "observed": 0,
+                "method": "Compare rendered crop to unchanged component",
+                "units": "pixels",
+                "pass": true
+              }
+            },
+            "pass": true
+          },
+          "upper_solid": {
+            "expected": {
+              "rectangle": [
+                44,
+                63,
+                58,
+                64
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 14
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "upper_glass": {
+            "expected": {
+              "rectangle": [
+                44,
+                64,
+                58,
+                65
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 1,
+              "sample_count": 14
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "lower_glass": {
+            "expected": {
+              "rectangle": [
+                44,
+                127,
+                58,
+                128
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 1,
+              "sample_count": 14
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "lower_solid": {
+            "expected": {
+              "rectangle": [
+                44,
+                128,
+                58,
+                129
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 14
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "observed": {
+          "cell_origin": [
+            32,
+            64
+          ],
+          "render_origin": [
+            33,
+            64
+          ],
+          "solid_origins": [
+            [
+              44,
+              32
+            ],
+            [
+              44,
+              128
+            ]
+          ]
+        },
+        "visual_limit": "Visible band reduces from 20 to proposed 14 px (6 px inward-face setback); readability and height interpretation require human review"
+      },
+      "intended_check": "relative_origin",
+      "valid_control_pass": true,
+      "proven": true
+    }
+  },
+  "preservation": {
+    "expected_counts": {
+      "manifest": 220,
+      "approved": 220,
+      "needs_human_review": 0
+    },
+    "observed_counts": {
+      "manifest": 220,
+      "approved": 220,
+      "needs_human_review": 0
+    },
+    "protected_file_count": 1370,
+    "missing": [],
+    "changed": [],
+    "authorized_additions": [
+      "references/architecture/master_validation_D2_v1/README.md",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_anchor_mismatch_1px.png",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_broken_contact.png",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_doubled_support.png",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_opaque_glass.png",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_overlapping_glass.png",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_pane_hole.png",
+      "references/architecture/master_validation_D2_v1/artifacts/broken_repeat_displacement_1px.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d1_d2_corner_diagnostic.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d1_d2_corner_ground_before.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d1_d2_corner_ground_completed.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d1_d2_corner_ground_component_only.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d1_d2_corner_scene.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_context_original_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_context_original_scene.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_context_original_structure.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_context_relocated_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_context_relocated_scene.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_context_relocated_structure.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_geometry_review_montage.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_grid_geometry_diagnostic.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_negative_controls.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_colored_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_colored_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_colored_object_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_colored_object_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_dark_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_dark_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_light_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_light_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_native.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_1_object_layer.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_colored_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_colored_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_colored_object_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_colored_object_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_dark_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_dark_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_light_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_light_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_native.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_2_object_layer.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_colored_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_colored_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_colored_object_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_colored_object_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_dark_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_dark_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_light_background.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_light_composite.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_native.png",
+      "references/architecture/master_validation_D2_v1/artifacts/d2_run_4_object_layer.png",
+      "references/architecture/master_validation_D2_v1/d2_geometry_alpha_contract_proposed.json",
+      "references/architecture/master_validation_D2_v1/d2_geometry_report.json",
+      "references/architecture/master_validation_D2_v1/d2_geometry_report.md",
+      "references/architecture/master_validation_D2_v1/d2_geometry_review_bundle.zip",
+      "references/architecture/master_validation_D2_v1/d2_repeat_scaffold_native.png",
+      "references/architecture/master_validation_D2_v1/d2_repeat_scaffold_source_8x.png",
+      "references/architecture/master_validation_D2_v1/d2_scaffold_native.png",
+      "references/architecture/master_validation_D2_v1/d2_scaffold_source_8x.png",
+      "references/architecture/master_validation_D2_v1/production_before.json",
+      "references/architecture/master_validation_D2_v1/production_preservation.json",
+      "references/architecture/master_validation_D2_v1/test_results.json",
+      "references/architecture/master_validation_D2_v1/test_results.txt",
+      "references/architecture/master_validation_D2_v1/visual_review.json"
+    ],
+    "unauthorized_additions": [],
+    "method": "Compare existence and SHA-256 of every historical file; allow only new files under explicitly named paths",
+    "pass": true
+  },
+  "recommendation": "READY FOR HUMAN GEOMETRY REVIEW",
+  "limitations": [
+    "No human geometry approval; scaffold conforms only to the explicitly proposed contract.",
+    "Straight runs are technically consistent; D1/D2 upper-rail continuity remains unresolved and must be judged separately.",
+    "Ground elbow mask is reference-only topology, not a visible adapter or asset."
+  ],
+  "tests": {
+    "command": "python -m pytest -q",
+    "method": "Complete-suite subprocess output; count parsed from pytest summary",
+    "baseline_passed": 67,
+    "passed": 94,
+    "exit_code": 0,
+    "status": "PASS",
+    "output_path": "test_results.txt"
+  },
+  "visual_review": {
+    "evidence_type": "assistant_visual_findings",
+    "reviewer": "Codex, D2 reference geometry task",
+    "method": "Direct inspection of the independently saved geometry review montage and local corner diagnostic; no production approval",
+    "findings": [
+      "The shallow 14 px band is visibly narrower than the approved 20 px solid-side carrier. Its flat pane remains readable at enlargement and in the wall context; native-scale suitability is a human design decision.",
+      "Separate colored test areas and yellow objects remain visible through the pane. The declared exterior areas show the separate background rather than baked artwork.",
+      "Two- and four-cell runs have single opaque support bands with no doubled seams in the valid assembly.",
+      "The local corner resembles a connected base-level L, but the D1 elevated top frame does not continue into a demonstrated side elevation. The marked 28 px head transition remains unresolved.",
+      "The proposed 4x8 ground-mask completion is displayed separately. It is not drawn over the scene and does not hide the visible corner problem."
+    ],
+    "approval_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+    "limits": "Pixel conformance and topology coverage are separate computed evidence. These recorded visual findings are not automatic feature detection or a human approval. No final appearance, all-junction validation, or production readiness is claimed."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "evidence_type": "assistant_visual_findings",
+  "reviewer": "Codex, D2 reference geometry task",
+  "method": "Direct inspection of the independently saved geometry review montage and local corner diagnostic; no production approval",
+  "findings": [
+    "The shallow 14 px band is visibly narrower than the approved 20 px solid-side carrier. Its flat pane remains readable at enlargement and in the wall context; native-scale suitability is a human design decision.",
+    "Separate colored test areas and yellow objects remain visible through the pane. The declared exterior areas show the separate background rather than baked artwork.",
+    "Two- and four-cell runs have single opaque support bands with no doubled seams in the valid assembly.",
+    "The local corner resembles a connected base-level L, but the D1 elevated top frame does not continue into a demonstrated side elevation. The marked 28 px head transition remains unresolved.",
+    "The proposed 4x8 ground-mask completion is displayed separately. It is not drawn over the scene and does not hide the visible corner problem."
+  ],
+  "approval_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "limits": "Pixel conformance and topology coverage are separate computed evidence. These recorded visual findings are not automatic feature detection or a human approval. No final appearance, all-junction validation, or production readiness is claimed."
+}
