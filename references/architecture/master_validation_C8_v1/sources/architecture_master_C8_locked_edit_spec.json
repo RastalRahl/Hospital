@@ -1,0 +1,50 @@
+{
+  "master_id": "C8_wide_equipment_opening",
+  "version": "locked_v1",
+  "base_master": "rastalr_architecture_master_C4_double_doors_closed_v1.png",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "source_scale": 8,
+  "native_canvas_px": [
+    192,
+    128
+  ],
+  "locked_edit_region_source_px": [
+    384,
+    64,
+    1152,
+    416
+  ],
+  "opening_source_px": [
+    384,
+    0,
+    1152,
+    416
+  ],
+  "opening_width_cells": 3,
+  "expected_native_module_px": [
+    96,
+    52
+  ],
+  "clear_passage_source_px": [
+    416,
+    96,
+    1120,
+    416
+  ],
+  "door_leaves_present": false,
+  "projection_into_floor": false,
+  "protective_corner_guards": true,
+  "threshold_type": "broad_flush",
+  "outside_edit_region_changed_pixels": 0,
+  "inside_edit_region_changed_pixels": 270335,
+  "diff_bbox_exclusive": [
+    384,
+    64,
+    1152,
+    416
+  ],
+  "production_note": "Locked-edit C8 built from validated C4 master. Everything outside x=384..1152, y=64..416 is pixel-for-pixel identical to C4. Only the centered 3-cell service-opening region is replaced. No perspective transform, global redraw, alpha trim, or rescaling was used."
+}

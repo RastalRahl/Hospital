@@ -1,0 +1,147 @@
+{
+  "validation_id": "architecture_master_C8_v1",
+  "purpose": "reference-only locked-edit wide equipment/service-opening validation",
+  "production_metadata_modified": false,
+  "source": {
+    "master": "references/architecture/master_validation_C8_v1/sources/rastalr_architecture_master_C8_wide_equipment_opening_locked_v1.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "source_scale": 8
+  },
+  "geometry": {
+    "structural_bounds": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "vertical_grid": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_grid": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "opening": [
+      384,
+      0,
+      1152,
+      416
+    ],
+    "clear_passage": [
+      416,
+      96,
+      1120,
+      416
+    ],
+    "header": [
+      384,
+      64,
+      1152,
+      96
+    ],
+    "reinforced_jambs": {
+      "left": [
+        384,
+        96,
+        416,
+        416
+      ],
+      "right": [
+        1120,
+        96,
+        1152,
+        416
+      ]
+    },
+    "crash_guards": {
+      "left": [
+        384,
+        280,
+        416,
+        416
+      ],
+      "right": [
+        1120,
+        280,
+        1152,
+        416
+      ]
+    },
+    "deviation_source_px": 0,
+    "drift": "none"
+  },
+  "locked_edit": {
+    "base_master": "references/architecture/master_validation_C4_v1/sources/rastalr_architecture_master_C4_double_doors_closed_v1.png",
+    "allowed_region": [
+      384,
+      64,
+      1152,
+      416
+    ],
+    "actual_diff_bbox": [
+      384,
+      64,
+      1152,
+      416
+    ],
+    "changed_pixels_inside": 270335,
+    "changed_pixels_outside": 0,
+    "registration": "identical outside allowed edit; no rescaling, warp, perspective transform, or whole-scene redraw"
+  },
+  "temporary_representation": {
+    "recommended": "single composite 3-cell equipment-opening module",
+    "rationale": "C8 has no independently moving leaves or projections; the reinforced header, jambs, guards, flush threshold, and passage comprise one grid-locked architectural unit.",
+    "crop": [
+      384,
+      0,
+      1152,
+      416
+    ],
+    "native_dimensions": [
+      96,
+      52
+    ],
+    "anchor": "architecture back-wall grid anchor spanning three cells",
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "components": 1,
+    "passage_treatment": "opaque recessed visual backing retained from locked source; no unsupported transparent-world layer is inferred",
+    "normalization": "architecture_grid_preserving; no trim or safety padding"
+  },
+  "reconstruction": {
+    "original_5_cell": {
+      "result": "pass",
+      "opening_start_column": 1,
+      "floor_alpha_gaps": 0
+    },
+    "extended_8_cell": {
+      "result": "pass",
+      "opening_start_column": 2,
+      "floor_alpha_gaps": 0
+    },
+    "continuity": "pass: cap/base/teal/baseline/frame/guards/threshold/floor; no cumulative drift"
+  },
+  "qa": {
+    "clipping": false,
+    "suspicious_debris": 0,
+    "detached_components": 0,
+    "threshold_alignment": "pass",
+    "frame_alignment": "pass",
+    "clear_passage_integrity": "pass",
+    "crash_guard_integrity": "pass",
+    "recommendation": "PASS"
+  }
+}

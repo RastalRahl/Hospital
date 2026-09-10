@@ -1,0 +1,57 @@
+{
+  "master_id": "C8_wide_equipment_opening",
+  "version": "clean_v1",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "wall_run_cells": 5,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "vertical_grid_source_px": [
+    128,
+    384,
+    640,
+    896,
+    1152,
+    1408
+  ],
+  "horizontal_structure_source_px": [
+    416,
+    672,
+    768,
+    928
+  ],
+  "opening_source_px": [
+    384,
+    0,
+    1152,
+    416
+  ],
+  "opening_width_cells": 3,
+  "opening_native_dimensions": [
+    96,
+    52
+  ],
+  "clear_passage_source_px": [
+    416,
+    96,
+    1120,
+    416
+  ],
+  "door_leaves_present": false,
+  "projection_into_floor": false,
+  "frame_type": "reinforced_equipment_service_frame",
+  "protective_corner_guards": true,
+  "threshold_type": "broad_flush",
+  "production_note": "C8 is a centered 3-cell hospital equipment/service opening in the same 5-cell wall run. It intentionally differs from C4-C7 by having no hinged/sliding leaves, a reinforced frame, protective lower jamb guards, and a broad flush threshold suitable for beds, carts, and equipment. The dark recess is scaffold-only visual backing; final alpha/background treatment must be validated later."
+}
