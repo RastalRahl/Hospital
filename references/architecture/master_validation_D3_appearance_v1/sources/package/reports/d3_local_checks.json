@@ -1,0 +1,757 @@
+{
+  "scope": "LOCAL_CANDIDATE_CHECKS_ONLY",
+  "baseline_commit": "65aca7a461a60d49e57e4b82257e782fc9c9b1d0",
+  "views": {
+    "main": {
+      "native_mode": "RGBA",
+      "source_mode": "RGBA",
+      "native_dimensions": [
+        12,
+        32
+      ],
+      "source_dimensions": [
+        96,
+        256
+      ],
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 384,
+      "zero_alpha_rgba_changed_pixels": 0,
+      "contract_alpha_violations": 0,
+      "source_block_errors": 0,
+      "native_roundtrip_errors": 0,
+      "alpha_histogram": {
+        "150": 192,
+        "255": 192
+      },
+      "pass": true
+    },
+    "repeat": {
+      "native_mode": "RGBA",
+      "source_mode": "RGBA",
+      "native_dimensions": [
+        12,
+        32
+      ],
+      "source_dimensions": [
+        96,
+        256
+      ],
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 384,
+      "zero_alpha_rgba_changed_pixels": 0,
+      "contract_alpha_violations": 0,
+      "source_block_errors": 0,
+      "native_roundtrip_errors": 0,
+      "alpha_histogram": {
+        "150": 224,
+        "255": 160
+      },
+      "pass": true
+    },
+    "corner_main": {
+      "native_mode": "RGBA",
+      "source_mode": "RGBA",
+      "native_dimensions": [
+        12,
+        56
+      ],
+      "source_dimensions": [
+        96,
+        448
+      ],
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 496,
+      "zero_alpha_rgba_changed_pixels": 0,
+      "contract_alpha_violations": 0,
+      "source_block_errors": 0,
+      "native_roundtrip_errors": 0,
+      "alpha_histogram": {
+        "0": 176,
+        "150": 232,
+        "255": 264
+      },
+      "pass": true
+    },
+    "corner_repeat": {
+      "native_mode": "RGBA",
+      "source_mode": "RGBA",
+      "native_dimensions": [
+        12,
+        56
+      ],
+      "source_dimensions": [
+        96,
+        448
+      ],
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 496,
+      "zero_alpha_rgba_changed_pixels": 0,
+      "contract_alpha_violations": 0,
+      "source_block_errors": 0,
+      "native_roundtrip_errors": 0,
+      "alpha_histogram": {
+        "0": 176,
+        "150": 264,
+        "255": 232
+      },
+      "pass": true
+    }
+  },
+  "runs": {
+    "straight_1": {
+      "dimensions": [
+        12,
+        32
+      ],
+      "origins": [
+        [
+          0,
+          0
+        ]
+      ],
+      "selected_views": [
+        "main"
+      ],
+      "body_alpha_violations": 0,
+      "support_spans": [
+        [
+          0,
+          4
+        ],
+        [
+          28,
+          32
+        ]
+      ],
+      "single_layer_violations": 0,
+      "selection_pixel_errors": 0,
+      "origin_pass": true,
+      "selection_pass": true,
+      "supports_pass": true,
+      "pass": true,
+      "transmission": {
+        "pane_pixels": 192,
+        "responsive_pane_pixels": 192,
+        "frame_response_pixels": 0,
+        "object_covered_pane_pixels": 108,
+        "object_responsive_pane_pixels": 108,
+        "source_over_pixel_errors": 0,
+        "pass": true
+      }
+    },
+    "corner_1": {
+      "dimensions": [
+        12,
+        56
+      ],
+      "origins": [
+        [
+          0,
+          0
+        ]
+      ],
+      "selected_views": [
+        "corner_main"
+      ],
+      "body_alpha_violations": 0,
+      "support_spans": [
+        [
+          0,
+          4
+        ],
+        [
+          28,
+          32
+        ]
+      ],
+      "single_layer_violations": 0,
+      "selection_pixel_errors": 0,
+      "origin_pass": true,
+      "selection_pass": true,
+      "supports_pass": true,
+      "return_alpha_violations": 0,
+      "pass": true,
+      "transmission": {
+        "pane_pixels": 232,
+        "responsive_pane_pixels": 232,
+        "frame_response_pixels": 0,
+        "object_covered_pane_pixels": 130,
+        "object_responsive_pane_pixels": 130,
+        "source_over_pixel_errors": 0,
+        "pass": true
+      }
+    },
+    "straight_2": {
+      "dimensions": [
+        12,
+        64
+      ],
+      "origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "selected_views": [
+        "repeat",
+        "main"
+      ],
+      "body_alpha_violations": 0,
+      "support_spans": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          60,
+          64
+        ]
+      ],
+      "single_layer_violations": 0,
+      "selection_pixel_errors": 0,
+      "origin_pass": true,
+      "selection_pass": true,
+      "supports_pass": true,
+      "pass": true,
+      "transmission": {
+        "pane_pixels": 416,
+        "responsive_pane_pixels": 416,
+        "frame_response_pixels": 0,
+        "object_covered_pane_pixels": 231,
+        "object_responsive_pane_pixels": 231,
+        "source_over_pixel_errors": 0,
+        "pass": true
+      }
+    },
+    "corner_2": {
+      "dimensions": [
+        12,
+        88
+      ],
+      "origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          56
+        ]
+      ],
+      "selected_views": [
+        "corner_repeat",
+        "main"
+      ],
+      "body_alpha_violations": 0,
+      "support_spans": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          60,
+          64
+        ]
+      ],
+      "single_layer_violations": 0,
+      "selection_pixel_errors": 0,
+      "origin_pass": true,
+      "selection_pass": true,
+      "supports_pass": true,
+      "return_alpha_violations": 0,
+      "pass": true,
+      "transmission": {
+        "pane_pixels": 456,
+        "responsive_pane_pixels": 456,
+        "frame_response_pixels": 0,
+        "object_covered_pane_pixels": 253,
+        "object_responsive_pane_pixels": 253,
+        "source_over_pixel_errors": 0,
+        "pass": true
+      }
+    },
+    "straight_4": {
+      "dimensions": [
+        12,
+        128
+      ],
+      "origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          64
+        ],
+        [
+          0,
+          96
+        ]
+      ],
+      "selected_views": [
+        "repeat",
+        "repeat",
+        "repeat",
+        "main"
+      ],
+      "body_alpha_violations": 0,
+      "support_spans": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          64,
+          68
+        ],
+        [
+          96,
+          100
+        ],
+        [
+          124,
+          128
+        ]
+      ],
+      "single_layer_violations": 0,
+      "selection_pixel_errors": 0,
+      "origin_pass": true,
+      "selection_pass": true,
+      "supports_pass": true,
+      "pass": true,
+      "transmission": {
+        "pane_pixels": 864,
+        "responsive_pane_pixels": 864,
+        "frame_response_pixels": 0,
+        "object_covered_pane_pixels": 481,
+        "object_responsive_pane_pixels": 481,
+        "source_over_pixel_errors": 0,
+        "pass": true
+      }
+    },
+    "corner_4": {
+      "dimensions": [
+        12,
+        152
+      ],
+      "origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          56
+        ],
+        [
+          0,
+          88
+        ],
+        [
+          0,
+          120
+        ]
+      ],
+      "selected_views": [
+        "corner_repeat",
+        "repeat",
+        "repeat",
+        "main"
+      ],
+      "body_alpha_violations": 0,
+      "support_spans": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          64,
+          68
+        ],
+        [
+          96,
+          100
+        ],
+        [
+          124,
+          128
+        ]
+      ],
+      "single_layer_violations": 0,
+      "selection_pixel_errors": 0,
+      "origin_pass": true,
+      "selection_pass": true,
+      "supports_pass": true,
+      "return_alpha_violations": 0,
+      "pass": true,
+      "transmission": {
+        "pane_pixels": 904,
+        "responsive_pane_pixels": 904,
+        "frame_response_pixels": 0,
+        "object_covered_pane_pixels": 501,
+        "object_responsive_pane_pixels": 501,
+        "source_over_pixel_errors": 0,
+        "pass": true
+      }
+    }
+  },
+  "corners": {
+    "0": {
+      "northeast": {
+        "actual_origin": [
+          88,
+          36
+        ],
+        "expected_origin": [
+          88,
+          36
+        ],
+        "anchor_pass": true,
+        "centerline_pass": true,
+        "opaque_overlap_pixels": 48,
+        "expected_overlap_pixels": 48,
+        "overlap_ownership_errors": 0,
+        "unexpected_overlap_pixels": 0,
+        "stacked_glass_pixels": 0,
+        "hidden_glass_pixels": 0,
+        "upper_contact_violations": 0,
+        "return_frame_violations": 0,
+        "return_glass_violations": 0,
+        "shallow_cap_violations": 0,
+        "ground_centerline": [
+          96,
+          60
+        ],
+        "baseline_y": 64,
+        "top_y": 36,
+        "cutaway_drop": 24,
+        "pass": true
+      },
+      "D1_structure_pixel_errors": 0,
+      "D1_composited_pixel_errors": 0,
+      "pass": true,
+      "saved_composite_errors": 0
+    },
+    "32": {
+      "northeast": {
+        "actual_origin": [
+          120,
+          68
+        ],
+        "expected_origin": [
+          120,
+          68
+        ],
+        "anchor_pass": true,
+        "centerline_pass": true,
+        "opaque_overlap_pixels": 48,
+        "expected_overlap_pixels": 48,
+        "overlap_ownership_errors": 0,
+        "unexpected_overlap_pixels": 0,
+        "stacked_glass_pixels": 0,
+        "hidden_glass_pixels": 0,
+        "upper_contact_violations": 0,
+        "return_frame_violations": 0,
+        "return_glass_violations": 0,
+        "shallow_cap_violations": 0,
+        "ground_centerline": [
+          128,
+          92
+        ],
+        "baseline_y": 96,
+        "top_y": 68,
+        "cutaway_drop": 24,
+        "pass": true
+      },
+      "D1_structure_pixel_errors": 0,
+      "D1_composited_pixel_errors": 0,
+      "pass": true,
+      "saved_composite_errors": 0
+    }
+  },
+  "enclosures": {
+    "0": {
+      "northeast": {
+        "actual_origin": [
+          184,
+          36
+        ],
+        "expected_origin": [
+          184,
+          36
+        ],
+        "anchor_pass": true,
+        "centerline_pass": true,
+        "opaque_overlap_pixels": 48,
+        "expected_overlap_pixels": 48,
+        "overlap_ownership_errors": 0,
+        "unexpected_overlap_pixels": 0,
+        "stacked_glass_pixels": 0,
+        "hidden_glass_pixels": 0,
+        "upper_contact_violations": 0,
+        "return_frame_violations": 0,
+        "return_glass_violations": 0,
+        "shallow_cap_violations": 0,
+        "ground_centerline": [
+          192,
+          60
+        ],
+        "baseline_y": 64,
+        "top_y": 36,
+        "cutaway_drop": 24,
+        "pass": true
+      },
+      "D1_structure_pixel_errors": 0,
+      "D1_composited_pixel_errors": 0,
+      "northwest": {
+        "actual_origin": [
+          60,
+          36
+        ],
+        "expected_origin": [
+          60,
+          36
+        ],
+        "anchor_pass": true,
+        "centerline_pass": true,
+        "opaque_overlap_pixels": 48,
+        "expected_overlap_pixels": 48,
+        "overlap_ownership_errors": 0,
+        "unexpected_overlap_pixels": 0,
+        "stacked_glass_pixels": 0,
+        "hidden_glass_pixels": 0,
+        "upper_contact_violations": 0,
+        "return_frame_violations": 0,
+        "return_glass_violations": 0,
+        "shallow_cap_violations": 0,
+        "ground_centerline": [
+          64,
+          60
+        ],
+        "baseline_y": 64,
+        "top_y": 36,
+        "cutaway_drop": 24,
+        "pass": true
+      },
+      "side_intersection_pixels": 0,
+      "front_open": true,
+      "D2_layer_pixel_errors": 0,
+      "pass": true,
+      "saved_composite_errors": 0
+    },
+    "32": {
+      "northeast": {
+        "actual_origin": [
+          216,
+          68
+        ],
+        "expected_origin": [
+          216,
+          68
+        ],
+        "anchor_pass": true,
+        "centerline_pass": true,
+        "opaque_overlap_pixels": 48,
+        "expected_overlap_pixels": 48,
+        "overlap_ownership_errors": 0,
+        "unexpected_overlap_pixels": 0,
+        "stacked_glass_pixels": 0,
+        "hidden_glass_pixels": 0,
+        "upper_contact_violations": 0,
+        "return_frame_violations": 0,
+        "return_glass_violations": 0,
+        "shallow_cap_violations": 0,
+        "ground_centerline": [
+          224,
+          92
+        ],
+        "baseline_y": 96,
+        "top_y": 68,
+        "cutaway_drop": 24,
+        "pass": true
+      },
+      "D1_structure_pixel_errors": 0,
+      "D1_composited_pixel_errors": 0,
+      "northwest": {
+        "actual_origin": [
+          92,
+          68
+        ],
+        "expected_origin": [
+          92,
+          68
+        ],
+        "anchor_pass": true,
+        "centerline_pass": true,
+        "opaque_overlap_pixels": 48,
+        "expected_overlap_pixels": 48,
+        "overlap_ownership_errors": 0,
+        "unexpected_overlap_pixels": 0,
+        "stacked_glass_pixels": 0,
+        "hidden_glass_pixels": 0,
+        "upper_contact_violations": 0,
+        "return_frame_violations": 0,
+        "return_glass_violations": 0,
+        "shallow_cap_violations": 0,
+        "ground_centerline": [
+          96,
+          92
+        ],
+        "baseline_y": 96,
+        "top_y": 68,
+        "cutaway_drop": 24,
+        "pass": true
+      },
+      "side_intersection_pixels": 0,
+      "front_open": true,
+      "D2_layer_pixel_errors": 0,
+      "pass": true,
+      "saved_composite_errors": 0
+    }
+  },
+  "contexts": {
+    "0": {
+      "cell": [
+        112,
+        64
+      ],
+      "render_origin": [
+        120,
+        64
+      ],
+      "origin_relative_to_cell": [
+        8,
+        0
+      ],
+      "upper_opaque_contact_pixels": 12,
+      "lower_opaque_contact_pixels": 12,
+      "wall_pixels_unchanged": true,
+      "overlap_pixels": 0,
+      "pass": true
+    },
+    "32": {
+      "cell": [
+        144,
+        96
+      ],
+      "render_origin": [
+        152,
+        96
+      ],
+      "origin_relative_to_cell": [
+        8,
+        0
+      ],
+      "upper_opaque_contact_pixels": 12,
+      "lower_opaque_contact_pixels": 12,
+      "wall_pixels_unchanged": true,
+      "overlap_pixels": 0,
+      "pass": true
+    }
+  },
+  "relationships": {
+    "repeat_pixel_errors": 0,
+    "corner_main_body_pixel_errors": 0,
+    "corner_repeat_body_pixel_errors": 0,
+    "pass": true
+  },
+  "lighting": {
+    "method": "Palette assigned directly at screen-space coordinates; source alpha copied; no finished-art reflection in builder",
+    "D3_vs_flipped_D2_pixel_differences": {
+      "main": 74,
+      "repeat": 74,
+      "corner_main": 114,
+      "corner_repeat": 114
+    },
+    "main_left_bevel_RGB": [
+      104,
+      134,
+      154
+    ],
+    "main_right_bevel_RGB": [
+      51,
+      73,
+      91
+    ]
+  },
+  "northeast_relocation_structure_errors": 0,
+  "enclosure_relocation_structure_errors": 0,
+  "D2_layer_errors_vs_scaffold_context": 0,
+  "wall_context_relocation_structure_errors": 0,
+  "negative_controls": {
+    "opaque_glass": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "pane_hole": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "broken_frame": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "wrong_terminal_or_doubled_support": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "repeat_drift_1px": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "stacked_glass": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "corner_drift_1px": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "wrong_left_origin": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "missing_corner_return": {
+      "valid_control_pass": true,
+      "rejected": true
+    },
+    "source_subpixel": {
+      "valid_control_pass": true,
+      "rejected": true
+    }
+  },
+  "sources_unchanged": true,
+  "status": "PASS_LOCAL_CANDIDATE_CHECKS",
+  "repository_suite_rerun": false,
+  "review_limits": [
+    "Right-side cutaway and the reviewed NW/NE enclosure only; not full-height side glass or all-direction junction approval.",
+    "Appearance readiness is ChatGPT visual judgement, not recorded human production approval.",
+    "Committed D3 historical contract stays proposed.",
+    "PNG outputs are local files; no repository was modified."
+  ]
+}

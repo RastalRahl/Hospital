@@ -123,7 +123,7 @@ def corner_check(front,side,union,edge,base,right,cell,origin):
         derived={'intersection':[edge,cy],'opaque_overlap_rectangles':overlap_rects},conformance_to=STATUS)
 
 
-def assembly(views,enclosure=False,delta=(0,0),defect=None,label=None):
+def assembly(views,enclosure=False,delta=(0,0),defect=None,label=None,*,artifact_dir=ART):
     dx,dy=delta; x0=(64 if enclosure else 32)+dx; width=128 if enclosure else 64; top=36+dy; base=top+28; east=x0+width; cy=base-4
     size=(east+48,176+dy); horizontal_count=width//32
     dm=d1.load(d1.PACKAGE/'candidate'/d1.VIEW_FILES['main']); dr=d1.load(d1.PACKAGE/'candidate'/d1.VIEW_FILES['repeat'])
@@ -145,10 +145,10 @@ def assembly(views,enclosure=False,delta=(0,0),defect=None,label=None):
     for y in range(base,size[1],32):
         for x in range(x0,east,32): bg.alpha_composite(floor,(x,y))
     if label:
-        layers={n:saved(ART/f'{label}_{n}_layer.png',im) for n,im in layers.items()}; bg=saved(ART/f'{label}_background.png',bg)
+        layers={n:saved(artifact_dir/f'{label}_{n}_layer.png',im) for n,im in layers.items()}; bg=saved(artifact_dir/f'{label}_background.png',bg)
     sides=Image.alpha_composite(layers['d2'],layers['d3']); union=Image.alpha_composite(sides,layers['d1']); scene=Image.alpha_composite(bg,union)
     if label:
-        union=saved(ART/f'{label}_structure.png',union); scene=saved(ART/f'{label}_clean.png',scene)
+        union=saved(artifact_dir/f'{label}_structure.png',union); scene=saved(artifact_dir/f'{label}_clean.png',scene)
     ne=corner_check(layers['d1'],layers['d3'],union,east,base,True,cell,origin)
     checks={'northeast':ne,'D1_render_unchanged':anchored_component(union,d1.assemble(dm,dr,horizontal_count)[0],(x0,top),(x0,top)),
         'D1_terminal_post':alpha_region(layers['d1'],[east-4,top,east,base],minimum=255,maximum=255),
@@ -170,21 +170,21 @@ def assembly(views,enclosure=False,delta=(0,0),defect=None,label=None):
         nw_required=Image.new('RGBA',size);nw_required.alpha_composite(d1.load(d0.CANON/'topology_se.png'),(x0-16,cy-16))
         checks['se_ground_coverage']=evidence(0,sum(a[3]>0 and b[3]==0 for a,b in zip(nw_required.get_flattened_data(),ground.get_flattened_data())),
             'Compare unchanged D2 north-cap ownership against canonical SE topology in enclosure')
-    if label: ground.save(ART/f'{label}_ground.png'); required.save(ART/f'{label}_required_sw.png')
+    if label: ground.save(artifact_dir/f'{label}_ground.png'); required.save(artifact_dir/f'{label}_required_sw.png')
     return d1.group(checks,derived={'D1_origin':[x0,top],'D1_width':width,'D3_cell':cell,'D3_origin':origin,'north_east_intersection':[east,cy]},
         computed={'sw_missing_before_north_cap':before,'sw_missing_after':missing(ground)},human_visual_review='PENDING'),scene,union
 
 
-def right_context(run,cell=(64,64),drift=0,label=None):
+def right_context(run,cell=(64,64),drift=0,label=None,*,artifact_dir=ART):
     x,y=cell; origin=(x+8+drift,y); size=(x+96,y+run.height+48)
     wall=d1.load(ROOT/'assets/architecture/hospital_wall_side_right_01.png'); floor=d1.load(ROOT/'assets/architecture/hospital_floor_plain_01.png')
     bg=Image.new('RGBA',size)
     for yy in range(0,size[1],32):
         for xx in range(0,size[0],32): bg.alpha_composite(floor,(xx,yy))
     structure=Image.new('RGBA',size); structure.alpha_composite(wall,(x,y-32)); structure.alpha_composite(wall,(x,y+run.height)); structure.alpha_composite(run,origin)
-    if label: bg=saved(ART/f'{label}_background.png',bg); structure=saved(ART/f'{label}_structure.png',structure)
+    if label: bg=saved(artifact_dir/f'{label}_background.png',bg); structure=saved(artifact_dir/f'{label}_structure.png',structure)
     scene=Image.alpha_composite(bg,structure)
-    if label: scene=saved(ART/f'{label}_clean.png',scene)
+    if label: scene=saved(artifact_dir/f'{label}_clean.png',scene)
     checks={'origin':evidence([8,0],[origin[0]-x,origin[1]-y],'Actual image origin relative to NS cell'),
         'anchored_pixels':anchored_component(structure,run,(x+8,y),origin),
         'north_contact':alpha_region(structure,[x+8,y-1,x+20,y+1],minimum=255,maximum=255),

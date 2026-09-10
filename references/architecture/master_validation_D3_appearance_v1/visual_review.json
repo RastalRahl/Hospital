@@ -1,0 +1,12 @@
+{
+  "evidence_type": "assistant_visual_findings",
+  "method": "Direct inspection of the independently rebuilt saved D3 appearance montage, including enlarged NW and NE details",
+  "findings": [
+    "The supplied right-side material treatment follows the existing narrow return and shallow side geometry. Both back corners remain visible together in the open-front enclosure.",
+    "The narrow glazed return and larger panes visibly respond to the separate backgrounds and yellow test object. Frame/support joins remain readable at enlargement.",
+    "D1 and D2 are retained in their original orientation. These visual observations do not establish authoring history or confer human approval; pixel preservation and source hashes are separately computed."
+  ],
+  "human_production_approval": false,
+  "historical_contract_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "limits": "Existing stylized cutaway and specified local corners only; no full-height side-glass or all-direction junction claim."
+}

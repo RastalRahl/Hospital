@@ -64,13 +64,13 @@ def package_integrity():
     return d1.group(checks,source_hashes=source_hashes,archive_sha256=d0.digest(archive),member_count=len(initial['members_sha256']))
 
 
-def check_candidate(name,im,source,c):
+def check_candidate(name,im,source,c,*,reference_path=None):
     geometry=v2.check_view(im,source,c,name)
-    ref=d1.load(v2.OUT/f'd2_{name}_native.png')
+    ref=d1.load(reference_path if reference_path is not None else v2.OUT/f'd2_{name}_native.png')
     checks={'dimensions_mode':evidence([ref.mode,list(ref.size)],[im.mode,list(im.size)],'Read native PNG mode and dimensions')}
     if im.mode!=ref.mode or im.size!=ref.size: return d1.group(checks,geometry=geometry)
-    checks['alpha_changed']=evidence(0,d1.pixel_difference(im,ref,channels=(3,)),'Count native alpha differences against corresponding committed v2 scaffold',units='pixels')
-    checks['rgb_changed']=evidence(EXPECTED_RGB[name],d1.pixel_difference(im,ref,channels=(0,1,2)),'Count actual RGB pixel differences against corresponding v2 scaffold',units='pixels')
+    checks['alpha_changed']=evidence(0,d1.pixel_difference(im,ref,channels=(3,)),'Count native alpha differences against corresponding committed scaffold',units='pixels')
+    checks['rgb_changed']=evidence(EXPECTED_RGB[name],d1.pixel_difference(im,ref,channels=(0,1,2)),'Count actual RGB pixel differences against corresponding committed scaffold',units='pixels')
     checks['zero_alpha_rgba_changed']=evidence(0,sum(a!=b for a,b in zip(im.get_flattened_data(),ref.get_flattened_data()) if b[3]==0),'Compare full RGBA at every originally zero-alpha pixel',units='pixels')
     result=d1.group(checks,geometry=geometry)
     result['pass']=result['pass'] and geometry['pass']

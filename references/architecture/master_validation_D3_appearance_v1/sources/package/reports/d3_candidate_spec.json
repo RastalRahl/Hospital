@@ -1,0 +1,149 @@
+{
+  "planning_id": "hospital_glass_partition_side_right_01",
+  "version": "locked_appearance_v1",
+  "status": "REFERENCE_ONLY_APPEARANCE_CANDIDATE",
+  "authority": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "65aca7a461a60d49e57e4b82257e782fc9c9b1d0",
+    "contract_path": "references/architecture/master_validation_D3_v1/d3_geometry_alpha_contract_proposed.json",
+    "contract_git_blob_sha1": "d31aeb126cdcf3903ce8806cc002a33d2092f4f1"
+  },
+  "normalization": "architecture_grid_preserving",
+  "logical_grid": 32,
+  "source_scale": 8,
+  "cell_anchor": [
+    16,
+    16
+  ],
+  "depth_stride": [
+    0,
+    32
+  ],
+  "alpha_policy": {
+    "frame": 255,
+    "pane": 150,
+    "exterior": 0,
+    "unchanged_pixel_for_pixel_from_corresponding_scaffold": true
+  },
+  "art_change": "RGB-only screen-space palette assignment, never mirrored D2 pixels",
+  "views": {
+    "main": {
+      "native_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+      "source_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_source_8x.png",
+      "native_dimensions": [
+        12,
+        32
+      ],
+      "source_dimensions": [
+        96,
+        256
+      ],
+      "image_anchor": [
+        8,
+        16
+      ],
+      "origin_relative_to_cell": [
+        8,
+        0
+      ],
+      "scaffold_file": "sources/d3_main_native.png",
+      "source_sha256": "f50904d68c04005ee84ca82f961029c25cd0aba1d5ce867c27445fcf6a710eff",
+      "candidate_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642"
+    },
+    "repeat": {
+      "native_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+      "source_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_source_8x.png",
+      "native_dimensions": [
+        12,
+        32
+      ],
+      "source_dimensions": [
+        96,
+        256
+      ],
+      "image_anchor": [
+        8,
+        16
+      ],
+      "origin_relative_to_cell": [
+        8,
+        0
+      ],
+      "scaffold_file": "sources/d3_repeat_native.png",
+      "source_sha256": "64f98a2cbefc1aa2783cee47bb83b02ecc7d06960aa9d1027c542353152d0656",
+      "candidate_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    "corner_main": {
+      "native_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+      "source_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_source_8x.png",
+      "native_dimensions": [
+        12,
+        56
+      ],
+      "source_dimensions": [
+        96,
+        448
+      ],
+      "image_anchor": [
+        8,
+        40
+      ],
+      "origin_relative_to_cell": [
+        8,
+        -24
+      ],
+      "scaffold_file": "sources/d3_corner_main_native.png",
+      "source_sha256": "299a20b7c1fee7208a868b84f152a55bea8f0103a9594ca5b9e20718ec5b6b22",
+      "candidate_sha256": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef"
+    },
+    "corner_repeat": {
+      "native_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+      "source_file": "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_source_8x.png",
+      "native_dimensions": [
+        12,
+        56
+      ],
+      "source_dimensions": [
+        96,
+        448
+      ],
+      "image_anchor": [
+        8,
+        40
+      ],
+      "origin_relative_to_cell": [
+        8,
+        -24
+      ],
+      "scaffold_file": "sources/d3_corner_repeat_native.png",
+      "source_sha256": "1e02e2710474f6b19ef8404db7579fb89a3ccf16fffd787be8e541e3399f18e4",
+      "candidate_sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2"
+    }
+  },
+  "relationships": {
+    "repeat": "Copy main; extend row 27 into rows 28..31 ONLY for x2..9.",
+    "corner_body": "corner_main/repeat crop [0,24,12,56) exactly equals main/repeat.",
+    "selection": "Use one alternative per ground cell. North-east first cell chooses corner_main if last, otherwise corner_repeat. Later cells choose repeat, then terminal main."
+  },
+  "corner": {
+    "layer_order": [
+      "separate background",
+      "unchanged D2 when present",
+      "D3",
+      "unchanged D1"
+    ],
+    "main_origin": [
+      8,
+      0
+    ],
+    "corner_origin": [
+      8,
+      -24
+    ],
+    "cutaway_drop": 24,
+    "expected_opaque_overlap_per_back_corner": 48,
+    "glass_overlap_allowed": false,
+    "D1_D2_modified": false
+  },
+  "scope": "All four views belong to ONE future logical asset. No production registration or approval."
+}

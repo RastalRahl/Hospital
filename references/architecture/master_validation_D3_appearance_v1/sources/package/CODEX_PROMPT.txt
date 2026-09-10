@@ -1,0 +1,206 @@
+Continue in the same Hospital repository and conversation.
+
+TASK: independent reference-only validation of the D3 locked appearance candidate.
+Read AGENTS.md. Preserve unrelated user changes. No production approval or ingestion.
+
+BASELINE
+D3 geometry commit: 65aca7a461a60d49e57e4b82257e782fc9c9b1d0
+D2 appearance validation: c6335c93e0c08c481c08e8096f5aa84c7f9a5000
+Last recorded suite: 198 passed. Verify the actual current starting state.
+Expected production: 220 manifest / 220 approved / 0 needs_human_review.
+
+ATTACHMENT
+rastalr_D3_locked_appearance_review_bundle.zip
+
+ChatGPT has reviewed the D3 geometry and this RGB-only appearance candidate
+as suitable to proceed to independent technical validation. This is assistant
+review evidence, NOT explicit human production approval. Do not alter the
+historical PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW contract or manufacture a
+human approval entry.
+
+1. PRESERVE AND INSPECT
+Read the archive and this complete task. Preserve the original ZIP and every
+member unchanged under:
+references/architecture/master_validation_D3_appearance_v1/sources/
+
+Put your independently generated outputs outside the supplied source package.
+Do not execute the package build script as a substitute for validation. It is
+optional reproducibility/provenance context after inspecting its contents.
+
+Read the committed authoritative D3 contract:
+references/architecture/master_validation_D3_v1/d3_geometry_alpha_contract_proposed.json
+at the baseline commit. Its Git blob SHA-1 is:
+d31aeb126cdcf3903ce8806cc002a33d2092f4f1
+
+Also read:
+- docs/ARCHITECTURE.md and relevant art-direction/camera rules.
+- D3 geometry report, tests and tools/validate_architecture_d3.py.
+- D3 native/source scaffolds from that workspace.
+- Actual validated D1 and D2 appearance files.
+- Existing geometry, compositing and preservation helpers.
+
+Package reports are supporting context, not observations to copy. The local
+source provenance pins all included reference PNGs. Verify source copies
+against committed files, including their hashes.
+
+2. ACTUAL CANDIDATE FILES
+Planning ID: hospital_glass_partition_side_right_01
+Stem: rastalr_D3_glass_partition_side_right_locked_v1_
+
+Under candidate/, four native files end with:
+main_native.png
+repeat_native.png
+corner_main_native.png
+corner_repeat_native.png
+
+Each has a corresponding source_8x.png file with the same view name.
+
+Main/repeat: 12x32 RGBA; source 96x256.
+Corner main/repeat: 12x56 RGBA; source 96x448.
+
+Cell anchor: [16,16].
+Main/repeat image anchor: [8,16]; origin relative to cell: [8,0].
+Corner image anchor: [8,40]; origin relative to cell: [8,-24].
+Grid: 32. Source scale: 8. Depth stride: [0,32].
+Normalization: architecture_grid_preserving.
+Rectangles: half-open [left, top, right, bottom).
+
+All four are MUTUALLY EXCLUSIVE implementation views of ONE future logical
+asset, not four catalog assets or four overlays to stack at the same origin.
+
+The straight shape has the same geometry as D2. Independently placing the
+same upper-left material recipe can yield identical straight RGB pixels.
+Do not invent trivial color differences to make those view files unique.
+The right-hand origins/corner return distinguish this usable orientation.
+The finished left-side image has NOT been reflected to author D3 highlights.
+
+3. INDEPENDENT FILE / PIXEL VALIDATION
+Read saved files without silently converting wrong modes or dimensions.
+Check exact 8x pixel blocks AND native round-trip, not just downsampling.
+Compare each native alpha map against its corresponding committed D3 scaffold.
+Require zero alpha changes and zero changed RGBA values at alpha-zero pixels.
+Require frame alpha 255, glass 150, and declared exterior 0.
+No baked background, undocumented opacity change, clipped frame or pane holes.
+
+Package measurements to verify, not hardcode as results:
+- Main/repeat RGB changed pixels: 384 each; alpha changes: 0.
+- Corner main/repeat RGB changed pixels: 496 each; alpha changes: 0.
+- Invisible RGBA changes: 0 in all views.
+
+Expected native alpha histograms:
+main: {150:192, 255:192}
+repeat: {150:224, 255:160}
+corner_main: {0:176, 150:232, 255:264}
+corner_repeat: {0:176, 150:264, 255:232}
+
+Measure dimensions, regions, counts, source provenance and hashes yourself.
+Separate expected/spec, computed/observed, derived and visual evidence.
+Do not validate appearance by exact comparison to FLAT scaffold RGB colors.
+
+4. VIEW RELATIONSHIPS AND REPEATS
+Check actual saved RGB and alpha:
+- repeat equals main except [2,28,10,32), where native row27 is extended.
+- corner_main crop [0,24,12,56) equals main exactly.
+- corner_repeat crop [0,24,12,56) equals repeat exactly.
+- Upper return in both corner views is identical.
+
+Rebuild straight AND corner-starting runs of 1, 2 and 4 ground cells.
+Use actual supplied files with 32 px depth stride.
+The first corner cell uses corner_main when it is also terminal;
+otherwise corner_repeat. Following cells use repeat until final main.
+Main/repeat and corner alternatives are never layered on each other.
+
+Check required four-pixel support spans, closures, single-layer glass,
+selection/anchor correctness, no drift, and no duplicate supports.
+Do not normalize the corner's 56 px visual carrier into a 32 px image.
+
+5. LIVE TRANSPARENCY
+Use separate light, dark, colored and toggled-object backgrounds.
+Verify source-over calculations, response of all required pane pixels,
+opaque frame invariance, exterior transparency, and no accumulated alpha.
+Include the narrow glazed return, not only the larger side pane.
+Source background PNGs and composites must remain separate.
+A flattened montage is a preview, never the source artwork.
+
+6. CORNERS, WALL CONTEXT AND ENCLOSURE
+Use the actual supplied D3 candidates with unchanged committed D1 and D2.
+Reconstruct:
+- The D1/D3 north-east corner, original and relocated.
+- Right-side approved Batch 11 wall/floor context, original and relocated.
+- Three-sided enclosure: actual D1 back, actual D2 left, D3 right, front open.
+- The same enclosure independently rebuilt at +32,+32.
+
+Keep D1 in its original orientation and choose its terminal right post
+correctly. Do not flip D1/D2, change their pixels, or mask them to hide errors.
+
+Draw order: separate background, D2 if present, D3, then unchanged D1.
+Preserve the ground-centerline / baseline distinction and 24 px cutaway.
+Derive expected overlap rectangles from the committed D3 contract and measure
+the actual pixels. Expected measured result is 48 intentional OPAQUE overlap
+pixels at each reviewed back corner, zero unexpected overlaps, zero stacked
+or hidden glass. The two corners are separate 48-pixel measurements, not a
+single whole-enclosure total.
+
+Check upper contacts, return-frame continuity, shallow cap, pane reveal,
+D1 composited-pixel preservation, D2 layer preservation, open front and
+relocation. Topology success alone does not establish visual continuity.
+No all-direction junction or full-height side-glass claim is authorized.
+
+The package uses an independently constructed wall-context scene. Absolute
+scene origins need not match the old geometry montage; relative anchors,
+contacts and edge alignment must match the contract. Do not reject solely
+because a preview's floor coverage or scene origin differs.
+
+7. CHECKS, NEGATIVE CONTROLS AND PRESERVATION
+Reuse the existing measured D3 and D2 helpers where suitable. Add focused
+appearance-regression coverage, not a duplicate framework or arbitrary
+large test-count target.
+
+Use valid controls and actual broken temporary fixtures to detect:
+- Wrong left-side origin reused on the right or a one-pixel anchor shift.
+- One-pixel depth stride error.
+- Missing/displaced upper return.
+- Wrong terminal selection or doubled supports.
+- Opaque glass, pane hole, broken frame contact, stacked glass.
+- Corrupted source subpixel missed by nearest-neighbor downsampling.
+- Unauthorized RGB changes in transparent exterior pixels.
+- Broken exact corner-body/repeat relationships.
+
+Run the COMPLETE repository test suite and capture command, exit code and
+actual total. Do not copy the package's local PASS into the repository report.
+
+Snapshot safeguards must permit only the explicitly authorized new directory:
+references/architecture/master_validation_D3_appearance_v1/
+
+Preserve every historical source/report/contract/snapshot and approved PNG.
+Do not overwrite baseline hashes, broadly exempt references, disable checks,
+or permit modification to protected files inside an allowed prefix.
+Authorized test/helper adjustments are allowed only as needed for this task.
+Compare real before/after task counts and protected file hashes.
+
+8. OUTPUTS AND STOP CONDITION
+Produce independent D3 appearance validation JSON and Markdown reports,
+file/alpha/view evidence, repeat/transmission evidence, original/relocated
+corner and enclosure images, a compact review montage, captured test output,
+and package-integrity/production-preservation evidence.
+
+Suggested montage:
+artifacts/d3_appearance_review_montage.png
+
+PASS only if measured checks pass. If any fail, preserve the candidate and
+report the exact discrepancy; do not silently repaint, warp or repair it.
+
+No production ingestion, approval, manifest/catalog additions, Batch 13,
+D4 scaffold, general junction repairs, or new model decisions in this task.
+Expected production remains 220 / 220 / 0.
+
+Follow AGENTS.md for committing and pushing successful reference work.
+Do not reset, force-push or discard unrelated user modifications.
+Report actual worktree status; do not promise clean if unrelated edits exist.
+
+FINAL RESPONSE
+Report PASS/FAIL and blockers; measured dimensions, alpha/RGB differences,
+view relationships, anchors, repeats, corner overlap and enclosure results;
+source and historical preservation; complete suite result; unchanged
+production counts; report/montage paths; commit SHA, push result and actual
+worktree state. Stop after this D3 appearance validation handoff.

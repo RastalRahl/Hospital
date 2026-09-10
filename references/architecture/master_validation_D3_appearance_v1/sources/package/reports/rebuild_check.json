@@ -1,0 +1,15 @@
+{
+  "scope": "Local candidate PNG reproducibility",
+  "same_candidate_bytes_after_rebuild": true,
+  "candidate_png_count": 8,
+  "sha256": {
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_source_8x.png": "0b502433115f38283ce15c826c40a09c88418a770fd42716111dd2fc9559792a",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_source_8x.png": "d537c408c562e5575cfe8338bafdd0cda7a2897f40d9cd5b55011fd28c398608",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_source_8x.png": "647c0da6742e8c2dcc9f6c707f8f90b98ef4047edc5dca0bf237deaffdd43baa",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_source_8x.png": "bb27a0d8ebe3d310562529c587fd66311d63c17d017cc5d3dcc719becd2bab12",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef"
+  }
+}

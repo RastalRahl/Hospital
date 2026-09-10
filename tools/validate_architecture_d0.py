@@ -27,6 +27,7 @@ AUTHORIZED_REFERENCE_ADDITIONS = (
     "references/architecture/master_validation_D2_v2/",
     "references/architecture/master_validation_D2_appearance_v1/",
     "references/architecture/master_validation_D3_v1/",
+    "references/architecture/master_validation_D3_appearance_v1/",
 )
 
 
