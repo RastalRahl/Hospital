@@ -12,8 +12,8 @@
     },
     "after": {
       "manifest": 220,
-      "approved": 212,
-      "needs_human_review": 8
+      "approved": 220,
+      "needs_human_review": 0
     }
   },
   "assets": [
@@ -44,7 +44,8 @@
       "normalization_mode": "architecture_grid_preserving",
       "anchor": "wall_center",
       "validation_reference": "references/architecture/master_validation_C1_v1/architecture_C1_validation_report.json",
-      "components": []
+      "components": [],
+      "approved_production_path": "assets/architecture/hospital_door_single_closed_01.png"
     },
     {
       "id": "hospital_door_single_half_open_01",
@@ -100,9 +101,11 @@
             896,
             496
           ],
-          "validation_reference": "references/architecture/master_validation_C2_v1/architecture_C2_validation_report.json"
+          "validation_reference": "references/architecture/master_validation_C2_v1/architecture_C2_validation_report.json",
+          "approved_production_path": "assets/architecture/components/hospital_door_single_half_open_01/hospital_door_single_half_open_leaf_projection_01.png"
         }
-      ]
+      ],
+      "approved_production_path": "assets/architecture/hospital_door_single_half_open_01.png"
     },
     {
       "id": "hospital_door_glazed_closed_01",
@@ -131,7 +134,8 @@
       "normalization_mode": "architecture_grid_preserving",
       "anchor": "wall_center",
       "validation_reference": "references/architecture/master_validation_C3_v2/architecture_C3_validation_report.json",
-      "components": []
+      "components": [],
+      "approved_production_path": "assets/architecture/hospital_door_glazed_closed_01.png"
     },
     {
       "id": "hospital_double_doors_closed_01",
@@ -160,7 +164,8 @@
       "normalization_mode": "architecture_grid_preserving",
       "anchor": "wall_center",
       "validation_reference": "references/architecture/master_validation_C4_v1/architecture_C4_validation_report.json",
-      "components": []
+      "components": [],
+      "approved_production_path": "assets/architecture/hospital_double_doors_closed_01.png"
     },
     {
       "id": "hospital_double_doors_half_open_01",
@@ -216,7 +221,8 @@
             640,
             496
           ],
-          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json"
+          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json",
+          "approved_production_path": "assets/architecture/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_left_leaf_projection_01.png"
         },
         {
           "role": "right_leaf_projection",
@@ -244,9 +250,11 @@
             896,
             496
           ],
-          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json"
+          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json",
+          "approved_production_path": "assets/architecture/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_right_leaf_projection_01.png"
         }
-      ]
+      ],
+      "approved_production_path": "assets/architecture/hospital_double_doors_half_open_01.png"
     },
     {
       "id": "hospital_sliding_clinical_doors_closed_01",
@@ -275,7 +283,8 @@
       "normalization_mode": "architecture_grid_preserving",
       "anchor": "wall_center",
       "validation_reference": "references/architecture/master_validation_C6_v1/architecture_C6_validation_report.json",
-      "components": []
+      "components": [],
+      "approved_production_path": "assets/architecture/hospital_sliding_clinical_doors_closed_01.png"
     },
     {
       "id": "hospital_sliding_clinical_doors_open_01",
@@ -331,7 +340,8 @@
             416,
             416
           ],
-          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json"
+          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+          "approved_production_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png"
         },
         {
           "role": "right_parked_leaf",
@@ -359,9 +369,11 @@
             1088,
             416
           ],
-          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json"
+          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+          "approved_production_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png"
         }
-      ]
+      ],
+      "approved_production_path": "assets/architecture/hospital_sliding_clinical_doors_open_01.png"
     },
     {
       "id": "hospital_equipment_opening_wide_01",
@@ -390,7 +402,8 @@
       "normalization_mode": "architecture_grid_preserving",
       "anchor": "wall_center",
       "validation_reference": "references/architecture/master_validation_C8_v1/architecture_C8_validation_report.json",
-      "components": []
+      "components": [],
+      "approved_production_path": "assets/architecture/hospital_equipment_opening_wide_01.png"
     }
   ],
   "reconstruction": {
@@ -454,9 +467,17 @@
     "original_reconstructions": "previews/architecture/production_batch_12_architecture_doors_openings_reconstructed_original.png",
     "extended_reconstructions": "previews/architecture/production_batch_12_architecture_doors_openings_reconstructed_extended.png",
     "mixed_corridor": "previews/architecture/production_batch_12_architecture_doors_openings_mixed_corridor.png",
-    "review_bundle": "release/production_batch_12_architecture_doors_openings_review_bundle.zip"
+    "review_bundle": "release/production_batch_12_architecture_doors_openings_review_bundle.zip",
+    "approved_contact_sheet": "previews/contact_sheets/architecture_doors_openings_batch_12_approved.png",
+    "approved_bundle": "release/production_batch_12_architecture_doors_openings_approved_bundle.zip"
   },
-  "status": "pass",
+  "status": "approved",
   "failures": [],
-  "review_state": "needs_human_review; no Batch 12 asset is approved by this task"
+  "review_state": "approved",
+  "technical_status": "pass",
+  "human_visual_review": {
+    "result": "PASS",
+    "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+    "reviewed_at": "2026-09-10T17:02:43.150439+00:00"
+  }
 }

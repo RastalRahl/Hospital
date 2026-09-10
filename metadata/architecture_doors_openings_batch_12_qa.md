@@ -32,3 +32,11 @@ All eight actual normalized candidates reconstructed cleanly in both five-cell o
 - `extended_reconstructions`: `previews/architecture/production_batch_12_architecture_doors_openings_reconstructed_extended.png`
 - `mixed_corridor`: `previews/architecture/production_batch_12_architecture_doors_openings_mixed_corridor.png`
 - `review_bundle`: `release/production_batch_12_architecture_doors_openings_review_bundle.zip`
+
+## Human visual approval
+
+**APPROVED.** Human visual review recorded `PASS` on `2026-09-10T17:02:43.150439+00:00` against `previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png`. All eight logical assets were promoted with their five implementation components; components remain non-logical and are absent from the catalog.
+
+## Human visual approval
+
+**APPROVED.** Human visual review recorded `PASS` on `2026-09-10T17:02:43.150439+00:00` against `previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png`. All eight logical assets were promoted with their five implementation components; components remain non-logical and are absent from the catalog.

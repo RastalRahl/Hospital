@@ -2747,7 +2747,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_door_glazed_closed_01.png",
       "normalized_path": "staging/pending/normalized/hospital_door_glazed_closed_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_door_glazed_closed_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -2766,12 +2766,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "0000ffc7d3c17e7e",
       "notes": "Batch 12 C3; validated locked-edit glazed single doorway; exact C1 structural crop.",
-      "updated_at": "2026-09-10T16:46:58.958859+00:00",
+      "updated_at": "2026-09-10T17:02:43.023247+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         32,
@@ -2792,6 +2792,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_door_glazed_closed_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -2835,7 +2842,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_door_single_closed_01.png",
       "normalized_path": "staging/pending/normalized/hospital_door_single_closed_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_door_single_closed_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -2854,12 +2861,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "0000fffefcfc7e3c",
       "notes": "Batch 12 C1; exact validated one-cell doorway crop; no trim, padding, or warp.",
-      "updated_at": "2026-09-10T16:46:58.985744+00:00",
+      "updated_at": "2026-09-10T17:02:42.999319+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         32,
@@ -2879,6 +2886,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_door_single_closed_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -2922,7 +2936,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_door_single_half_open_01.png",
       "normalized_path": "staging/pending/normalized/hospital_door_single_half_open_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_door_single_half_open_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -2941,12 +2955,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "0001f9bdbdb93938",
       "notes": "Batch 12 C2; one logical door asset assembled from a fixed doorway and its validated projecting leaf overlay.",
-      "updated_at": "2026-09-10T16:46:59.054006+00:00",
+      "updated_at": "2026-09-10T17:02:43.015235+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         32,
@@ -3028,7 +3042,9 @@
             "padding_applied": 0,
             "trim_applied": false,
             "scaler": "nearest_neighbor"
-          }
+          },
+          "approved_staging_path": "staging/approved/components/hospital_door_single_half_open_01/hospital_door_single_half_open_leaf_projection_01.png",
+          "final_path": "assets/architecture/components/hospital_door_single_half_open_01/hospital_door_single_half_open_leaf_projection_01.png"
         }
       ],
       "normalized_sha256": "5173af07e508268ad131fe99510460b0e15eb985a3e6322d94dabc70134de53c",
@@ -3038,6 +3054,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_door_single_half_open_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -3081,7 +3104,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_double_doors_closed_01.png",
       "normalized_path": "staging/pending/normalized/hospital_double_doors_closed_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_double_doors_closed_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -3100,12 +3123,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "0000fff7e7e76766",
       "notes": "Batch 12 C4; exact two-cell closed double-door composite crop.",
-      "updated_at": "2026-09-10T16:46:59.084047+00:00",
+      "updated_at": "2026-09-10T17:02:43.030863+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         64,
@@ -3125,6 +3148,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_double_doors_closed_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -3168,7 +3198,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_double_doors_half_open_01.png",
       "normalized_path": "staging/pending/normalized/hospital_double_doors_half_open_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_double_doors_half_open_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -3187,12 +3217,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "0000e7e7ffe76666",
       "notes": "Batch 12 C5; one logical double door assembled from a fixed doorway and two independently anchored leaf overlays.",
-      "updated_at": "2026-09-10T16:46:59.183091+00:00",
+      "updated_at": "2026-09-10T17:02:43.058599+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         64,
@@ -3274,7 +3304,9 @@
             "padding_applied": 0,
             "trim_applied": false,
             "scaler": "nearest_neighbor"
-          }
+          },
+          "approved_staging_path": "staging/approved/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "final_path": "assets/architecture/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_left_leaf_projection_01.png"
         },
         {
           "role": "right_leaf_projection",
@@ -3344,7 +3376,9 @@
             "padding_applied": 0,
             "trim_applied": false,
             "scaler": "nearest_neighbor"
-          }
+          },
+          "approved_staging_path": "staging/approved/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "final_path": "assets/architecture/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_right_leaf_projection_01.png"
         }
       ],
       "normalized_sha256": "efa36b41d1f431ac70f004a00b5b8fd4a3a21732758411df0d57b290a7f24307",
@@ -3354,6 +3388,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_double_doors_half_open_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -3397,7 +3438,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_equipment_opening_wide_01.png",
       "normalized_path": "staging/pending/normalized/hospital_equipment_opening_wide_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_equipment_opening_wide_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -3416,12 +3457,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "ffff8080808000ff",
       "notes": "Batch 12 C8; exact three-cell reinforced equipment/service-opening composite crop.",
-      "updated_at": "2026-09-10T16:46:59.214754+00:00",
+      "updated_at": "2026-09-10T17:02:43.104551+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         96,
@@ -3442,6 +3483,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_equipment_opening_wide_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -4502,7 +4550,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_sliding_clinical_doors_closed_01.png",
       "normalized_path": "staging/pending/normalized/hospital_sliding_clinical_doors_closed_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_sliding_clinical_doors_closed_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -4521,12 +4569,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "0000fffffdc9ff7e",
       "notes": "Batch 12 C6; exact two-cell closed sliding clinical-door composite crop.",
-      "updated_at": "2026-09-10T16:46:59.247963+00:00",
+      "updated_at": "2026-09-10T17:02:43.067799+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         64,
@@ -4546,6 +4594,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_sliding_clinical_doors_closed_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
@@ -4590,7 +4645,7 @@
       ],
       "staging_path": "staging/pending/raw/hospital_sliding_clinical_doors_open_01.png",
       "normalized_path": "staging/pending/normalized/hospital_sliding_clinical_doors_open_01.png",
-      "final_path": "",
+      "final_path": "assets/architecture/hospital_sliding_clinical_doors_open_01.png",
       "raw_qa_status": "warning",
       "raw_qa_issues": [
         {
@@ -4609,12 +4664,12 @@
           "message": "Every outer-edge pixel is opaque; inspect for a generated background."
         }
       ],
-      "approval_status": "needs_human_review",
+      "approval_status": "approved",
       "qa_status": "pass",
       "qa_issues": [],
       "perceptual_hash": "ffff8181818181bd",
       "notes": "Batch 12 C7; one logical open sliding-door state assembled from the fixed doorway and two laterally parked leaves.",
-      "updated_at": "2026-09-10T16:46:59.323208+00:00",
+      "updated_at": "2026-09-10T17:02:43.096006+00:00",
       "normalization_mode": "architecture_grid_preserving",
       "expected_native_dimensions": [
         64,
@@ -4687,7 +4742,9 @@
             "padding_applied": 0,
             "trim_applied": false,
             "scaler": "nearest_neighbor"
-          }
+          },
+          "approved_staging_path": "staging/approved/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "final_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png"
         },
         {
           "role": "right_parked_leaf",
@@ -4748,7 +4805,9 @@
             "padding_applied": 0,
             "trim_applied": false,
             "scaler": "nearest_neighbor"
-          }
+          },
+          "approved_staging_path": "staging/approved/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "final_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png"
         }
       ],
       "normalized_sha256": "7cd5a7addcfe1b126684dfbb53d5e2222f4fcbf3123db94d161ac13129a4852f",
@@ -4758,6 +4817,13 @@
         "padding_applied": 0,
         "trim_applied": false,
         "scaler": "nearest_neighbor"
+      },
+      "approved_staging_path": "staging/approved/hospital_sliding_clinical_doors_open_01.png",
+      "human_visual_review": {
+        "result": "PASS",
+        "reviewed_artifact": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+        "reviewed_at": "2026-09-10T17:02:43.150439+00:00",
+        "batch": "Architecture Production Batch 12: Doors & Openings"
       }
     },
     {
