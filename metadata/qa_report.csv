@@ -49,6 +49,12 @@ hospital_bed_pediatric_01,hospital_bed_pediatric_01.png,pass,,C:\Users\USER\Rast
 hospital_bed_rails_lowered_01,hospital_bed_rails_lowered_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_bed_rails_lowered_01.png
 hospital_bed_standard_01,hospital_bed_standard_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_bed_standard_01.png
 hospital_bed_unmade_01,hospital_bed_unmade_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_bed_unmade_01.png
+hospital_door_glazed_closed_01,hospital_door_glazed_closed_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_door_glazed_closed_01.png
+hospital_door_single_closed_01,hospital_door_single_closed_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_door_single_closed_01.png
+hospital_door_single_half_open_01,hospital_door_single_half_open_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_door_single_half_open_01.png
+hospital_double_doors_closed_01,hospital_double_doors_closed_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_double_doors_closed_01.png
+hospital_double_doors_half_open_01,hospital_double_doors_half_open_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_double_doors_half_open_01.png
+hospital_equipment_opening_wide_01,hospital_equipment_opening_wide_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_equipment_opening_wide_01.png
 hospital_floor_alt_01,hospital_floor_alt_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_floor_alt_01.png
 hospital_floor_alt_02,hospital_floor_alt_02.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_floor_alt_02.png
 hospital_floor_alt_03,hospital_floor_alt_03.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_floor_alt_03.png
@@ -61,6 +67,8 @@ hospital_front_wall_cutaway_01,hospital_front_wall_cutaway_01.png,pass,,C:\Users
 hospital_front_wall_cutaway_02,hospital_front_wall_cutaway_02.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_front_wall_cutaway_02.png
 hospital_front_wall_cutaway_03,hospital_front_wall_cutaway_03.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_front_wall_cutaway_03.png
 hospital_front_wall_cutaway_04,hospital_front_wall_cutaway_04.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_front_wall_cutaway_04.png
+hospital_sliding_clinical_doors_closed_01,hospital_sliding_clinical_doors_closed_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_sliding_clinical_doors_closed_01.png
+hospital_sliding_clinical_doors_open_01,hospital_sliding_clinical_doors_open_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_sliding_clinical_doors_open_01.png
 hospital_wall_back_straight_01,hospital_wall_back_straight_01.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_wall_back_straight_01.png
 hospital_wall_back_straight_02,hospital_wall_back_straight_02.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_wall_back_straight_02.png
 hospital_wall_back_straight_03,hospital_wall_back_straight_03.png,pass,,C:\Users\USER\RastalR-Modern\staging\pending\normalized\hospital_wall_back_straight_03.png

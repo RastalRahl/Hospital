@@ -184,6 +184,58 @@ def validate_architecture_grid_image(
     }
 
 
+def validate_architecture_component_image(
+    image: Image.Image,
+    *,
+    expected_dimensions: Iterable[int],
+    filename: str | None = None,
+    alpha_policy: str = "full_coverage_structural_component_box",
+) -> dict[str, Any]:
+    """Validate a grid-preserving module or a deliberately masked overlay.
+
+    ``masked_overlay`` exists for architectural door leaves whose transparent
+    regions are intentional.  It is metadata on a single logical asset, never
+    a second catalog asset.
+    """
+    if alpha_policy == "full_coverage_structural_component_box":
+        return validate_architecture_grid_image(
+            image, expected_dimensions=expected_dimensions, filename=filename,
+        )
+    if alpha_policy != "masked_overlay":
+        raise ValueError(f"Unknown architecture component alpha policy: {alpha_policy!r}.")
+    dimensions = tuple(expected_dimensions)
+    rgba = ensure_rgba(image)
+    alpha = rgba.getchannel("A")
+    issues: list[dict[str, str]] = []
+    if rgba.size != dimensions:
+        issues.append({
+            "code": "architecture_dimension_mismatch", "severity": "error",
+            "message": f"Expected native dimensions {dimensions[0]}x{dimensions[1]}, got {rgba.width}x{rgba.height}.",
+        })
+    if rgba.mode != "RGBA":
+        issues.append({"code": "architecture_not_rgba", "severity": "error", "message": "Architecture component is not RGBA."})
+    bounds = alpha.getbbox()
+    if bounds is None:
+        issues.append({"code": "empty_sprite", "severity": "error", "message": "Masked architecture overlay has no visible pixels."})
+    if alpha.getextrema()[0] > 0:
+        issues.append({
+            "code": "overlay_missing_transparency", "severity": "error",
+            "message": "Masked architecture overlay must retain its validated transparent pixels.",
+        })
+    if filename and not FILENAME_RE.fullmatch(filename):
+        issues.append({"code": "filename_schema", "severity": "error", "message": "Filename is not lowercase snake_case ending in _NN.png."})
+    return {
+        "dimensions": {"width": rgba.width, "height": rgba.height},
+        "mode": rgba.mode,
+        "alpha": alpha_summary(rgba),
+        "alpha_bounds": list(bounds) if bounds else None,
+        "connection_edges_covered": False,
+        "intentional_alpha_policy": "masked_overlay",
+        "issues": issues,
+        "status": "fail" if issues else "pass",
+    }
+
+
 def alpha_summary(image: Image.Image) -> dict[str, Any]:
     rgba = ensure_rgba(image)
     alpha = rgba.getchannel("A")
@@ -344,6 +396,46 @@ def _validate_batch_item(item: dict[str, Any]) -> None:
         dimensions = item.get("expected_native_dimensions")
         if not isinstance(dimensions, list) or len(dimensions) != 2 or not all(isinstance(value, int) and value > 0 for value in dimensions):
             raise ValueError("architecture_grid_preserving assets require expected_native_dimensions [width, height].")
+    components = item.get("components", [])
+    if not isinstance(components, list):
+        raise ValueError("components must be an optional array of implementation components.")
+    roles: set[str] = set()
+    filenames: set[str] = set()
+    for component in components:
+        if not isinstance(component, dict):
+            raise ValueError("Each component must be an object.")
+        missing_component = [key for key in ("role", "filename", "crop", "expected_native_dimensions", "anchor_relative_to_logical_native") if key not in component]
+        if missing_component:
+            raise ValueError(f"Architecture component missing required field(s): {', '.join(missing_component)}")
+        role = slug(component["role"])
+        filename = component["filename"]
+        if role in roles or filename in filenames:
+            raise ValueError("Component roles and filenames must be unique within one logical asset.")
+        roles.add(role)
+        filenames.add(filename)
+        if not isinstance(filename, str) or not FILENAME_RE.fullmatch(filename):
+            raise ValueError("Component filename must be lowercase snake_case ending in _NN.png.")
+        crop = component["crop"]
+        if not isinstance(crop, list) or len(crop) != 4 or not all(isinstance(value, int) for value in crop):
+            raise ValueError("Component crop must be four integer Pillow coordinates [left, top, right, bottom].")
+        dimensions = component["expected_native_dimensions"]
+        if not isinstance(dimensions, list) or len(dimensions) != 2 or not all(isinstance(value, int) and value > 0 for value in dimensions):
+            raise ValueError("Component expected_native_dimensions must contain two positive integers.")
+        anchor = component["anchor_relative_to_logical_native"]
+        if not isinstance(anchor, list) or len(anchor) != 2 or not all(isinstance(value, int) for value in anchor):
+            raise ValueError("Component anchor_relative_to_logical_native must be two integer native coordinates.")
+        if component.get("normalization_mode", mode) != "architecture_grid_preserving":
+            raise ValueError("Architecture implementation components must use architecture_grid_preserving.")
+        if component.get("alpha_policy", "full_coverage_structural_component_box") not in {
+            "full_coverage_structural_component_box", "masked_overlay",
+        }:
+            raise ValueError("Component alpha_policy is not recognized.")
+        polygon = component.get("mask_polygon_source_px")
+        if polygon is not None and (
+            not isinstance(polygon, list) or len(polygon) < 3
+            or any(not isinstance(point, list) or len(point) != 2 or not all(isinstance(value, int) for value in point) for point in polygon)
+        ):
+            raise ValueError("mask_polygon_source_px must be a list of at least three [x, y] source-pixel points.")
 
 
 def ingest_batch(batch_path: str | Path, *, force: bool = False) -> list[dict[str, Any]]:
@@ -398,6 +490,52 @@ def ingest_batch(batch_path: str | Path, *, force: bool = False) -> list[dict[st
         ):
             if key in item:
                 asset[key] = item[key]
+        components: list[dict[str, Any]] = []
+        for configured in item.get("components", []):
+            component_source = repo_path(configured.get("source", item["source"]))
+            if not component_source.is_file():
+                raise FileNotFoundError(f"Component input PNG was not found: {component_source}")
+            with Image.open(component_source) as opened:
+                component_image = ensure_rgba(opened)
+            component_source_size = {"width": component_image.width, "height": component_image.height}
+            left, top, right, bottom = configured["crop"]
+            if not (0 <= left < right <= component_image.width and 0 <= top < bottom <= component_image.height):
+                raise ValueError(
+                    f"Component crop {configured['crop']} lies outside {component_source} "
+                    f"({component_image.width}x{component_image.height})."
+                )
+            component_image = component_image.crop(tuple(configured["crop"]))
+            if configured.get("mask_polygon_source_px") is not None:
+                mask = Image.new("L", component_image.size, 0)
+                ImageDraw.Draw(mask).polygon([
+                    (x - left, y - top) for x, y in configured["mask_polygon_source_px"]
+                ], fill=255)
+                component_image.putalpha(mask)
+            component_raw = ROOT / "staging" / "pending" / "raw" / "components" / filename[:-4] / configured["filename"]
+            if component_raw.exists() and not force:
+                raise FileExistsError(f"{component_raw} exists. Use --force only for pending pilot artifacts.")
+            component_raw.parent.mkdir(parents=True, exist_ok=True)
+            component_image.save(component_raw, format="PNG")
+            component = {
+                "role": slug(configured["role"]), "filename": configured["filename"],
+                "source": rel(component_source), "source_sha256": sha256_file(component_source),
+                "source_dimensions": component_source_size, "crop": configured["crop"],
+                "source_scale": validate_source_scale(configured.get("source_scale", item.get("source_scale", 1))),
+                "expected_native_dimensions": configured["expected_native_dimensions"],
+                "normalization_mode": "architecture_grid_preserving",
+                "anchor_relative_to_logical_native": configured["anchor_relative_to_logical_native"],
+                "alpha_policy": configured.get("alpha_policy", "full_coverage_structural_component_box"),
+                "validation_reference": configured.get("validation_reference", item.get("validation_reference", "")),
+                "staging_path": rel(component_raw), "normalized_path": "", "raw_qa_status": validate_image(component_image, filename=configured["filename"])["status"],
+                "raw_qa_issues": validate_image(component_image, filename=configured["filename"])["issues"],
+                "qa_status": "not_run", "qa_issues": [],
+            }
+            if configured.get("mask_polygon_source_px") is not None:
+                component["mask_polygon_source_px"] = configured["mask_polygon_source_px"]
+                component["deterministic_geometry_mask"] = "validated_source_polygon"
+            components.append(component)
+        if components:
+            asset["components"] = components
         upsert_asset(manifest, asset)
         ingested.append(asset)
     save_manifest(manifest)
@@ -444,6 +582,30 @@ def normalize_pending(
                 "padding_applied": 0,
                 "trim_applied": False,
                 "scaler": "nearest_neighbor",
+            }
+        for component in asset.get("components", []):
+            component_raw = repo_path(component.get("staging_path", ""))
+            if not component_raw.is_file():
+                raise FileNotFoundError(f"Missing staged raw component for {asset['id']}/{component.get('role')}: {component_raw}")
+            component_output = ROOT / "staging" / "pending" / "normalized" / "components" / asset["id"] / component["filename"]
+            if component_output.exists() and not force:
+                raise FileExistsError(f"{component_output} exists. Use --force to refresh pending output.")
+            with Image.open(component_raw) as opened:
+                component_image = normalize_architecture_grid_image(
+                    opened,
+                    source_scale=validate_source_scale(component.get("source_scale", asset.get("source_scale", 1))),
+                    expected_native_dimensions=component["expected_native_dimensions"],
+                )
+            component_output.parent.mkdir(parents=True, exist_ok=True)
+            component_image.save(component_output, format="PNG")
+            component["normalized_path"] = rel(component_output)
+            component["canvas_width"], component["canvas_height"] = component_image.size
+            component["normalized_sha256"] = sha256_file(component_output)
+            component["perceptual_hash"] = perceptual_hash(component_image)
+            component["normalization_exception"] = {
+                "kind": "architecture_grid_preserving",
+                "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+                "padding_applied": 0, "trim_applied": False, "scaler": "nearest_neighbor",
             }
         asset["updated_at"] = datetime.now(timezone.utc).isoformat()
         normalized.append(asset["id"])
@@ -525,6 +687,22 @@ def approve_assets(asset_ids: Iterable[str], *, human_qa_disposition: str | None
             raise FileExistsError(f"Refusing to overwrite existing final asset: {final}")
         shutil.copy2(source, approved_stage)
         shutil.copy2(source, final)
+        for component in asset.get("components", []):
+            component_source = repo_path(component.get("normalized_path", ""))
+            if not component_source.is_file():
+                raise FileNotFoundError(
+                    f"Cannot approve {asset_id}; normalized component {component.get('role')} is missing: {component_source}"
+                )
+            component_stage = ROOT / "staging" / "approved" / "components" / asset_id / component["filename"]
+            component_final = ROOT / "assets" / asset["category"] / "components" / asset_id / component["filename"]
+            component_stage.parent.mkdir(parents=True, exist_ok=True)
+            component_final.parent.mkdir(parents=True, exist_ok=True)
+            if component_final.exists():
+                raise FileExistsError(f"Refusing to overwrite existing final component asset: {component_final}")
+            shutil.copy2(component_source, component_stage)
+            shutil.copy2(component_source, component_final)
+            component["approved_staging_path"] = rel(component_stage)
+            component["final_path"] = rel(component_final)
         asset["approved_staging_path"] = rel(approved_stage)
         asset["final_path"] = rel(final)
         asset["approval_status"] = "approved"
@@ -532,6 +710,56 @@ def approve_assets(asset_ids: Iterable[str], *, human_qa_disposition: str | None
         approved.append(asset_id)
     save_manifest(manifest)
     return approved
+
+
+def _architecture_component_qa_report(
+    raw_path: Path,
+    image_path: Path,
+    *,
+    filename: str,
+    source_scale: int,
+    expected_native_dimensions: Iterable[int],
+    alpha_policy: str,
+    native_grid: int = 32,
+    footprint_width_tiles: int | None = None,
+    footprint_height_tiles: int | None = None,
+    normalization_exception: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Run raw and native QA while retaining intentional architecture cues."""
+    expected_native = list(expected_native_dimensions)
+    expected_source = [value * validate_source_scale(source_scale) for value in expected_native]
+    with Image.open(raw_path) as image:
+        generic_raw = validate_image(image, filename=filename)
+        raw_report = validate_architecture_component_image(
+            image, expected_dimensions=expected_source, filename=filename, alpha_policy=alpha_policy,
+        )
+    with Image.open(image_path) as image:
+        generic_native = validate_image(
+            image, filename=filename, native_grid=native_grid,
+            footprint_width_tiles=footprint_width_tiles, footprint_height_tiles=footprint_height_tiles,
+        )
+        report = validate_architecture_component_image(
+            image, expected_dimensions=expected_native, filename=filename, alpha_policy=alpha_policy,
+        )
+    intentional_codes = {"missing_transparency", "opaque_border", "touching_canvas_edge"}
+    generic_issues = generic_raw["issues"] + [
+        issue for issue in generic_native["issues"] if issue not in generic_raw["issues"]
+    ]
+    unexpected_generic = [issue for issue in generic_issues if issue["code"] not in intentional_codes]
+    report["raw_dimensions"] = raw_report["dimensions"]
+    report["architecture_qa"] = {
+        "raw": raw_report,
+        "native": report.copy(),
+        "generic_findings_retained_as_intentional": [
+            issue for issue in generic_issues if issue["code"] in intentional_codes
+        ],
+        "normalization_exception": normalization_exception or {},
+    }
+    report["issues"] = unexpected_generic + report["issues"]
+    report["status"] = "fail" if any(issue["severity"] == "error" for issue in report["issues"]) else (
+        "warning" if report["issues"] else "pass"
+    )
+    return report
 
 
 def run_qa() -> dict[str, Any]:
@@ -544,39 +772,15 @@ def run_qa() -> dict[str, Any]:
             missing = raw_path if not raw_path.is_file() else image_path
             report = {"status": "fail", "issues": [{"code": "missing_staged_file", "severity": "error", "message": str(missing)}]}
         elif asset.get("normalization_mode") == "architecture_grid_preserving":
-            expected_native = asset.get("expected_native_dimensions", [])
-            expected_source = [value * validate_source_scale(asset.get("source_scale", 1)) for value in expected_native]
-            with Image.open(raw_path) as image:
-                generic_raw = validate_image(image, filename=asset["filename"])
-                raw_report = validate_architecture_grid_image(
-                    image, expected_dimensions=expected_source, filename=asset["filename"],
-                )
-            with Image.open(image_path) as image:
-                generic_native = validate_image(
-                    image, filename=asset["filename"], native_grid=asset.get("native_grid", 32),
-                    footprint_width_tiles=asset.get("footprint_width_tiles"),
-                    footprint_height_tiles=asset.get("footprint_height_tiles"),
-                )
-                report = validate_architecture_grid_image(
-                    image, expected_dimensions=expected_native, filename=asset["filename"],
-                )
-            intentional_codes = {"missing_transparency", "opaque_border", "touching_canvas_edge"}
-            generic_issues = generic_raw["issues"] + [
-                issue for issue in generic_native["issues"] if issue not in generic_raw["issues"]
-            ]
-            unexpected_generic = [issue for issue in generic_issues if issue["code"] not in intentional_codes]
-            report["raw_dimensions"] = raw_report["dimensions"]
-            report["architecture_qa"] = {
-                "raw": raw_report,
-                "native": report.copy(),
-                "generic_findings_retained_as_intentional": [
-                    issue for issue in generic_issues if issue["code"] in intentional_codes
-                ],
-                "normalization_exception": asset.get("normalization_exception", {}),
-            }
-            report["issues"] = unexpected_generic + report["issues"]
-            report["status"] = "fail" if any(issue["severity"] == "error" for issue in report["issues"]) else (
-                "warning" if report["issues"] else "pass"
+            report = _architecture_component_qa_report(
+                raw_path, image_path, filename=asset["filename"],
+                source_scale=validate_source_scale(asset.get("source_scale", 1)),
+                expected_native_dimensions=asset.get("expected_native_dimensions", []),
+                alpha_policy="full_coverage_structural_component_box",
+                native_grid=asset.get("native_grid", 32),
+                footprint_width_tiles=asset.get("footprint_width_tiles"),
+                footprint_height_tiles=asset.get("footprint_height_tiles"),
+                normalization_exception=asset.get("normalization_exception", {}),
             )
         else:
             # QA must inspect the raw crop as well: normalization intentionally adds a
@@ -595,6 +799,42 @@ def run_qa() -> dict[str, Any]:
             report["raw_dimensions"] = raw_report["dimensions"]
             report["issues"] = issues
             report["status"] = "fail" if any(item["severity"] == "error" for item in issues) else ("warning" if issues else "pass")
+        component_reports: list[dict[str, Any]] = []
+        for component in asset.get("components", []):
+            component_raw = repo_path(component.get("staging_path", ""))
+            component_image = repo_path(component.get("normalized_path") or component.get("staging_path", ""))
+            if not component_raw.is_file() or not component_image.is_file():
+                missing = component_raw if not component_raw.is_file() else component_image
+                component_report = {
+                    "status": "fail", "issues": [{"code": "missing_staged_component", "severity": "error", "message": str(missing)}],
+                }
+            else:
+                component_report = _architecture_component_qa_report(
+                    component_raw, component_image, filename=component["filename"],
+                    source_scale=validate_source_scale(component.get("source_scale", asset.get("source_scale", 1))),
+                    expected_native_dimensions=component["expected_native_dimensions"],
+                    alpha_policy=component.get("alpha_policy", "full_coverage_structural_component_box"),
+                    native_grid=asset.get("native_grid", 32),
+                    normalization_exception=component.get("normalization_exception", {}),
+                )
+            component["qa_status"] = component_report["status"]
+            component["qa_issues"] = component_report["issues"]
+            component_reports.append({"role": component["role"], "filename": component["filename"], **component_report})
+        if component_reports:
+            report["components"] = component_reports
+            if any(component["status"] == "fail" for component in component_reports):
+                report["issues"].append({
+                    "code": "component_qa_failed", "severity": "error",
+                    "message": "One or more implementation components failed technical QA.",
+                })
+            elif any(component["status"] == "warning" for component in component_reports):
+                report["issues"].append({
+                    "code": "component_qa_warning", "severity": "warning",
+                    "message": "One or more implementation components has a technical QA warning.",
+                })
+            report["status"] = "fail" if any(issue["severity"] == "error" for issue in report["issues"]) else (
+                "warning" if report["issues"] else "pass"
+            )
         asset["qa_status"] = report["status"]
         asset["qa_issues"] = report["issues"]
         if asset.get("approval_status") == "technical_pending":
@@ -652,13 +892,15 @@ def write_catalog() -> Path:
     fields = [
         "id", "filename", "category", "subcategory", "asset_type", "variant", "orientation", "state", "reuse_scope",
         "native_grid", "source_scale", "canvas_width", "canvas_height", "footprint_width_tiles", "footprint_height_tiles", "anchor",
-        "approval_status", "qa_status", "tags", "source", "normalized_path", "notes",
+        "approval_status", "qa_status", "component_count", "component_roles", "tags", "source", "normalized_path", "notes",
     ]
     with CATALOG_PATH.open("w", encoding="utf-8", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=fields)
         writer.writeheader()
         for asset in manifest["assets"]:
             row = {field: asset.get(field, "") for field in fields}
+            row["component_count"] = len(asset.get("components", []))
+            row["component_roles"] = ";".join(component.get("role", "") for component in asset.get("components", []))
             row["tags"] = ";".join(asset.get("tags", []))
             writer.writerow(row)
     return CATALOG_PATH

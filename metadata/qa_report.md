@@ -1,6 +1,6 @@
 # Technical QA Report
 
-Assets checked: 212
+Assets checked: 220
 
 | Asset | Status | Findings |
 | --- | --- | --- |
@@ -54,6 +54,12 @@ Assets checked: 212
 | `hospital_bed_rails_lowered_01.png` | pass | none |
 | `hospital_bed_standard_01.png` | pass | none |
 | `hospital_bed_unmade_01.png` | pass | none |
+| `hospital_door_glazed_closed_01.png` | pass | none |
+| `hospital_door_single_closed_01.png` | pass | none |
+| `hospital_door_single_half_open_01.png` | pass | none |
+| `hospital_double_doors_closed_01.png` | pass | none |
+| `hospital_double_doors_half_open_01.png` | pass | none |
+| `hospital_equipment_opening_wide_01.png` | pass | none |
 | `hospital_floor_alt_01.png` | pass | none |
 | `hospital_floor_alt_02.png` | pass | none |
 | `hospital_floor_alt_03.png` | pass | none |
@@ -66,6 +72,8 @@ Assets checked: 212
 | `hospital_front_wall_cutaway_02.png` | pass | none |
 | `hospital_front_wall_cutaway_03.png` | pass | none |
 | `hospital_front_wall_cutaway_04.png` | pass | none |
+| `hospital_sliding_clinical_doors_closed_01.png` | pass | none |
+| `hospital_sliding_clinical_doors_open_01.png` | pass | none |
 | `hospital_wall_back_straight_01.png` | pass | none |
 | `hospital_wall_back_straight_02.png` | pass | none |
 | `hospital_wall_back_straight_03.png` | pass | none |

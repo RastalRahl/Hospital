@@ -1,0 +1,462 @@
+{
+  "batch": "Architecture Production Batch 12: Doors & Openings",
+  "generated_at": "2026-09-10T16:47:05.057380+00:00",
+  "logical_asset_count": 8,
+  "technical_component_count": 5,
+  "components_counted_as_logical_assets": false,
+  "manifest_counts": {
+    "before": {
+      "manifest": 212,
+      "approved": 212,
+      "needs_human_review": 0
+    },
+    "after": {
+      "manifest": 220,
+      "approved": 212,
+      "needs_human_review": 8
+    }
+  },
+  "assets": [
+    {
+      "id": "hospital_door_single_closed_01",
+      "filename": "hospital_door_single_closed_01.png",
+      "path": "staging/pending/normalized/hospital_door_single_closed_01.png",
+      "representation": "single_grid_locked_doorway_module",
+      "dimensions": [
+        32,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C1_v1/sources/rastalr_architecture_master_C1_single_hinged_door_closed_v1.png",
+      "source_crop": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C1_v1/architecture_C1_validation_report.json",
+      "components": []
+    },
+    {
+      "id": "hospital_door_single_half_open_01",
+      "filename": "hospital_door_single_half_open_01.png",
+      "path": "staging/pending/normalized/hospital_door_single_half_open_01.png",
+      "representation": "fixed_grid_locked_doorway_plus_leaf_projection_overlay",
+      "dimensions": [
+        32,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C2_v1/sources/rastalr_architecture_master_C2_single_hinged_door_half_open_v1.png",
+      "source_crop": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C2_v1/architecture_C2_validation_report.json",
+      "components": [
+        {
+          "role": "leaf_projection",
+          "filename": "hospital_door_single_half_open_leaf_projection_01.png",
+          "path": "staging/pending/normalized/components/hospital_door_single_half_open_01/hospital_door_single_half_open_leaf_projection_01.png",
+          "dimensions": [
+            32,
+            11
+          ],
+          "anchor_relative_to_logical_native": [
+            0,
+            51
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_components": 1,
+          "qa_status": "pass",
+          "qa_issues": [],
+          "source": "references/architecture/master_validation_C2_v1/sources/rastalr_architecture_master_C2_single_hinged_door_half_open_v1.png",
+          "crop": [
+            640,
+            408,
+            896,
+            496
+          ],
+          "validation_reference": "references/architecture/master_validation_C2_v1/architecture_C2_validation_report.json"
+        }
+      ]
+    },
+    {
+      "id": "hospital_door_glazed_closed_01",
+      "filename": "hospital_door_glazed_closed_01.png",
+      "path": "staging/pending/normalized/hospital_door_glazed_closed_01.png",
+      "representation": "single_grid_locked_glazed_doorway_module",
+      "dimensions": [
+        32,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C3_v2/sources/rastalr_architecture_master_C3_glazed_single_door_closed_v3.png",
+      "source_crop": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C3_v2/architecture_C3_validation_report.json",
+      "components": []
+    },
+    {
+      "id": "hospital_double_doors_closed_01",
+      "filename": "hospital_double_doors_closed_01.png",
+      "path": "staging/pending/normalized/hospital_double_doors_closed_01.png",
+      "representation": "single_grid_locked_double_doorway_module",
+      "dimensions": [
+        64,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C4_v1/sources/rastalr_architecture_master_C4_double_doors_closed_v1.png",
+      "source_crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C4_v1/architecture_C4_validation_report.json",
+      "components": []
+    },
+    {
+      "id": "hospital_double_doors_half_open_01",
+      "filename": "hospital_double_doors_half_open_01.png",
+      "path": "staging/pending/normalized/hospital_double_doors_half_open_01.png",
+      "representation": "fixed_grid_locked_double_doorway_plus_two_leaf_projection_overlays",
+      "dimensions": [
+        64,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+      "source_crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json",
+      "components": [
+        {
+          "role": "left_leaf_projection",
+          "filename": "hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "path": "staging/pending/normalized/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "dimensions": [
+            32,
+            11
+          ],
+          "anchor_relative_to_logical_native": [
+            0,
+            51
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_components": 1,
+          "qa_status": "pass",
+          "qa_issues": [],
+          "source": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+          "crop": [
+            384,
+            408,
+            640,
+            496
+          ],
+          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json"
+        },
+        {
+          "role": "right_leaf_projection",
+          "filename": "hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "path": "staging/pending/normalized/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "dimensions": [
+            32,
+            11
+          ],
+          "anchor_relative_to_logical_native": [
+            32,
+            51
+          ],
+          "alpha_extrema": [
+            0,
+            255
+          ],
+          "alpha_components": 1,
+          "qa_status": "pass",
+          "qa_issues": [],
+          "source": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+          "crop": [
+            640,
+            408,
+            896,
+            496
+          ],
+          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json"
+        }
+      ]
+    },
+    {
+      "id": "hospital_sliding_clinical_doors_closed_01",
+      "filename": "hospital_sliding_clinical_doors_closed_01.png",
+      "path": "staging/pending/normalized/hospital_sliding_clinical_doors_closed_01.png",
+      "representation": "single_grid_locked_sliding_doorway_module",
+      "dimensions": [
+        64,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C6_v1/sources/rastalr_architecture_master_C6_sliding_clinical_doors_closed_v1.png",
+      "source_crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C6_v1/architecture_C6_validation_report.json",
+      "components": []
+    },
+    {
+      "id": "hospital_sliding_clinical_doors_open_01",
+      "filename": "hospital_sliding_clinical_doors_open_01.png",
+      "path": "staging/pending/normalized/hospital_sliding_clinical_doors_open_01.png",
+      "representation": "fixed_grid_locked_opening_plus_two_parked_sliding_leaf_overlays",
+      "dimensions": [
+        64,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C7_v1/sources/rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+      "source_crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+      "components": [
+        {
+          "role": "left_parked_leaf",
+          "filename": "hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "path": "staging/pending/normalized/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "dimensions": [
+            28,
+            38
+          ],
+          "anchor_relative_to_logical_native": [
+            -24,
+            14
+          ],
+          "alpha_extrema": [
+            255,
+            255
+          ],
+          "alpha_components": 1,
+          "qa_status": "pass",
+          "qa_issues": [],
+          "source": "references/architecture/master_validation_C7_v1/sources/rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+          "crop": [
+            192,
+            112,
+            416,
+            416
+          ],
+          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json"
+        },
+        {
+          "role": "right_parked_leaf",
+          "filename": "hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "path": "staging/pending/normalized/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "dimensions": [
+            28,
+            38
+          ],
+          "anchor_relative_to_logical_native": [
+            60,
+            14
+          ],
+          "alpha_extrema": [
+            255,
+            255
+          ],
+          "alpha_components": 1,
+          "qa_status": "pass",
+          "qa_issues": [],
+          "source": "references/architecture/master_validation_C7_v1/sources/rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+          "crop": [
+            864,
+            112,
+            1088,
+            416
+          ],
+          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json"
+        }
+      ]
+    },
+    {
+      "id": "hospital_equipment_opening_wide_01",
+      "filename": "hospital_equipment_opening_wide_01.png",
+      "path": "staging/pending/normalized/hospital_equipment_opening_wide_01.png",
+      "representation": "single_grid_locked_three_cell_equipment_opening_module",
+      "dimensions": [
+        96,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_components": 1,
+      "qa_status": "pass",
+      "qa_issues": [],
+      "source": "references/architecture/master_validation_C8_v1/sources/rastalr_architecture_master_C8_wide_equipment_opening_locked_v1.png",
+      "source_crop": [
+        384,
+        0,
+        1152,
+        416
+      ],
+      "source_scale": 8,
+      "normalization_mode": "architecture_grid_preserving",
+      "anchor": "wall_center",
+      "validation_reference": "references/architecture/master_validation_C8_v1/architecture_C8_validation_report.json",
+      "components": []
+    }
+  ],
+  "reconstruction": {
+    "source": "actual Batch 12 normalized candidates plus approved Batch 11 architecture pieces only",
+    "original_five_cell": {
+      "status": "pass",
+      "assets_tested": [
+        "hospital_door_single_closed_01",
+        "hospital_door_single_half_open_01",
+        "hospital_door_glazed_closed_01",
+        "hospital_double_doors_closed_01",
+        "hospital_double_doors_half_open_01",
+        "hospital_sliding_clinical_doors_closed_01",
+        "hospital_sliding_clinical_doors_open_01",
+        "hospital_equipment_opening_wide_01"
+      ]
+    },
+    "extended_eight_cell": {
+      "status": "pass",
+      "assets_tested": [
+        "hospital_door_single_closed_01",
+        "hospital_door_single_half_open_01",
+        "hospital_door_glazed_closed_01",
+        "hospital_double_doors_closed_01",
+        "hospital_double_doors_half_open_01",
+        "hospital_sliding_clinical_doors_closed_01",
+        "hospital_sliding_clinical_doors_open_01",
+        "hospital_equipment_opening_wide_01"
+      ]
+    },
+    "mixed_corridor": {
+      "status": "pass",
+      "logical_assets": [
+        "hospital_door_single_closed_01",
+        "hospital_door_single_half_open_01",
+        "hospital_door_glazed_closed_01",
+        "hospital_double_doors_closed_01",
+        "hospital_double_doors_half_open_01",
+        "hospital_sliding_clinical_doors_closed_01",
+        "hospital_sliding_clinical_doors_open_01",
+        "hospital_equipment_opening_wide_01"
+      ]
+    },
+    "checks": [
+      "exact_grid_spacing",
+      "wall_baseline",
+      "cap_continuity",
+      "teal_base_continuity",
+      "floor_continuity",
+      "thresholds",
+      "overlay_placement",
+      "render_order",
+      "no_alpha_gaps",
+      "no_unintended_overlap",
+      "no_cumulative_drift"
+    ]
+  },
+  "artifacts": {
+    "review_contact_sheet": "previews/contact_sheets/production_batch_12_architecture_doors_openings_review.png",
+    "chatgpt_qa_montage": "previews/architecture/production_batch_12_architecture_doors_openings_qa_montage.png",
+    "original_reconstructions": "previews/architecture/production_batch_12_architecture_doors_openings_reconstructed_original.png",
+    "extended_reconstructions": "previews/architecture/production_batch_12_architecture_doors_openings_reconstructed_extended.png",
+    "mixed_corridor": "previews/architecture/production_batch_12_architecture_doors_openings_mixed_corridor.png",
+    "review_bundle": "release/production_batch_12_architecture_doors_openings_review_bundle.zip"
+  },
+  "status": "pass",
+  "failures": [],
+  "review_state": "needs_human_review; no Batch 12 asset is approved by this task"
+}

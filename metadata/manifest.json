@@ -2706,6 +2706,745 @@
       "approved_staging_path": "staging/approved/hospital_bed_unmade_01.png"
     },
     {
+      "id": "hospital_door_glazed_closed_01",
+      "filename": "hospital_door_glazed_closed_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_door_glazed_closed",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 32,
+      "canvas_height": 52,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "single",
+        "hinged",
+        "glazed",
+        "closed",
+        "grid_32",
+        "C3"
+      ],
+      "source": "references/architecture/master_validation_C3_v2/sources/rastalr_architecture_master_C3_glazed_single_door_closed_v3.png",
+      "source_sha256": "41fcc7fdd861565733df8fa21eeb99b2fc825ed931c781a19acde2d174980298",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_door_glazed_closed_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_door_glazed_closed_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "0000ffc7d3c17e7e",
+      "notes": "Batch 12 C3; validated locked-edit glazed single doorway; exact C1 structural crop.",
+      "updated_at": "2026-09-10T16:46:58.958859+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_single_doorway",
+      "architecture_provenance": {
+        "master_id": "C3",
+        "master": "rastalr_architecture_master_C3_glazed_single_door_closed_v3.png",
+        "representation": "single_grid_locked_glazed_doorway_module",
+        "locked_edit_base": "C1"
+      },
+      "validation_reference": "references/architecture/master_validation_C3_v2/architecture_C3_validation_report.json",
+      "normalized_sha256": "958cda88b30b6598efda913506fa3d9658a51df1e5005da87f691831e41418c2",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
+      "id": "hospital_door_single_closed_01",
+      "filename": "hospital_door_single_closed_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_door_single_closed",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 32,
+      "canvas_height": 52,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "single",
+        "hinged",
+        "closed",
+        "grid_32",
+        "C1"
+      ],
+      "source": "references/architecture/master_validation_C1_v1/sources/rastalr_architecture_master_C1_single_hinged_door_closed_v1.png",
+      "source_sha256": "85a3209ef27c26d7f3fba8a9e8943ae0543a9f303b8ceaeb652e776d65145ae3",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_door_single_closed_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_door_single_closed_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "0000fffefcfc7e3c",
+      "notes": "Batch 12 C1; exact validated one-cell doorway crop; no trim, padding, or warp.",
+      "updated_at": "2026-09-10T16:46:58.985744+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_single_doorway",
+      "architecture_provenance": {
+        "master_id": "C1",
+        "master": "rastalr_architecture_master_C1_single_hinged_door_closed_v1.png",
+        "representation": "single_grid_locked_doorway_module"
+      },
+      "validation_reference": "references/architecture/master_validation_C1_v1/architecture_C1_validation_report.json",
+      "normalized_sha256": "d6ac11a0664864de48b06a9f256bba4cb34aabf93730070847e15ba8f925bf7f",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
+      "id": "hospital_door_single_half_open_01",
+      "filename": "hospital_door_single_half_open_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_door_single_half_open",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 32,
+      "canvas_height": 52,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "single",
+        "hinged",
+        "half_open",
+        "grid_32",
+        "C2"
+      ],
+      "source": "references/architecture/master_validation_C2_v1/sources/rastalr_architecture_master_C2_single_hinged_door_half_open_v1.png",
+      "source_sha256": "3cf6ea64b6ceed0a4f9cc08b907e6c893ebcbe1ded4302343469d2c32c5c94b1",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_door_single_half_open_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_door_single_half_open_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "0001f9bdbdb93938",
+      "notes": "Batch 12 C2; one logical door asset assembled from a fixed doorway and its validated projecting leaf overlay.",
+      "updated_at": "2026-09-10T16:46:59.054006+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_single_doorway",
+      "architecture_provenance": {
+        "master_id": "C2",
+        "master": "rastalr_architecture_master_C2_single_hinged_door_half_open_v1.png",
+        "representation": "fixed_grid_locked_doorway_plus_leaf_projection_overlay"
+      },
+      "validation_reference": "references/architecture/master_validation_C2_v1/architecture_C2_validation_report.json",
+      "components": [
+        {
+          "role": "leaf_projection",
+          "filename": "hospital_door_single_half_open_leaf_projection_01.png",
+          "source": "references/architecture/master_validation_C2_v1/sources/rastalr_architecture_master_C2_single_hinged_door_half_open_v1.png",
+          "source_sha256": "3cf6ea64b6ceed0a4f9cc08b907e6c893ebcbe1ded4302343469d2c32c5c94b1",
+          "source_dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "crop": [
+            640,
+            408,
+            896,
+            496
+          ],
+          "source_scale": 8,
+          "expected_native_dimensions": [
+            32,
+            11
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "anchor_relative_to_logical_native": [
+            0,
+            51
+          ],
+          "alpha_policy": "masked_overlay",
+          "validation_reference": "references/architecture/master_validation_C2_v1/architecture_C2_validation_report.json",
+          "staging_path": "staging/pending/raw/components/hospital_door_single_half_open_01/hospital_door_single_half_open_leaf_projection_01.png",
+          "normalized_path": "staging/pending/normalized/components/hospital_door_single_half_open_01/hospital_door_single_half_open_leaf_projection_01.png",
+          "raw_qa_status": "warning",
+          "raw_qa_issues": [
+            {
+              "code": "touching_canvas_edge",
+              "severity": "warning",
+              "message": "Visible pixels reach a canvas edge; source may be clipped."
+            }
+          ],
+          "qa_status": "pass",
+          "qa_issues": [],
+          "mask_polygon_source_px": [
+            [
+              688,
+              88
+            ],
+            [
+              840,
+              176
+            ],
+            [
+              840,
+              496
+            ],
+            [
+              688,
+              408
+            ]
+          ],
+          "deterministic_geometry_mask": "validated_source_polygon",
+          "canvas_width": 32,
+          "canvas_height": 11,
+          "normalized_sha256": "158cd1b27cc9dd7875f289ea60b37a477207a054729b6dda2d803302f3753a32",
+          "perceptual_hash": "c3c3e3e3f3f3fbff",
+          "normalization_exception": {
+            "kind": "architecture_grid_preserving",
+            "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+            "padding_applied": 0,
+            "trim_applied": false,
+            "scaler": "nearest_neighbor"
+          }
+        }
+      ],
+      "normalized_sha256": "5173af07e508268ad131fe99510460b0e15eb985a3e6322d94dabc70134de53c",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
+      "id": "hospital_double_doors_closed_01",
+      "filename": "hospital_double_doors_closed_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_double_doors_closed",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 64,
+      "canvas_height": 52,
+      "footprint_width_tiles": 2,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "double",
+        "hinged",
+        "closed",
+        "grid_32",
+        "C4"
+      ],
+      "source": "references/architecture/master_validation_C4_v1/sources/rastalr_architecture_master_C4_double_doors_closed_v1.png",
+      "source_sha256": "bead235661f5cc47ebb417bc12a08ecbc56f1a6d73d091c69bd2d4ce7d03cbdd",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_double_doors_closed_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_double_doors_closed_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "0000fff7e7e76766",
+      "notes": "Batch 12 C4; exact two-cell closed double-door composite crop.",
+      "updated_at": "2026-09-10T16:46:59.084047+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        64,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_double_doorway",
+      "architecture_provenance": {
+        "master_id": "C4",
+        "master": "rastalr_architecture_master_C4_double_doors_closed_v1.png",
+        "representation": "single_grid_locked_double_doorway_module"
+      },
+      "validation_reference": "references/architecture/master_validation_C4_v1/architecture_C4_validation_report.json",
+      "normalized_sha256": "e31807dcf955f5684d7a72f0900de44f71f408d33b86b0a304f137efb26b853f",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
+      "id": "hospital_double_doors_half_open_01",
+      "filename": "hospital_double_doors_half_open_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_double_doors_half_open",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 64,
+      "canvas_height": 52,
+      "footprint_width_tiles": 2,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "double",
+        "hinged",
+        "half_open",
+        "grid_32",
+        "C5"
+      ],
+      "source": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+      "source_sha256": "6b79b549b768d3836a30290fe7219df92c9829407a003d5ccc016b103b401387",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_double_doors_half_open_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_double_doors_half_open_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "0000e7e7ffe76666",
+      "notes": "Batch 12 C5; one logical double door assembled from a fixed doorway and two independently anchored leaf overlays.",
+      "updated_at": "2026-09-10T16:46:59.183091+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        64,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_double_doorway",
+      "architecture_provenance": {
+        "master_id": "C5",
+        "master": "rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+        "representation": "fixed_grid_locked_double_doorway_plus_two_leaf_projection_overlays"
+      },
+      "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json",
+      "components": [
+        {
+          "role": "left_leaf_projection",
+          "filename": "hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "source": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+          "source_sha256": "6b79b549b768d3836a30290fe7219df92c9829407a003d5ccc016b103b401387",
+          "source_dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "crop": [
+            384,
+            408,
+            640,
+            496
+          ],
+          "source_scale": 8,
+          "expected_native_dimensions": [
+            32,
+            11
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "anchor_relative_to_logical_native": [
+            0,
+            51
+          ],
+          "alpha_policy": "masked_overlay",
+          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json",
+          "staging_path": "staging/pending/raw/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "normalized_path": "staging/pending/normalized/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "raw_qa_status": "warning",
+          "raw_qa_issues": [
+            {
+              "code": "touching_canvas_edge",
+              "severity": "warning",
+              "message": "Visible pixels reach a canvas edge; source may be clipped."
+            }
+          ],
+          "qa_status": "pass",
+          "qa_issues": [],
+          "mask_polygon_source_px": [
+            [
+              432,
+              88
+            ],
+            [
+              568,
+              160
+            ],
+            [
+              568,
+              496
+            ],
+            [
+              432,
+              408
+            ]
+          ],
+          "deterministic_geometry_mask": "validated_source_polygon",
+          "canvas_width": 32,
+          "canvas_height": 11,
+          "normalized_sha256": "8a71e4198dd738c1add3d1fdea61e43bbe075cad92d01c189dc8cdb7e6b1733d",
+          "perceptual_hash": "c3c3c3e3f3f3fbff",
+          "normalization_exception": {
+            "kind": "architecture_grid_preserving",
+            "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+            "padding_applied": 0,
+            "trim_applied": false,
+            "scaler": "nearest_neighbor"
+          }
+        },
+        {
+          "role": "right_leaf_projection",
+          "filename": "hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "source": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+          "source_sha256": "6b79b549b768d3836a30290fe7219df92c9829407a003d5ccc016b103b401387",
+          "source_dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "crop": [
+            640,
+            408,
+            896,
+            496
+          ],
+          "source_scale": 8,
+          "expected_native_dimensions": [
+            32,
+            11
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "anchor_relative_to_logical_native": [
+            32,
+            51
+          ],
+          "alpha_policy": "masked_overlay",
+          "validation_reference": "references/architecture/master_validation_C5_v1/architecture_C5_validation_report.json",
+          "staging_path": "staging/pending/raw/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "normalized_path": "staging/pending/normalized/components/hospital_double_doors_half_open_01/hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "raw_qa_status": "warning",
+          "raw_qa_issues": [
+            {
+              "code": "touching_canvas_edge",
+              "severity": "warning",
+              "message": "Visible pixels reach a canvas edge; source may be clipped."
+            }
+          ],
+          "qa_status": "pass",
+          "qa_issues": [],
+          "mask_polygon_source_px": [
+            [
+              712,
+              160
+            ],
+            [
+              848,
+              88
+            ],
+            [
+              848,
+              408
+            ],
+            [
+              712,
+              496
+            ]
+          ],
+          "deterministic_geometry_mask": "validated_source_polygon",
+          "canvas_width": 32,
+          "canvas_height": 11,
+          "normalized_sha256": "a244bfcc17f6ebf6674be9ec9b8a94d508749eee3411733deeae57e8858bc1a1",
+          "perceptual_hash": "c3c3c3c7cfcfdfff",
+          "normalization_exception": {
+            "kind": "architecture_grid_preserving",
+            "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+            "padding_applied": 0,
+            "trim_applied": false,
+            "scaler": "nearest_neighbor"
+          }
+        }
+      ],
+      "normalized_sha256": "efa36b41d1f431ac70f004a00b5b8fd4a3a21732758411df0d57b290a7f24307",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
+      "id": "hospital_equipment_opening_wide_01",
+      "filename": "hospital_equipment_opening_wide_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_equipment_opening_wide",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 96,
+      "canvas_height": 52,
+      "footprint_width_tiles": 3,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "equipment",
+        "service_opening",
+        "wide",
+        "three_cell",
+        "grid_32",
+        "C8"
+      ],
+      "source": "references/architecture/master_validation_C8_v1/sources/rastalr_architecture_master_C8_wide_equipment_opening_locked_v1.png",
+      "source_sha256": "1643f70cda5f591210cf7393309839f996ccfb07499b0eb80dba4253ee445376",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        384,
+        0,
+        1152,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_equipment_opening_wide_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_equipment_opening_wide_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "ffff8080808000ff",
+      "notes": "Batch 12 C8; exact three-cell reinforced equipment/service-opening composite crop.",
+      "updated_at": "2026-09-10T16:46:59.214754+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        96,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_wide_equipment_opening",
+      "architecture_provenance": {
+        "master_id": "C8",
+        "master": "rastalr_architecture_master_C8_wide_equipment_opening_locked_v1.png",
+        "representation": "single_grid_locked_three_cell_equipment_opening_module",
+        "locked_edit_base": "C4"
+      },
+      "validation_reference": "references/architecture/master_validation_C8_v1/architecture_C8_validation_report.json",
+      "normalized_sha256": "f32bbbf884bc4d6f1e7c9641fb5a13958fb07ca8c20531133f95f921fc1e8ccc",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
       "id": "hospital_floor_alt_01",
       "filename": "hospital_floor_alt_01.png",
       "category": "architecture",
@@ -3720,6 +4459,306 @@
         "scaler": "nearest_neighbor"
       },
       "approved_staging_path": "staging/approved/hospital_front_wall_cutaway_04.png"
+    },
+    {
+      "id": "hospital_sliding_clinical_doors_closed_01",
+      "filename": "hospital_sliding_clinical_doors_closed_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_sliding_clinical_doors_closed",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 64,
+      "canvas_height": 52,
+      "footprint_width_tiles": 2,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "double",
+        "sliding",
+        "clinical",
+        "closed",
+        "grid_32",
+        "C6"
+      ],
+      "source": "references/architecture/master_validation_C6_v1/sources/rastalr_architecture_master_C6_sliding_clinical_doors_closed_v1.png",
+      "source_sha256": "65532af54a2bd95924f7a428f22937ee859fbf5a23256c4a3e57d2a56f5fb540",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_sliding_clinical_doors_closed_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_sliding_clinical_doors_closed_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "0000fffffdc9ff7e",
+      "notes": "Batch 12 C6; exact two-cell closed sliding clinical-door composite crop.",
+      "updated_at": "2026-09-10T16:46:59.247963+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        64,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_double_sliding_doorway",
+      "architecture_provenance": {
+        "master_id": "C6",
+        "master": "rastalr_architecture_master_C6_sliding_clinical_doors_closed_v1.png",
+        "representation": "single_grid_locked_sliding_doorway_module"
+      },
+      "validation_reference": "references/architecture/master_validation_C6_v1/architecture_C6_validation_report.json",
+      "normalized_sha256": "36053dc913f421f3f22c5a646c39d8527c91ee75767c1990197ed43c55e2da68",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
+    },
+    {
+      "id": "hospital_sliding_clinical_doors_open_01",
+      "filename": "hospital_sliding_clinical_doors_open_01.png",
+      "category": "architecture",
+      "subcategory": "doors_openings",
+      "asset_type": "hospital_sliding_clinical_doors_open",
+      "variant": 1,
+      "orientation": "default",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "canvas_width": 64,
+      "canvas_height": 52,
+      "footprint_width_tiles": 2,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "tags": [
+        "architecture",
+        "doors_openings",
+        "door",
+        "double",
+        "sliding",
+        "clinical",
+        "open",
+        "grid_32",
+        "C7"
+      ],
+      "source": "references/architecture/master_validation_C7_v1/sources/rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+      "source_sha256": "ca63c63e3a174c7a6f7b19d5acc444c223b1cc78348c1e85fd6a5d39addfb358",
+      "source_dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "staging_path": "staging/pending/raw/hospital_sliding_clinical_doors_open_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_sliding_clinical_doors_open_01.png",
+      "final_path": "",
+      "raw_qa_status": "warning",
+      "raw_qa_issues": [
+        {
+          "code": "touching_canvas_edge",
+          "severity": "warning",
+          "message": "Visible pixels reach a canvas edge; source may be clipped."
+        },
+        {
+          "code": "missing_transparency",
+          "severity": "warning",
+          "message": "No fully transparent pixels found."
+        },
+        {
+          "code": "opaque_border",
+          "severity": "warning",
+          "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+        }
+      ],
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "perceptual_hash": "ffff8181818181bd",
+      "notes": "Batch 12 C7; one logical open sliding-door state assembled from the fixed doorway and two laterally parked leaves.",
+      "updated_at": "2026-09-10T16:46:59.323208+00:00",
+      "normalization_mode": "architecture_grid_preserving",
+      "expected_native_dimensions": [
+        64,
+        52
+      ],
+      "architecture_structural_role": "north_back_wall_double_sliding_doorway",
+      "architecture_provenance": {
+        "master_id": "C7",
+        "master": "rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+        "representation": "fixed_grid_locked_opening_plus_two_parked_sliding_leaf_overlays"
+      },
+      "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+      "components": [
+        {
+          "role": "left_parked_leaf",
+          "filename": "hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "source": "references/architecture/master_validation_C7_v1/sources/rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+          "source_sha256": "ca63c63e3a174c7a6f7b19d5acc444c223b1cc78348c1e85fd6a5d39addfb358",
+          "source_dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "crop": [
+            192,
+            112,
+            416,
+            416
+          ],
+          "source_scale": 8,
+          "expected_native_dimensions": [
+            28,
+            38
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "anchor_relative_to_logical_native": [
+            -24,
+            14
+          ],
+          "alpha_policy": "full_coverage_structural_component_box",
+          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+          "staging_path": "staging/pending/raw/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "normalized_path": "staging/pending/normalized/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "raw_qa_status": "warning",
+          "raw_qa_issues": [
+            {
+              "code": "touching_canvas_edge",
+              "severity": "warning",
+              "message": "Visible pixels reach a canvas edge; source may be clipped."
+            },
+            {
+              "code": "missing_transparency",
+              "severity": "warning",
+              "message": "No fully transparent pixels found."
+            },
+            {
+              "code": "opaque_border",
+              "severity": "warning",
+              "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+            }
+          ],
+          "qa_status": "pass",
+          "qa_issues": [],
+          "canvas_width": 28,
+          "canvas_height": 38,
+          "normalized_sha256": "c2cdf979d9d61b07adf030ba833d410a5ecd70ed1c2f9e4293d1ea06c7fa0ace",
+          "perceptual_hash": "ff91818181dc7f7f",
+          "normalization_exception": {
+            "kind": "architecture_grid_preserving",
+            "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+            "padding_applied": 0,
+            "trim_applied": false,
+            "scaler": "nearest_neighbor"
+          }
+        },
+        {
+          "role": "right_parked_leaf",
+          "filename": "hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "source": "references/architecture/master_validation_C7_v1/sources/rastalr_architecture_master_C7_sliding_clinical_doors_open_v1.png",
+          "source_sha256": "ca63c63e3a174c7a6f7b19d5acc444c223b1cc78348c1e85fd6a5d39addfb358",
+          "source_dimensions": {
+            "width": 1536,
+            "height": 1024
+          },
+          "crop": [
+            864,
+            112,
+            1088,
+            416
+          ],
+          "source_scale": 8,
+          "expected_native_dimensions": [
+            28,
+            38
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "anchor_relative_to_logical_native": [
+            60,
+            14
+          ],
+          "alpha_policy": "full_coverage_structural_component_box",
+          "validation_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+          "staging_path": "staging/pending/raw/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "normalized_path": "staging/pending/normalized/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "raw_qa_status": "warning",
+          "raw_qa_issues": [
+            {
+              "code": "touching_canvas_edge",
+              "severity": "warning",
+              "message": "Visible pixels reach a canvas edge; source may be clipped."
+            },
+            {
+              "code": "missing_transparency",
+              "severity": "warning",
+              "message": "No fully transparent pixels found."
+            },
+            {
+              "code": "opaque_border",
+              "severity": "warning",
+              "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+            }
+          ],
+          "qa_status": "pass",
+          "qa_issues": [],
+          "canvas_width": 28,
+          "canvas_height": 38,
+          "normalized_sha256": "44c5bffd5a3be8a5559638bb1a7ca6065526ed2d68c9a9b899f9bba39b198991",
+          "perceptual_hash": "7f515141013f7f7f",
+          "normalization_exception": {
+            "kind": "architecture_grid_preserving",
+            "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+            "padding_applied": 0,
+            "trim_applied": false,
+            "scaler": "nearest_neighbor"
+          }
+        }
+      ],
+      "normalized_sha256": "7cd5a7addcfe1b126684dfbb53d5e2222f4fcbf3123db94d161ac13129a4852f",
+      "normalization_exception": {
+        "kind": "architecture_grid_preserving",
+        "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+        "padding_applied": 0,
+        "trim_applied": false,
+        "scaler": "nearest_neighbor"
+      }
     },
     {
       "id": "hospital_wall_back_straight_01",

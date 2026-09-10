@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-10T00:42:50.651423+00:00",
-  "assets_checked": 212,
+  "generated_at": "2026-09-10T16:47:03.952004+00:00",
+  "assets_checked": 220,
   "status_counts": {
-    "pass": 166,
+    "pass": 174,
     "warning": 46
   },
   "assets": [
@@ -1547,6 +1547,850 @@
       }
     },
     {
+      "id": "hospital_door_glazed_closed_01",
+      "filename": "hospital_door_glazed_closed_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_door_glazed_closed_01.png",
+      "dimensions": {
+        "width": 32,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 1664,
+        "total_pixels": 1664,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 256,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 256,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 106496,
+            "total_pixels": 106496,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 32,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 1664,
+            "total_pixels": 1664,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 256,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      }
+    },
+    {
+      "id": "hospital_door_single_closed_01",
+      "filename": "hospital_door_single_closed_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_door_single_closed_01.png",
+      "dimensions": {
+        "width": 32,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 1664,
+        "total_pixels": 1664,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 256,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 256,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 106496,
+            "total_pixels": 106496,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 32,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 1664,
+            "total_pixels": 1664,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 256,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      }
+    },
+    {
+      "id": "hospital_door_single_half_open_01",
+      "filename": "hospital_door_single_half_open_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_door_single_half_open_01.png",
+      "dimensions": {
+        "width": 32,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 1664,
+        "total_pixels": 1664,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 256,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 256,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 106496,
+            "total_pixels": 106496,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 32,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 1664,
+            "total_pixels": 1664,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 256,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      },
+      "components": [
+        {
+          "role": "leaf_projection",
+          "filename": "hospital_door_single_half_open_leaf_projection_01.png",
+          "dimensions": {
+            "width": 32,
+            "height": 11
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": true,
+            "transparent_pixels": 247,
+            "opaque_pixels": 105,
+            "total_pixels": 352,
+            "transparent_ratio": 0.7017
+          },
+          "alpha_bounds": [
+            7,
+            0,
+            25,
+            11
+          ],
+          "connection_edges_covered": false,
+          "intentional_alpha_policy": "masked_overlay",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 256,
+            "height": 88
+          },
+          "architecture_qa": {
+            "raw": {
+              "dimensions": {
+                "width": 256,
+                "height": 88
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": true,
+                "transparent_pixels": 15676,
+                "opaque_pixels": 6852,
+                "total_pixels": 22528,
+                "transparent_ratio": 0.6958
+              },
+              "alpha_bounds": [
+                48,
+                0,
+                201,
+                88
+              ],
+              "connection_edges_covered": false,
+              "intentional_alpha_policy": "masked_overlay",
+              "issues": [],
+              "status": "pass"
+            },
+            "native": {
+              "dimensions": {
+                "width": 32,
+                "height": 11
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": true,
+                "transparent_pixels": 247,
+                "opaque_pixels": 105,
+                "total_pixels": 352,
+                "transparent_ratio": 0.7017
+              },
+              "alpha_bounds": [
+                7,
+                0,
+                25,
+                11
+              ],
+              "connection_edges_covered": false,
+              "intentional_alpha_policy": "masked_overlay",
+              "issues": [],
+              "status": "pass",
+              "raw_dimensions": {
+                "width": 256,
+                "height": 88
+              }
+            },
+            "generic_findings_retained_as_intentional": [
+              {
+                "code": "touching_canvas_edge",
+                "severity": "warning",
+                "message": "Visible pixels reach a canvas edge; source may be clipped."
+              }
+            ],
+            "normalization_exception": {
+              "kind": "architecture_grid_preserving",
+              "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+              "padding_applied": 0,
+              "trim_applied": false,
+              "scaler": "nearest_neighbor"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "hospital_double_doors_closed_01",
+      "filename": "hospital_double_doors_closed_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_double_doors_closed_01.png",
+      "dimensions": {
+        "width": 64,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 3328,
+        "total_pixels": 3328,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 512,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 512,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 212992,
+            "total_pixels": 212992,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 64,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 3328,
+            "total_pixels": 3328,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 512,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      }
+    },
+    {
+      "id": "hospital_double_doors_half_open_01",
+      "filename": "hospital_double_doors_half_open_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_double_doors_half_open_01.png",
+      "dimensions": {
+        "width": 64,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 3328,
+        "total_pixels": 3328,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 512,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 512,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 212992,
+            "total_pixels": 212992,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 64,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 3328,
+            "total_pixels": 3328,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 512,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      },
+      "components": [
+        {
+          "role": "left_leaf_projection",
+          "filename": "hospital_double_doors_half_open_left_leaf_projection_01.png",
+          "dimensions": {
+            "width": 32,
+            "height": 11
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": true,
+            "transparent_pixels": 258,
+            "opaque_pixels": 94,
+            "total_pixels": 352,
+            "transparent_ratio": 0.733
+          },
+          "alpha_bounds": [
+            7,
+            0,
+            23,
+            11
+          ],
+          "connection_edges_covered": false,
+          "intentional_alpha_policy": "masked_overlay",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 256,
+            "height": 88
+          },
+          "architecture_qa": {
+            "raw": {
+              "dimensions": {
+                "width": 256,
+                "height": 88
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": true,
+                "transparent_pixels": 16388,
+                "opaque_pixels": 6140,
+                "total_pixels": 22528,
+                "transparent_ratio": 0.7275
+              },
+              "alpha_bounds": [
+                48,
+                0,
+                185,
+                88
+              ],
+              "connection_edges_covered": false,
+              "intentional_alpha_policy": "masked_overlay",
+              "issues": [],
+              "status": "pass"
+            },
+            "native": {
+              "dimensions": {
+                "width": 32,
+                "height": 11
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": true,
+                "transparent_pixels": 258,
+                "opaque_pixels": 94,
+                "total_pixels": 352,
+                "transparent_ratio": 0.733
+              },
+              "alpha_bounds": [
+                7,
+                0,
+                23,
+                11
+              ],
+              "connection_edges_covered": false,
+              "intentional_alpha_policy": "masked_overlay",
+              "issues": [],
+              "status": "pass",
+              "raw_dimensions": {
+                "width": 256,
+                "height": 88
+              }
+            },
+            "generic_findings_retained_as_intentional": [
+              {
+                "code": "touching_canvas_edge",
+                "severity": "warning",
+                "message": "Visible pixels reach a canvas edge; source may be clipped."
+              }
+            ],
+            "normalization_exception": {
+              "kind": "architecture_grid_preserving",
+              "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+              "padding_applied": 0,
+              "trim_applied": false,
+              "scaler": "nearest_neighbor"
+            }
+          }
+        },
+        {
+          "role": "right_leaf_projection",
+          "filename": "hospital_double_doors_half_open_right_leaf_projection_01.png",
+          "dimensions": {
+            "width": 32,
+            "height": 11
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": true,
+            "transparent_pixels": 258,
+            "opaque_pixels": 94,
+            "total_pixels": 352,
+            "transparent_ratio": 0.733
+          },
+          "alpha_bounds": [
+            9,
+            0,
+            25,
+            11
+          ],
+          "connection_edges_covered": false,
+          "intentional_alpha_policy": "masked_overlay",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 256,
+            "height": 88
+          },
+          "architecture_qa": {
+            "raw": {
+              "dimensions": {
+                "width": 256,
+                "height": 88
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": true,
+                "transparent_pixels": 16388,
+                "opaque_pixels": 6140,
+                "total_pixels": 22528,
+                "transparent_ratio": 0.7275
+              },
+              "alpha_bounds": [
+                72,
+                0,
+                209,
+                88
+              ],
+              "connection_edges_covered": false,
+              "intentional_alpha_policy": "masked_overlay",
+              "issues": [],
+              "status": "pass"
+            },
+            "native": {
+              "dimensions": {
+                "width": 32,
+                "height": 11
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": true,
+                "transparent_pixels": 258,
+                "opaque_pixels": 94,
+                "total_pixels": 352,
+                "transparent_ratio": 0.733
+              },
+              "alpha_bounds": [
+                9,
+                0,
+                25,
+                11
+              ],
+              "connection_edges_covered": false,
+              "intentional_alpha_policy": "masked_overlay",
+              "issues": [],
+              "status": "pass",
+              "raw_dimensions": {
+                "width": 256,
+                "height": 88
+              }
+            },
+            "generic_findings_retained_as_intentional": [
+              {
+                "code": "touching_canvas_edge",
+                "severity": "warning",
+                "message": "Visible pixels reach a canvas edge; source may be clipped."
+              }
+            ],
+            "normalization_exception": {
+              "kind": "architecture_grid_preserving",
+              "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+              "padding_applied": 0,
+              "trim_applied": false,
+              "scaler": "nearest_neighbor"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "hospital_equipment_opening_wide_01",
+      "filename": "hospital_equipment_opening_wide_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_equipment_opening_wide_01.png",
+      "dimensions": {
+        "width": 96,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 4992,
+        "total_pixels": 4992,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 768,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 768,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 319488,
+            "total_pixels": 319488,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 96,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 4992,
+            "total_pixels": 4992,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 768,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      }
+    },
+    {
       "id": "hospital_floor_alt_01",
       "filename": "hospital_floor_alt_01.png",
       "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_floor_alt_01.png",
@@ -2617,6 +3461,370 @@
           "scaler": "nearest_neighbor"
         }
       }
+    },
+    {
+      "id": "hospital_sliding_clinical_doors_closed_01",
+      "filename": "hospital_sliding_clinical_doors_closed_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_sliding_clinical_doors_closed_01.png",
+      "dimensions": {
+        "width": 64,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 3328,
+        "total_pixels": 3328,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 512,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 512,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 212992,
+            "total_pixels": 212992,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 64,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 3328,
+            "total_pixels": 3328,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 512,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      }
+    },
+    {
+      "id": "hospital_sliding_clinical_doors_open_01",
+      "filename": "hospital_sliding_clinical_doors_open_01.png",
+      "path": "C:\\Users\\USER\\RastalR-Modern\\staging\\pending\\normalized\\hospital_sliding_clinical_doors_open_01.png",
+      "dimensions": {
+        "width": 64,
+        "height": 52
+      },
+      "mode": "RGBA",
+      "alpha": {
+        "has_transparency": false,
+        "transparent_pixels": 0,
+        "opaque_pixels": 3328,
+        "total_pixels": 3328,
+        "transparent_ratio": 0.0
+      },
+      "connection_edges_covered": true,
+      "intentional_alpha_policy": "full_coverage_structural_component_box",
+      "issues": [],
+      "status": "pass",
+      "raw_dimensions": {
+        "width": 512,
+        "height": 416
+      },
+      "architecture_qa": {
+        "raw": {
+          "dimensions": {
+            "width": 512,
+            "height": 416
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 212992,
+            "total_pixels": 212992,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass"
+        },
+        "native": {
+          "dimensions": {
+            "width": 64,
+            "height": 52
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 3328,
+            "total_pixels": 3328,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 512,
+            "height": 416
+          }
+        },
+        "generic_findings_retained_as_intentional": [
+          {
+            "code": "touching_canvas_edge",
+            "severity": "warning",
+            "message": "Visible pixels reach a canvas edge; source may be clipped."
+          },
+          {
+            "code": "missing_transparency",
+            "severity": "warning",
+            "message": "No fully transparent pixels found."
+          },
+          {
+            "code": "opaque_border",
+            "severity": "warning",
+            "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+          }
+        ],
+        "normalization_exception": {
+          "kind": "architecture_grid_preserving",
+          "reason": "Canonical architecture modules intentionally retain exact opaque connection boxes; generic alpha trim and transparent safety padding would shift grid-aligned edges.",
+          "padding_applied": 0,
+          "trim_applied": false,
+          "scaler": "nearest_neighbor"
+        }
+      },
+      "components": [
+        {
+          "role": "left_parked_leaf",
+          "filename": "hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+          "dimensions": {
+            "width": 28,
+            "height": 38
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 1064,
+            "total_pixels": 1064,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 224,
+            "height": 304
+          },
+          "architecture_qa": {
+            "raw": {
+              "dimensions": {
+                "width": 224,
+                "height": 304
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": false,
+                "transparent_pixels": 0,
+                "opaque_pixels": 68096,
+                "total_pixels": 68096,
+                "transparent_ratio": 0.0
+              },
+              "connection_edges_covered": true,
+              "intentional_alpha_policy": "full_coverage_structural_component_box",
+              "issues": [],
+              "status": "pass"
+            },
+            "native": {
+              "dimensions": {
+                "width": 28,
+                "height": 38
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": false,
+                "transparent_pixels": 0,
+                "opaque_pixels": 1064,
+                "total_pixels": 1064,
+                "transparent_ratio": 0.0
+              },
+              "connection_edges_covered": true,
+              "intentional_alpha_policy": "full_coverage_structural_component_box",
+              "issues": [],
+              "status": "pass",
+              "raw_dimensions": {
+                "width": 224,
+                "height": 304
+              }
+            },
+            "generic_findings_retained_as_intentional": [
+              {
+                "code": "touching_canvas_edge",
+                "severity": "warning",
+                "message": "Visible pixels reach a canvas edge; source may be clipped."
+              },
+              {
+                "code": "missing_transparency",
+                "severity": "warning",
+                "message": "No fully transparent pixels found."
+              },
+              {
+                "code": "opaque_border",
+                "severity": "warning",
+                "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+              }
+            ],
+            "normalization_exception": {
+              "kind": "architecture_grid_preserving",
+              "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+              "padding_applied": 0,
+              "trim_applied": false,
+              "scaler": "nearest_neighbor"
+            }
+          }
+        },
+        {
+          "role": "right_parked_leaf",
+          "filename": "hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+          "dimensions": {
+            "width": 28,
+            "height": 38
+          },
+          "mode": "RGBA",
+          "alpha": {
+            "has_transparency": false,
+            "transparent_pixels": 0,
+            "opaque_pixels": 1064,
+            "total_pixels": 1064,
+            "transparent_ratio": 0.0
+          },
+          "connection_edges_covered": true,
+          "intentional_alpha_policy": "full_coverage_structural_component_box",
+          "issues": [],
+          "status": "pass",
+          "raw_dimensions": {
+            "width": 224,
+            "height": 304
+          },
+          "architecture_qa": {
+            "raw": {
+              "dimensions": {
+                "width": 224,
+                "height": 304
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": false,
+                "transparent_pixels": 0,
+                "opaque_pixels": 68096,
+                "total_pixels": 68096,
+                "transparent_ratio": 0.0
+              },
+              "connection_edges_covered": true,
+              "intentional_alpha_policy": "full_coverage_structural_component_box",
+              "issues": [],
+              "status": "pass"
+            },
+            "native": {
+              "dimensions": {
+                "width": 28,
+                "height": 38
+              },
+              "mode": "RGBA",
+              "alpha": {
+                "has_transparency": false,
+                "transparent_pixels": 0,
+                "opaque_pixels": 1064,
+                "total_pixels": 1064,
+                "transparent_ratio": 0.0
+              },
+              "connection_edges_covered": true,
+              "intentional_alpha_policy": "full_coverage_structural_component_box",
+              "issues": [],
+              "status": "pass",
+              "raw_dimensions": {
+                "width": 224,
+                "height": 304
+              }
+            },
+            "generic_findings_retained_as_intentional": [
+              {
+                "code": "touching_canvas_edge",
+                "severity": "warning",
+                "message": "Visible pixels reach a canvas edge; source may be clipped."
+              },
+              {
+                "code": "missing_transparency",
+                "severity": "warning",
+                "message": "No fully transparent pixels found."
+              },
+              {
+                "code": "opaque_border",
+                "severity": "warning",
+                "message": "Every outer-edge pixel is opaque; inspect for a generated background."
+              }
+            ],
+            "normalization_exception": {
+              "kind": "architecture_grid_preserving",
+              "reason": "Validated architecture implementation component retains its exact crop, anchor, and alpha behavior.",
+              "padding_applied": 0,
+              "trim_applied": false,
+              "scaler": "nearest_neighbor"
+            }
+          }
+        }
+      ]
     },
     {
       "id": "hospital_wall_back_straight_01",

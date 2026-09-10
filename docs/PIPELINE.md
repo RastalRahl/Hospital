@@ -15,6 +15,8 @@ python tools/pilot.py pipeline --batch metadata/pilot_batch.json
 
 The JSON batch has an `assets` array. Required fields are `source`, `category`, and `asset_type`; paths are repository-relative. Optional `crop` is `[left, top, right, bottom]` using Pillow coordinates. `source_scale` is a positive integer and defaults to `1`; set it explicitly (for example, `8`) only when a sheet was rendered at a known pixel working scale. Supply meaningful `variant`, `orientation`, `state`, `footprint_width_tiles`, `footprint_height_tiles`, `anchor`, `reuse_scope`, `tags`, and `notes` when they differ from defaults.
 
+Grid-locked architecture entries may contain a `components` array when one logical asset needs deterministic implementation layers. Every component declares a stable PNG `filename`, `role`, exact `crop`, `expected_native_dimensions`, `anchor_relative_to_logical_native`, and `alpha_policy`. A validated `mask_polygon_source_px` may be supplied only for an intentional projected overlay; it is a deterministic geometry mask, never an automatic alpha cleanup. Component PNGs are staged and QA'd with their parent, but are not manifest assets or catalog rows.
+
 ```json
 {
   "assets": [

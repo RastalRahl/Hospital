@@ -99,3 +99,56 @@ def test_qa_retains_raw_edge_clipping_finding_after_normalization(tmp_path, monk
     approved = core.load_manifest()["assets"][0]
     assert approved["approval_status"] == "approved"
     assert approved["human_qa_disposition"] == "Human review confirmed this source-edge cue is benign."
+
+
+def test_grid_locked_components_remain_part_of_one_logical_manifest_asset(tmp_path, monkeypatch):
+    root = tmp_path
+    for directory in ("metadata", "source/generated/incoming", "staging/pending/raw", "staging/pending/normalized"):
+        (root / directory).mkdir(parents=True, exist_ok=True)
+    for name, path in {
+        "ROOT": root, "MANIFEST_PATH": root / "metadata/manifest.json", "CATALOG_PATH": root / "metadata/catalog.csv",
+        "QA_JSON_PATH": root / "metadata/qa_report.json", "QA_MD_PATH": root / "metadata/qa_report.md",
+        "QA_CSV_PATH": root / "metadata/qa_report.csv",
+    }.items():
+        monkeypatch.setattr(core, name, path)
+
+    source = Image.new("RGBA", (16, 16), (40, 55, 70, 255))
+    source.save(root / "source/generated/incoming/door.png")
+    leaf = Image.new("RGBA", (16, 8), (0, 0, 0, 0))
+    for y in range(8):
+        for x in range(16):
+            leaf.putpixel((x, y), (0, 0, 0, 0) if x < 8 else (140, 180, 194, 255))
+    leaf.save(root / "source/generated/incoming/leaf.png")
+    batch = {"assets": [{
+        "source": "source/generated/incoming/door.png", "crop": [0, 0, 16, 16], "category": "architecture",
+        "asset_type": "test_architecture_door", "source_scale": 8, "expected_native_dimensions": [2, 2],
+        "normalization_mode": "architecture_grid_preserving", "anchor": "wall_center",
+        "components": [{
+            "role": "leaf_projection", "filename": "test_architecture_door_leaf_projection_01.png",
+            "source": "source/generated/incoming/leaf.png", "crop": [0, 0, 16, 8], "expected_native_dimensions": [2, 1],
+            "anchor_relative_to_logical_native": [0, 1], "alpha_policy": "masked_overlay",
+        }],
+    }]}
+    (root / "metadata/pilot_batch.json").write_text(json.dumps(batch), encoding="utf-8")
+
+    assert len(core.ingest_batch("metadata/pilot_batch.json")) == 1
+    assert core.normalize_pending() == ["test_architecture_door_01"]
+    report = core.run_qa()
+    manifest = core.load_manifest()
+    assert len(manifest["assets"]) == 1
+    asset = manifest["assets"][0]
+    # This synthetic 2x1 overlay is intentionally below the generic size cue;
+    # the important behavior is that it stays a non-failing child of one asset.
+    assert asset["qa_status"] in {"pass", "warning"}
+    assert asset["components"][0]["qa_status"] in {"pass", "warning"}
+    assert asset["components"][0]["anchor_relative_to_logical_native"] == [0, 1]
+    assert (root / asset["components"][0]["normalized_path"]).is_file()
+    core.write_catalog()
+    rows = (root / "metadata/catalog.csv").read_text(encoding="utf-8").splitlines()
+    assert len(rows) == 2
+    assert "component_count" in rows[0]
+    assert report["assets_checked"] == 1
+    core.approve_assets(["test_architecture_door_01"], human_qa_disposition="Synthetic small overlay is an intentional test fixture.")
+    approved = core.load_manifest()["assets"][0]
+    assert (root / approved["components"][0]["approved_staging_path"]).is_file()
+    assert (root / approved["components"][0]["final_path"]).is_file()
