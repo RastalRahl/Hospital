@@ -1,0 +1,113 @@
+{
+  "master_id": "C5_double_doors_half_open",
+  "version": "clean_v1",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "wall_run_cells": 5,
+  "opening_source_px": [
+    384,
+    0,
+    896,
+    416
+  ],
+  "center_seam_source_x": 640,
+  "floor_bounds_source_px": [
+    128,
+    416,
+    1408,
+    928
+  ],
+  "door_state": "half_open",
+  "door_type": "double_hospital_doors",
+  "hinge_sides": [
+    "left_jamb",
+    "right_jamb"
+  ],
+  "swing": "inward",
+  "left_leaf_projection_native_polygon": [
+    [
+      54,
+      11
+    ],
+    [
+      71,
+      20
+    ],
+    [
+      71,
+      62
+    ],
+    [
+      54,
+      51
+    ]
+  ],
+  "right_leaf_projection_native_polygon": [
+    [
+      89,
+      20
+    ],
+    [
+      106,
+      11
+    ],
+    [
+      106,
+      51
+    ],
+    [
+      89,
+      62
+    ]
+  ],
+  "left_leaf_projection_source_polygon": [
+    [
+      432,
+      88
+    ],
+    [
+      568,
+      160
+    ],
+    [
+      568,
+      496
+    ],
+    [
+      432,
+      408
+    ]
+  ],
+  "right_leaf_projection_source_polygon": [
+    [
+      712,
+      160
+    ],
+    [
+      848,
+      88
+    ],
+    [
+      848,
+      408
+    ],
+    [
+      712,
+      496
+    ]
+  ],
+  "production_note": "C5 reuses the validated C4 two-cell doorway geometry exactly. Both leaves are partially open inward and project into the room. As with C2, later production may recommend a split representation: doorway plus projecting leaf overlays."
+}

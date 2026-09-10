@@ -1,0 +1,129 @@
+{
+  "validation_id": "architecture_master_C3_v1",
+  "purpose": "reference-only C3 geometry validation",
+  "production_metadata_modified": false,
+  "source": {
+    "master": "references/architecture/master_validation_C3_v1/sources/rastalr_architecture_master_C3_glazed_single_door_closed_v1.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "source_scale": 8
+  },
+  "expected": {
+    "vertical_boundaries": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_boundaries": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "doorway": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "glazing": [
+      704,
+      120,
+      832,
+      320
+    ]
+  },
+  "observed": {
+    "wall_run_x": [
+      80,
+      1455
+    ],
+    "wall_vertical_boundaries": [
+      80,
+      355,
+      630,
+      905,
+      1180,
+      1455
+    ],
+    "horizontal_landmarks": [
+      580,
+      665,
+      753,
+      819
+    ],
+    "door_frame": [
+      652,
+      235,
+      883,
+      580
+    ],
+    "glazing": [
+      703,
+      278,
+      835,
+      515
+    ]
+  },
+  "deviation_source_px": {
+    "wall_run": {
+      "left": -48,
+      "right": 47
+    },
+    "vertical_boundaries": {
+      "128": -48,
+      "384": -29,
+      "640": -10,
+      "896": 9,
+      "1152": 28,
+      "1408": 47
+    },
+    "horizontal_boundaries": {
+      "wall_floor": 164,
+      "internal_floor": -7,
+      "front_cutaway": -15,
+      "floor_bottom": -109
+    },
+    "door_frame": {
+      "left": 12,
+      "right": -13,
+      "top": 235,
+      "threshold": 164
+    },
+    "glazing": {
+      "left": -1,
+      "right": 3,
+      "top": 158,
+      "bottom": 195
+    }
+  },
+  "registration_assessment": {
+    "horizontal": "generated wall cells are approximately 275 px rather than 256 px; this is a uniform scale/origin mismatch, not usable without warping",
+    "vertical": "non-affine: the cap starts around y=205, wall/floor is y=580, then interior and cutaway landmarks contract to 665, 753, and 819",
+    "result": "fail: generated material cannot be registered to canonical Geometry safely"
+  },
+  "extraction": {
+    "attempted": false,
+    "reason": "Failure rule: significant structural/non-affine mismatch; arbitrary crop, warp, and reconstruction are prohibited."
+  },
+  "qa": {
+    "candidate_alpha_extrema": [
+      0,
+      254
+    ],
+    "candidate_alpha_bbox": [
+      0,
+      28,
+      1520,
+      1008
+    ],
+    "clipping_or_debris_review": "not applicable to a rejected pre-extraction geometry candidate"
+  },
+  "recommendation": "REGENERATE MASTER"
+}

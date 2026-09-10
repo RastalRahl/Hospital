@@ -1,0 +1,190 @@
+{
+  "validation_id": "architecture_master_C2_v1",
+  "purpose": "reference-only half-open door extraction and reconstruction validation",
+  "production_metadata_modified": false,
+  "source": {
+    "master": "references/architecture/master_validation_C2_v1/sources/rastalr_architecture_master_C2_single_hinged_door_half_open_v1.png",
+    "mode": "RGB",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "source_scale": 8
+  },
+  "geometry": {
+    "observed_structural_bounds_source_px": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "vertical_boundaries_source_px": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_boundaries_source_px": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "doorway_opening_source_px": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "leaf_projection_source_polygon": [
+      [
+        688,
+        88
+      ],
+      [
+        840,
+        176
+      ],
+      [
+        840,
+        496
+      ],
+      [
+        688,
+        408
+      ]
+    ],
+    "leaf_projection_envelope_source_px": [
+      688,
+      88,
+      840,
+      496
+    ],
+    "deviation_source_px": {
+      "structural_left": 0,
+      "structural_right": 0,
+      "cell_boundaries": {
+        "128": 0,
+        "384": 0,
+        "640": 0,
+        "896": 0,
+        "1152": 0,
+        "1408": 0
+      },
+      "floor_top": 0,
+      "internal_floor_boundary": 0,
+      "front_cutaway_top": 0,
+      "floor_bottom": 0,
+      "doorway_left": 0,
+      "doorway_right": 0,
+      "doorway_top": 0,
+      "threshold": 0,
+      "leaf_hinge_top": [
+        0,
+        0
+      ],
+      "leaf_hinge_lower": [
+        0,
+        0
+      ],
+      "leaf_outermost_projection": [
+        0,
+        0
+      ],
+      "leaf_lowest_projection": 0
+    },
+    "visual_insets": {
+      "outer_art_coverage": [
+        128,
+        7,
+        1408,
+        927
+      ],
+      "note": "Cap/panel shading and the recessed doorway art are material treatment within canonical boxes."
+    },
+    "drift": "none; structural registration is coherent, with no affine or local correction required"
+  },
+  "temporary_representation": {
+    "recommended": "split doorway + leaf projection overlay",
+    "rationale": "Keeps the 32 x 52 doorway on the exact wall grid while allowing the intentional leaf to render over the floor without an opaque rectangular crop obscuring it.",
+    "opening": {
+      "source_crop_px": [
+        640,
+        0,
+        896,
+        416
+      ],
+      "source_dimensions_px": [
+        256,
+        416
+      ],
+      "native_dimensions_px": [
+        32,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "path": "references/architecture/master_validation_C2_v1/temporary_components/hospital_door_single_half_open_opening_native.png"
+    },
+    "leaf_projection": {
+      "source_crop_px": [
+        640,
+        408,
+        896,
+        496
+      ],
+      "source_dimensions_px": [
+        256,
+        88
+      ],
+      "native_dimensions_px": [
+        32,
+        11
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "anchor_native_px": [
+        0,
+        51
+      ],
+      "path": "references/architecture/master_validation_C2_v1/temporary_components/hospital_door_single_half_open_leaf_projection_native.png"
+    },
+    "normalization": "architecture_grid_preserving; no trim or safety padding"
+  },
+  "reconstruction": {
+    "original_5_cell": {
+      "door_column": 2,
+      "native_dimensions_px": [
+        192,
+        128
+      ],
+      "interior_floor_transparent_pixels": 0,
+      "result": "pass"
+    },
+    "extended_8_cell": {
+      "door_column": 1,
+      "native_dimensions_px": [
+        288,
+        128
+      ],
+      "interior_floor_transparent_pixels": 0,
+      "result": "pass"
+    },
+    "result": "pass: no drift, no structural gap/overlap, and leaf renders above the floor"
+  },
+  "qa": {
+    "opening_connected_alpha_components": 1,
+    "leaf_connected_alpha_components": 1,
+    "suspicious_debris": 0,
+    "clipping": false,
+    "wall_cap_base_teal_continuity": "pass",
+    "floor_threshold_alignment": "pass",
+    "recommendation": "PASS"
+  }
+}

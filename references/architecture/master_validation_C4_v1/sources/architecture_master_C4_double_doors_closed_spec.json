@@ -1,0 +1,36 @@
+{
+  "master_id": "C4_double_doors_closed",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "wall_run_cells": 5,
+  "design_decision": "A perfectly centered 2-cell opening would not remain aligned to the 32x32 architecture grid in a 5-cell wall run. Therefore C4 uses a grid-aligned two-cell opening spanning cells 2-3.",
+  "opening_source_px": [
+    384,
+    0,
+    896,
+    416
+  ],
+  "center_seam_source_x": 640,
+  "floor_bounds_source_px": [
+    128,
+    416,
+    1408,
+    928
+  ],
+  "door_state": "closed",
+  "door_type": "double_hospital_doors",
+  "production_note": "This is the first 2-cell-wide doorway master. Geometry prioritizes grid alignment over perfect visual centering."
+}

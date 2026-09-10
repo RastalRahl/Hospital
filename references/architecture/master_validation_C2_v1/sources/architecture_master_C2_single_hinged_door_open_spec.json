@@ -1,0 +1,72 @@
+{
+  "master_id": "C2_single_hinged_door_open",
+  "version": "clean_v2",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "wall_run_cells": 5,
+  "opening_source_px": [
+    640,
+    0,
+    896,
+    416
+  ],
+  "floor_bounds_source_px": [
+    128,
+    416,
+    1408,
+    928
+  ],
+  "door_state": "open",
+  "hinge_side": "left",
+  "swing": "inward",
+  "leaf_projection_native_polygon": [
+    [
+      86,
+      11
+    ],
+    [
+      105,
+      22
+    ],
+    [
+      105,
+      62
+    ],
+    [
+      86,
+      51
+    ]
+  ],
+  "leaf_projection_source_polygon": [
+    [
+      688,
+      88
+    ],
+    [
+      840,
+      176
+    ],
+    [
+      840,
+      496
+    ],
+    [
+      688,
+      408
+    ]
+  ],
+  "production_note": "The wall opening remains exactly one 32x52 structural cell. The open leaf is a substantial full-height side-facing plane that extends into the room."
+}

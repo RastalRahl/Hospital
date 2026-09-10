@@ -1,0 +1,43 @@
+{
+  "master_id": "C6_sliding_clinical_doors_closed",
+  "version": "clean_v1",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "wall_run_cells": 5,
+  "opening_source_px": [
+    384,
+    0,
+    896,
+    416
+  ],
+  "meeting_line_source_x": 640,
+  "floor_bounds_source_px": [
+    128,
+    416,
+    1408,
+    928
+  ],
+  "door_state": "closed",
+  "door_type": "double_sliding_clinical",
+  "track_header_source_px": [
+    416,
+    64,
+    864,
+    112
+  ],
+  "projection_overlay_required": false,
+  "production_note": "C6 reuses validated C4/C5 two-cell doorway geometry exactly. Both sliding leaves remain in the wall plane. It is differentiated from C4 by the track/header, large glazing, recessed pulls, and absence of hinges."
+}

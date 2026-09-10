@@ -1,0 +1,390 @@
+{
+  "batch": "Architecture Foundation Production Batch 11",
+  "normalization_exception": "architecture_grid_preserving: no alpha trim or transparent safety padding; exact opaque canonical component boxes retained.",
+  "assets": [
+    {
+      "id": "hospital_floor_plain_01",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_plain_02",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_plain_03",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_plain_04",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_alt_01",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 232,
+      "connection_edge_alpha_max": 246,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_alt_02",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 236,
+      "connection_edge_alpha_max": 246,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_alt_03",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 236,
+      "connection_edge_alpha_max": 246,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_floor_alt_04",
+      "native_dimensions": [
+        32,
+        32
+      ],
+      "expected_native_dimensions": [
+        32,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 236,
+      "connection_edge_alpha_max": 245,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "floor_cell"
+    },
+    {
+      "id": "hospital_wall_back_straight_01",
+      "native_dimensions": [
+        32,
+        52
+      ],
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "north_back_wall_cell"
+    },
+    {
+      "id": "hospital_wall_back_straight_02",
+      "native_dimensions": [
+        32,
+        52
+      ],
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "north_back_wall_cell"
+    },
+    {
+      "id": "hospital_wall_back_straight_03",
+      "native_dimensions": [
+        32,
+        52
+      ],
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "north_back_wall_cell"
+    },
+    {
+      "id": "hospital_wall_back_straight_04",
+      "native_dimensions": [
+        32,
+        52
+      ],
+      "expected_native_dimensions": [
+        32,
+        52
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "north_back_wall_cell"
+    },
+    {
+      "id": "hospital_wall_side_left_01",
+      "native_dimensions": [
+        20,
+        32
+      ],
+      "expected_native_dimensions": [
+        20,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "west_shallow_wall_cell"
+    },
+    {
+      "id": "hospital_wall_side_left_02",
+      "native_dimensions": [
+        20,
+        32
+      ],
+      "expected_native_dimensions": [
+        20,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "west_shallow_wall_cell"
+    },
+    {
+      "id": "hospital_wall_side_right_01",
+      "native_dimensions": [
+        20,
+        32
+      ],
+      "expected_native_dimensions": [
+        20,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "east_shallow_wall_cell"
+    },
+    {
+      "id": "hospital_wall_side_right_02",
+      "native_dimensions": [
+        20,
+        32
+      ],
+      "expected_native_dimensions": [
+        20,
+        32
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "east_shallow_wall_cell"
+    },
+    {
+      "id": "hospital_front_wall_cutaway_01",
+      "native_dimensions": [
+        32,
+        20
+      ],
+      "expected_native_dimensions": [
+        32,
+        20
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "south_front_cutaway_cell"
+    },
+    {
+      "id": "hospital_front_wall_cutaway_02",
+      "native_dimensions": [
+        32,
+        20
+      ],
+      "expected_native_dimensions": [
+        32,
+        20
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "south_front_cutaway_cell"
+    },
+    {
+      "id": "hospital_front_wall_cutaway_03",
+      "native_dimensions": [
+        32,
+        20
+      ],
+      "expected_native_dimensions": [
+        32,
+        20
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "south_front_cutaway_cell"
+    },
+    {
+      "id": "hospital_front_wall_cutaway_04",
+      "native_dimensions": [
+        32,
+        20
+      ],
+      "expected_native_dimensions": [
+        32,
+        20
+      ],
+      "dimension_pass": true,
+      "rgba_pass": true,
+      "connection_edge_alpha_min": 255,
+      "connection_edge_alpha_max": 255,
+      "alpha_gap_pixels": 0,
+      "architecture_qa_status": "pass",
+      "role": "south_front_cutaway_cell"
+    }
+  ],
+  "connection_geometry_pass": true,
+  "wall_continuity": "All back components share 32x52 placement; side modules share 20x32 placement; front modules share 32x20 placement. The reconstruction uses exact canonical offsets, so cap, teal stripe, and base coordinates cannot accumulate drift.",
+  "floor_continuity": "All floor variants retain 32x32 opaque tile boxes; mixed adjacency has no alpha gaps and preserves validated grout edge treatment.",
+  "reconstruction": {
+    "room_cells": [
+      6,
+      4
+    ],
+    "native_canvas": [
+      256,
+      192
+    ],
+    "preview_scale": 4,
+    "visible_interior_alpha_gaps": 0,
+    "cumulative_grid_drift": 0,
+    "layers": [
+      "floor",
+      "north_back",
+      "west_east_sides",
+      "south_front"
+    ]
+  },
+  "architecture_contact_sheet": "previews/contact_sheets/architecture_foundation_batch_11.png",
+  "reconstruction_preview": "previews/architecture/architecture_foundation_batch_11_room_6x4.png"
+}

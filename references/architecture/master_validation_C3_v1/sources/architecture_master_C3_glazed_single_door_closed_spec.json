@@ -1,0 +1,46 @@
+{
+  "master_id": "C3_glazed_single_door_closed",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "wall_run_cells": 5,
+  "opening_source_px": [
+    640,
+    0,
+    896,
+    416
+  ],
+  "floor_bounds_source_px": [
+    128,
+    416,
+    1408,
+    928
+  ],
+  "door_state": "closed",
+  "door_type": "single_glazed_hospital_door",
+  "glazing_native_px": [
+    88,
+    15,
+    104,
+    40
+  ],
+  "glazing_source_px": [
+    704,
+    120,
+    832,
+    320
+  ],
+  "production_note": "C3 uses the same structural opening as C1. The only intended change is the door design: a large glazed central panel for a more clinical door variant."
+}

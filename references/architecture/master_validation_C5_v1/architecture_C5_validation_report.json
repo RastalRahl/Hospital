@@ -1,0 +1,181 @@
+{
+  "validation_id": "architecture_master_C5_v1",
+  "purpose": "reference-only half-open double-door validation",
+  "production_metadata_modified": false,
+  "source": {
+    "master": "references/architecture/master_validation_C5_v1/sources/rastalr_architecture_master_C5_double_doors_half_open_v1.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "source_scale": 8
+  },
+  "geometry": {
+    "structural_bounds": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "vertical_grid": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_grid": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "opening": [
+      384,
+      0,
+      896,
+      416
+    ],
+    "centerline": 640,
+    "deviation_source_px": 0,
+    "drift": "none"
+  },
+  "leaves": {
+    "left": {
+      "hinge_top": [
+        432,
+        88
+      ],
+      "hinge_bottom": [
+        432,
+        408
+      ],
+      "free_top": [
+        568,
+        160
+      ],
+      "free_bottom": [
+        568,
+        496
+      ],
+      "envelope": [
+        432,
+        88,
+        568,
+        496
+      ],
+      "lowest_y": 496
+    },
+    "right": {
+      "hinge_top": [
+        848,
+        88
+      ],
+      "hinge_bottom": [
+        848,
+        408
+      ],
+      "free_top": [
+        712,
+        160
+      ],
+      "free_bottom": [
+        712,
+        496
+      ],
+      "envelope": [
+        712,
+        88,
+        848,
+        496
+      ],
+      "lowest_y": 496
+    },
+    "matches_spec": true,
+    "symmetry": "mirror-equivalent inward geometry"
+  },
+  "temporary_representation": {
+    "recommended": "fixed doorway + two separate leaf overlays",
+    "rationale": "Each leaf has an independent jamb, symmetry, and future state/animation value while retaining a grid-locked shared doorway and simple layer ordering.",
+    "opening": {
+      "crop": [
+        384,
+        0,
+        896,
+        416
+      ],
+      "native_dimensions": [
+        64,
+        52
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "components": 1
+    },
+    "left_overlay": {
+      "crop": [
+        384,
+        408,
+        640,
+        496
+      ],
+      "native_dimensions": [
+        32,
+        11
+      ],
+      "anchor_relative_to_opening": [
+        0,
+        51
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "components": 1
+    },
+    "right_overlay": {
+      "crop": [
+        640,
+        408,
+        896,
+        496
+      ],
+      "native_dimensions": [
+        32,
+        11
+      ],
+      "anchor_relative_to_opening": [
+        32,
+        51
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "components": 1
+    },
+    "normalization": "architecture_grid_preserving; no trim or safety padding"
+  },
+  "reconstruction": {
+    "original_5_cell": {
+      "result": "pass",
+      "door_start_column": 1,
+      "floor_alpha_gaps": 0
+    },
+    "extended_8_cell": {
+      "result": "pass",
+      "door_start_column": 3,
+      "floor_alpha_gaps": 0
+    },
+    "continuity": "pass: cap/base/teal/baseline/floor/threshold and leaf order; no cumulative drift"
+  },
+  "qa": {
+    "clipping": false,
+    "suspicious_debris": 0,
+    "recommendation": "PASS"
+  }
+}

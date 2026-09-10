@@ -1,0 +1,36 @@
+{
+  "master_id": "C3_glazed_single_door_closed",
+  "version": "locked_edit_v3",
+  "base_master": "rastalr_architecture_master_C1_single_hinged_door_closed_v1.png",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "source_scale": 8,
+  "canonical_structural_bounds_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "canonical_door_opening_source_px": [
+    640,
+    0,
+    896,
+    416
+  ],
+  "allowed_modified_region_source_px_exclusive": [
+    704,
+    120,
+    824,
+    320
+  ],
+  "glazing_inner_source_px_exclusive": [
+    712,
+    128,
+    816,
+    312
+  ],
+  "outside_allowed_region_pixel_identical_to_C1": true,
+  "generation_usage": "Only the glass-pane appearance was taken from image generation. All other pixels derive from validated C1."
+}

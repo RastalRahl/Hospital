@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/
+
+# Local tooling, editor state, and operating-system metadata.
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+.env
+.env.*
+
+# Never retain local transfer archives or old repository snapshots. Canonical
+# Architecture v2 reference ZIPs remain intentionally tracked by name.
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tgz
+*_snapshot.zip
+*_backup.zip
+*.tmp
+*.bak

@@ -1,0 +1,41 @@
+{
+  "master_id": "C1_single_hinged_door",
+  "version": "clean_v2",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "wall_run_cells": 5,
+  "opening_source_px": [
+    640,
+    0,
+    896,
+    416
+  ],
+  "floor_bounds_source_px": [
+    128,
+    416,
+    1408,
+    928
+  ],
+  "horizontal_reference_lines_source_px": {
+    "floor_top": 416,
+    "internal_floor_boundary": 672,
+    "front_cutaway_top": 768,
+    "floor_bottom": 928
+  },
+  "notes": [
+    "Clean connected generation scaffold with hidden mathematical grid and separate overlay for validation."
+  ]
+}

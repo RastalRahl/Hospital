@@ -1,0 +1,101 @@
+{
+  "validation_id": "architecture_master_C4_v1",
+  "purpose": "reference-only two-cell double door extraction/reconstruction validation",
+  "production_metadata_modified": false,
+  "source": {
+    "master": "references/architecture/master_validation_C4_v1/sources/rastalr_architecture_master_C4_double_doors_closed_v1.png",
+    "mode": "RGB",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "source_scale": 8
+  },
+  "geometry": {
+    "observed_structural_bounds": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "vertical_grid": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_grid": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "opening": [
+      384,
+      0,
+      896,
+      416
+    ],
+    "center_seam_source_x": 640,
+    "deviation_source_px": {
+      "all_structural_boundaries": 0,
+      "opening_left": 0,
+      "opening_right": 0,
+      "center_seam": 0,
+      "threshold": 0
+    },
+    "visual_coverage_inset": [
+      130,
+      7,
+      1407,
+      927
+    ],
+    "drift": "none"
+  },
+  "temporary_candidate": {
+    "id": "hospital_double_doors_closed_01",
+    "source_crop": [
+      384,
+      0,
+      896,
+      416
+    ],
+    "source_dimensions": [
+      512,
+      416
+    ],
+    "native_dimensions": [
+      64,
+      52
+    ],
+    "normalization": "architecture_grid_preserving",
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "alpha_components": 1,
+    "alpha_trim_or_safety_padding": false,
+    "intentionally_touches_structural_edges": true,
+    "path": "references/architecture/master_validation_C4_v1/temporary_components/hospital_double_doors_closed_01_native.png"
+  },
+  "reconstruction": {
+    "original_5_cell": {
+      "door_start_column": 1,
+      "result": "pass",
+      "floor_alpha_gaps": 0
+    },
+    "extended_8_cell": {
+      "door_start_column": 3,
+      "result": "pass",
+      "floor_alpha_gaps": 0
+    },
+    "continuity": "pass: cap/base/teal/wall baseline/floor/threshold/central seam; no cumulative drift"
+  },
+  "qa": {
+    "clipping": false,
+    "suspicious_detached_debris": 0,
+    "recommendation": "PASS"
+  }
+}

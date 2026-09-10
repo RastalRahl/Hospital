@@ -1,0 +1,98 @@
+{
+  "version": "Architecture Master Plan v1.0",
+  "status": "locked_for_next_generation_round",
+  "architecture_system": {
+    "projection": "rectangular-grid RPG oblique",
+    "logical_cell_px": 32,
+    "generation_source_scale": 8,
+    "master_canvas_native_px": [
+      192,
+      128
+    ],
+    "master_canvas_source_px": [
+      1536,
+      1024
+    ],
+    "topology_masks": "canonical Architecture v2",
+    "visible_geometry_source": "canonical Architecture v2 render layers"
+  },
+  "master_A1_floor_plain": {
+    "purpose": "continuous floor-material master",
+    "grid_cells": [
+      6,
+      4
+    ],
+    "native_region_px": [
+      192,
+      128
+    ],
+    "rules": [
+      "no walls",
+      "no props",
+      "no perimeter border or slab edge",
+      "no baked directional shadows",
+      "continuous material and lighting",
+      "cell seams may exist only if intended as actual floor joints"
+    ]
+  },
+  "master_A2_floor_alt": {
+    "purpose": "continuous alternate hospital floor-material master",
+    "grid_cells": [
+      6,
+      4
+    ],
+    "native_region_px": [
+      192,
+      128
+    ],
+    "rules": [
+      "same geometry as A1",
+      "subtle alternate material only",
+      "no checkerboard motif",
+      "no decorative centerpiece",
+      "no perimeter border",
+      "no baked directional shadows"
+    ]
+  },
+  "master_B_golden_room": {
+    "purpose": "canonical wall/floor material and connection master",
+    "room_cells": [
+      4,
+      2
+    ],
+    "floor_origin_native_px": [
+      32,
+      52
+    ],
+    "floor_bounds_native_px": [
+      32,
+      52,
+      160,
+      116
+    ],
+    "north_wall": "4 canonical full-height back-wall cells",
+    "west_wall": "2 canonical shallow left-side cells",
+    "east_wall": "2 canonical shallow right-side cells",
+    "south_wall": "4 canonical front-cutaway cells",
+    "rules": [
+      "no furniture",
+      "no doors",
+      "no windows",
+      "no signage",
+      "no loose props",
+      "all structural boundaries must remain exactly aligned to scaffold",
+      "wall stripe/base/cap must be continuous across repeated cells",
+      "lighting must be continuous across entire room",
+      "no cast shadow may create a required seam dependency across extracted modules"
+    ]
+  },
+  "approval_workflow": [
+    "Generate/refine over deterministic scaffold, never from geometry-free prompt.",
+    "Human-review master as one coherent environment.",
+    "Preserve master PNG untouched after approval.",
+    "Codex derives production modules with exact grid-aware extraction.",
+    "Codex rebuilds validation room using only extracted modules.",
+    "Compare rebuilt structure to approved master for seam and connection errors.",
+    "Promote only after reconstruction QA passes."
+  ]
+}

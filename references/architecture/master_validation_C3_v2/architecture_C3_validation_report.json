@@ -1,0 +1,121 @@
+{
+  "validation_id": "architecture_master_C3_locked_v2",
+  "purpose": "reference-only pixel-locked C3 validation",
+  "production_metadata_modified": false,
+  "source": {
+    "base_master": "references/architecture/master_validation_C1_v1/sources/rastalr_architecture_master_C1_single_hinged_door_closed_v1.png",
+    "candidate": "references/architecture/master_validation_C3_v2/sources/rastalr_architecture_master_C3_glazed_single_door_closed_v3.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "source_scale": 8
+  },
+  "pixel_lock": {
+    "allowed_edit_region_exclusive": [
+      704,
+      120,
+      824,
+      320
+    ],
+    "difference_bbox_exclusive": [
+      704,
+      120,
+      824,
+      320
+    ],
+    "changed_pixel_count": 24000,
+    "out_of_region_changed_pixel_count": 0,
+    "pass": true
+  },
+  "geometry": {
+    "structural_bounds": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "vertical_grid": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_grid": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "doorway": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "deviation_source_px": 0
+  },
+  "glazing": {
+    "edit_envelope": [
+      704,
+      120,
+      824,
+      320
+    ],
+    "inner_bounds": [
+      712,
+      128,
+      816,
+      312
+    ],
+    "inside_door_leaf": true,
+    "interferes_with_hinges_handle_or_frame": false,
+    "assessment": "substantial, visually distinct glazing inset"
+  },
+  "temporary_candidate": {
+    "id": "hospital_door_glazed_closed_01",
+    "source_crop": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "source_dimensions": [
+      256,
+      416
+    ],
+    "native_dimensions": [
+      32,
+      52
+    ],
+    "normalization": "architecture_grid_preserving",
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "alpha_components": 1,
+    "alpha_trim_or_safety_padding": false,
+    "path": "references/architecture/master_validation_C3_v2/temporary_components/hospital_door_glazed_closed_01_native.png"
+  },
+  "reconstruction": {
+    "original_5_cell": {
+      "result": "pass",
+      "door_column": 2,
+      "floor_alpha_gaps": 0
+    },
+    "extended_8_cell": {
+      "result": "pass",
+      "door_column": 1,
+      "floor_alpha_gaps": 0
+    },
+    "continuity": "cap/base/teal/wall baseline/floor/threshold all pass; no cumulative drift"
+  },
+  "qa": {
+    "clipping": false,
+    "suspicious_detached_debris": 0,
+    "recommendation": "PASS"
+  }
+}

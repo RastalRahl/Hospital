@@ -1,0 +1,142 @@
+{
+  "validation_id": "architecture_master_C1_v1",
+  "purpose": "reference-only extraction and reconstruction validation",
+  "production_metadata_modified": false,
+  "source": {
+    "master": "references/architecture/master_validation_C1_v1/sources/rastalr_architecture_master_C1_single_hinged_door_closed_v1.png",
+    "mode": "RGB",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "source_scale": 8
+  },
+  "geometry": {
+    "structural_span_source_px": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "observed_structural_bounds_source_px": [
+      128,
+      0,
+      1408,
+      928
+    ],
+    "vertical_boundaries_source_px": [
+      128,
+      384,
+      640,
+      896,
+      1152,
+      1408
+    ],
+    "horizontal_boundaries_source_px": [
+      416,
+      672,
+      768,
+      928
+    ],
+    "door_structural_opening_source_px": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "observed_door_structural_opening_source_px": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "deviation_source_px": {
+      "structural_left": 0,
+      "structural_right": 0,
+      "cell_boundaries": {
+        "128": 0,
+        "384": 0,
+        "640": 0,
+        "896": 0,
+        "1152": 0,
+        "1408": 0
+      },
+      "floor_top": 0,
+      "internal_floor_boundary": 0,
+      "front_cutaway_top": 0,
+      "floor_bottom": 0,
+      "door_opening_left": 0,
+      "door_opening_right": 0,
+      "door_bottom_threshold": 0
+    },
+    "visual_insets_source_px": {
+      "outer_left_visible_coverage": {
+        "observed": 129,
+        "expected_structural": 128,
+        "deviation": 1
+      },
+      "door_leaf_recess_box": [
+        672,
+        72,
+        872,
+        408
+      ],
+      "door_leaf_recess_note": "Decorative frame/leaf inset inside the 640..896 structural opening; not a connection-box displacement.",
+      "door_lintel_top": 64
+    },
+    "drift": "none; all structural reference lines remain coherent and no affine or local correction is needed"
+  },
+  "temporary_candidate": {
+    "id": "hospital_door_single_closed_01",
+    "source_crop_px": [
+      640,
+      0,
+      896,
+      416
+    ],
+    "source_dimensions_px": [
+      256,
+      416
+    ],
+    "native_dimensions_px": [
+      32,
+      52
+    ],
+    "normalization": "architecture_grid_preserving",
+    "alpha_min": 255,
+    "alpha_max": 255,
+    "intentionally_touches_structural_edges": true,
+    "alpha_trim_or_safety_padding_applied": false,
+    "source_file": "references/architecture/master_validation_C1_v1/temporary_components/hospital_door_single_closed_01_source.png",
+    "native_file": "references/architecture/master_validation_C1_v1/temporary_components/hospital_door_single_closed_01_native.png"
+  },
+  "reconstruction": {
+    "original_5_cell": {
+      "door_column": 2,
+      "native_dimensions_px": [
+        192,
+        128
+      ],
+      "interior_floor_transparent_pixels": 0,
+      "result": "pass: exact 32 px placement, no overlap/gap at wall-to-door boundaries"
+    },
+    "extended_8_cell": {
+      "door_column": 1,
+      "native_dimensions_px": [
+        288,
+        128
+      ],
+      "interior_floor_transparent_pixels": 0,
+      "result": "pass: no cumulative drift and door connects away from its source position"
+    },
+    "comparison_note": "Reconstruction deliberately uses Batch 11 materials for non-door modules, so it is assessed for structural continuity rather than pixel identity to the generated master."
+  },
+  "qa": {
+    "clip_or_crop_loss": false,
+    "suspicious_detached_alpha_components": 0,
+    "generic_trim_padding_would_damage_connection_box": true,
+    "wall_cap_base_teal_continuity": "pass",
+    "floor_threshold_alignment": "pass",
+    "recommendation": "PASS"
+  }
+}

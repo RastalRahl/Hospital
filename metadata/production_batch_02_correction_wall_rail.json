@@ -1,0 +1,20 @@
+{
+  "assets": [
+    {
+      "source": "source/generated/incoming/rastalr_correction_wall_medical_rail_01.png",
+      "crop": [117, 122, 650, 391],
+      "category": "patient_rooms",
+      "subcategory": "patient_support",
+      "asset_type": "wall_medical_rail",
+      "variant": 1,
+      "source_scale": 8,
+      "footprint_width_tiles": 2,
+      "footprint_height_tiles": 1,
+      "anchor": "wall_center",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "tags": ["wall", "medical_rail", "outlets", "patient_support", "utility"],
+      "notes": "Production batch 02 correction; approved rail source with transparent source margin."
+    }
+  ]
+}

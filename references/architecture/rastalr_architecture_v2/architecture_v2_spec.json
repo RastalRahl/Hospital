@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "logical_grid_px": 32,
+  "topology_wall_thickness_px": 8,
+  "connection_center_range_px": [
+    12,
+    19
+  ],
+  "physical_wall_height_px": 44,
+  "top_cap_px": 8,
+  "projection": "rectangular-grid RPG oblique",
+  "rendering_layers": {
+    "back_north_wall": "full 44px face + 8px cap",
+    "side_east_west_wall": "camera-aware shallow side boundary",
+    "front_south_wall": "12px cutaway face + 8px trim",
+    "glass_partition": "28px transparent partition"
+  },
+  "important": "Topology is deterministic. Visual wall faces are orientation-aware render layers."
+}

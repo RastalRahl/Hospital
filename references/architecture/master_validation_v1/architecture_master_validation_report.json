@@ -1,0 +1,709 @@
+{
+  "validation": "Architecture Master Validation v1",
+  "production_manifest_mutated": false,
+  "source_scale": 8,
+  "logical_native_cell": [
+    32,
+    32
+  ],
+  "master_dimensions": {
+    "A1": [
+      1536,
+      1024
+    ],
+    "A2": [
+      1536,
+      1024
+    ],
+    "B": [
+      1536,
+      1024
+    ]
+  },
+  "floors": {
+    "A1": {
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "grid_measurement": {
+        "x": [
+          {
+            "expected": 256,
+            "observed_darkest": 254,
+            "deviation": -2,
+            "band": [
+              252,
+              254
+            ],
+            "thickness": 3
+          },
+          {
+            "expected": 512,
+            "observed_darkest": 510,
+            "deviation": -2,
+            "band": [
+              509,
+              511
+            ],
+            "thickness": 3
+          },
+          {
+            "expected": 768,
+            "observed_darkest": 765,
+            "deviation": -3,
+            "band": [
+              765,
+              767
+            ],
+            "thickness": 3
+          },
+          {
+            "expected": 1024,
+            "observed_darkest": 1023,
+            "deviation": -1,
+            "band": [
+              1021,
+              1023
+            ],
+            "thickness": 3
+          },
+          {
+            "expected": 1280,
+            "observed_darkest": 1278,
+            "deviation": -2,
+            "band": [
+              1277,
+              1279
+            ],
+            "thickness": 3
+          }
+        ],
+        "max_x_deviation": 3,
+        "y": [
+          {
+            "expected": 256,
+            "observed_darkest": 254,
+            "deviation": -2,
+            "band": [
+              253,
+              255
+            ],
+            "thickness": 3
+          },
+          {
+            "expected": 512,
+            "observed_darkest": 510,
+            "deviation": -2,
+            "band": [
+              510,
+              512
+            ],
+            "thickness": 3
+          },
+          {
+            "expected": 768,
+            "observed_darkest": 766,
+            "deviation": -2,
+            "band": [
+              766,
+              768
+            ],
+            "thickness": 3
+          }
+        ],
+        "max_y_deviation": 2
+      },
+      "extraction": {
+        "source_cells": 24,
+        "source_cell_dimensions": [
+          256,
+          256
+        ],
+        "native_cell_dimensions": [
+          32,
+          32
+        ],
+        "native_unique_hashes": 24,
+        "original_reconstruction_identical": true,
+        "shuffled_reconstruction": "references/architecture/master_validation_v1/artifacts/architecture_A1_shuffled_reconstruction.png",
+        "extraction_preview": "references/architecture/master_validation_v1/artifacts/architecture_A1_cell_extraction_preview.png",
+        "transparent_gap_pixels_in_shuffled": 0,
+        "seam_assessment": "Every shuffled join uses one source cell's intended terminal grout edge and the next cell's interior edge; no crop gap or doubled extracted seam was introduced."
+      },
+      "recommended_eventual_variants": 4
+    },
+    "A2": {
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "grid_measurement": {
+        "x": [
+          {
+            "expected": 256,
+            "observed_darkest": 255,
+            "deviation": -1,
+            "band": [
+              255,
+              256
+            ],
+            "thickness": 2
+          },
+          {
+            "expected": 512,
+            "observed_darkest": 512,
+            "deviation": 0,
+            "band": [
+              511,
+              512
+            ],
+            "thickness": 2
+          },
+          {
+            "expected": 768,
+            "observed_darkest": 768,
+            "deviation": 0,
+            "band": [
+              767,
+              768
+            ],
+            "thickness": 2
+          },
+          {
+            "expected": 1024,
+            "observed_darkest": 1023,
+            "deviation": -1,
+            "band": [
+              1023,
+              1024
+            ],
+            "thickness": 2
+          },
+          {
+            "expected": 1280,
+            "observed_darkest": 1279,
+            "deviation": -1,
+            "band": [
+              1279,
+              1280
+            ],
+            "thickness": 2
+          }
+        ],
+        "max_x_deviation": 1,
+        "y": [
+          {
+            "expected": 256,
+            "observed_darkest": 255,
+            "deviation": -1,
+            "band": [
+              255,
+              256
+            ],
+            "thickness": 2
+          },
+          {
+            "expected": 512,
+            "observed_darkest": 512,
+            "deviation": 0,
+            "band": [
+              511,
+              512
+            ],
+            "thickness": 2
+          },
+          {
+            "expected": 768,
+            "observed_darkest": 768,
+            "deviation": 0,
+            "band": [
+              767,
+              768
+            ],
+            "thickness": 2
+          }
+        ],
+        "max_y_deviation": 1
+      },
+      "extraction": {
+        "source_cells": 24,
+        "source_cell_dimensions": [
+          256,
+          256
+        ],
+        "native_cell_dimensions": [
+          32,
+          32
+        ],
+        "native_unique_hashes": 24,
+        "original_reconstruction_identical": true,
+        "shuffled_reconstruction": "references/architecture/master_validation_v1/artifacts/architecture_A2_shuffled_reconstruction.png",
+        "extraction_preview": "references/architecture/master_validation_v1/artifacts/architecture_A2_cell_extraction_preview.png",
+        "transparent_gap_pixels_in_shuffled": 0,
+        "seam_assessment": "Every shuffled join uses one source cell's intended terminal grout edge and the next cell's interior edge; no crop gap or doubled extracted seam was introduced."
+      },
+      "recommended_eventual_variants": 4
+    }
+  },
+  "golden_room": {
+    "alignment": {
+      "expected": {
+        "floor_bounds": [
+          256,
+          416,
+          1280,
+          928
+        ],
+        "floor_vertical_grid": [
+          256,
+          512,
+          768,
+          1024,
+          1280
+        ],
+        "floor_horizontal_grid": [
+          416,
+          672,
+          928
+        ],
+        "north_back_alpha_envelope": [
+          256,
+          0,
+          1280,
+          416
+        ],
+        "west_side_alpha_envelope": [
+          96,
+          416,
+          256,
+          928
+        ],
+        "east_side_alpha_envelope": [
+          1280,
+          416,
+          1440,
+          928
+        ],
+        "south_front_alpha_envelope": [
+          256,
+          768,
+          1280,
+          928
+        ]
+      },
+      "observed": {
+        "floor_vertical_grid_dark_centers": [
+          256,
+          510,
+          765,
+          1021,
+          1280
+        ],
+        "floor_top_material_transition": 400,
+        "floor_internal_horizontal_joint": 638,
+        "south_front_top": 768,
+        "north_back_alpha_envelope": [
+          256,
+          0,
+          1280,
+          416
+        ],
+        "west_side_alpha_envelope": [
+          96,
+          416,
+          256,
+          928
+        ],
+        "east_side_alpha_envelope": [
+          1280,
+          416,
+          1440,
+          928
+        ],
+        "south_front_alpha_envelope": [
+          256,
+          768,
+          1280,
+          928
+        ]
+      },
+      "deviations_source_px": {
+        "floor_vertical_grid": [
+          0,
+          -2,
+          -3,
+          -3,
+          0
+        ],
+        "floor_top_material_transition": -16,
+        "floor_internal_horizontal_joint": -34,
+        "south_front_top": 0,
+        "north_back_alpha_envelope": 0,
+        "west_side_alpha_envelope": 0,
+        "east_side_alpha_envelope": 0,
+        "south_front_alpha_envelope": 0
+      },
+      "max_abs_x_deviation": 3,
+      "max_abs_y_deviation": 34,
+      "deviation_character": "locally inconsistent vertical distortion: top -16 px, internal join -34 px, south front 0 px",
+      "safe_for_canonical_extraction": false,
+      "failure_reason": "The generated floor top and internal row joint do not register to the canonical y=416/y=672 boundaries. Applying canonical crops would slice the generated material at non-structural positions, while warping would violate the locked geometry rule."
+    },
+    "alignment_artifact": "references/architecture/master_validation_v1/artifacts/architecture_B_scaffold_alignment.png",
+    "extraction_attempted": false
+  },
+  "recommendation": "A1/A2 PASS; B v1 REGENERATE (preserved); B v2 PASS",
+  "golden_room_v2": {
+    "source": "references/architecture/master_validation_v1/sources/rastalr_architecture_master_B_golden_room_v2.png",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "alignment": {
+      "expected": {
+        "floor_bounds": [
+          256,
+          416,
+          1280,
+          928
+        ],
+        "floor_vertical_grid": [
+          256,
+          512,
+          768,
+          1024,
+          1280
+        ],
+        "floor_horizontal_grid": [
+          416,
+          672,
+          928
+        ],
+        "north_back_component_region": [
+          256,
+          0,
+          1280,
+          416
+        ],
+        "west_side_component_region": [
+          96,
+          416,
+          256,
+          928
+        ],
+        "east_side_component_region": [
+          1280,
+          416,
+          1440,
+          928
+        ],
+        "south_front_component_region": [
+          256,
+          768,
+          1280,
+          928
+        ]
+      },
+      "observed_structural_coordinates": {
+        "floor_top": 416,
+        "floor_internal_cell_start": 672,
+        "floor_bottom_and_front_component_end": 928,
+        "floor_vertical_grid": [
+          256,
+          512,
+          768,
+          1024,
+          1280
+        ],
+        "north_back_component_region": [
+          256,
+          0,
+          1280,
+          416
+        ],
+        "west_side_component_region": [
+          96,
+          416,
+          256,
+          928
+        ],
+        "east_side_component_region": [
+          1280,
+          416,
+          1440,
+          928
+        ],
+        "south_front_component_region": [
+          256,
+          768,
+          1280,
+          928
+        ]
+      },
+      "deviations_source_px": {
+        "floor_top": 0,
+        "floor_internal_cell_start": 0,
+        "floor_bottom": 0,
+        "floor_vertical_grid": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "north_back_component_region": 0,
+        "west_side_component_region": 0,
+        "east_side_component_region": 0,
+        "south_front_component_region": 0
+      },
+      "visual_grout_centres_or_bands": {
+        "vertical_dark_centres": [
+          509,
+          765,
+          1021
+        ],
+        "vertical_deviation_from_nominal": [
+          -3,
+          -3,
+          -3
+        ],
+        "vertical_bands": [
+          [
+            508,
+            510
+          ],
+          [
+            764,
+            766
+          ],
+          [
+            1020,
+            1023
+          ]
+        ],
+        "top_transition_band": [
+          407,
+          414
+        ],
+        "internal_horizontal_grout_band": [
+          666,
+          669
+        ],
+        "internal_horizontal_grout_centre": [
+          667,
+          668
+        ],
+        "assessment": "These are stable terminal-edge material/grout treatments inside otherwise exact canonical component boxes, not a displaced structural grid."
+      },
+      "deviation_character": "coherent canonical component registration; no progressive or local non-affine structural drift",
+      "safe_for_canonical_extraction": true
+    },
+    "alignment_artifact": "references/architecture/master_validation_v1/artifacts/architecture_B_v2_scaffold_alignment.png",
+    "extraction_attempted": true,
+    "extraction": {
+      "component_geometry": {
+        "north_back": {
+          "count": 4,
+          "dimensions": [
+            256,
+            416
+          ],
+          "crops": [
+            [
+              256,
+              0,
+              512,
+              416
+            ],
+            [
+              512,
+              0,
+              768,
+              416
+            ],
+            [
+              768,
+              0,
+              1024,
+              416
+            ],
+            [
+              1024,
+              0,
+              1280,
+              416
+            ]
+          ]
+        },
+        "west_side": {
+          "count": 2,
+          "dimensions": [
+            160,
+            256
+          ],
+          "crops": [
+            [
+              96,
+              416,
+              256,
+              672
+            ],
+            [
+              96,
+              672,
+              256,
+              928
+            ]
+          ]
+        },
+        "east_side": {
+          "count": 2,
+          "dimensions": [
+            160,
+            256
+          ],
+          "crops": [
+            [
+              1280,
+              416,
+              1440,
+              672
+            ],
+            [
+              1280,
+              672,
+              1440,
+              928
+            ]
+          ]
+        },
+        "south_front": {
+          "count": 4,
+          "dimensions": [
+            256,
+            160
+          ],
+          "crops": [
+            [
+              256,
+              768,
+              512,
+              928
+            ],
+            [
+              512,
+              768,
+              768,
+              928
+            ],
+            [
+              768,
+              768,
+              1024,
+              928
+            ],
+            [
+              1024,
+              768,
+              1280,
+              928
+            ]
+          ]
+        },
+        "floor": {
+          "count": 4,
+          "dimensions": [
+            256,
+            256
+          ],
+          "crops": [
+            [
+              256,
+              416,
+              512,
+              672
+            ],
+            [
+              512,
+              416,
+              768,
+              672
+            ],
+            [
+              768,
+              416,
+              1024,
+              672
+            ],
+            [
+              1024,
+              416,
+              1280,
+              672
+            ]
+          ]
+        },
+        "lower_visible": {
+          "count": 4,
+          "dimensions": [
+            256,
+            96
+          ],
+          "crops": [
+            [
+              256,
+              672,
+              512,
+              768
+            ],
+            [
+              512,
+              672,
+              768,
+              768
+            ],
+            [
+              768,
+              672,
+              1024,
+              768
+            ],
+            [
+              1024,
+              672,
+              1280,
+              768
+            ]
+          ],
+          "purpose": "temporary reconstruction-only strip: lower floor is occluded by the front wall"
+        }
+      },
+      "component_preview": "references/architecture/master_validation_v1/artifacts/architecture_B_v2_extracted_components_preview.png",
+      "original_reconstruction": {
+        "artifact": "references/architecture/master_validation_v1/artifacts/architecture_B_v2_reconstructed_original.png",
+        "pixel_identical_within_canonical_alpha": true,
+        "differing_pixels_within_canonical_alpha": 0,
+        "background_comparison_excluded": "master is RGB with near-black background noise; comparison uses deterministic scaffold alpha",
+        "alpha_gaps_in_floor_above_front": 0
+      },
+      "expanded_reconstruction": {
+        "artifact": "references/architecture/master_validation_v1/artifacts/architecture_B_v2_reconstructed_expanded.png",
+        "canvas_dimensions": [
+          2048,
+          1536
+        ],
+        "room_cells": [
+          6,
+          4
+        ],
+        "visible_interior_alpha_gaps": 0,
+        "cumulative_grid_drift": 0
+      }
+    },
+    "recommendation": "PASS"
+  }
+}

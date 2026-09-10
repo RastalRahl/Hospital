@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rastalr-hospital-pipeline"
+version = "0.1.0"
+description = "Pilot asset-ingestion and QA tooling for RastalR Modern Hospital"
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools]
+packages = ["rastalr_pipeline"]
+package-dir = {rastalr_pipeline = "tools/rastalr_pipeline"}
