@@ -1,0 +1,428 @@
+{
+  "id": "hospital_glass_partition_front_cutaway_01",
+  "status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "rectangle_convention": "[left, top, right, bottom)",
+  "canonical_requirements": {
+    "grid": 32,
+    "scale": 8,
+    "camera": "rectangular-grid RPG oblique",
+    "ground_strip": [
+      0,
+      12,
+      32,
+      20
+    ],
+    "front_solid_rendering_convention": "12px cutaway face + 8px trim",
+    "normalization": "architecture_grid_preserving",
+    "footprint": [
+      1,
+      1
+    ],
+    "interior": "north/above",
+    "stride": [
+      32,
+      0
+    ]
+  },
+  "measured_sources": {
+    "method": "Saved PNG dimensions and nonzero-alpha bounds; metadata below is quoted, not pixel measurement",
+    "pngs": {
+      "references/architecture/rastalr_architecture_v2/front_wall_cutaway_1x.png": {
+        "size": [
+          32,
+          20
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          32,
+          20
+        ]
+      },
+      "references/architecture/rastalr_architecture_v2/topology_ew.png": {
+        "size": [
+          32,
+          32
+        ],
+        "alpha_bbox": [
+          0,
+          12,
+          32,
+          20
+        ]
+      },
+      "references/architecture/rastalr_architecture_v2/topology_ne.png": {
+        "size": [
+          32,
+          32
+        ],
+        "alpha_bbox": [
+          12,
+          0,
+          32,
+          20
+        ]
+      },
+      "references/architecture/rastalr_architecture_v2/topology_nw.png": {
+        "size": [
+          32,
+          32
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          20,
+          20
+        ]
+      },
+      "assets/architecture/hospital_front_wall_cutaway_01.png": {
+        "size": [
+          32,
+          20
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          32,
+          20
+        ]
+      },
+      "assets/architecture/hospital_front_wall_cutaway_02.png": {
+        "size": [
+          32,
+          20
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          32,
+          20
+        ]
+      },
+      "assets/architecture/hospital_front_wall_cutaway_03.png": {
+        "size": [
+          32,
+          20
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          32,
+          20
+        ]
+      },
+      "assets/architecture/hospital_front_wall_cutaway_04.png": {
+        "size": [
+          32,
+          20
+        ],
+        "alpha_bbox": [
+          0,
+          0,
+          32,
+          20
+        ]
+      }
+    },
+    "batch11_metadata": "Front01 crop [256,768,512,928)/8 =>32x20; four variants share dimensions. Review builder uses x32+32*c,y160; sides y52+32*r end180. Those absolute scene coordinates are not D4 anchors.",
+    "side_terminal": "Validated main bodies are12x32 with last4 rows fully opaque. Corner bodies have24px north extension, retaining the same terminal support. Actual assembly scans verify these observations."
+  },
+  "derived_geometry": {
+    "side_south_endpoint": "side cell north center + [0,32*depth]; call its y coordinate S. The final side support occupies [S-4,S).",
+    "D4_cell": "[west,S-16]; image origin cell+[0,12]=[west,S-4]; image anchor=cell anchor-origin=[16,4]",
+    "centerline_image_y": 4,
+    "ground_strip_image": [
+      0,
+      0,
+      32,
+      8
+    ],
+    "visible_base_exclusive_image_y": 12,
+    "scene_edges": "Upper trim begins S-4 and ends S; pane [S,S+6); bottom rail [S+6,S+8); visual base S+8. Ground strip is [S-4,S+4), NOT the image base.",
+    "endpoints_cell": [
+      [
+        0,
+        16
+      ],
+      [
+        32,
+        16
+      ]
+    ],
+    "endpoints_image": [
+      [
+        0,
+        4
+      ],
+      [
+        32,
+        4
+      ]
+    ],
+    "source_rule": "Every coordinate times8, nearest-neighbor only, no trim/padding/warp."
+  },
+  "proposed_choices": {
+    "visible_height": 12,
+    "upper_trim_depth": 4,
+    "front_face_height": 8,
+    "pane_height": 6,
+    "lower_rail_height": 2,
+    "rationale": "Retain the canonical top-trim plus foreground-face organization, but use the existing shallow side terminal support depth4 for trim and a minimal8px glass face (6px pane +2px lower rail). This is an orientation-specific low cutaway proposal, not the solid wall20px canvas or a new physical height. D1 installed height and D2/D3 north-return design remain unchanged.",
+    "endpoint_shoulders": "Unchanged side supports project4px outside each D4 endpoint; the front face turns inward to its4px terminal post. This deliberate stepped silhouette is exposed for review.",
+    "frame_rgba": [
+      39,
+      55,
+      70,
+      255
+    ],
+    "pane_rgba": [
+      158,
+      205,
+      216,
+      150
+    ],
+    "representation": "Two mutually exclusive views of ONE future logical asset; no separate visible corner component and no assembly masks.",
+    "repeat": "Each cell owns its left4px support. Main owns the closing right4px support; repeat extends its declared pane to x32. This follows explicit D4 region ownership, not a copied D1 pixel-column rule.",
+    "ground_caps": "D4 owns a technical8x4 south half-strip cap at each corner centered on the endpoint. It completes canonical NE/NW ground elbows only; it is not rendered artwork or inventory."
+  },
+  "views": {
+    "main": {
+      "size": [
+        32,
+        12
+      ],
+      "source_size": [
+        256,
+        96
+      ],
+      "envelope": [
+        0,
+        0,
+        32,
+        12
+      ],
+      "origin": [
+        0,
+        12
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "image_anchor": [
+        16,
+        4
+      ],
+      "frame": [
+        [
+          0,
+          0,
+          32,
+          4
+        ],
+        [
+          0,
+          10,
+          32,
+          12
+        ],
+        [
+          0,
+          4,
+          4,
+          10
+        ],
+        [
+          28,
+          4,
+          32,
+          10
+        ]
+      ],
+      "pane": [
+        [
+          4,
+          4,
+          28,
+          10
+        ]
+      ],
+      "exterior": [],
+      "contacts": {
+        "upper_trim": [
+          0,
+          0,
+          32,
+          4
+        ],
+        "lower_rail": [
+          0,
+          10,
+          32,
+          12
+        ],
+        "left_post": [
+          0,
+          0,
+          4,
+          12
+        ]
+      }
+    },
+    "repeat": {
+      "size": [
+        32,
+        12
+      ],
+      "source_size": [
+        256,
+        96
+      ],
+      "envelope": [
+        0,
+        0,
+        32,
+        12
+      ],
+      "origin": [
+        0,
+        12
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "image_anchor": [
+        16,
+        4
+      ],
+      "frame": [
+        [
+          0,
+          0,
+          32,
+          4
+        ],
+        [
+          0,
+          10,
+          32,
+          12
+        ],
+        [
+          0,
+          4,
+          4,
+          10
+        ]
+      ],
+      "pane": [
+        [
+          4,
+          4,
+          32,
+          10
+        ]
+      ],
+      "exterior": [],
+      "contacts": {
+        "upper_trim": [
+          0,
+          0,
+          32,
+          4
+        ],
+        "lower_rail": [
+          0,
+          10,
+          32,
+          12
+        ],
+        "left_post": [
+          0,
+          0,
+          4,
+          12
+        ]
+      }
+    }
+  },
+  "alpha_policy": {
+    "frame": 255,
+    "pane": 150,
+    "all_other_pixels": 0
+  },
+  "front_corner_contract": {
+    "southwest_overlap_relative_to_intersection": [
+      0,
+      -4,
+      8,
+      0
+    ],
+    "southeast_overlap_relative_to_intersection": [
+      -8,
+      -4,
+      0,
+      0
+    ],
+    "expected_overlap_reason": "Each side terminal support is12x4; D4 trim intersects its8px inward section. Each intersection is8*4=32 opaque pixels. Measure each separately.",
+    "side_view_selection": "Depth1 corner_main; greater depths corner_repeat, then repeat, ending main. Never suppress the terminal to hide a join.",
+    "draw_order": [
+      "approved separate floor",
+      "separate test object",
+      "validated D2",
+      "validated D3",
+      "validated D1",
+      "D4"
+    ],
+    "ownership": "D4 upper trim owns the visible pixels in the two32px opaque contacts; unchanged side supports retain outer4px shoulders. No translucent intersection is permitted.",
+    "allowed_hidden_glass": 0,
+    "allowed_stacked_glass": 0,
+    "allowed_unexpected_overlap": 0,
+    "masks": []
+  },
+  "human_visual_review": {
+    "status": "PENDING",
+    "approval": false,
+    "review": [
+      "12px front cutaway balance",
+      "6px pane readability",
+      "both4px endpoint shoulders",
+      "foreground face relative to side cutaways"
+    ],
+    "limits": "Closed enclosure is connection evidence, not a room with an entrance; no all-direction junction claim."
+  },
+  "sources_sha256": {
+    "references/architecture/rastalr_architecture_v2/front_wall_cutaway_1x.png": "060a62fb0e60049f62c76f5aa4d6d85b1f467a8fd6d1323e1280cc74f7874e93",
+    "references/architecture/rastalr_architecture_v2/topology_ew.png": "25a9f54523c6ef67efbaa0e2bb1e0cb33a0220e60df3f66371f2758789962b46",
+    "references/architecture/rastalr_architecture_v2/topology_ne.png": "7d79f1749c770b0bf5c6c6851e96a06b6a3f826bb427f917164e6909ed20c589",
+    "references/architecture/rastalr_architecture_v2/topology_nw.png": "22b5d28157b628233d0e4d5548c7a6079038db960067324b304ab213a177b506",
+    "assets/architecture/hospital_front_wall_cutaway_01.png": "ac005a89292b249107fcd5ede2bd2de31c945658c3aebe9fe2b2d4c90c15a06f",
+    "assets/architecture/hospital_front_wall_cutaway_02.png": "1e54bd6b0b0994501ad2718a728abcf8385ae95fa775385e03e469b555b560d6",
+    "assets/architecture/hospital_front_wall_cutaway_03.png": "17f3afafecafc7016e83ffec0b0fd295d3ba70c0614743786943b1709e6c0e71",
+    "assets/architecture/hospital_front_wall_cutaway_04.png": "e06102d9c84652ad9f860e52b2deab1d0315e4c3a2831052d5d0a81a0c02e585",
+    "AGENTS.md": "d71fea057f6409548d8ecba5c56f944f2e39073c88f375a65268b23108e33bdf",
+    "docs/ARCHITECTURE.md": "f17330c2dd54d1a3feb594b281f933ebaa7f2d3620910d00346178de52bbe1c5",
+    "docs/ART_DIRECTION.md": "681ff206bbbf1a0cf3dc2a2794814e82ff67badb11a52c33a39fad39d1e877f0",
+    "references/camera/rastalr_camera_reference_v1.png": "663eab7790538b91a1433e277c273b188bb22030281e3e110f6b12fe9b960a29",
+    "references/architecture/rastalr_architecture_v2/architecture_v2_spec.json": "4ae9b6dce918aef68e2541c0cc03b83527b68d4efeb5fe52d1787c5e596605f0",
+    "metadata/production_batch_11_architecture_foundation.json": "dbf5b7d74f83df4a088f3a63df88288c95d6080d4823c1804cd8ace3a98dba8b",
+    "tools/build_architecture_foundation_batch_11_review.py": "e2644d9aed879d6d752a06e8e1499774cea2e69dd213c4af9e9451eecd7364c4",
+    "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json": "4e45d342cee783d44acb1d91d04c16b2fb60303042ed9a4cd4cf40fc727dd0f2",
+    "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json": "a6a6cc6e9a80e82fcf71619b9fc5245f7402fbca0c7eb178e84d9d1ac2b7c73b",
+    "references/architecture/master_validation_D3_v1/d3_geometry_alpha_contract_proposed.json": "66549dd3c655ba341a5a00bf30d7bc483b5af1f6c857c7623778b7f43e0d2c00",
+    "references/architecture/master_validation_D1_v1/d1_validation_report.json": "cda3df394c2296e79cadc53eced4c124def8113d62a94776f6129973ceb34215",
+    "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json": "39587557d5b8d8780e7bf81b8ed383393aad96020b179c620349bb2437dca948",
+    "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json": "0da44eb584b6660bbeb720c3d7386e332f3d4cf8caec52d232b4a4e0270e77a9",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+    "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+    "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2"
+  }
+}

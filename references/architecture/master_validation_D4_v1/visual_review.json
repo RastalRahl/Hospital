@@ -1,0 +1,16 @@
+{
+  "reviewer": "Codex assistant",
+  "human_approval": false,
+  "scope": "Saved deterministic D4 scaffold and complete enclosure",
+  "findings": [
+    "Both front contacts are visible and connect the shallow sides through the upper trim.",
+    "Unchanged side terminal shoulders remain exposed by four pixels; no hidden repairs or cover pieces.",
+    "The front glass is a narrow cutaway window, with the separate gold test object visibly transmitted.",
+    "Both back returns retain the existing D1/D2/D3 appearance and cutaway relationship."
+  ],
+  "pending_human_geometry_review": [
+    "Accept or revise the proposed six-pixel front pane and eight-pixel front face.",
+    "Accept or revise the exposed four-pixel outer corner shoulders."
+  ],
+  "limitations": "This is intentionally a shallow foreground cutaway; no full-height foreground barrier, entrance, final appearance or approval."
+}

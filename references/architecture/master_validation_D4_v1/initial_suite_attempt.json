@@ -1,0 +1,13 @@
+{
+  "command": "python -m pytest -q",
+  "collected": 237,
+  "passed": 235,
+  "failed": 2,
+  "exit_code": 1,
+  "duration_seconds": 92.71,
+  "reason": "D4 workspace was created while suite was running; previously loaded D3 and D3-appearance preservation tests rejected the new directory. Narrow named addition allowances were then applied; no protected hashes changed.",
+  "failed_tests": [
+    "tests/test_architecture_d3.py::test_current_task_preserves_every_historical_hash_and_count",
+    "tests/test_architecture_d3_appearance.py::test_all_historical_production_files_and_counts_unchanged"
+  ]
+}

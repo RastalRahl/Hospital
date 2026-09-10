@@ -1,0 +1,2 @@
+# Keep this reference evidence byte-stable, including text stored in the review ZIP.
+* -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
