@@ -1,0 +1,448 @@
+{
+  "id": "hospital_glass_partition_side_left_01",
+  "revision": 2,
+  "status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "rectangle_convention": "[left, top, right, bottom)",
+  "canonical_requirements": {
+    "grid": 32,
+    "scale": 8,
+    "ground_strip": [
+      12,
+      0,
+      20,
+      32
+    ],
+    "camera": "rectangular-grid RPG oblique; axis-aligned ground; orientation-aware shallow side",
+    "normalization": "architecture_grid_preserving",
+    "D1_unchanged": true
+  },
+  "measured_sources": {
+    "method": "Read saved PNG sizes and alpha bounds",
+    "canonical_side_size": [
+      20,
+      32
+    ],
+    "canonical_side_envelope": [
+      0,
+      0,
+      20,
+      32
+    ],
+    "canonical_glass_size": [
+      32,
+      28
+    ]
+  },
+  "proposed_presentation": {
+    "type": "Explicit stylized cutaway with glazed upright north return; not a continuous equal-height side rail",
+    "reason": "v1 placed a shallow band at the back-wall base with no visible upper connection. v2 exposes the cutaway with a return cheek touching both the D1 upper frame and the side cap.",
+    "orientation": "left/west room boundary; room interior east/right; repeat south/+y",
+    "logical_footprint": [
+      1,
+      1
+    ],
+    "visible_width": 12,
+    "width_reason": "8 px topology strip plus a proposed 4 px inward shallow face; replaces the unapproved 14 px height-ratio heuristic. No physical camera equation is claimed.",
+    "frame_width": 2,
+    "support_depth": 4,
+    "return_reason": "A 4 px wide side-facing return cheek, matching D1 post width, carries a 2 px glazed reveal and 2 px outer frame. It belongs to D2, adjacent to the unchanged D1 upright post. Its cap reaches 4 px over that opaque post.",
+    "cutaway": "The full-height north return starts at D1 top, then drops 24 screen pixels to the shallow side cap at the ground centerline. This is deliberate orientation-dependent cutaway geometry, not a statement that the actual partition height drops.",
+    "human_review_required": [
+      "2 px return glass legibility",
+      "deliberate abrupt 24 px cutaway",
+      "12 px side width and frame balance",
+      "material continuity with D1 after future appearance work"
+    ],
+    "approval": false
+  },
+  "views": {
+    "main": {
+      "size": [
+        12,
+        32
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        32
+      ],
+      "origin": [
+        12,
+        0
+      ],
+      "image_anchor": [
+        4,
+        16
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "frame": [
+        [
+          0,
+          0,
+          2,
+          32
+        ],
+        [
+          10,
+          0,
+          12,
+          32
+        ],
+        [
+          2,
+          0,
+          10,
+          4
+        ],
+        [
+          2,
+          28,
+          10,
+          32
+        ]
+      ],
+      "pane": [
+        [
+          2,
+          4,
+          10,
+          28
+        ]
+      ]
+    },
+    "repeat": {
+      "size": [
+        12,
+        32
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        32
+      ],
+      "origin": [
+        12,
+        0
+      ],
+      "image_anchor": [
+        4,
+        16
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "frame": [
+        [
+          0,
+          0,
+          2,
+          32
+        ],
+        [
+          10,
+          0,
+          12,
+          32
+        ],
+        [
+          2,
+          0,
+          10,
+          4
+        ]
+      ],
+      "pane": [
+        [
+          2,
+          4,
+          10,
+          32
+        ]
+      ]
+    },
+    "corner_main": {
+      "size": [
+        12,
+        56
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        56
+      ],
+      "origin": [
+        12,
+        -24
+      ],
+      "image_anchor": [
+        4,
+        40
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "frame": [
+        [
+          0,
+          0,
+          8,
+          4
+        ],
+        [
+          0,
+          4,
+          2,
+          24
+        ],
+        [
+          0,
+          24,
+          12,
+          28
+        ],
+        [
+          0,
+          28,
+          2,
+          56
+        ],
+        [
+          10,
+          28,
+          12,
+          56
+        ],
+        [
+          2,
+          52,
+          10,
+          56
+        ]
+      ],
+      "pane": [
+        [
+          2,
+          4,
+          4,
+          24
+        ],
+        [
+          2,
+          28,
+          10,
+          52
+        ]
+      ]
+    },
+    "corner_repeat": {
+      "size": [
+        12,
+        56
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        56
+      ],
+      "origin": [
+        12,
+        -24
+      ],
+      "image_anchor": [
+        4,
+        40
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "frame": [
+        [
+          0,
+          0,
+          8,
+          4
+        ],
+        [
+          0,
+          4,
+          2,
+          24
+        ],
+        [
+          0,
+          24,
+          12,
+          28
+        ],
+        [
+          0,
+          28,
+          2,
+          56
+        ],
+        [
+          10,
+          28,
+          12,
+          56
+        ]
+      ],
+      "pane": [
+        [
+          2,
+          4,
+          4,
+          24
+        ],
+        [
+          2,
+          28,
+          10,
+          56
+        ]
+      ]
+    }
+  },
+  "alpha_policy": {
+    "frame": 255,
+    "pane": 150,
+    "all_other_pixels": 0,
+    "outside_envelope": 0
+  },
+  "derived_mapping": {
+    "D1_cell_example": [
+      64,
+      44
+    ],
+    "D1_render_origin": [
+      64,
+      36
+    ],
+    "D1_centerline_y": 60,
+    "D1_base_exclusive_y": 64,
+    "D1_top_y": 36,
+    "intersection": [
+      64,
+      60
+    ],
+    "D2_cell_example": [
+      48,
+      60
+    ],
+    "D2_corner_origin": [
+      60,
+      36
+    ],
+    "D2_straight_origin": [
+      60,
+      60
+    ],
+    "calculation": "D1 cell y44 + center16 =60; base44+20=64; top44-8=36. D2 north axis is cell+[16,0]. Return top offset=36-60=-24. Cell anchor minus origin gives image anchor [4,40].",
+    "endpoints": "D2 north center [16,0], south center [16,32]; north contact cap reaches y=4 (the D1 base edge). The image upper return is not the ground endpoint.",
+    "source_rule": "Every native coordinate and size multiplied exactly by 8; no trim, padding, warp, rotation or transpose."
+  },
+  "repeat": {
+    "stride": [
+      0,
+      32
+    ],
+    "ownership": "Every cell owns north support. Only final cell owns south support. First cell may use corner adjacency view; mutually exclusive with main/repeat. No extra logical asset.",
+    "corner_carrier_overlap": "Corner carrier extends north by24; subsequent cells still begin every32 at their ground origins. Carrier padding is not added; bounds enclose declared visible geometry."
+  },
+  "corner_contract": {
+    "top_contact_D2_image": [
+      4,
+      0,
+      8,
+      4
+    ],
+    "D1_post_local": [
+      0,
+      0,
+      4,
+      4
+    ],
+    "return_glass_D2_image": [
+      2,
+      4,
+      4,
+      24
+    ],
+    "return_outer_frame": [
+      0,
+      0,
+      2,
+      28
+    ],
+    "shallow_cap_D2_image": [
+      0,
+      24,
+      12,
+      28
+    ],
+    "expected_opaque_overlap_scene": [
+      [
+        64,
+        36,
+        68,
+        40
+      ],
+      [
+        64,
+        60,
+        72,
+        64
+      ]
+    ],
+    "layer_order": [
+      "separate background",
+      "D2 corner/run",
+      "unchanged D1"
+    ],
+    "occlusion": "D1 opaque post hides 4x4 of D2 return cap; D1 opaque base hides 8x4 of the side cap. These are the only overlaps. No translucent surface may be drawn twice.",
+    "assembly_mask": "none; D1 pixels and alpha remain untouched",
+    "ground_elbow_ownership": [
+      12,
+      -4,
+      20,
+      32
+    ],
+    "v1_mask_reassessment": "v1 began the NS strip at baseline y64 rather than center y60; its 4x8 missing quadrant mixed a 4px registration discrepancy with elbow ownership. v2 starts at center60, and D2 owns a half-strip cap to y56. Before that cap only the 4x4 NW quadrant is missing; cap completes it without a separate repair mask.",
+    "testable_transition": "Required opaque return cap intersects D1 top post, the 2px glazed reveal is present, outer frame is connected down to the side cap, and side cap meets D1 base. All checked on saved layers plus assembly; ground coverage alone is insufficient."
+  },
+  "sources_sha256": {
+    "docs/ARCHITECTURE.md": "f17330c2dd54d1a3feb594b281f933ebaa7f2d3620910d00346178de52bbe1c5",
+    "docs/ART_DIRECTION.md": "681ff206bbbf1a0cf3dc2a2794814e82ff67badb11a52c33a39fad39d1e877f0",
+    "references/camera/rastalr_camera_reference_v1.png": "663eab7790538b91a1433e277c273b188bb22030281e3e110f6b12fe9b960a29",
+    "references/architecture/rastalr_architecture_v2/architecture_v2_spec.json": "4ae9b6dce918aef68e2541c0cc03b83527b68d4efeb5fe52d1787c5e596605f0",
+    "references/architecture/rastalr_architecture_v2/side_wall_left_1x.png": "c0a9fc9ad6a8ccd55f787f33f4480f7810adddb6915d62bffd84142267163c69",
+    "references/architecture/rastalr_architecture_v2/back_wall_1x.png": "f72c0049f47c147bbf3288f82cfbfe5162efc796238d63ba70f22ae59aed1e26",
+    "references/architecture/rastalr_architecture_v2/topology_ns.png": "90e3e2bae350d87a092e53b73295c1a6f79fa46c947116407a5e150d153e0a03",
+    "references/architecture/rastalr_architecture_v2/topology_se.png": "71435bf37774d5b291860eed46407f4e51450796f4b7155c5c83781d80b219bf",
+    "references/architecture/rastalr_architecture_v2/topology_nw.png": "22b5d28157b628233d0e4d5548c7a6079038db960067324b304ab213a177b506",
+    "references/architecture/rastalr_architecture_v2/glass_partition_1x.png": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6",
+    "metadata/production_batch_11_architecture_foundation.json": "dbf5b7d74f83df4a088f3a63df88288c95d6080d4823c1804cd8ace3a98dba8b",
+    "tools/build_architecture_foundation_batch_11_review.py": "e2644d9aed879d6d752a06e8e1499774cea2e69dd213c4af9e9451eecd7364c4",
+    "references/architecture/master_validation_D0_v1/sources/rastalr_architecture_gap_audit_scope_v1.json": "2af91c4a8bdcad7a7f4e7d08a6df3b16f9022fed3c197d0c390b810aea8cfcc7",
+    "references/architecture/master_validation_D0_v1/d0_technical_report.md": "0fbffadcd6a81ec6c392a30b807b2c9087811bd72a4dcd120aa3d2ca6aa2e27d",
+    "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json": "4e45d342cee783d44acb1d91d04c16b2fb60303042ed9a4cd4cf40fc727dd0f2",
+    "references/architecture/master_validation_D1_v1/d1_validation_report.json": "cda3df394c2296e79cadc53eced4c124def8113d62a94776f6129973ceb34215",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png": "0362cbf1b4d8ac3a605a7e39a98288ad6f6a20ec7d860239da8fb22a0894f28e",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png": "ebe91b5d154720a7fd561b952391abf075cf4adc2db28a7454b88060f6aa6dab",
+    "references/architecture/master_validation_D2_v1/d2_geometry_alpha_contract_proposed.json": "48bca3bfe284794ecb32e859b7b76164e558704e557120fa23f7690046c77eac",
+    "references/architecture/master_validation_D2_v1/d2_geometry_report.json": "79613ac89c4972cd61c80a0378e52b4f078817e94970dcda3a47818e385552ad",
+    "references/architecture/master_validation_D2_v1/artifacts/d1_d2_corner_scene.png": "164d6138ef0f3a5b574b96984b528832b87c122b6f0b77158ff5edaf6d489813"
+  }
+}

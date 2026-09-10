@@ -1,0 +1,13 @@
+{
+  "evidence_type": "assistant_visual_findings",
+  "method": "Direct inspection of saved annotated corner and review montage, separate from computed pixel checks",
+  "findings": [
+    "The upper glazed reveal is visible immediately left of the unchanged D1 upright post and joins the shallow side cap. It is narrow: two native translucent pixels wide.",
+    "The side run still uses shallow presentation. The full-height-to-cutaway step is now explicit in the saved adjacency view; it is not continuous equal-height rail geometry.",
+    "The clean and annotated corner are enlarged separately. The old v1 image remains visible for comparison; labels remain outside the artwork except geometric guide lines in the annotated view.",
+    "A human must decide whether the abrupt cutaway and narrow return read intentionally in gameplay. These images do not establish readiness for final appearance."
+  ],
+  "human_geometry_review": "PENDING",
+  "contract_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "production_approval": false
+}

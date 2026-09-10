@@ -1,0 +1,3386 @@
+{
+  "contract_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "computed_conformance": "PASS",
+  "corner": {
+    "checks": {
+      "origin": {
+        "expected": [
+          60,
+          36
+        ],
+        "observed": [
+          60,
+          36
+        ],
+        "method": "Read actual return draw origin; ground anchor implies y36",
+        "units": "native_px",
+        "pass": true
+      },
+      "upper_contact": {
+        "expected": {
+          "rectangle": [
+            64,
+            36,
+            68,
+            40
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 16
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "D1_upper_contact": {
+        "expected": {
+          "rectangle": [
+            64,
+            36,
+            68,
+            40
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 16
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "return_reveal": {
+        "expected": {
+          "rectangle": [
+            62,
+            40,
+            64,
+            60
+          ],
+          "alpha_range_inclusive": [
+            150,
+            150
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 150,
+          "alpha_max": 150,
+          "violations": 0,
+          "sample_count": 40
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "return_frame": {
+        "expected": {
+          "rectangle": [
+            60,
+            36,
+            62,
+            64
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 56
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "side_cap": {
+        "expected": {
+          "rectangle": [
+            60,
+            60,
+            72,
+            64
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 48
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "overlap_ownership": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Compare actual overlap set against two declared opaque ownership rectangles",
+        "units": "native_px",
+        "pass": true
+      },
+      "glass_overlap": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Count translucent/translucent intersections",
+        "units": "native_px",
+        "pass": true
+      },
+      "glass_hidden": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Count any pane hidden by the other component frame",
+        "units": "native_px",
+        "pass": true
+      },
+      "D1_render_unchanged": {
+        "checks": {
+          "origin": {
+            "expected": [
+              64,
+              36
+            ],
+            "observed": [
+              64,
+              36
+            ],
+            "method": "Read placement metadata",
+            "units": "native_px",
+            "pass": true
+          },
+          "pixel_mismatches": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare rendered crop to unchanged component",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "elbow_coverage": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Compare center-registered strip union with canonical SE topology after D2 half-strip cap ownership",
+        "units": "native_px",
+        "pass": true
+      },
+      "cutaway_drop": {
+        "expected": 24,
+        "observed": 24,
+        "method": "Measure upper-post start versus shallow-cap start, separately from base contact",
+        "units": "native_px",
+        "pass": true
+      },
+      "saved_composite": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Reload both saved RGBA layers and clean scene; compare full source-over reconstruction",
+        "units": "native_px",
+        "pass": true
+      }
+    },
+    "pass": true,
+    "computed": {
+      "intersection": [
+        64,
+        60
+      ],
+      "D1_baseline_edge_y": 64,
+      "D1_top_y": 36,
+      "D2_shallow_cap_y": 60,
+      "cutaway_drop_px": 24,
+      "opaque_overlap_pixels": 48,
+      "translucent_overlap_pixels": 0,
+      "hidden_glass_pixels": 0,
+      "unexpected_overlap_pixels": 0,
+      "missing_declared_overlap_pixels": 0,
+      "ground_missing_before_cap": 16,
+      "ground_missing_after_cap": 0,
+      "D1_origin": [
+        64,
+        36
+      ],
+      "D2_origin": [
+        60,
+        36
+      ],
+      "coordinate_provenance": "Intersection is declared topology placement; D1 top/base and D2 shallow-cap y are scanned from actual alpha."
+    },
+    "visual_review": "PENDING_HUMAN_REVIEW_OF_EXPLICIT_CUTAWAY"
+  },
+  "files": {
+    "main": {
+      "checks": {
+        "mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload native PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "size": {
+          "expected": [
+            12,
+            32
+          ],
+          "observed": [
+            12,
+            32
+          ],
+          "method": "Reload native dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload source PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_size": {
+          "expected": [
+            96,
+            256
+          ],
+          "observed": [
+            96,
+            256
+          ],
+          "method": "Reload source dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "blocks": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare every source pixel with its native 8x8 block",
+          "units": "native_px",
+          "pass": true
+        },
+        "roundtrip": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Lossless nearest-neighbor native roundtrip",
+          "units": "native_px",
+          "pass": true
+        },
+        "envelope": {
+          "expected": [
+            0,
+            0,
+            12,
+            32
+          ],
+          "observed": [
+            0,
+            0,
+            12,
+            32
+          ],
+          "method": "Read saved nonzero-alpha envelope",
+          "units": "native_px",
+          "pass": true
+        },
+        "frame_0": {
+          "expected": {
+            "rectangle": [
+              0,
+              0,
+              2,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_1": {
+          "expected": {
+            "rectangle": [
+              10,
+              0,
+              12,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_2": {
+          "expected": {
+            "rectangle": [
+              2,
+              0,
+              10,
+              4
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 32
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_3": {
+          "expected": {
+            "rectangle": [
+              2,
+              28,
+              10,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 32
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane_0": {
+          "expected": {
+            "rectangle": [
+              2,
+              4,
+              10,
+              28
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 192
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Check undeclared pixels have zero alpha",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "computed": {
+        "alpha_histogram": {
+          "255": 192,
+          "150": 192
+        },
+        "envelope": [
+          0,
+          0,
+          12,
+          32
+        ]
+      },
+      "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+    },
+    "repeat": {
+      "checks": {
+        "mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload native PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "size": {
+          "expected": [
+            12,
+            32
+          ],
+          "observed": [
+            12,
+            32
+          ],
+          "method": "Reload native dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload source PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_size": {
+          "expected": [
+            96,
+            256
+          ],
+          "observed": [
+            96,
+            256
+          ],
+          "method": "Reload source dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "blocks": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare every source pixel with its native 8x8 block",
+          "units": "native_px",
+          "pass": true
+        },
+        "roundtrip": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Lossless nearest-neighbor native roundtrip",
+          "units": "native_px",
+          "pass": true
+        },
+        "envelope": {
+          "expected": [
+            0,
+            0,
+            12,
+            32
+          ],
+          "observed": [
+            0,
+            0,
+            12,
+            32
+          ],
+          "method": "Read saved nonzero-alpha envelope",
+          "units": "native_px",
+          "pass": true
+        },
+        "frame_0": {
+          "expected": {
+            "rectangle": [
+              0,
+              0,
+              2,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_1": {
+          "expected": {
+            "rectangle": [
+              10,
+              0,
+              12,
+              32
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 64
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_2": {
+          "expected": {
+            "rectangle": [
+              2,
+              0,
+              10,
+              4
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 32
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane_0": {
+          "expected": {
+            "rectangle": [
+              2,
+              4,
+              10,
+              32
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 224
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Check undeclared pixels have zero alpha",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "computed": {
+        "alpha_histogram": {
+          "255": 160,
+          "150": 224
+        },
+        "envelope": [
+          0,
+          0,
+          12,
+          32
+        ]
+      },
+      "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+    },
+    "corner_main": {
+      "checks": {
+        "mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload native PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "size": {
+          "expected": [
+            12,
+            56
+          ],
+          "observed": [
+            12,
+            56
+          ],
+          "method": "Reload native dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload source PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_size": {
+          "expected": [
+            96,
+            448
+          ],
+          "observed": [
+            96,
+            448
+          ],
+          "method": "Reload source dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "blocks": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare every source pixel with its native 8x8 block",
+          "units": "native_px",
+          "pass": true
+        },
+        "roundtrip": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Lossless nearest-neighbor native roundtrip",
+          "units": "native_px",
+          "pass": true
+        },
+        "envelope": {
+          "expected": [
+            0,
+            0,
+            12,
+            56
+          ],
+          "observed": [
+            0,
+            0,
+            12,
+            56
+          ],
+          "method": "Read saved nonzero-alpha envelope",
+          "units": "native_px",
+          "pass": true
+        },
+        "frame_0": {
+          "expected": {
+            "rectangle": [
+              0,
+              0,
+              8,
+              4
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 32
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_1": {
+          "expected": {
+            "rectangle": [
+              0,
+              4,
+              2,
+              24
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_2": {
+          "expected": {
+            "rectangle": [
+              0,
+              24,
+              12,
+              28
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 48
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_3": {
+          "expected": {
+            "rectangle": [
+              0,
+              28,
+              2,
+              56
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 56
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_4": {
+          "expected": {
+            "rectangle": [
+              10,
+              28,
+              12,
+              56
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 56
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_5": {
+          "expected": {
+            "rectangle": [
+              2,
+              52,
+              10,
+              56
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 32
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane_0": {
+          "expected": {
+            "rectangle": [
+              2,
+              4,
+              4,
+              24
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane_1": {
+          "expected": {
+            "rectangle": [
+              2,
+              28,
+              10,
+              52
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 192
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Check undeclared pixels have zero alpha",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "computed": {
+        "alpha_histogram": {
+          "255": 264,
+          "0": 176,
+          "150": 232
+        },
+        "envelope": [
+          0,
+          0,
+          12,
+          56
+        ]
+      },
+      "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+    },
+    "corner_repeat": {
+      "checks": {
+        "mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload native PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "size": {
+          "expected": [
+            12,
+            56
+          ],
+          "observed": [
+            12,
+            56
+          ],
+          "method": "Reload native dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_mode": {
+          "expected": "RGBA",
+          "observed": "RGBA",
+          "method": "Reload source PNG mode",
+          "units": "native_px",
+          "pass": true
+        },
+        "source_size": {
+          "expected": [
+            96,
+            448
+          ],
+          "observed": [
+            96,
+            448
+          ],
+          "method": "Reload source dimensions",
+          "units": "native_px",
+          "pass": true
+        },
+        "blocks": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Compare every source pixel with its native 8x8 block",
+          "units": "native_px",
+          "pass": true
+        },
+        "roundtrip": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Lossless nearest-neighbor native roundtrip",
+          "units": "native_px",
+          "pass": true
+        },
+        "envelope": {
+          "expected": [
+            0,
+            0,
+            12,
+            56
+          ],
+          "observed": [
+            0,
+            0,
+            12,
+            56
+          ],
+          "method": "Read saved nonzero-alpha envelope",
+          "units": "native_px",
+          "pass": true
+        },
+        "frame_0": {
+          "expected": {
+            "rectangle": [
+              0,
+              0,
+              8,
+              4
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 32
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_1": {
+          "expected": {
+            "rectangle": [
+              0,
+              4,
+              2,
+              24
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_2": {
+          "expected": {
+            "rectangle": [
+              0,
+              24,
+              12,
+              28
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 48
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_3": {
+          "expected": {
+            "rectangle": [
+              0,
+              28,
+              2,
+              56
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 56
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "frame_4": {
+          "expected": {
+            "rectangle": [
+              10,
+              28,
+              12,
+              56
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 56
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane_0": {
+          "expected": {
+            "rectangle": [
+              2,
+              4,
+              4,
+              24
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 40
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "pane_1": {
+          "expected": {
+            "rectangle": [
+              2,
+              28,
+              10,
+              56
+            ],
+            "alpha_range_inclusive": [
+              150,
+              150
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 150,
+            "alpha_max": 150,
+            "violations": 0,
+            "sample_count": 224
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "exterior": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Check undeclared pixels have zero alpha",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "computed": {
+        "alpha_histogram": {
+          "255": 232,
+          "0": 176,
+          "150": 264
+        },
+        "envelope": [
+          0,
+          0,
+          12,
+          56
+        ]
+      },
+      "conformance_to": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+    }
+  },
+  "repeats": {
+    "1": {
+      "geometry": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              32
+            ],
+            "observed": [
+              12,
+              32
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                32
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 192,
+            "observed": 192,
+            "method": "Toggle separate light/dark background",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 72,
+            "observed": 72,
+            "method": "Toggle separate yellow object behind glass",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_present": {
+            "expected": true,
+            "observed": true,
+            "method": "Count object-covered pane samples",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Opaque frame must hide background",
+            "units": "native_px",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Integer source-over equation at every pixel",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "2": {
+      "geometry": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 416,
+            "observed": 416,
+            "method": "Toggle separate light/dark background",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 72,
+            "observed": 72,
+            "method": "Toggle separate yellow object behind glass",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_present": {
+            "expected": true,
+            "observed": true,
+            "method": "Count object-covered pane samples",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Opaque frame must hide background",
+            "units": "native_px",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Integer source-over equation at every pixel",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "4": {
+      "geometry": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              128
+            ],
+            "observed": [
+              12,
+              128
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ],
+              [
+                0,
+                64
+              ],
+              [
+                0,
+                96
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ],
+              [
+                0,
+                64
+              ],
+              [
+                0,
+                96
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                64,
+                68
+              ],
+              [
+                96,
+                100
+              ],
+              [
+                124,
+                128
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                64,
+                68
+              ],
+              [
+                96,
+                100
+              ],
+              [
+                124,
+                128
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      },
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 864,
+            "observed": 864,
+            "method": "Toggle separate light/dark background",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 72,
+            "observed": 72,
+            "method": "Toggle separate yellow object behind glass",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_present": {
+            "expected": true,
+            "observed": true,
+            "method": "Count object-covered pane samples",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Opaque frame must hide background",
+            "units": "native_px",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Integer source-over equation at every pixel",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "corner_repeats": {
+    "1": {
+      "checks": {
+        "body_unchanged": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read saved corner-run body against saved straight run",
+          "units": "native_px",
+          "pass": true
+        },
+        "origins": {
+          "expected": [
+            [
+              0,
+              0
+            ]
+          ],
+          "observed": [
+            [
+              0,
+              0
+            ]
+          ],
+          "method": "Actual image origins; ground stride remains32",
+          "units": "native_px",
+          "pass": true
+        },
+        "single_glass_layer": {
+          "expected": 1,
+          "observed": 1,
+          "method": "Maximum translucent draw count in corner run",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 232,
+            "observed": 232,
+            "method": "Toggle separate light/dark background",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 12,
+            "observed": 12,
+            "method": "Toggle separate yellow object behind glass",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_present": {
+            "expected": true,
+            "observed": true,
+            "method": "Count object-covered pane samples",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Opaque frame must hide background",
+            "units": "native_px",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Integer source-over equation at every pixel",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "2": {
+      "checks": {
+        "body_unchanged": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read saved corner-run body against saved straight run",
+          "units": "native_px",
+          "pass": true
+        },
+        "origins": {
+          "expected": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              56
+            ]
+          ],
+          "observed": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              56
+            ]
+          ],
+          "method": "Actual image origins; ground stride remains32",
+          "units": "native_px",
+          "pass": true
+        },
+        "single_glass_layer": {
+          "expected": 1,
+          "observed": 1,
+          "method": "Maximum translucent draw count in corner run",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 456,
+            "observed": 456,
+            "method": "Toggle separate light/dark background",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 12,
+            "observed": 12,
+            "method": "Toggle separate yellow object behind glass",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_present": {
+            "expected": true,
+            "observed": true,
+            "method": "Count object-covered pane samples",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Opaque frame must hide background",
+            "units": "native_px",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Integer source-over equation at every pixel",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "4": {
+      "checks": {
+        "body_unchanged": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read saved corner-run body against saved straight run",
+          "units": "native_px",
+          "pass": true
+        },
+        "origins": {
+          "expected": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              56
+            ],
+            [
+              0,
+              88
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "observed": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              56
+            ],
+            [
+              0,
+              88
+            ],
+            [
+              0,
+              120
+            ]
+          ],
+          "method": "Actual image origins; ground stride remains32",
+          "units": "native_px",
+          "pass": true
+        },
+        "single_glass_layer": {
+          "expected": 1,
+          "observed": 1,
+          "method": "Maximum translucent draw count in corner run",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "transmission": {
+        "checks": {
+          "pane_response": {
+            "expected": 904,
+            "observed": 904,
+            "method": "Toggle separate light/dark background",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_response": {
+            "expected": 12,
+            "observed": 12,
+            "method": "Toggle separate yellow object behind glass",
+            "units": "native_px",
+            "pass": true
+          },
+          "object_present": {
+            "expected": true,
+            "observed": true,
+            "method": "Count object-covered pane samples",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame_invariance": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Opaque frame must hide background",
+            "units": "native_px",
+            "pass": true
+          },
+          "source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Integer source-over equation at every pixel",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "contexts": {
+    "original": {
+      "checks": {
+        "anchor": {
+          "checks": {
+            "origin": {
+              "expected": [
+                44,
+                64
+              ],
+              "observed": [
+                44,
+                64
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "render_origin": {
+          "expected": [
+            12,
+            0
+          ],
+          "observed": [
+            12,
+            0
+          ],
+          "method": "Compare actual render placement with grid origin",
+          "units": "native_px",
+          "pass": true
+        },
+        "north_contact": {
+          "expected": {
+            "rectangle": [
+              44,
+              63,
+              56,
+              65
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 24
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "south_contact": {
+          "expected": {
+            "rectangle": [
+              44,
+              127,
+              56,
+              129
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 24
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "saved_composite": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Reload saved structure/background and compare scene",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "computed": {
+        "cell": [
+          32,
+          64
+        ],
+        "render_origin": [
+          44,
+          64
+        ]
+      }
+    },
+    "relocated": {
+      "checks": {
+        "anchor": {
+          "checks": {
+            "origin": {
+              "expected": [
+                76,
+                96
+              ],
+              "observed": [
+                76,
+                96
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "render_origin": {
+          "expected": [
+            12,
+            0
+          ],
+          "observed": [
+            12,
+            0
+          ],
+          "method": "Compare actual render placement with grid origin",
+          "units": "native_px",
+          "pass": true
+        },
+        "north_contact": {
+          "expected": {
+            "rectangle": [
+              76,
+              95,
+              88,
+              97
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 24
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "south_contact": {
+          "expected": {
+            "rectangle": [
+              76,
+              159,
+              88,
+              161
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 24
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "saved_composite": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Reload saved structure/background and compare scene",
+          "units": "native_px",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "computed": {
+        "cell": [
+          64,
+          96
+        ],
+        "render_origin": [
+          76,
+          96
+        ]
+      }
+    }
+  },
+  "negative_controls": {
+    "repeat_displacement_1px": {
+      "validation": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                33
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": false
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 20,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 8,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                33,
+                37
+              ],
+              [
+                61,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": false
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 8,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "intended_check": "origins",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "broken_contact": {
+      "validation": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": false
+      },
+      "intended_check": "frame",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "opaque_glass": {
+      "validation": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 416,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": false
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": false
+      },
+      "intended_check": "pane",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "pane_hole": {
+      "validation": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": false
+      },
+      "intended_check": "pane",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "doubled_support": {
+      "validation": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 32,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": false
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 32,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "intended_check": "support_spans",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "stacked_glass": {
+      "validation": {
+        "checks": {
+          "size": {
+            "expected": [
+              12,
+              64
+            ],
+            "observed": [
+              12,
+              64
+            ],
+            "method": "Read saved run dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "origins": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                32
+              ]
+            ],
+            "method": "Read actual draw coordinates",
+            "units": "native_px",
+            "pass": true
+          },
+          "frame": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": true
+          },
+          "pane": {
+            "expected": 0,
+            "observed": 192,
+            "method": "Independent alpha predicate for regular side rails, pane and owned supports",
+            "units": "native_px",
+            "pass": false
+          },
+          "support_spans": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque support spans at pane center x6",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_glass_layer": {
+            "expected": 0,
+            "observed": 192,
+            "method": "Count actual translucent draw contributions",
+            "units": "native_px",
+            "pass": false
+          }
+        },
+        "pass": false
+      },
+      "intended_check": "single_glass_layer",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "anchor_mismatch_1px": {
+      "validation": {
+        "checks": {
+          "anchor": {
+            "checks": {
+              "origin": {
+                "expected": [
+                  44,
+                  64
+                ],
+                "observed": [
+                  45,
+                  64
+                ],
+                "method": "Read placement metadata",
+                "units": "native_px",
+                "pass": false
+              },
+              "pixel_mismatches": {
+                "expected": 0,
+                "observed": 168,
+                "method": "Compare rendered crop to unchanged component",
+                "units": "pixels",
+                "pass": false
+              }
+            },
+            "pass": false
+          },
+          "render_origin": {
+            "expected": [
+              12,
+              0
+            ],
+            "observed": [
+              13,
+              0
+            ],
+            "method": "Compare actual render placement with grid origin",
+            "units": "native_px",
+            "pass": false
+          },
+          "north_contact": {
+            "expected": {
+              "rectangle": [
+                44,
+                63,
+                56,
+                65
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 1,
+              "sample_count": 24
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "south_contact": {
+            "expected": {
+              "rectangle": [
+                44,
+                127,
+                56,
+                129
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 1,
+              "sample_count": 24
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "computed": {
+          "cell": [
+            32,
+            64
+          ],
+          "render_origin": [
+            45,
+            64
+          ]
+        }
+      },
+      "intended_check": "render_origin",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "missing_corner_return": {
+      "validation": {
+        "checks": {
+          "origin": {
+            "expected": [
+              60,
+              36
+            ],
+            "observed": [
+              60,
+              36
+            ],
+            "method": "Read actual return draw origin; ground anchor implies y36",
+            "units": "native_px",
+            "pass": true
+          },
+          "upper_contact": {
+            "expected": {
+              "rectangle": [
+                64,
+                36,
+                68,
+                40
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 0,
+              "violations": 16,
+              "sample_count": 16
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "D1_upper_contact": {
+            "expected": {
+              "rectangle": [
+                64,
+                36,
+                68,
+                40
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 16
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "return_reveal": {
+            "expected": {
+              "rectangle": [
+                62,
+                40,
+                64,
+                60
+              ],
+              "alpha_range_inclusive": [
+                150,
+                150
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 0,
+              "violations": 40,
+              "sample_count": 40
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "return_frame": {
+            "expected": {
+              "rectangle": [
+                60,
+                36,
+                62,
+                64
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 48,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "side_cap": {
+            "expected": {
+              "rectangle": [
+                60,
+                60,
+                72,
+                64
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 48
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "overlap_ownership": {
+            "expected": 0,
+            "observed": 16,
+            "method": "Compare actual overlap set against two declared opaque ownership rectangles",
+            "units": "native_px",
+            "pass": false
+          },
+          "glass_overlap": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count translucent/translucent intersections",
+            "units": "native_px",
+            "pass": true
+          },
+          "glass_hidden": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count any pane hidden by the other component frame",
+            "units": "native_px",
+            "pass": true
+          },
+          "D1_render_unchanged": {
+            "checks": {
+              "origin": {
+                "expected": [
+                  64,
+                  36
+                ],
+                "observed": [
+                  64,
+                  36
+                ],
+                "method": "Read placement metadata",
+                "units": "native_px",
+                "pass": true
+              },
+              "pixel_mismatches": {
+                "expected": 0,
+                "observed": 0,
+                "method": "Compare rendered crop to unchanged component",
+                "units": "pixels",
+                "pass": true
+              }
+            },
+            "pass": true
+          },
+          "elbow_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare center-registered strip union with canonical SE topology after D2 half-strip cap ownership",
+            "units": "native_px",
+            "pass": true
+          },
+          "cutaway_drop": {
+            "expected": 24,
+            "observed": 24,
+            "method": "Measure upper-post start versus shallow-cap start, separately from base contact",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "computed": {
+          "intersection": [
+            64,
+            60
+          ],
+          "D1_baseline_edge_y": 64,
+          "D1_top_y": 36,
+          "D2_shallow_cap_y": 60,
+          "cutaway_drop_px": 24,
+          "opaque_overlap_pixels": 32,
+          "translucent_overlap_pixels": 0,
+          "hidden_glass_pixels": 0,
+          "unexpected_overlap_pixels": 0,
+          "missing_declared_overlap_pixels": 16,
+          "ground_missing_before_cap": 16,
+          "ground_missing_after_cap": 0,
+          "D1_origin": [
+            64,
+            36
+          ],
+          "D2_origin": [
+            60,
+            36
+          ],
+          "coordinate_provenance": "Intersection is declared topology placement; D1 top/base and D2 shallow-cap y are scanned from actual alpha."
+        },
+        "visual_review": "PENDING_HUMAN_REVIEW_OF_EXPLICIT_CUTAWAY"
+      },
+      "intended_check": "upper_contact",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "corner_displacement_1px": {
+      "validation": {
+        "checks": {
+          "origin": {
+            "expected": [
+              60,
+              36
+            ],
+            "observed": [
+              61,
+              36
+            ],
+            "method": "Read actual return draw origin; ground anchor implies y36",
+            "units": "native_px",
+            "pass": false
+          },
+          "upper_contact": {
+            "expected": {
+              "rectangle": [
+                64,
+                36,
+                68,
+                40
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 16
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "D1_upper_contact": {
+            "expected": {
+              "rectangle": [
+                64,
+                36,
+                68,
+                40
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 16
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "return_reveal": {
+            "expected": {
+              "rectangle": [
+                62,
+                40,
+                64,
+                60
+              ],
+              "alpha_range_inclusive": [
+                150,
+                150
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 255,
+              "violations": 20,
+              "sample_count": 40
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "return_frame": {
+            "expected": {
+              "rectangle": [
+                60,
+                36,
+                62,
+                64
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 28,
+              "sample_count": 56
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "side_cap": {
+            "expected": {
+              "rectangle": [
+                60,
+                60,
+                72,
+                64
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 4,
+              "sample_count": 48
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "overlap_ownership": {
+            "expected": 0,
+            "observed": 28,
+            "method": "Compare actual overlap set against two declared opaque ownership rectangles",
+            "units": "native_px",
+            "pass": false
+          },
+          "glass_overlap": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count translucent/translucent intersections",
+            "units": "native_px",
+            "pass": true
+          },
+          "glass_hidden": {
+            "expected": 0,
+            "observed": 20,
+            "method": "Count any pane hidden by the other component frame",
+            "units": "native_px",
+            "pass": false
+          },
+          "D1_render_unchanged": {
+            "checks": {
+              "origin": {
+                "expected": [
+                  64,
+                  36
+                ],
+                "observed": [
+                  64,
+                  36
+                ],
+                "method": "Read placement metadata",
+                "units": "native_px",
+                "pass": true
+              },
+              "pixel_mismatches": {
+                "expected": 0,
+                "observed": 0,
+                "method": "Compare rendered crop to unchanged component",
+                "units": "pixels",
+                "pass": true
+              }
+            },
+            "pass": true
+          },
+          "elbow_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare center-registered strip union with canonical SE topology after D2 half-strip cap ownership",
+            "units": "native_px",
+            "pass": true
+          },
+          "cutaway_drop": {
+            "expected": 24,
+            "observed": 24,
+            "method": "Measure upper-post start versus shallow-cap start, separately from base contact",
+            "units": "native_px",
+            "pass": true
+          }
+        },
+        "pass": false,
+        "computed": {
+          "intersection": [
+            64,
+            60
+          ],
+          "D1_baseline_edge_y": 64,
+          "D1_top_y": 36,
+          "D2_shallow_cap_y": 60,
+          "cutaway_drop_px": 24,
+          "opaque_overlap_pixels": 56,
+          "translucent_overlap_pixels": 0,
+          "hidden_glass_pixels": 20,
+          "unexpected_overlap_pixels": 28,
+          "missing_declared_overlap_pixels": 0,
+          "ground_missing_before_cap": 16,
+          "ground_missing_after_cap": 0,
+          "D1_origin": [
+            64,
+            36
+          ],
+          "D2_origin": [
+            61,
+            36
+          ],
+          "coordinate_provenance": "Intersection is declared topology placement; D1 top/base and D2 shallow-cap y are scanned from actual alpha."
+        },
+        "visual_review": "PENDING_HUMAN_REVIEW_OF_EXPLICIT_CUTAWAY"
+      },
+      "intended_check": "overlap_ownership",
+      "valid_control_pass": true,
+      "proven": true
+    }
+  },
+  "preservation": {
+    "expected_counts": {
+      "manifest": 220,
+      "approved": 220,
+      "needs_human_review": 0
+    },
+    "observed_counts": {
+      "manifest": 220,
+      "approved": 220,
+      "needs_human_review": 0
+    },
+    "protected_file_count": 1435,
+    "missing": [],
+    "changed": [],
+    "authorized_additions": [
+      "references/architecture/master_validation_D2_v2/README.md",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_anchor_mismatch_1px.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_broken_contact.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_corner_displacement_1px.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_doubled_support.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_missing_corner_return.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_opaque_glass.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_pane_hole.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_repeat_displacement_1px.png",
+      "references/architecture/master_validation_D2_v2/artifacts/broken_stacked_glass.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_annotated.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_clean.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_d1_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_d2_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_ground_before.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_ground_completed.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_ground_elbow_ownership.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_context_original_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_context_original_scene.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_context_original_structure.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_context_relocated_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_context_relocated_scene.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_context_relocated_structure.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_before_after.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_colored_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_colored_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_dark_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_dark_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_light_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_light_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_native.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_object_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_object_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_1_object_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_colored_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_colored_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_dark_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_dark_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_light_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_light_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_native.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_object_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_object_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_2_object_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_colored_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_colored_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_dark_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_dark_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_light_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_light_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_native.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_object_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_object_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_corner_run_4_object_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_geometry_review_montage.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_colored_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_colored_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_dark_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_dark_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_light_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_light_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_native.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_object_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_object_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_1_object_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_colored_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_colored_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_dark_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_dark_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_light_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_light_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_native.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_object_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_object_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_2_object_layer.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_colored_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_colored_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_dark_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_dark_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_light_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_light_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_native.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_object_background.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_object_composite.png",
+      "references/architecture/master_validation_D2_v2/artifacts/d2_run_4_object_layer.png",
+      "references/architecture/master_validation_D2_v2/d2_corner_main_native.png",
+      "references/architecture/master_validation_D2_v2/d2_corner_main_source_8x.png",
+      "references/architecture/master_validation_D2_v2/d2_corner_repeat_native.png",
+      "references/architecture/master_validation_D2_v2/d2_corner_repeat_source_8x.png",
+      "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json",
+      "references/architecture/master_validation_D2_v2/d2_geometry_report.json",
+      "references/architecture/master_validation_D2_v2/d2_geometry_report.md",
+      "references/architecture/master_validation_D2_v2/d2_geometry_review_bundle.zip",
+      "references/architecture/master_validation_D2_v2/d2_main_native.png",
+      "references/architecture/master_validation_D2_v2/d2_main_source_8x.png",
+      "references/architecture/master_validation_D2_v2/d2_repeat_native.png",
+      "references/architecture/master_validation_D2_v2/d2_repeat_source_8x.png",
+      "references/architecture/master_validation_D2_v2/production_before.json",
+      "references/architecture/master_validation_D2_v2/production_preservation.json",
+      "references/architecture/master_validation_D2_v2/test_results.json",
+      "references/architecture/master_validation_D2_v2/test_results.txt",
+      "references/architecture/master_validation_D2_v2/visual_review.json"
+    ],
+    "unauthorized_additions": [],
+    "method": "Compare existence and SHA-256 of every historical file; allow only new files under explicitly named paths",
+    "pass": true
+  },
+  "human_visual_review": "PENDING: explicit cutaway and narrow glazed return need human geometry judgment; no final appearance readiness claimed",
+  "recommendation": "REVISED_GEOMETRY_HANDOFF_FOR_HUMAN_REVIEW",
+  "tests": {
+    "command": "python -m pytest -q",
+    "exit_code": 0,
+    "passed": 124,
+    "baseline_passed": 94,
+    "method": "Actual complete-suite subprocess; count parsed from pytest summary"
+  },
+  "assistant_visual_findings": {
+    "evidence_type": "assistant_visual_findings",
+    "method": "Direct inspection of saved annotated corner and review montage, separate from computed pixel checks",
+    "findings": [
+      "The upper glazed reveal is visible immediately left of the unchanged D1 upright post and joins the shallow side cap. It is narrow: two native translucent pixels wide.",
+      "The side run still uses shallow presentation. The full-height-to-cutaway step is now explicit in the saved adjacency view; it is not continuous equal-height rail geometry.",
+      "The clean and annotated corner are enlarged separately. The old v1 image remains visible for comparison; labels remain outside the artwork except geometric guide lines in the annotated view.",
+      "A human must decide whether the abrupt cutaway and narrow return read intentionally in gameplay. These images do not establish readiness for final appearance."
+    ],
+    "human_geometry_review": "PENDING",
+    "contract_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+    "production_approval": false
+  }
+}

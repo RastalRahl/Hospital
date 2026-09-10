@@ -128,6 +128,7 @@ def test_d2_snapshot_allowance_does_not_exempt_existing_files(tmp_path,mutation,
 
 def test_task_preserves_all_production_d0_d1_history_and_authorities():
     report=compare_snapshots(d0.read_json(d2.OUT/"production_before.json"),d2.snapshot(),
-                             allowed_addition_prefixes=("references/architecture/master_validation_D2_v1/",))
+                             allowed_addition_prefixes=("references/architecture/master_validation_D2_v1/",
+                                                        "references/architecture/master_validation_D2_v2/"))
     assert report["pass"]
     assert report["observed_counts"]=={"manifest":220,"approved":220,"needs_human_review":0}

@@ -1,0 +1,7 @@
+{
+  "command": "python -m pytest -q",
+  "exit_code": 0,
+  "passed": 124,
+  "baseline_passed": 94,
+  "method": "Actual complete-suite subprocess; count parsed from pytest summary"
+}
