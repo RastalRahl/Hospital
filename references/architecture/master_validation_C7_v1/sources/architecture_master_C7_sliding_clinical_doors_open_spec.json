@@ -1,0 +1,56 @@
+{
+  "master_id": "C7_sliding_clinical_doors_open",
+  "version": "clean_v1",
+  "canvas_source_px": [
+    1536,
+    1024
+  ],
+  "canvas_native_px": [
+    192,
+    128
+  ],
+  "source_scale": 8,
+  "wall_run_cells": 5,
+  "structural_span_source_px": [
+    128,
+    0,
+    1408,
+    928
+  ],
+  "opening_source_px": [
+    384,
+    0,
+    896,
+    416
+  ],
+  "closed_state_meeting_line_source_x": 640,
+  "track_header_source_px": [
+    416,
+    64,
+    864,
+    112
+  ],
+  "clear_passage_source_px": [
+    416,
+    112,
+    864,
+    416
+  ],
+  "left_leaf_open_source_px": [
+    192,
+    112,
+    416,
+    416
+  ],
+  "right_leaf_open_source_px": [
+    864,
+    112,
+    1088,
+    416
+  ],
+  "leaf_slide_distance_source_px": 224,
+  "leaf_projection_into_floor": false,
+  "door_state": "open",
+  "door_type": "double_sliding_clinical",
+  "production_note": "C7 reuses C6's exact validated 2-cell opening. Each leaf slides outward by 224 source px (28 native px), remaining entirely in the wall plane. The clear passage is x=416..864, y=112..416. The scaffold uses an opaque dark recess for visual readability only; production alpha treatment must be decided during Codex validation rather than inferred from this scaffold."
+}
