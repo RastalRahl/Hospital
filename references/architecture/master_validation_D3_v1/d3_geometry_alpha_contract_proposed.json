@@ -1,0 +1,630 @@
+{
+  "id": "hospital_glass_partition_side_right_01",
+  "status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW",
+  "rectangle_convention": "[left, top, right, bottom)",
+  "canonical_constraints": {
+    "grid": 32,
+    "source_scale": 8,
+    "ground_strip": [
+      12,
+      0,
+      20,
+      32
+    ],
+    "camera": "rectangular-grid RPG oblique",
+    "side_policy": "camera-aware shallow side boundary",
+    "normalization": "architecture_grid_preserving",
+    "transforms": "Integer placement and exact nearest-neighbor 8x only; no trim, pad, warp or finished-art reflection"
+  },
+  "measured_sources": {
+    "method": "Read actual PNG dimensions and nonzero-alpha bounds; placement metadata is quoted separately",
+    "right_wall_size": [
+      20,
+      32
+    ],
+    "right_wall_envelope": [
+      0,
+      0,
+      20,
+      32
+    ],
+    "ns_alpha_bbox": [
+      12,
+      0,
+      20,
+      32
+    ],
+    "sw_alpha_bbox": [
+      0,
+      12,
+      20,
+      32
+    ],
+    "approved_placement_metadata": "Batch11 right01 crop [1280,416,1440,672)/8=[160,52,180,84); right02 same x range. Review builder places right walls at x224, y52+32*r. Canonical right envelope occupies cell x0..20; D3 retains its outer edge20 with a narrower inward band8..20."
+  },
+  "derived_right_geometry": {
+    "rule_cell": "[l,r) -> [32-r,32-l) about cell x16",
+    "rule_image": "[l,r) -> [12-r,12-l); a pixel index x maps to11-x, not12-x",
+    "origin_rule": "32-(D2 origin x12 + width12)=8; y unchanged",
+    "anchor_rule": "cell [16,16] minus origin gives image [8,16] or [8,40]",
+    "logical_footprint": [
+      1,
+      1
+    ],
+    "orientation": "east/right boundary, interior west/left; repeat south/+y",
+    "stride": [
+      0,
+      32
+    ],
+    "north_endpoint_cell": [
+      16,
+      0
+    ],
+    "south_endpoint_cell": [
+      16,
+      32
+    ],
+    "north_endpoint_main_image": [
+      8,
+      0
+    ],
+    "north_endpoint_corner_image": [
+      8,
+      24
+    ],
+    "ground_elbow_corner_cell": [
+      12,
+      -4,
+      20,
+      32
+    ],
+    "cutaway_drop": 24
+  },
+  "proposed_choices": {
+    "design_basis": "D2 v2 reviewed stylized shallow cutaway with upright north return, retaining all family proportions",
+    "differences": "Only structural x reflection and resulting x origin/anchor/contact ownership; no dimensional departure. D1 terminal artwork is used in its authored orientation.",
+    "frame_rgba": [
+      39,
+      55,
+      70,
+      255
+    ],
+    "glass_rgba": [
+      158,
+      205,
+      216,
+      150
+    ],
+    "lighting": "Flat scaffold has no material lighting; future D3 highlights must be authored for upper-left light independently",
+    "view_selection": "One future logical D3 asset. First cell at D1 NE uses corner_main if terminal, corner_repeat otherwise; subsequent cells use repeat until final main. Alternatives are never stacked."
+  },
+  "views": {
+    "main": {
+      "size": [
+        12,
+        32
+      ],
+      "source_size": [
+        96,
+        256
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        32
+      ],
+      "cell_envelope": [
+        8,
+        0,
+        20,
+        32
+      ],
+      "origin": [
+        8,
+        0
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "image_anchor": [
+        8,
+        16
+      ],
+      "frame": [
+        [
+          10,
+          0,
+          12,
+          32
+        ],
+        [
+          0,
+          0,
+          2,
+          32
+        ],
+        [
+          2,
+          0,
+          10,
+          4
+        ],
+        [
+          2,
+          28,
+          10,
+          32
+        ]
+      ],
+      "pane": [
+        [
+          2,
+          4,
+          10,
+          28
+        ]
+      ],
+      "exterior": [],
+      "contacts": {
+        "north_cap": [
+          0,
+          0,
+          12,
+          4
+        ]
+      },
+      "terminal_contact": [
+        0,
+        28,
+        12,
+        32
+      ]
+    },
+    "repeat": {
+      "size": [
+        12,
+        32
+      ],
+      "source_size": [
+        96,
+        256
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        32
+      ],
+      "cell_envelope": [
+        8,
+        0,
+        20,
+        32
+      ],
+      "origin": [
+        8,
+        0
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "image_anchor": [
+        8,
+        16
+      ],
+      "frame": [
+        [
+          10,
+          0,
+          12,
+          32
+        ],
+        [
+          0,
+          0,
+          2,
+          32
+        ],
+        [
+          2,
+          0,
+          10,
+          4
+        ]
+      ],
+      "pane": [
+        [
+          2,
+          4,
+          10,
+          32
+        ]
+      ],
+      "exterior": [],
+      "contacts": {
+        "north_cap": [
+          0,
+          0,
+          12,
+          4
+        ]
+      },
+      "terminal_contact": [
+        [
+          0,
+          28,
+          2,
+          32
+        ],
+        [
+          10,
+          28,
+          12,
+          32
+        ]
+      ]
+    },
+    "corner_main": {
+      "size": [
+        12,
+        56
+      ],
+      "source_size": [
+        96,
+        448
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        56
+      ],
+      "cell_envelope": [
+        8,
+        -24,
+        20,
+        32
+      ],
+      "origin": [
+        8,
+        -24
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "image_anchor": [
+        8,
+        40
+      ],
+      "frame": [
+        [
+          4,
+          0,
+          12,
+          4
+        ],
+        [
+          10,
+          4,
+          12,
+          24
+        ],
+        [
+          0,
+          24,
+          12,
+          28
+        ],
+        [
+          10,
+          28,
+          12,
+          56
+        ],
+        [
+          0,
+          28,
+          2,
+          56
+        ],
+        [
+          2,
+          52,
+          10,
+          56
+        ]
+      ],
+      "pane": [
+        [
+          8,
+          4,
+          10,
+          24
+        ],
+        [
+          2,
+          28,
+          10,
+          52
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          0,
+          4,
+          4
+        ],
+        [
+          0,
+          4,
+          8,
+          24
+        ]
+      ],
+      "contacts": {
+        "top_return": [
+          4,
+          0,
+          8,
+          4
+        ],
+        "outer_return": [
+          10,
+          0,
+          12,
+          28
+        ],
+        "shallow_cap": [
+          0,
+          24,
+          12,
+          28
+        ]
+      },
+      "terminal_contact": [
+        0,
+        52,
+        12,
+        56
+      ]
+    },
+    "corner_repeat": {
+      "size": [
+        12,
+        56
+      ],
+      "source_size": [
+        96,
+        448
+      ],
+      "envelope": [
+        0,
+        0,
+        12,
+        56
+      ],
+      "cell_envelope": [
+        8,
+        -24,
+        20,
+        32
+      ],
+      "origin": [
+        8,
+        -24
+      ],
+      "cell_anchor": [
+        16,
+        16
+      ],
+      "image_anchor": [
+        8,
+        40
+      ],
+      "frame": [
+        [
+          4,
+          0,
+          12,
+          4
+        ],
+        [
+          10,
+          4,
+          12,
+          24
+        ],
+        [
+          0,
+          24,
+          12,
+          28
+        ],
+        [
+          10,
+          28,
+          12,
+          56
+        ],
+        [
+          0,
+          28,
+          2,
+          56
+        ]
+      ],
+      "pane": [
+        [
+          8,
+          4,
+          10,
+          24
+        ],
+        [
+          2,
+          28,
+          10,
+          56
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          0,
+          4,
+          4
+        ],
+        [
+          0,
+          4,
+          8,
+          24
+        ]
+      ],
+      "contacts": {
+        "top_return": [
+          4,
+          0,
+          8,
+          4
+        ],
+        "outer_return": [
+          10,
+          0,
+          12,
+          28
+        ],
+        "shallow_cap": [
+          0,
+          24,
+          12,
+          28
+        ]
+      },
+      "terminal_contact": [
+        [
+          0,
+          52,
+          2,
+          56
+        ],
+        [
+          10,
+          52,
+          12,
+          56
+        ]
+      ]
+    }
+  },
+  "alpha_policy": {
+    "frame": 255,
+    "pane": 150,
+    "all_other_pixels": 0
+  },
+  "corner_contract": {
+    "example_D1_origin": [
+      32,
+      36
+    ],
+    "example_D1_width": 64,
+    "example_D1_terminal_post": [
+      92,
+      36,
+      96,
+      64
+    ],
+    "example_D3_cell": [
+      80,
+      60
+    ],
+    "example_D3_corner_origin": [
+      88,
+      36
+    ],
+    "intersection": [
+      96,
+      60
+    ],
+    "D1_baseline_edge": 64,
+    "centerline_rule": "D1 ground center is baseline minus4; D3 north center is cell+[16,0]. Base edge and ground center are not interchangeable.",
+    "expected_opaque_overlap": [
+      [
+        92,
+        36,
+        96,
+        40
+      ],
+      [
+        88,
+        60,
+        96,
+        64
+      ]
+    ],
+    "overlap_derivation": "D3 reflected upper cap intersects existing D1 terminal post over4x4; shallow cap intersects D1 lower rail over8x4. Expected area=16+32=48; actual pixels must be measured.",
+    "glazed_return": [
+      96,
+      40,
+      98,
+      60
+    ],
+    "outer_frame": [
+      98,
+      36,
+      100,
+      64
+    ],
+    "shallow_cap": [
+      88,
+      60,
+      100,
+      64
+    ],
+    "ground_ownership": "D3 owns half-strip north cap [12,-4,20,0) to complete canonical SW elbow; no visible repair component",
+    "draw_order": [
+      "separate floor/background",
+      "D2 if present",
+      "D3",
+      "unchanged D1"
+    ],
+    "no_masks": "No D1/D2 assembly mask, reflection or repair. D1 owns both declared opaque occlusions; zero stacked/hidden glass required."
+  },
+  "human_visual_review": {
+    "status": "PENDING",
+    "approval": false,
+    "scope": "Proposed right-side geometry, these two local corners, and enclosure only; no all-direction L/T/cross claim. Flat D3 shading is intentional, not a material mismatch."
+  },
+  "sources_sha256": {
+    "docs/ARCHITECTURE.md": "f17330c2dd54d1a3feb594b281f933ebaa7f2d3620910d00346178de52bbe1c5",
+    "docs/ART_DIRECTION.md": "681ff206bbbf1a0cf3dc2a2794814e82ff67badb11a52c33a39fad39d1e877f0",
+    "references/camera/rastalr_camera_reference_v1.png": "663eab7790538b91a1433e277c273b188bb22030281e3e110f6b12fe9b960a29",
+    "references/architecture/rastalr_architecture_v2/architecture_v2_spec.json": "4ae9b6dce918aef68e2541c0cc03b83527b68d4efeb5fe52d1787c5e596605f0",
+    "references/architecture/rastalr_architecture_v2/side_wall_right_1x.png": "48a7b3ad087f9b65014c0c13a4e939f7924042070a7d6fc5cafdffc4976db17c",
+    "references/architecture/rastalr_architecture_v2/side_wall_left_1x.png": "c0a9fc9ad6a8ccd55f787f33f4480f7810adddb6915d62bffd84142267163c69",
+    "references/architecture/rastalr_architecture_v2/topology_ns.png": "90e3e2bae350d87a092e53b73295c1a6f79fa46c947116407a5e150d153e0a03",
+    "references/architecture/rastalr_architecture_v2/topology_sw.png": "acfe8a3cb1cfd07712007f8a450c65ad76fe3c9c651e6b431f9dc3cdbbdd8380",
+    "references/architecture/rastalr_architecture_v2/topology_se.png": "71435bf37774d5b291860eed46407f4e51450796f4b7155c5c83781d80b219bf",
+    "metadata/production_batch_11_architecture_foundation.json": "dbf5b7d74f83df4a088f3a63df88288c95d6080d4823c1804cd8ace3a98dba8b",
+    "tools/build_architecture_foundation_batch_11_review.py": "e2644d9aed879d6d752a06e8e1499774cea2e69dd213c4af9e9451eecd7364c4",
+    "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json": "4e45d342cee783d44acb1d91d04c16b2fb60303042ed9a4cd4cf40fc727dd0f2",
+    "references/architecture/master_validation_D1_v1/d1_validation_report.json": "cda3df394c2296e79cadc53eced4c124def8113d62a94776f6129973ceb34215",
+    "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json": "a6a6cc6e9a80e82fcf71619b9fc5245f7402fbca0c7eb178e84d9d1ac2b7c73b",
+    "references/architecture/master_validation_D2_v2/d2_geometry_report.json": "12f2dbead43be52d3eaf45982c6523f9030eecc4fcaa9b08f3c0c182289a6a4d",
+    "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json": "39587557d5b8d8780e7bf81b8ed383393aad96020b179c620349bb2437dca948",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+    "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+    "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+    "assets/architecture/hospital_wall_side_right_01.png": "cf7e8eb6a56945214e85bff417d3b4fc335e55f0a4c309f48d2bb98d0e7d4e17",
+    "assets/architecture/hospital_wall_side_right_02.png": "9cdfc5d86db53cba48173a0504cedd6313e5f168f4faf4462670e5c31a92eaca",
+    "assets/architecture/hospital_floor_plain_01.png": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6"
+  }
+}

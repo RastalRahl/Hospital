@@ -1,0 +1,12 @@
+{
+  "evidence_type": "assistant_visual_findings",
+  "method": "Direct inspection of the saved D3 geometry montage with enlarged local corner details",
+  "findings": [
+    "The right-hand north return is visible outside D1's existing terminal post and reaches the shallow right-side cap. The same cutaway concept appears at both enclosure corners.",
+    "The enclosure retains D1 and D2 material artwork while D3 uses intentional flat scaffold colors; no material mismatch judgment is inferred.",
+    "The front remains open. Separate yellow objects and background changes are visible through the side panes. The original and relocated contexts expose the approved-wall/scaffold width step without hiding it."
+  ],
+  "human_geometry_review": "PENDING",
+  "approval": false,
+  "limits": "Only the two specified local corners and straight repeats are represented; no all-direction or general junction approval."
+}
