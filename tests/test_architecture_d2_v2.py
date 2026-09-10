@@ -107,7 +107,8 @@ def test_v2_additions_never_exempt_historical_files(tmp_path,action,allowed):
 
 def test_all_production_and_historical_d2_v1_files_preserved():
     before=d0.read_json(v2.OUT/'production_before.json')
-    report=compare_snapshots(before,v1.snapshot(),allowed_addition_prefixes=(v2.PREFIX,))
+    report=compare_snapshots(before,v1.snapshot(),allowed_addition_prefixes=(v2.PREFIX,
+        'references/architecture/master_validation_D2_appearance_v1/'))
     assert report['pass'] and report['protected_file_count']==1435
     assert report['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}
     historical=[p for p in before['sha256'] if p.startswith('references/architecture/master_validation_D2_v1/')]

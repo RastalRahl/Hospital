@@ -1,0 +1,84 @@
+Continue in the same Hospital repository and conversation.
+
+TASK: Independently validate the attached D2 locked appearance v1.
+This is REFERENCE-ONLY validation, not production ingestion or approval.
+Read AGENTS.md and follow it. Preserve unrelated work.
+
+Attachment: rastalr_D2_locked_appearance_review_bundle.zip
+Preserve the original archive and every extracted member unchanged under:
+references/architecture/master_validation_D2_appearance_v1/sources/
+Keep new independent evidence outside sources/. Do not use a preview as artwork.
+
+AUTHORITY AND REVIEW SCOPE
+Use the existing D2 v2 geometry contract at commit:
+4f078aec4aa876e5ac3a806b0ef6a5662f42c8cb
+Contract:
+references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json
+
+ChatGPT inspected the committed clean corner and judged its deliberate shallow/cutaway presentation suitable for a reference-only appearance trial. It also reviewed the attached appearance candidate. This does not constitute final human production approval. Keep the historical proposed contract/status and reports unchanged; record new review evidence separately and accurately.
+
+Use D0/D1 and the existing v2 validator as supporting authorities. Package scripts/reports are supporting material, not independent evidence to copy. Do not run the supplied builder before verifying the supplied files.
+
+ACTUAL CANDIDATES
+All files are beneath candidate/ and share prefix:
+rastalr_D2_glass_partition_side_left_locked_v1_
+Suffixes:
+- main_native.png and main_source_8x.png
+- repeat_native.png and repeat_source_8x.png
+- corner_main_native.png and corner_main_source_8x.png
+- corner_repeat_native.png and corner_repeat_source_8x.png
+
+These are FOUR MUTUALLY EXCLUSIVE IMPLEMENTATION VIEWS of ONE future logical asset, hospital_glass_partition_side_left_01. They are not four catalog assets and must not be composited on top of each other.
+
+VERIFY FROM SAVED PNGs
+- Main/repeat: 12x32 RGBA; exact 96x256 working exports.
+- Corner-main/repeat: 12x56 RGBA; exact 96x448 exports.
+- Exact 8x nearest-neighbor blocks and lossless native round-trips.
+- Compare each native alpha map against its corresponding committed D2 v2 scaffold, not D1 or D2 v1. Required changed alpha pixels: 0.
+- All original zero-alpha RGBA pixels must remain unchanged.
+- Expected measured RGB changes: main 384, repeat 384, corner_main 496, corner_repeat 496. Compute these; do not hardcode observations.
+- Frame alpha 255, glass 150, exterior 0, per the v2 regions.
+- Verify provenance against committed sources. The package contains unchanged source scaffolds and D1 references for comparison.
+- No trim, padding, warp, perspective transform, rotation, or silent normalization.
+
+VIEW RELATIONSHIPS AND PLACEMENT
+Use half-open rectangles.
+- The bottom [0,24,12,56) of each corner view must exactly equal its corresponding straight view in RGBA.
+- The repeat view differs from main only in [2,28,10,32), extending native row 27 through rows 28..31 within x=2..10.
+- Main/repeat origin relative to logical cell [12,0]; image anchor [4,16].
+- Corner origins [12,-24]; image anchor [4,40].
+- Logical-cell anchor [16,16]; logical depth stride [0,32].
+- Use corner views only for the first side cell at the reviewed D1 north-west connection. Select main when that cell closes the run, repeat when it continues. Never layer alternative views.
+
+INDEPENDENT RECONSTRUCTION
+Rebuild 1/2/4-cell straight runs AND runs beginning with a corner view from the supplied files. Check exact support ownership, 4 px support widths, 32 px ground stride, single-layer glass alpha, and terminal closure.
+
+Rebuild the reviewed local north-west D1/D2 corner and a relocated version, using unchanged validated D1 files. Preserve the distinction between ground centerline and baseline. In the reference placement, centerlines meet at [64,60], D1 baseline is y=64, and the corner's deliberate cutaway is 24 px.
+
+Verify the documented opaque overlaps only: 48 px total in [64,36,68,40) and [64,60,72,64). Draw background, D2, then unchanged D1. Require zero stacked/hidden glass and no unexpected overlap. Recheck required upper contact, glazed return and frame continuity. D1 files and final D1 composited pixels must remain unchanged.
+
+Test light, dark, colored and separate-object backgrounds, including actual background response through all panes and opaque-frame invariance. Use unchanged approved Batch 11 assets for original and relocated wall/floor context. Package context scenes are examples, not substitutes for these independent tests.
+
+Do not claim all-direction junction coverage. Do not redefine the deliberate cutaway as a full-height glazed side wall.
+
+TESTS AND PRESERVATION
+Reuse measured D0/D1/D2 helpers as appropriate. Do not compare appearance RGB against flat scaffold RGB. Keep expected, observed, derived and reviewer findings distinct.
+
+Retain relevant negative controls and add bounded candidate regressions for alpha corruption, export subpixel corruption, repeat displacement, doubled support, stacked glass, missing corner return and displaced corner contact. Broken fixtures need passing valid controls; manipulate temporary copies only.
+
+Extend authorized-reference-addition safeguards narrowly for the new D2 appearance workspace. Preserve every existing protected file/hash and historical snapshot. Do not broadly exempt references or refresh baselines to pass tests.
+
+Run the COMPLETE test suite. Last recorded baseline: 124 passed. Report the actual result; do not present the package's local checks as repository tests.
+
+Production before/after must remain:
+220 manifest / 220 approved / 0 needs human review.
+No new catalog rows or production candidates. Do not create Batch 13, begin D3, repaint art, or approve/ingest D1/D2.
+
+OUTPUT AND GIT
+Create an independent JSON/Markdown validation report, region/alpha evidence, straight and corner repeats, clean and annotated corner reconstruction, relocated context, transparency evidence, one compact review montage, preservation checks and captured test results.
+
+On successful validation, commit/push the intended work following AGENTS.md. No force-push or unrelated cleanup.
+
+Final report: PASS/FAIL with exact blockers; per-view dimensions/alpha/RGB differences; view-selection and anchor results; repeat/corner/overlap/transmission findings; source and production preservation; test total; montage/report paths; commit SHA; push result; actual worktree status.
+
+Stop after reference-only D2 appearance validation. On failure preserve the candidate unchanged and report the specific discrepancy instead of repairing it silently.

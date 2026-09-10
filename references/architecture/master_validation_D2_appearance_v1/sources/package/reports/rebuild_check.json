@@ -1,0 +1,13 @@
+{
+  "candidate_rebuild_byte_identical": true,
+  "files": {
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_source_8x.png": "a715ee4bf1cec78a297f240dfe40d12ec6b4011152bb098b4f95b0a4ccbaa296",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_source_8x.png": "647c0da6742e8c2dcc9f6c707f8f90b98ef4047edc5dca0bf237deaffdd43baa",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_source_8x.png": "c97509b2f14820443b43218498902adb828cfb405e2d08af9672ba59608df280",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_source_8x.png": "0b502433115f38283ce15c826c40a09c88418a770fd42716111dd2fc9559792a",
+    "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a"
+  }
+}

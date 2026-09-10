@@ -1,0 +1,7 @@
+{
+  "command": "python -m pytest -q",
+  "exit_code": 0,
+  "passed": 160,
+  "baseline_passed": 124,
+  "method": "Complete repository subprocess; actual pytest summary"
+}

@@ -1,0 +1,12 @@
+{
+  "evidence_type": "assistant_visual_findings",
+  "method": "Direct inspection of the independently reconstructed saved review montage; no package montage used as artwork",
+  "findings": [
+    "The candidate adds controlled frame shading and pane highlights over the unchanged cutaway geometry. The narrow return is visible beside the original D1 post.",
+    "Separate background colors and the yellow test object remain visible through the saved candidate panes. Opaque supports visibly retain their width at repeat joins.",
+    "The original and relocated corner preserve the deliberate shallow cutaway. This evidence is limited to the specified north-west connection and straight runs."
+  ],
+  "user_reported_review": "ChatGPT reviewed the candidate for independent technical validation; this is supporting evidence, not a result copied into technical QA",
+  "human_production_approval": false,
+  "historical_contract_status": "PROPOSED_FOR_HUMAN_GEOMETRY_REVIEW"
+}

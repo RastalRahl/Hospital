@@ -1,0 +1,130 @@
+{
+  "id": "hospital_glass_partition_side_left_01",
+  "candidate_version": "locked_appearance_v1",
+  "status": "REFERENCE_ONLY_APPEARANCE_CANDIDATE",
+  "authoritative_geometry_commit": "4f078aec4aa876e5ac3a806b0ef6a5662f42c8cb",
+  "authoritative_geometry_contract": "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json",
+  "review_scope": "ChatGPT judged v2 suitable for this controlled appearance trial. No user or production approval is inferred; historical proposed contract remains untouched.",
+  "material_policy": "RGB-only edits within source nonzero-alpha regions; all source alpha and zero-alpha RGBA values preserved.",
+  "coordinate_convention": "[left, top, right, bottom)",
+  "source_scale": 8,
+  "normalization": "architecture_grid_preserving",
+  "logical_asset_count": 1,
+  "interpretation": "Low glass partition rendered as a shallow side cutaway, with a glazed north return. Not a full-height glazed side wall.",
+  "views": {
+    "main": {
+      "native_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+      "source_8x_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_source_8x.png",
+      "source_reference_file": "sources/d2_main_native.png",
+      "native_size": [
+        12,
+        32
+      ],
+      "render_origin_relative_to_cell": [
+        12,
+        0
+      ],
+      "image_anchor": [
+        4,
+        16
+      ],
+      "logical_cell_anchor": [
+        16,
+        16
+      ]
+    },
+    "repeat": {
+      "native_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+      "source_8x_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_source_8x.png",
+      "source_reference_file": "sources/d2_repeat_native.png",
+      "native_size": [
+        12,
+        32
+      ],
+      "render_origin_relative_to_cell": [
+        12,
+        0
+      ],
+      "image_anchor": [
+        4,
+        16
+      ],
+      "logical_cell_anchor": [
+        16,
+        16
+      ]
+    },
+    "corner_main": {
+      "native_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+      "source_8x_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_source_8x.png",
+      "source_reference_file": "sources/d2_corner_main_native.png",
+      "native_size": [
+        12,
+        56
+      ],
+      "render_origin_relative_to_cell": [
+        12,
+        -24
+      ],
+      "image_anchor": [
+        4,
+        40
+      ],
+      "logical_cell_anchor": [
+        16,
+        16
+      ]
+    },
+    "corner_repeat": {
+      "native_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+      "source_8x_file": "candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_source_8x.png",
+      "source_reference_file": "sources/d2_corner_repeat_native.png",
+      "native_size": [
+        12,
+        56
+      ],
+      "render_origin_relative_to_cell": [
+        12,
+        -24
+      ],
+      "image_anchor": [
+        4,
+        40
+      ],
+      "logical_cell_anchor": [
+        16,
+        16
+      ]
+    }
+  },
+  "assembly": {
+    "depth_stride": [
+      0,
+      32
+    ],
+    "mutually_exclusive_views": true,
+    "selection": "Use corner_main/corner_repeat only for the first D2 cell adjoining D1 at the reviewed NW corner. Main closes a run; repeat continues it. Never layer alternatives.",
+    "corner_body_offset": [
+      0,
+      24
+    ],
+    "repeat_edit_region_main": [
+      2,
+      28,
+      10,
+      32
+    ],
+    "layer_order": [
+      "separate background",
+      "D2",
+      "unchanged D1"
+    ],
+    "intentional_opaque_overlap_pixels": 48,
+    "glass_overlap_pixels": 0
+  },
+  "limits": [
+    "Only the existing local NW corner, not every junction, was reviewed.",
+    "No production asset, catalog row, or repository file was created.",
+    "Independent Codex validation remains required."
+  ]
+}

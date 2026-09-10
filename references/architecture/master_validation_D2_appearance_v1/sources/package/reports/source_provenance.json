@@ -1,0 +1,71 @@
+{
+  "repository": "RastalRahl/Hospital",
+  "geometry_commit": "4f078aec4aa876e5ac3a806b0ef6a5662f42c8cb",
+  "contract_path": "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json",
+  "contract_git_blob_sha": "b54006a964f1c78a051deaca57eae9fe10acd94c",
+  "files": {
+    "d2_main_native.png": {
+      "repository_path": "references/architecture/master_validation_D2_v2/d2_main_native.png",
+      "git_blob_sha": "fba4465ab5d28b0ab4e58599d2f1f09323517ca8",
+      "sha256": "f50904d68c04005ee84ca82f961029c25cd0aba1d5ce867c27445fcf6a710eff",
+      "dimensions": [
+        12,
+        32
+      ],
+      "mode": "RGBA"
+    },
+    "d2_repeat_native.png": {
+      "repository_path": "references/architecture/master_validation_D2_v2/d2_repeat_native.png",
+      "git_blob_sha": "6ea7ade489952c6fe2303d95539b9cd6b70f5cf3",
+      "sha256": "64f98a2cbefc1aa2783cee47bb83b02ecc7d06960aa9d1027c542353152d0656",
+      "dimensions": [
+        12,
+        32
+      ],
+      "mode": "RGBA"
+    },
+    "d2_corner_main_native.png": {
+      "repository_path": "references/architecture/master_validation_D2_v2/d2_corner_main_native.png",
+      "git_blob_sha": "911570daadae9b1a7e0b893146b1160a61f532d8",
+      "sha256": "ca3d46ead816cd32ce04c1898677c86eaee52427777b3814373245f6ef771157",
+      "dimensions": [
+        12,
+        56
+      ],
+      "mode": "RGBA"
+    },
+    "d2_corner_repeat_native.png": {
+      "repository_path": "references/architecture/master_validation_D2_v2/d2_corner_repeat_native.png",
+      "git_blob_sha": "307d55c670d730cda5a0a662ad3bd988fd9436e1",
+      "sha256": "f3909042ab4fdaae09822caef0dfd1847fb9894459ad284c38c52d655780766f",
+      "dimensions": [
+        12,
+        56
+      ],
+      "mode": "RGBA"
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_native.png": {
+      "repository_path": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+      "sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502"
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": {
+      "repository_path": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+      "sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    "hospital_wall_back_straight_01.png": {
+      "repository_path": "assets/architecture/hospital_wall_back_straight_01.png",
+      "sha256": "5de21497d18af52605754193c188f6555d35f09d42d9228fff31ad2fb29187e2",
+      "source": "Unchanged input from the independently validated D1 package; recheck against repository during Codex validation."
+    },
+    "hospital_floor_plain_01.png": {
+      "repository_path": "assets/architecture/hospital_floor_plain_01.png",
+      "sha256": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+      "source": "Unchanged input from the independently validated D1 package; recheck against repository during Codex validation."
+    },
+    "d1_d2_corner_clean_scaffold_v2.png": {
+      "repository_path": "references/architecture/master_validation_D2_v2/artifacts/d1_d2_corner_clean.png",
+      "git_blob_sha": "d451f2162dcfef1810c679b94eeaccded0a49894",
+      "sha256": "0dfd9f48da530c76c438574411b229c1e48545eccc1abfa04dbb679ab83decdb"
+    }
+  }
+}

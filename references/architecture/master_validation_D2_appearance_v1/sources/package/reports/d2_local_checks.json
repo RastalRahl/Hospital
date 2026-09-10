@@ -1,0 +1,341 @@
+{
+  "status": "LOCAL_CANDIDATE_CHECKS_ONLY",
+  "views": {
+    "main": {
+      "native_dimensions": [
+        12,
+        32
+      ],
+      "source_dimensions": [
+        96,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 384,
+      "transparent_rgba_changed_pixels": 0,
+      "source_block_errors": 0,
+      "alpha_histogram": {
+        "150": 192,
+        "255": 192
+      },
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 192,
+        "responsive_pane_pixels": 192,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    },
+    "repeat": {
+      "native_dimensions": [
+        12,
+        32
+      ],
+      "source_dimensions": [
+        96,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 384,
+      "transparent_rgba_changed_pixels": 0,
+      "source_block_errors": 0,
+      "alpha_histogram": {
+        "150": 224,
+        "255": 160
+      },
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 224,
+        "responsive_pane_pixels": 224,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    },
+    "corner_main": {
+      "native_dimensions": [
+        12,
+        56
+      ],
+      "source_dimensions": [
+        96,
+        448
+      ],
+      "mode": "RGBA",
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 496,
+      "transparent_rgba_changed_pixels": 0,
+      "source_block_errors": 0,
+      "alpha_histogram": {
+        "0": 176,
+        "150": 232,
+        "255": 264
+      },
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 232,
+        "responsive_pane_pixels": 232,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    },
+    "corner_repeat": {
+      "native_dimensions": [
+        12,
+        56
+      ],
+      "source_dimensions": [
+        96,
+        448
+      ],
+      "mode": "RGBA",
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 496,
+      "transparent_rgba_changed_pixels": 0,
+      "source_block_errors": 0,
+      "alpha_histogram": {
+        "0": 176,
+        "150": 264,
+        "255": 232
+      },
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 264,
+        "responsive_pane_pixels": 264,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    }
+  },
+  "runs": {
+    "1": {
+      "pass": true,
+      "dimensions": [
+        12,
+        32
+      ],
+      "support_spans_observed": [
+        [
+          0,
+          4
+        ],
+        [
+          28,
+          32
+        ]
+      ],
+      "actual_origins": [
+        [
+          0,
+          0
+        ]
+      ],
+      "alpha_violations": 0,
+      "pane_layer_violations": 0,
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 192,
+        "responsive_pane_pixels": 192,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      }
+    },
+    "2": {
+      "pass": true,
+      "dimensions": [
+        12,
+        64
+      ],
+      "support_spans_observed": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          60,
+          64
+        ]
+      ],
+      "actual_origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "alpha_violations": 0,
+      "pane_layer_violations": 0,
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 416,
+        "responsive_pane_pixels": 416,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      }
+    },
+    "4": {
+      "pass": true,
+      "dimensions": [
+        12,
+        128
+      ],
+      "support_spans_observed": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          64,
+          68
+        ],
+        [
+          96,
+          100
+        ],
+        [
+          124,
+          128
+        ]
+      ],
+      "actual_origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          64
+        ],
+        [
+          0,
+          96
+        ]
+      ],
+      "alpha_violations": 0,
+      "pane_layer_violations": 0,
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 864,
+        "responsive_pane_pixels": 864,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      }
+    }
+  },
+  "corner_runs": {
+    "1": {
+      "body_matches_straight": true,
+      "max_translucent_layers": 1,
+      "origins": [
+        [
+          0,
+          0
+        ]
+      ],
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 232,
+        "responsive_pane_pixels": 232,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    },
+    "2": {
+      "body_matches_straight": true,
+      "max_translucent_layers": 1,
+      "origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          56
+        ]
+      ],
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 456,
+        "responsive_pane_pixels": 456,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    },
+    "4": {
+      "body_matches_straight": true,
+      "max_translucent_layers": 1,
+      "origins": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          56
+        ],
+        [
+          0,
+          88
+        ],
+        [
+          0,
+          120
+        ]
+      ],
+      "transmission": {
+        "pass": true,
+        "pane_pixels": 904,
+        "responsive_pane_pixels": 904,
+        "responsive_opaque_frame_pixels": 0,
+        "source_over_pixel_errors": 0
+      },
+      "pass": true
+    }
+  },
+  "exclusive_view_relationships": "PASS: corner body identical to straight; repeat extends only terminal support region",
+  "scaffold_corner_reconstructed_byte_exact": true,
+  "corner": {
+    "opaque_overlap_pixels": 48,
+    "overlap_ownership_mismatches": 0,
+    "hidden_or_stacked_glass_pixels": 0,
+    "D1_composited_pixel_mismatches": 0,
+    "pass": true
+  },
+  "context_relocation_pixel_match": true,
+  "negative_controls_rejected": {
+    "opaque_glass": true,
+    "pane_hole": true,
+    "broken_frame": true,
+    "doubled_support": true,
+    "stacked_glass": true,
+    "repeat_displacement_1px": true,
+    "missing_return": true,
+    "corner_displacement_1px": true
+  },
+  "local_source_hashes_unchanged": true,
+  "repository_test_suite": "NOT RUN HERE. Codex independently validates and runs the repository suite.",
+  "human_production_approval": false,
+  "pass": true
+}
