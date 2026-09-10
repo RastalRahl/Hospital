@@ -1,0 +1,92 @@
+{
+  "id": "hospital_glass_partition_back_01",
+  "candidate_version": "locked_appearance_v1",
+  "status": "awaiting_user_appearance_review_reference_only",
+  "coordinate_convention": "[left,top,right,bottom)",
+  "contract_repository_path": "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json",
+  "contract_commit": "9ed992f57585d77448f3e396b8f4dc6f25aa5987",
+  "canonical_sha256": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6",
+  "native_dimensions": [
+    32,
+    28
+  ],
+  "source_scale": 8,
+  "source_dimensions": [
+    256,
+    224
+  ],
+  "frame_regions_native": {
+    "left_post": [
+      0,
+      0,
+      4,
+      28
+    ],
+    "right_post": [
+      28,
+      0,
+      32,
+      28
+    ],
+    "top_rail": [
+      4,
+      0,
+      28,
+      5
+    ],
+    "bottom_rail": [
+      4,
+      23,
+      28,
+      28
+    ]
+  },
+  "pane_native": [
+    4,
+    5,
+    28,
+    23
+  ],
+  "alpha_edit_policy": "Canonical alpha preserved pixel-for-pixel in the terminal/main candidate.",
+  "frame_alpha": 255,
+  "pane_alpha_values": [
+    150,
+    210
+  ],
+  "anchor_cell_native": [
+    16,
+    20
+  ],
+  "anchor_image_native": [
+    16,
+    28
+  ],
+  "origin_relative_to_cell_native": [
+    0,
+    -8
+  ],
+  "repeat": {
+    "stride_native": 32,
+    "shared_post_width_native": 4,
+    "nonterminal_edit_rect": [
+      28,
+      0,
+      32,
+      28
+    ],
+    "extension_column": 27,
+    "use_rule": "Use repeat/nonterminal for every cell with a glass neighbor on the right. Use main/terminal for the final cell or standalone panel. Do not place both files on the same cell.",
+    "logical_assets": 1,
+    "implementation_views": 2,
+    "terminal_pane_width_native": 24,
+    "nonterminal_pane_width_native": 28
+  },
+  "normalization_mode": "architecture_grid_preserving",
+  "production_artwork_changed": false,
+  "canonical_changed": false,
+  "sources": {
+    "glass_partition_1x.png": "references/architecture/rastalr_architecture_v2/glass_partition_1x.png",
+    "hospital_wall_back_straight_01.png": "assets/architecture/hospital_wall_back_straight_01.png",
+    "hospital_floor_plain_01.png": "assets/architecture/hospital_floor_plain_01.png"
+  }
+}

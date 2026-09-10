@@ -1,0 +1,467 @@
+{
+  "stage": "local_reference_only_appearance_review",
+  "repository_commit_read": "9ed992f57585d77448f3e396b8f4dc6f25aa5987",
+  "scope": "Checks executed here on saved/reloaded candidate PNGs. Not the repository-wide test suite.",
+  "status": "PASS",
+  "checks": {
+    "exact_native_rgba_geometry": true,
+    "alpha_map_pixel_lock": true,
+    "appearance_rgb_changed": true,
+    "source_exact_eight_by_eight_blocks": true,
+    "source_native_roundtrip": true,
+    "all_pane_pixels_transmit_background": true,
+    "opaque_frame_not_affected_by_background": true,
+    "one_two_four_panel_checks": true,
+    "all_six_broken_controls_rejected": true,
+    "straight_approved_wall_context": true,
+    "all_source_files_unchanged": true
+  },
+  "native": {
+    "size": [
+      32,
+      28
+    ],
+    "mode": "RGBA",
+    "rgb_changed_pixels": 796,
+    "alpha_changed_pixels": 0,
+    "alpha_histogram": {
+      "150": 421,
+      "210": 11,
+      "255": 464
+    },
+    "rgba_color_count": 18,
+    "responsive_pane_pixels": 432,
+    "opaque_frame_pixels_responsive_to_background": 0
+  },
+  "source_8x": {
+    "size": [
+      256,
+      224
+    ],
+    "exact_block_replication": true,
+    "roundtrip": true
+  },
+  "repeats": {
+    "1": {
+      "pass": true,
+      "checks": {
+        "rgba_dimensions": true,
+        "declared_origins_match_stride": true,
+        "exact_source_alpha_with_shared_edge_rule": true,
+        "required_frame_opaque": true,
+        "pane_translucent_without_holes": true,
+        "measured_post_widths": true,
+        "no_alpha_accumulation": true
+      },
+      "expected_size": [
+        32,
+        28
+      ],
+      "observed_size": [
+        32,
+        28
+      ],
+      "observed_opaque_post_runs_at_y14": [
+        [
+          0,
+          4
+        ],
+        [
+          28,
+          32
+        ]
+      ],
+      "alpha_mismatches": 0,
+      "alpha_histogram": {
+        "150": 421,
+        "210": 11,
+        "255": 464
+      }
+    },
+    "2": {
+      "pass": true,
+      "checks": {
+        "rgba_dimensions": true,
+        "declared_origins_match_stride": true,
+        "exact_source_alpha_with_shared_edge_rule": true,
+        "required_frame_opaque": true,
+        "pane_translucent_without_holes": true,
+        "measured_post_widths": true,
+        "no_alpha_accumulation": true
+      },
+      "expected_size": [
+        64,
+        28
+      ],
+      "observed_size": [
+        64,
+        28
+      ],
+      "observed_opaque_post_runs_at_y14": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          60,
+          64
+        ]
+      ],
+      "alpha_mismatches": 0,
+      "alpha_histogram": {
+        "150": 914,
+        "210": 22,
+        "255": 856
+      }
+    },
+    "4": {
+      "pass": true,
+      "checks": {
+        "rgba_dimensions": true,
+        "declared_origins_match_stride": true,
+        "exact_source_alpha_with_shared_edge_rule": true,
+        "required_frame_opaque": true,
+        "pane_translucent_without_holes": true,
+        "measured_post_widths": true,
+        "no_alpha_accumulation": true
+      },
+      "expected_size": [
+        128,
+        28
+      ],
+      "observed_size": [
+        128,
+        28
+      ],
+      "observed_opaque_post_runs_at_y14": [
+        [
+          0,
+          4
+        ],
+        [
+          32,
+          36
+        ],
+        [
+          64,
+          68
+        ],
+        [
+          96,
+          100
+        ],
+        [
+          124,
+          128
+        ]
+      ],
+      "alpha_mismatches": 0,
+      "alpha_histogram": {
+        "150": 1900,
+        "210": 44,
+        "255": 1640
+      }
+    }
+  },
+  "straight_context": {
+    "wall_origins_native": [
+      [
+        0,
+        0
+      ],
+      [
+        160,
+        0
+      ]
+    ],
+    "glass_origin_native": [
+      32,
+      24
+    ],
+    "derived_bottom_edges_native": [
+      52,
+      52,
+      52
+    ],
+    "same_baseline": true,
+    "context_compositing_pixel_mismatches": 0,
+    "left_wall_pixels_unchanged": true,
+    "right_wall_pixels_unchanged": true,
+    "front_floor_all_opaque": true,
+    "native_size": [
+      192,
+      116
+    ],
+    "notes": "Straight-run context only. No L/T/cross validation or approval is claimed.",
+    "pass": true
+  },
+  "negative_controls": {
+    "pane_alpha_hole": {
+      "intended_check": "pane_translucent_without_holes",
+      "detected_for_intended_reason": true,
+      "details": {
+        "pass": false,
+        "checks": {
+          "rgba_dimensions": true,
+          "declared_origins_match_stride": true,
+          "exact_source_alpha_with_shared_edge_rule": false,
+          "required_frame_opaque": true,
+          "pane_translucent_without_holes": false,
+          "measured_post_widths": true,
+          "no_alpha_accumulation": false
+        },
+        "expected_size": [
+          32,
+          28
+        ],
+        "observed_size": [
+          32,
+          28
+        ],
+        "observed_opaque_post_runs_at_y14": [
+          [
+            0,
+            4
+          ],
+          [
+            28,
+            32
+          ]
+        ],
+        "alpha_mismatches": 1,
+        "alpha_histogram": {
+          "0": 1,
+          "150": 420,
+          "210": 11,
+          "255": 464
+        }
+      }
+    },
+    "broken_opaque_base": {
+      "intended_check": "required_frame_opaque",
+      "detected_for_intended_reason": true,
+      "details": {
+        "pass": false,
+        "checks": {
+          "rgba_dimensions": true,
+          "declared_origins_match_stride": true,
+          "exact_source_alpha_with_shared_edge_rule": false,
+          "required_frame_opaque": false,
+          "pane_translucent_without_holes": true,
+          "measured_post_widths": true,
+          "no_alpha_accumulation": true
+        },
+        "expected_size": [
+          32,
+          28
+        ],
+        "observed_size": [
+          32,
+          28
+        ],
+        "observed_opaque_post_runs_at_y14": [
+          [
+            0,
+            4
+          ],
+          [
+            28,
+            32
+          ]
+        ],
+        "alpha_mismatches": 1,
+        "alpha_histogram": {
+          "0": 1,
+          "150": 421,
+          "210": 11,
+          "255": 463
+        }
+      }
+    },
+    "fake_opaque_glass": {
+      "intended_check": "pane_translucent_without_holes",
+      "detected_for_intended_reason": true,
+      "details": {
+        "pass": false,
+        "checks": {
+          "rgba_dimensions": true,
+          "declared_origins_match_stride": true,
+          "exact_source_alpha_with_shared_edge_rule": false,
+          "required_frame_opaque": true,
+          "pane_translucent_without_holes": false,
+          "measured_post_widths": false,
+          "no_alpha_accumulation": false
+        },
+        "expected_size": [
+          32,
+          28
+        ],
+        "observed_size": [
+          32,
+          28
+        ],
+        "observed_opaque_post_runs_at_y14": [
+          [
+            0,
+            32
+          ]
+        ],
+        "alpha_mismatches": 432,
+        "alpha_histogram": {
+          "255": 896
+        }
+      }
+    },
+    "double_width_seam": {
+      "intended_check": "measured_post_widths",
+      "detected_for_intended_reason": true,
+      "details": {
+        "pass": false,
+        "checks": {
+          "rgba_dimensions": true,
+          "declared_origins_match_stride": true,
+          "exact_source_alpha_with_shared_edge_rule": false,
+          "required_frame_opaque": true,
+          "pane_translucent_without_holes": false,
+          "measured_post_widths": false,
+          "no_alpha_accumulation": false
+        },
+        "expected_size": [
+          64,
+          28
+        ],
+        "observed_size": [
+          64,
+          28
+        ],
+        "observed_opaque_post_runs_at_y14": [
+          [
+            0,
+            4
+          ],
+          [
+            28,
+            36
+          ],
+          [
+            60,
+            64
+          ]
+        ],
+        "alpha_mismatches": 72,
+        "alpha_histogram": {
+          "150": 842,
+          "210": 22,
+          "255": 928
+        }
+      }
+    },
+    "one_pixel_stride_shift": {
+      "intended_check": "declared_origins_match_stride",
+      "detected_for_intended_reason": true,
+      "details": {
+        "pass": false,
+        "checks": {
+          "rgba_dimensions": true,
+          "declared_origins_match_stride": false,
+          "exact_source_alpha_with_shared_edge_rule": false,
+          "required_frame_opaque": false,
+          "pane_translucent_without_holes": false,
+          "measured_post_widths": false,
+          "no_alpha_accumulation": false
+        },
+        "expected_size": [
+          64,
+          28
+        ],
+        "observed_size": [
+          64,
+          28
+        ],
+        "observed_opaque_post_runs_at_y14": [
+          [
+            0,
+            4
+          ],
+          [
+            33,
+            37
+          ],
+          [
+            61,
+            64
+          ]
+        ],
+        "alpha_mismatches": 86,
+        "alpha_histogram": {
+          "0": 28,
+          "150": 914,
+          "210": 22,
+          "255": 828
+        }
+      }
+    },
+    "double_coated_glass": {
+      "intended_check": "no_alpha_accumulation",
+      "detected_for_intended_reason": true,
+      "details": {
+        "pass": false,
+        "checks": {
+          "rgba_dimensions": true,
+          "declared_origins_match_stride": true,
+          "exact_source_alpha_with_shared_edge_rule": false,
+          "required_frame_opaque": true,
+          "pane_translucent_without_holes": true,
+          "measured_post_widths": true,
+          "no_alpha_accumulation": false
+        },
+        "expected_size": [
+          64,
+          28
+        ],
+        "observed_size": [
+          64,
+          28
+        ],
+        "observed_opaque_post_runs_at_y14": [
+          [
+            0,
+            4
+          ],
+          [
+            32,
+            36
+          ],
+          [
+            60,
+            64
+          ]
+        ],
+        "alpha_mismatches": 432,
+        "alpha_histogram": {
+          "150": 493,
+          "210": 11,
+          "212": 421,
+          "247": 11,
+          "255": 856
+        }
+      }
+    }
+  },
+  "source_sha256": {
+    "hospital_floor_plain_01.png": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+    "ART_DIRECTION.md": "681ff206bbbf1a0cf3dc2a2794814e82ff67badb11a52c33a39fad39d1e877f0",
+    "hospital_wall_back_straight_01.png": "5de21497d18af52605754193c188f6555d35f09d42d9228fff31ad2fb29187e2",
+    "glass_partition_1x.png": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6"
+  },
+  "limitations": [
+    "No L/T/cross junction appearance or topology work.",
+    "No production ingestion, manifest changes or repository writes.",
+    "Independent Codex validation and user visual approval are still required.",
+    "Terminal/nonterminal files are implementation views of one proposed logical asset."
+  ]
+}

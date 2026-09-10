@@ -15,10 +15,13 @@ from rastalr_pipeline.geometry import (
     RECTANGLE_CONVENTION, alpha_region, anchored_component, evidence, horizontal_join,
 )
 from rastalr_pipeline.approval_report import approved_markdown
+from rastalr_pipeline.snapshot import compare_snapshots
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "references/architecture/master_validation_D0_v1"
 CANON = ROOT / "references/architecture/rastalr_architecture_v2"
+# Explicitly authorized by the D1 validation task. Existing hashes remain locked.
+AUTHORIZED_REFERENCE_ADDITIONS = ("references/architecture/master_validation_D1_v1/",)
 
 
 def read_json(path):
@@ -412,7 +415,8 @@ def main():
         raise ValueError(f"Unexpected production state: {before['counts']}")
     baseline_path=OUT/"sources/production_before.json"
     if baseline_path.exists():
-        if before != read_json(baseline_path):
+        if not compare_snapshots(read_json(baseline_path), before,
+                                 allowed_addition_prefixes=AUTHORIZED_REFERENCE_ADDITIONS)["pass"]:
             raise ValueError("Protected production/reference hashes changed since D0 baseline")
     else:
         write_json(baseline_path,before)

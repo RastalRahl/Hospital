@@ -6,7 +6,9 @@ from PIL import Image
 from rastalr_pipeline.approval_report import approved_markdown
 from rastalr_pipeline.core import normalize_architecture_grid_image
 from rastalr_pipeline.geometry import alpha_region, anchored_component, horizontal_join, rectangle_pixels
+from rastalr_pipeline.snapshot import compare_snapshots
 from validate_architecture_d0 import (
+    AUTHORIZED_REFERENCE_ADDITIONS,
     CANON, OUT, ROOT, approved_images, behind_glass, compose_glass, contract_from_canonical,
     glass_architecture_context, integration_scene, negative_fixtures, production_snapshot, rgba, topology_check,
     topology_layout, validate_glass,
@@ -127,5 +129,6 @@ def test_approval_markdown_idempotent_preserves_record_and_sections():
 
 def test_production_and_canonical_hashes_unchanged():
     baseline=json.loads((OUT/"sources/production_before.json").read_text())
-    assert production_snapshot()==baseline
+    assert compare_snapshots(baseline, production_snapshot(),
+                             allowed_addition_prefixes=AUTHORIZED_REFERENCE_ADDITIONS)["pass"]
     assert baseline["counts"]=={"manifest":220,"approved":220,"needs_human_review":0}

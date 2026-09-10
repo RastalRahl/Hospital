@@ -1,0 +1,4377 @@
+{
+  "status": "PASS",
+  "scope": "reference_only_independent_d1_validation",
+  "authority": {
+    "checks": {
+      "canonical_sha256": {
+        "expected": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6",
+        "observed": "51a11bddc75b2b51bb387b056f829c79315c0d714459784ab9c0ae3bea3564d6",
+        "method": "Hash actual canonical PNG",
+        "units": "sha256",
+        "pass": true
+      },
+      "committed_contract": {
+        "expected": true,
+        "observed": true,
+        "method": "Compare local contract JSON with specified Git commit",
+        "units": "boolean",
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "package_integrity": {
+    "checks": {
+      "archive_sha256": {
+        "expected": "87dcbdac0b7c9aa87883bad3d7f684b60b7f729487c4608ae24b7157f91c3902",
+        "observed": "87dcbdac0b7c9aa87883bad3d7f684b60b7f729487c4608ae24b7157f91c3902",
+        "method": "SHA-256 of preserved original archive",
+        "units": "sha256",
+        "pass": true
+      },
+      "extracted_members": {
+        "expected": [
+          "PACKAGE_CONTENTS.md",
+          "SHA256SUMS.txt",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+          "previews/d1_alpha_regions_diagnostic_8x.png",
+          "previews/d1_approved_wall_context_4x.png",
+          "previews/d1_approved_wall_context_native.png",
+          "previews/d1_context_background_only.png",
+          "previews/d1_run_1_native_rgba.png",
+          "previews/d1_run_1_source_8x_rgba.png",
+          "previews/d1_run_2_native_rgba.png",
+          "previews/d1_run_2_source_8x_rgba.png",
+          "previews/d1_run_4_native_rgba.png",
+          "previews/d1_run_4_source_8x_rgba.png",
+          "previews/d1_transmission_background_only.png",
+          "previews/d1_transmission_composite.png",
+          "previews/rastalr_D1_locked_appearance_review.png",
+          "reports/d1_candidate_spec.json",
+          "reports/d1_local_checks.json",
+          "reports/d1_local_checks.md",
+          "sources/ART_DIRECTION.md",
+          "sources/glass_partition_1x.png",
+          "sources/hospital_floor_plain_01.png",
+          "sources/hospital_wall_back_straight_01.png",
+          "tools/build_d1_appearance.py"
+        ],
+        "observed": [
+          "PACKAGE_CONTENTS.md",
+          "SHA256SUMS.txt",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png",
+          "candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+          "previews/d1_alpha_regions_diagnostic_8x.png",
+          "previews/d1_approved_wall_context_4x.png",
+          "previews/d1_approved_wall_context_native.png",
+          "previews/d1_context_background_only.png",
+          "previews/d1_run_1_native_rgba.png",
+          "previews/d1_run_1_source_8x_rgba.png",
+          "previews/d1_run_2_native_rgba.png",
+          "previews/d1_run_2_source_8x_rgba.png",
+          "previews/d1_run_4_native_rgba.png",
+          "previews/d1_run_4_source_8x_rgba.png",
+          "previews/d1_transmission_background_only.png",
+          "previews/d1_transmission_composite.png",
+          "previews/rastalr_D1_locked_appearance_review.png",
+          "reports/d1_candidate_spec.json",
+          "reports/d1_local_checks.json",
+          "reports/d1_local_checks.md",
+          "sources/ART_DIRECTION.md",
+          "sources/glass_partition_1x.png",
+          "sources/hospital_floor_plain_01.png",
+          "sources/hospital_wall_back_straight_01.png",
+          "tools/build_d1_appearance.py"
+        ],
+        "method": "Enumerate archive and extracted files",
+        "units": "paths",
+        "pass": true
+      },
+      "extracted_bytes": {
+        "expected": [],
+        "observed": [],
+        "method": "Compare every extracted member byte-for-byte to original ZIP",
+        "units": "paths",
+        "pass": true
+      },
+      "initial_member_hashes": {
+        "expected": [],
+        "observed": [],
+        "method": "Compare every member to initial extraction hashes",
+        "units": "paths",
+        "pass": true
+      }
+    },
+    "pass": true,
+    "member_count": 27,
+    "candidate_sha256": {
+      "rastalr_D1_glass_partition_back_locked_v1_native.png": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+      "rastalr_D1_glass_partition_back_locked_v1_source_8x.png": "0362cbf1b4d8ac3a605a7e39a98288ad6f6a20ec7d860239da8fb22a0894f28e",
+      "rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png": "ebe91b5d154720a7fd561b952391abf075cf4adc2db28a7454b88060f6aa6dab"
+    }
+  },
+  "candidate_metadata": {
+    "checks": {
+      "id": {
+        "expected": "hospital_glass_partition_back_01",
+        "observed": "hospital_glass_partition_back_01",
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "native_dimensions": {
+        "expected": [
+          32,
+          28
+        ],
+        "observed": [
+          32,
+          28
+        ],
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "source_scale": {
+        "expected": 8,
+        "observed": 8,
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "source_dimensions": {
+        "expected": [
+          256,
+          224
+        ],
+        "observed": [
+          256,
+          224
+        ],
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "frame_regions_native": {
+        "expected": {
+          "left_post": [
+            0,
+            0,
+            4,
+            28
+          ],
+          "right_post": [
+            28,
+            0,
+            32,
+            28
+          ],
+          "top_rail": [
+            4,
+            0,
+            28,
+            5
+          ],
+          "bottom_rail": [
+            4,
+            23,
+            28,
+            28
+          ]
+        },
+        "observed": {
+          "left_post": [
+            0,
+            0,
+            4,
+            28
+          ],
+          "right_post": [
+            28,
+            0,
+            32,
+            28
+          ],
+          "top_rail": [
+            4,
+            0,
+            28,
+            5
+          ],
+          "bottom_rail": [
+            4,
+            23,
+            28,
+            28
+          ]
+        },
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "pane_native": {
+        "expected": [
+          4,
+          5,
+          28,
+          23
+        ],
+        "observed": [
+          4,
+          5,
+          28,
+          23
+        ],
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "anchor_cell_native": {
+        "expected": [
+          16,
+          20
+        ],
+        "observed": [
+          16,
+          20
+        ],
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "anchor_image_native": {
+        "expected": [
+          16,
+          28
+        ],
+        "observed": [
+          16,
+          28
+        ],
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "origin_relative_to_cell_native": {
+        "expected": [
+          0,
+          -8
+        ],
+        "observed": [
+          0,
+          -8
+        ],
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "normalization_mode": {
+        "expected": "architecture_grid_preserving",
+        "observed": "architecture_grid_preserving",
+        "method": "Read supplied candidate metadata; compare with committed D0 contract, not a PNG measurement",
+        "units": "contract_field",
+        "pass": true
+      },
+      "repeat_logical_assets": {
+        "expected": 1,
+        "observed": 1,
+        "method": "Read declared mutually exclusive implementation-view metadata",
+        "units": "contract_field",
+        "pass": true
+      },
+      "repeat_implementation_views": {
+        "expected": 2,
+        "observed": 2,
+        "method": "Read declared mutually exclusive implementation-view metadata",
+        "units": "contract_field",
+        "pass": true
+      },
+      "repeat_stride_native": {
+        "expected": 32,
+        "observed": 32,
+        "method": "Read declared mutually exclusive implementation-view metadata",
+        "units": "contract_field",
+        "pass": true
+      },
+      "repeat_shared_post_width_native": {
+        "expected": 4,
+        "observed": 4,
+        "method": "Read declared mutually exclusive implementation-view metadata",
+        "units": "contract_field",
+        "pass": true
+      },
+      "repeat_terminal_pane_width_native": {
+        "expected": 24,
+        "observed": 24,
+        "method": "Read declared mutually exclusive implementation-view metadata",
+        "units": "contract_field",
+        "pass": true
+      },
+      "repeat_nonterminal_pane_width_native": {
+        "expected": 28,
+        "observed": 28,
+        "method": "Read declared mutually exclusive implementation-view metadata",
+        "units": "contract_field",
+        "pass": true
+      }
+    },
+    "pass": true
+  },
+  "files": {
+    "checks": {
+      "main_mode": {
+        "expected": "RGBA",
+        "observed": "RGBA",
+        "method": "Read saved PNG mode",
+        "units": "mode",
+        "pass": true
+      },
+      "main_dimensions": {
+        "expected": [
+          32,
+          28
+        ],
+        "observed": [
+          32,
+          28
+        ],
+        "method": "Read saved PNG dimensions",
+        "units": "native_px",
+        "pass": true
+      },
+      "repeat_mode": {
+        "expected": "RGBA",
+        "observed": "RGBA",
+        "method": "Read saved PNG mode",
+        "units": "mode",
+        "pass": true
+      },
+      "repeat_dimensions": {
+        "expected": [
+          32,
+          28
+        ],
+        "observed": [
+          32,
+          28
+        ],
+        "method": "Read saved PNG dimensions",
+        "units": "native_px",
+        "pass": true
+      },
+      "main_8x_mode": {
+        "expected": "RGBA",
+        "observed": "RGBA",
+        "method": "Read saved PNG mode",
+        "units": "mode",
+        "pass": true
+      },
+      "main_8x_dimensions": {
+        "expected": [
+          256,
+          224
+        ],
+        "observed": [
+          256,
+          224
+        ],
+        "method": "Read saved PNG dimensions",
+        "units": "source_px",
+        "pass": true
+      },
+      "repeat_8x_mode": {
+        "expected": "RGBA",
+        "observed": "RGBA",
+        "method": "Read saved PNG mode",
+        "units": "mode",
+        "pass": true
+      },
+      "repeat_8x_dimensions": {
+        "expected": [
+          256,
+          224
+        ],
+        "observed": [
+          256,
+          224
+        ],
+        "method": "Read saved PNG dimensions",
+        "units": "source_px",
+        "pass": true
+      },
+      "main_8x_blocks": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Read all 57,344 source pixels against their native 8x8 block",
+        "units": "pixels",
+        "pass": true
+      },
+      "main_roundtrip": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Nearest-neighbor source-to-native comparison of all RGBA pixels",
+        "units": "pixels",
+        "pass": true
+      },
+      "repeat_8x_blocks": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Read all 57,344 source pixels against their native 8x8 block",
+        "units": "pixels",
+        "pass": true
+      },
+      "repeat_roundtrip": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Nearest-neighbor source-to-native comparison of all RGBA pixels",
+        "units": "pixels",
+        "pass": true
+      },
+      "main_alpha_lock": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Compare all 896 alpha samples with canonical PNG",
+        "units": "pixels",
+        "pass": true
+      },
+      "main_rgb_changes": {
+        "expected": 796,
+        "observed": 796,
+        "method": "Compare RGB triples with canonical PNG",
+        "units": "pixels",
+        "pass": true
+      },
+      "main_alpha_histogram": {
+        "expected": {
+          "150": 421,
+          "210": 11,
+          "255": 464
+        },
+        "observed": {
+          "150": 421,
+          "210": 11,
+          "255": 464
+        },
+        "method": "Count alpha values from saved main PNG",
+        "units": "pixels_per_alpha",
+        "pass": true
+      },
+      "left_post": {
+        "expected": {
+          "rectangle": [
+            0,
+            0,
+            4,
+            28
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 112
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "right_post": {
+        "expected": {
+          "rectangle": [
+            28,
+            0,
+            32,
+            28
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 112
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "top_rail": {
+        "expected": {
+          "rectangle": [
+            4,
+            0,
+            28,
+            5
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 120
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "bottom_rail": {
+        "expected": {
+          "rectangle": [
+            4,
+            23,
+            28,
+            28
+          ],
+          "alpha_range_inclusive": [
+            255,
+            255
+          ],
+          "violations": 0
+        },
+        "observed": {
+          "alpha_min": 255,
+          "alpha_max": 255,
+          "violations": 0,
+          "sample_count": 120
+        },
+        "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+        "pass": true
+      },
+      "pane_locked_alpha_values": {
+        "expected": [
+          150,
+          210
+        ],
+        "observed": [
+          150,
+          210
+        ],
+        "method": "Read unique alpha values inside half-open pane region",
+        "units": "alpha",
+        "pass": true
+      },
+      "visual_envelope": {
+        "expected": [
+          0,
+          0,
+          32,
+          28
+        ],
+        "observed": [
+          0,
+          0,
+          32,
+          28
+        ],
+        "method": "Compute nonzero alpha bounding box; required outer frame remains present",
+        "units": "native_px",
+        "pass": true
+      },
+      "repeat_column_extension": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Compare supplied repeat columns 28..31 with main column 27, all RGBA channels",
+        "units": "pixels",
+        "pass": true
+      },
+      "repeat_outside_extension": {
+        "expected": 0,
+        "observed": 0,
+        "method": "Compare every pixel outside the allowed half-open extension region",
+        "units": "pixels",
+        "pass": true
+      }
+    },
+    "pass": true,
+    "measured_palette_entries": 18,
+    "policy": "Main RGB-only appearance edit is authorized; alpha/topology changes are not. Repeat differs only by the specified column extension."
+  },
+  "blockers": [],
+  "runs": {
+    "1": {
+      "geometry": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              32,
+              28
+            ],
+            "observed": [
+              32,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                28,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                28,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                28,
+                0,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                32
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                32
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": true
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": true
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true,
+        "derived": {
+          "pane_widths_native": [
+            24
+          ],
+          "implementation_views": [
+            "main_terminal"
+          ]
+        }
+      },
+      "transmission": {
+        "checks": {
+          "light_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "dark_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "colored_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "colored_object_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane_background_response": {
+            "expected": 432,
+            "observed": 432,
+            "method": "Compare light versus dark composites at independently canonical-mapped pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "frame_background_response": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare background response in required frame pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_transmission": {
+            "expected": 63,
+            "observed": 63,
+            "method": "Toggle separate yellow object layer behind pane and compare output pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_exercised": {
+            "expected": true,
+            "observed": true,
+            "method": "Require at least one independently masked object pixel behind glass",
+            "units": "boolean",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "2": {
+      "geometry": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": true
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": true
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "transmission": {
+        "checks": {
+          "light_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "dark_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "colored_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "colored_object_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane_background_response": {
+            "expected": 936,
+            "observed": 936,
+            "method": "Compare light versus dark composites at independently canonical-mapped pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "frame_background_response": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare background response in required frame pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_transmission": {
+            "expected": 126,
+            "observed": 126,
+            "method": "Toggle separate yellow object layer behind pane and compare output pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_exercised": {
+            "expected": true,
+            "observed": true,
+            "method": "Require at least one independently masked object pixel behind glass",
+            "units": "boolean",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    },
+    "4": {
+      "geometry": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              128,
+              28
+            ],
+            "observed": [
+              128,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ],
+              [
+                64,
+                0
+              ],
+              [
+                96,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ],
+              [
+                64,
+                0
+              ],
+              [
+                96,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                64,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                64,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_2": {
+            "expected": {
+              "rectangle": [
+                64,
+                0,
+                68,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_2": {
+            "expected": {
+              "rectangle": [
+                68,
+                0,
+                96,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_2": {
+            "expected": {
+              "rectangle": [
+                64,
+                23,
+                96,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_2": {
+            "expected": {
+              "rectangle": [
+                68,
+                5,
+                96,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_3": {
+            "expected": {
+              "rectangle": [
+                96,
+                0,
+                100,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_3": {
+            "expected": {
+              "rectangle": [
+                100,
+                0,
+                124,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_3": {
+            "expected": {
+              "rectangle": [
+                96,
+                23,
+                128,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_3": {
+            "expected": {
+              "rectangle": [
+                100,
+                5,
+                124,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                124,
+                0,
+                128,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                64,
+                68
+              ],
+              [
+                96,
+                100
+              ],
+              [
+                124,
+                128
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                64,
+                68
+              ],
+              [
+                96,
+                100
+              ],
+              [
+                124,
+                128
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": true
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": true
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": true
+          }
+        },
+        "pass": true,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            28,
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "repeat",
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "transmission": {
+        "checks": {
+          "light_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "dark_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "colored_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "colored_object_source_over": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare composited pixels to independent integer source-over equation",
+            "units": "pixels",
+            "pass": true
+          },
+          "pane_background_response": {
+            "expected": 1944,
+            "observed": 1944,
+            "method": "Compare light versus dark composites at independently canonical-mapped pane pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "frame_background_response": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Compare background response in required frame pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_transmission": {
+            "expected": 252,
+            "observed": 252,
+            "method": "Toggle separate yellow object layer behind pane and compare output pixels",
+            "units": "pixels",
+            "pass": true
+          },
+          "object_exercised": {
+            "expected": true,
+            "observed": true,
+            "method": "Require at least one independently masked object pixel behind glass",
+            "units": "boolean",
+            "pass": true
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "contexts": {
+    "original": {
+      "checks": {
+        "glass_anchor": {
+          "checks": {
+            "origin": {
+              "expected": [
+                64,
+                56
+              ],
+              "observed": [
+                64,
+                56
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "left_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                32,
+                32
+              ],
+              "observed": [
+                32,
+                32
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "right_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                192,
+                32
+              ],
+              "observed": [
+                192,
+                32
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "baseline": {
+          "expected": [
+            84,
+            84,
+            84
+          ],
+          "observed": [
+            84,
+            84,
+            84
+          ],
+          "method": "Actual origins plus loaded PNG heights",
+          "units": "native_px",
+          "pass": true
+        },
+        "adjacency": {
+          "expected": [
+            64,
+            192
+          ],
+          "observed": [
+            64,
+            192
+          ],
+          "method": "Actual carrier bounds at both solid/glass joins",
+          "units": "native_px",
+          "pass": true
+        },
+        "relative_origin": {
+          "expected": [
+            0,
+            -8
+          ],
+          "observed": [
+            0,
+            -8
+          ],
+          "method": "Compute render origin minus explicit logical-cell origin",
+          "units": "native_px",
+          "pass": true
+        },
+        "left_solid_contact": {
+          "expected": {
+            "rectangle": [
+              63,
+              79,
+              64,
+              84
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "left_glass_contact": {
+          "expected": {
+            "rectangle": [
+              64,
+              79,
+              65,
+              84
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "right_glass_contact": {
+          "expected": {
+            "rectangle": [
+              191,
+              79,
+              192,
+              84
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "right_solid_contact": {
+          "expected": {
+            "rectangle": [
+              192,
+              79,
+              193,
+              84
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "rendered_composite": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read scene crop against separate background plus unchanged candidate run",
+          "units": "pixels",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "observed": {
+        "wall_origins": [
+          [
+            32,
+            32
+          ],
+          [
+            192,
+            32
+          ]
+        ],
+        "glass_origin": [
+          64,
+          56
+        ],
+        "logical_cell_origin": [
+          64,
+          64
+        ],
+        "shared_baseline": 84
+      },
+      "scope": "Straight wall/glass only; no L/T/cross appearance claim"
+    },
+    "relocated": {
+      "checks": {
+        "glass_anchor": {
+          "checks": {
+            "origin": {
+              "expected": [
+                96,
+                88
+              ],
+              "observed": [
+                96,
+                88
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "left_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                64,
+                64
+              ],
+              "observed": [
+                64,
+                64
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "right_wall_unchanged": {
+          "checks": {
+            "origin": {
+              "expected": [
+                224,
+                64
+              ],
+              "observed": [
+                224,
+                64
+              ],
+              "method": "Read placement metadata",
+              "units": "native_px",
+              "pass": true
+            },
+            "pixel_mismatches": {
+              "expected": 0,
+              "observed": 0,
+              "method": "Compare rendered crop to unchanged component",
+              "units": "pixels",
+              "pass": true
+            }
+          },
+          "pass": true
+        },
+        "baseline": {
+          "expected": [
+            116,
+            116,
+            116
+          ],
+          "observed": [
+            116,
+            116,
+            116
+          ],
+          "method": "Actual origins plus loaded PNG heights",
+          "units": "native_px",
+          "pass": true
+        },
+        "adjacency": {
+          "expected": [
+            96,
+            224
+          ],
+          "observed": [
+            96,
+            224
+          ],
+          "method": "Actual carrier bounds at both solid/glass joins",
+          "units": "native_px",
+          "pass": true
+        },
+        "relative_origin": {
+          "expected": [
+            0,
+            -8
+          ],
+          "observed": [
+            0,
+            -8
+          ],
+          "method": "Compute render origin minus explicit logical-cell origin",
+          "units": "native_px",
+          "pass": true
+        },
+        "left_solid_contact": {
+          "expected": {
+            "rectangle": [
+              95,
+              111,
+              96,
+              116
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "left_glass_contact": {
+          "expected": {
+            "rectangle": [
+              96,
+              111,
+              97,
+              116
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "right_glass_contact": {
+          "expected": {
+            "rectangle": [
+              223,
+              111,
+              224,
+              116
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "right_solid_contact": {
+          "expected": {
+            "rectangle": [
+              224,
+              111,
+              225,
+              116
+            ],
+            "alpha_range_inclusive": [
+              255,
+              255
+            ],
+            "violations": 0
+          },
+          "observed": {
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "violations": 0,
+            "sample_count": 5
+          },
+          "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+          "pass": true
+        },
+        "rendered_composite": {
+          "expected": 0,
+          "observed": 0,
+          "method": "Read scene crop against separate background plus unchanged candidate run",
+          "units": "pixels",
+          "pass": true
+        }
+      },
+      "pass": true,
+      "observed": {
+        "wall_origins": [
+          [
+            64,
+            64
+          ],
+          [
+            224,
+            64
+          ]
+        ],
+        "glass_origin": [
+          96,
+          88
+        ],
+        "logical_cell_origin": [
+          96,
+          96
+        ],
+        "shared_baseline": 116
+      },
+      "scope": "Straight wall/glass only; no L/T/cross appearance claim"
+    }
+  },
+  "negative_controls": {
+    "placement_drift_1px": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                33,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": false
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 28,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 5,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 255,
+              "violations": 18,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 255,
+              "violations": 18,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                33,
+                37
+              ],
+              [
+                61,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": false
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 86,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": false
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 18,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": false
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 252,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "intended_check": "placements",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "broken_base_contact": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 255,
+              "violations": 1,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": false
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": true
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "intended_check": "base_0",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "opaque_glass": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 504,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 432,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": false
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 936,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": false
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": true
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 936,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "intended_check": "glass_0",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "zero_alpha_glass": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 0,
+              "alpha_max": 210,
+              "violations": 1,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": false
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 0,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": true
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 1,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "intended_check": "glass_0",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "doubled_post": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 255,
+              "violations": 72,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": false
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                28,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": false
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 72,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": false
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 72,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": false
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 104,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "intended_check": "post_runs",
+      "valid_control_pass": true,
+      "proven": true
+    },
+    "overlapping_glass": {
+      "validation": {
+        "checks": {
+          "dimensions": {
+            "expected": [
+              64,
+              28
+            ],
+            "observed": [
+              64,
+              28
+            ],
+            "method": "Read actual PNG dimensions",
+            "units": "native_px",
+            "pass": true
+          },
+          "placements": {
+            "expected": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                0
+              ],
+              [
+                32,
+                0
+              ]
+            ],
+            "method": "Read composer placement records",
+            "units": "native_px",
+            "pass": true
+          },
+          "post_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                0,
+                4,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                0,
+                32,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 140
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_0": {
+            "expected": {
+              "rectangle": [
+                0,
+                23,
+                32,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_0": {
+            "expected": {
+              "rectangle": [
+                4,
+                5,
+                32,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 247,
+              "violations": 0,
+              "sample_count": 504
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                0,
+                36,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "top_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                0,
+                60,
+                5
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 120
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "base_1": {
+            "expected": {
+              "rectangle": [
+                32,
+                23,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 160
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "glass_1": {
+            "expected": {
+              "rectangle": [
+                36,
+                5,
+                60,
+                23
+              ],
+              "alpha_range_inclusive": [
+                1,
+                254
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 150,
+              "alpha_max": 210,
+              "violations": 0,
+              "sample_count": 432
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "terminal_post": {
+            "expected": {
+              "rectangle": [
+                60,
+                0,
+                64,
+                28
+              ],
+              "alpha_range_inclusive": [
+                255,
+                255
+              ],
+              "violations": 0
+            },
+            "observed": {
+              "alpha_min": 255,
+              "alpha_max": 255,
+              "violations": 0,
+              "sample_count": 112
+            },
+            "method": "Read every alpha pixel in the required region; out-of-canvas is a violation",
+            "pass": true
+          },
+          "post_runs": {
+            "expected": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "observed": [
+              [
+                0,
+                4
+              ],
+              [
+                32,
+                36
+              ],
+              [
+                60,
+                64
+              ]
+            ],
+            "method": "Scan opaque alpha runs at y=14",
+            "units": "native_px",
+            "pass": true
+          },
+          "single_layer_alpha": {
+            "expected": 0,
+            "observed": 432,
+            "method": "Compare output alpha to canonical one-layer alpha at mapped coordinates",
+            "units": "pixels",
+            "pass": false
+          },
+          "translucent_layer_coverage": {
+            "expected": 0,
+            "observed": 432,
+            "method": "Count actual translucent draw contributions per required glass pixel",
+            "units": "pixels",
+            "pass": false
+          },
+          "candidate_rgba_mapping": {
+            "expected": 0,
+            "observed": 432,
+            "method": "Compare actual run pixels to D1 main candidate RGB/alpha under the contract extension rule",
+            "units": "pixels",
+            "pass": false
+          }
+        },
+        "pass": false,
+        "derived": {
+          "pane_widths_native": [
+            28,
+            24
+          ],
+          "implementation_views": [
+            "repeat",
+            "main_terminal"
+          ]
+        }
+      },
+      "intended_check": "single_layer_alpha",
+      "valid_control_pass": true,
+      "proven": true
+    }
+  },
+  "preservation": {
+    "expected_counts": {
+      "manifest": 220,
+      "approved": 220,
+      "needs_human_review": 0
+    },
+    "observed_counts": {
+      "manifest": 220,
+      "approved": 220,
+      "needs_human_review": 0
+    },
+    "protected_file_count": 1284,
+    "missing": [],
+    "changed": [],
+    "authorized_additions": [
+      "references/architecture/master_validation_D1_v1/.gitattributes",
+      "references/architecture/master_validation_D1_v1/README.md",
+      "references/architecture/master_validation_D1_v1/artifacts/broken_broken_base_contact.png",
+      "references/architecture/master_validation_D1_v1/artifacts/broken_doubled_post.png",
+      "references/architecture/master_validation_D1_v1/artifacts/broken_opaque_glass.png",
+      "references/architecture/master_validation_D1_v1/artifacts/broken_overlapping_glass.png",
+      "references/architecture/master_validation_D1_v1/artifacts/broken_placement_drift_1px.png",
+      "references/architecture/master_validation_D1_v1/artifacts/broken_zero_alpha_glass.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_geometry_alpha_diagnostic.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_negative_controls.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_review_montage.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_colored_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_colored_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_colored_object_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_colored_object_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_dark_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_dark_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_light_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_light_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_native.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_1_object_layer.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_colored_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_colored_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_colored_object_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_colored_object_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_dark_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_dark_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_light_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_light_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_native.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_2_object_layer.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_colored_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_colored_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_colored_object_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_colored_object_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_dark_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_dark_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_light_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_light_composite.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_native.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_run_4_object_layer.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_wall_context_original_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_wall_context_original_scene.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_wall_context_original_structure.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_wall_context_relocated_background.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_wall_context_relocated_scene.png",
+      "references/architecture/master_validation_D1_v1/artifacts/d1_wall_context_relocated_structure.png",
+      "references/architecture/master_validation_D1_v1/d1_validation_report.json",
+      "references/architecture/master_validation_D1_v1/d1_validation_report.md",
+      "references/architecture/master_validation_D1_v1/package_provenance.json",
+      "references/architecture/master_validation_D1_v1/production_before.json",
+      "references/architecture/master_validation_D1_v1/production_preservation.json",
+      "references/architecture/master_validation_D1_v1/sources/package/PACKAGE_CONTENTS.md",
+      "references/architecture/master_validation_D1_v1/sources/package/SHA256SUMS.txt",
+      "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+      "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+      "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png",
+      "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_alpha_regions_diagnostic_8x.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_approved_wall_context_4x.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_approved_wall_context_native.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_context_background_only.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_run_1_native_rgba.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_run_1_source_8x_rgba.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_run_2_native_rgba.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_run_2_source_8x_rgba.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_run_4_native_rgba.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_run_4_source_8x_rgba.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_transmission_background_only.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/d1_transmission_composite.png",
+      "references/architecture/master_validation_D1_v1/sources/package/previews/rastalr_D1_locked_appearance_review.png",
+      "references/architecture/master_validation_D1_v1/sources/package/reports/d1_candidate_spec.json",
+      "references/architecture/master_validation_D1_v1/sources/package/reports/d1_local_checks.json",
+      "references/architecture/master_validation_D1_v1/sources/package/reports/d1_local_checks.md",
+      "references/architecture/master_validation_D1_v1/sources/package/sources/ART_DIRECTION.md",
+      "references/architecture/master_validation_D1_v1/sources/package/sources/glass_partition_1x.png",
+      "references/architecture/master_validation_D1_v1/sources/package/sources/hospital_floor_plain_01.png",
+      "references/architecture/master_validation_D1_v1/sources/package/sources/hospital_wall_back_straight_01.png",
+      "references/architecture/master_validation_D1_v1/sources/package/tools/build_d1_appearance.py",
+      "references/architecture/master_validation_D1_v1/sources/rastalr_D1_locked_appearance_review_bundle.zip",
+      "references/architecture/master_validation_D1_v1/test_results.json",
+      "references/architecture/master_validation_D1_v1/test_results.txt",
+      "references/architecture/master_validation_D1_v1/visual_review.json"
+    ],
+    "unauthorized_additions": [],
+    "method": "Compare existence and SHA-256 of every historical file; allow only new files under explicitly named paths",
+    "pass": true
+  },
+  "tests": {
+    "command": "python -m pytest -q",
+    "method": "Complete-suite subprocess output; count parsed from pytest summary",
+    "baseline_passed": 39,
+    "passed": 67,
+    "exit_code": 0,
+    "status": "PASS",
+    "output_path": "test_results.txt"
+  },
+  "visual_review": {
+    "evidence_type": "assistant_visual_findings",
+    "reviewer": "Codex, independent D1 validation task",
+    "method": "Direct inspection of actual supplied main/repeat 8x PNGs and independently reconstructed review montage, not the package presentation board",
+    "reviewed_inputs": [
+      "sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+      "sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png",
+      "artifacts/d1_review_montage.png",
+      "artifacts/d1_negative_controls.png"
+    ],
+    "findings": [
+      "The actual panes show restrained horizontal tint bands and sparse diagonal gleams; no room, object, lettering, signage or background scene is depicted in the candidate itself.",
+      "Dark exterior posts and hard-edged rails stay within the locked envelope; no visible protrusion or missing frame segment was found.",
+      "The independently assembled light/dark/colored views show live backgrounds through the pane. Separate yellow test objects remain visible beneath the glass.",
+      "The correct runs retain single shared posts and the intentional narrower terminal pane. The deliberately doubled-post and double-coated fixtures show the expected visible defect.",
+      "Original and relocated straight-wall contexts preserve the low partition height. No L/T/cross appearance result is asserted."
+    ],
+    "limitations": "These are recorded visual findings from this task, not runtime pixel detections. Background response, clipping envelope and contact coverage are separately measured in the technical report.",
+    "prior_review": "User states ChatGPT appearance review passed for proceeding to independent technical validation.",
+    "human_production_approval": "not given; not requested or recorded by this task"
+  }
+}

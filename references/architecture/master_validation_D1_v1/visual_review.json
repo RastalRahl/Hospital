@@ -1,0 +1,21 @@
+{
+  "evidence_type": "assistant_visual_findings",
+  "reviewer": "Codex, independent D1 validation task",
+  "method": "Direct inspection of actual supplied main/repeat 8x PNGs and independently reconstructed review montage, not the package presentation board",
+  "reviewed_inputs": [
+    "sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+    "sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png",
+    "artifacts/d1_review_montage.png",
+    "artifacts/d1_negative_controls.png"
+  ],
+  "findings": [
+    "The actual panes show restrained horizontal tint bands and sparse diagonal gleams; no room, object, lettering, signage or background scene is depicted in the candidate itself.",
+    "Dark exterior posts and hard-edged rails stay within the locked envelope; no visible protrusion or missing frame segment was found.",
+    "The independently assembled light/dark/colored views show live backgrounds through the pane. Separate yellow test objects remain visible beneath the glass.",
+    "The correct runs retain single shared posts and the intentional narrower terminal pane. The deliberately doubled-post and double-coated fixtures show the expected visible defect.",
+    "Original and relocated straight-wall contexts preserve the low partition height. No L/T/cross appearance result is asserted."
+  ],
+  "limitations": "These are recorded visual findings from this task, not runtime pixel detections. Background response, clipping envelope and contact coverage are separately measured in the technical report.",
+  "prior_review": "User states ChatGPT appearance review passed for proceeding to independent technical validation.",
+  "human_production_approval": "not given; not requested or recorded by this task"
+}
