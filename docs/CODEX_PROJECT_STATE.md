@@ -29,14 +29,28 @@ Verified 2026-09-11. Operational handoff for future Codex sessions; read with `A
 
 ## Next priorities
 
-1. Obtain the user's visual decision on junction V2, directly from the comparison montage or J/K controls in the stable demo. Production promotion remains on hold; do not present V1 as the latest candidate.
+1. Rework junction construction from the downloaded itch.io architecture references described below. The user remains dissatisfied with V2 and has authorized these packs as architecture/logic references. V2 is a preserved comparison baseline, not a recommended production candidate. Build one focused, empty connected-room test before further surface refinement; production promotion remains on hold.
 2. After visual acceptance and production authorization, consolidate glass approval, the door alpha repair, wall RGB revisions and formal junction-view integration using existing conventions. Preserve old versions/provenance, declare any required placement-specific views explicitly, and record approval accurately; do not silently promote the reference-only junction files.
 3. Point the stable demo at promoted production assets; use existing contracts/scripts, targeted preflight, one full suite, one Godot smoke and one final integration capture. Expected inventory: **224 / 224 approved / 0 pending**.
 4. Then address targeted bench proportions and brochure-rack/plant noisy pixels. Floor repetition and generalized terminal/corner/junction art are lower priority; do not reopen the architecture system routinely.
 
 Use cost-conscious iteration: existing scripts/contracts, targeted checks, full suite once per completed batch, Godot as primary practical test. No bespoke validator framework for ordinary assets or bulk generation without instruction. Work toward approximately 400 meaningful assets only after cleanup and authorization.
 
-## Relevant history
+## Local architecture references (2026-09-11)
+
+User supplied three extracted packs under `references/itch.io/`. Inspected their actual PNGs, not just store previews. These are local study material; do not include third-party sprites in RastalR exports or commit the downloaded packs.
+
+- Primary construction reference: `references/itch.io/Modern tiles_Free/Interiors_free/32x32/Room_Builder_free_32x32.png` ([LimeZu](https://limezu.itch.io/moderninteriors)). The top of the sheet supplies connected ceiling/wall-top shapes separately from repeated wall-face finishes below. Study the shared boundary, corner turns and face termination logic. The 32px export is not a reason to copy its proportions into our independent 32px footprint contract.
+- Secondary assembled-room reference: `references/itch.io/Top-Down_Retro_Interior/TopDownHouse_FloorsAndWalls.png` ([Penzilla](https://penzilla.itch.io/top-down-retro-interior)). Compact connected rooms make the distinction between tall horizontal faces and thin vertical partitions visible. Compare its sibling `TopDownHouse_FloorsAndWalls_OpenDoors.png` when studying openings.
+- Supporting modular reference: `references/itch.io/SmallBurg_village_pack_v3.18_free/assets/housing/house_interiors_assets.png` ([almostApixel](https://almostapixel.itch.io/small-burg-village-pack/devlog/337115/weekly-update-3-new-housing-system)). Local sheet contains separate wall/trim and furnishing pieces; the previously inspected author devlog provides the clearer empty multiroom construction example.
+
+Implementation direction inferred from these references: determine connectivity first, produce one continuous wall-top region through L/T/cross contacts, then draw visible faces with consistent endpoint and occlusion rules. Do not outline shared internal edges as separate posts. Doorways interrupt both the relevant boundary and face, with explicit exposed ends. Adapt this to our existing centered 8px strip, anchors, full back faces, shallow sides and low front cutaways; the reference layouts do not themselves validate our mixed-height transitions.
+
+Next practical proof: an original RastalR empty layout with an L corner, T and cross intersections, a doorway, and a full-wall-to-shallow-side/front transition in the existing Godot demo. Judge cap continuity, visible end faces and depth ordering before adding furniture. Reuse existing scripts and targeted checks; no new validation framework. No implementation or artwork changes were made during this reference intake.
+
+Local license notes: LimeZu's downloaded free license restricts commercial sprite use; SmallBurg prohibits asset redistribution/resale. This workflow studies construction and authors original RastalR geometry/art. The downloaded files remain untouched and untracked.
+
+## Commit history
 
 - `9740fae2fa9ad8042d4d85433fa5d36944080bfd` — junction V1, preserved as the visual refinement baseline.
 - Verified bootstrap starting HEAD on `main`: `504c52c45e6409710a10afb8badbef427bcfdd18` — wall-family propagation and review.
