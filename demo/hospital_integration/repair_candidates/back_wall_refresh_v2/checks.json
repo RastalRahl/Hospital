@@ -1,0 +1,249 @@
+{
+  "status": "reference_only_unapproved",
+  "v1_direction": "human_approved_direction_only",
+  "candidate": "hospital_wall_back_straight_01_refresh_candidate_v2.png",
+  "dimensions": [
+    32,
+    52
+  ],
+  "mode": "RGBA",
+  "alpha_changed_vs_v1": 0,
+  "rgb_changed_vs_v1": 1108,
+  "rgb_changed_vs_approved": 1589,
+  "source_sha256": "5de21497d18af52605754193c188f6555d35f09d42d9228fff31ad2fb29187e2",
+  "v1_sha256": "856755594cfe654ee5c55e2a567a8da8b3e168d5772bdd8a378ad0aeee46fea0",
+  "candidate_sha256": "b92cfe0523a4122c693dcd1a0be9f3b75661a24f3492736e5ddfd83ef6097cfa",
+  "anchor": "wall_center",
+  "footprint": [
+    1,
+    1
+  ],
+  "offset": [
+    -16,
+    -52
+  ],
+  "band_rows_half_open": {
+    "cap": [
+      0,
+      8
+    ],
+    "separator": [
+      8,
+      9
+    ],
+    "face": [
+      9,
+      45
+    ],
+    "base_separator": [
+      45,
+      46
+    ],
+    "base": [
+      46,
+      51
+    ],
+    "bottom": [
+      51,
+      52
+    ]
+  },
+  "face_base_rgb": [
+    230,
+    223,
+    211
+  ],
+  "face_detail_rgb": [
+    [
+      228,
+      224,
+      207
+    ],
+    [
+      232,
+      222,
+      215
+    ]
+  ],
+  "detail_pixels": 18,
+  "edge_keepout_columns": 6,
+  "metrics": {
+    "approved": {
+      "each_boundary": [
+        {
+          "boundary_x": 32,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        },
+        {
+          "boundary_x": 64,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        },
+        {
+          "boundary_x": 96,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        },
+        {
+          "boundary_x": 128,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        },
+        {
+          "boundary_x": 160,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        },
+        {
+          "boundary_x": 192,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        },
+        {
+          "boundary_x": 224,
+          "edge_rgb_mae": 4.987179,
+          "neighborhood_rgb_mae": 94.773504
+        }
+      ],
+      "bands": {
+        "face": {
+          "column_mean_luma_range": 187.58091667,
+          "period_32_fourier_amplitude": 23.8973818,
+          "horizontal_luma_rms": 43.94084218
+        },
+        "base": {
+          "column_mean_luma_range": 88.54968,
+          "period_32_fourier_amplitude": 8.31883905,
+          "horizontal_luma_rms": 20.22951725
+        },
+        "cap": {
+          "column_mean_luma_range": 80.608375,
+          "period_32_fourier_amplitude": 11.08565721,
+          "horizontal_luma_rms": 24.3548584
+        }
+      }
+    },
+    "v1": {
+      "each_boundary": [
+        {
+          "boundary_x": 32,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 64,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 96,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 128,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 160,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 192,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 224,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        }
+      ],
+      "bands": {
+        "face": {
+          "column_mean_luma_range": 1.44466667,
+          "period_32_fourier_amplitude": 0.4633043,
+          "horizontal_luma_rms": 1.10198041
+        },
+        "base": {
+          "column_mean_luma_range": 4.02912,
+          "period_32_fourier_amplitude": 0.98316827,
+          "horizontal_luma_rms": 3.13946028
+        },
+        "cap": {
+          "column_mean_luma_range": 0.723925,
+          "period_32_fourier_amplitude": 0.17664902,
+          "horizontal_luma_rms": 1.10157689
+        }
+      }
+    },
+    "v2": {
+      "each_boundary": [
+        {
+          "boundary_x": 32,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 64,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 96,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 128,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 160,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 192,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        },
+        {
+          "boundary_x": 224,
+          "edge_rgb_mae": 0.0,
+          "neighborhood_rgb_mae": 0.0
+        }
+      ],
+      "bands": {
+        "face": {
+          "column_mean_luma_range": 0.00013333,
+          "period_32_fourier_amplitude": 1.043e-05,
+          "horizontal_luma_rms": 0.00014443
+        },
+        "base": {
+          "column_mean_luma_range": 0.0,
+          "period_32_fourier_amplitude": 0.0,
+          "horizontal_luma_rms": 0.0
+        },
+        "cap": {
+          "column_mean_luma_range": 0.0,
+          "period_32_fourier_amplitude": 0.0,
+          "horizontal_luma_rms": 0.0
+        }
+      }
+    }
+  },
+  "alpha_changed_vs_approved": 0,
+  "verification": {
+    "repository_suite": "373 passed in 56.09s; one completion run",
+    "focused_demo": "6 passed",
+    "godot": "4.7.1.stable.official.a13da4feb",
+    "three_way_capture": "WALL_PROTOTYPE_REVIEW_PASS",
+    "smoke": "HOSPITAL_SMOKE_PASS",
+    "changed_pixels_outside_wall_and_hud": 0
+  }
+}

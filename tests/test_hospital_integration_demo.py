@@ -119,3 +119,28 @@ def test_wall_prototype_preserves_alpha_geometry_and_quiet_repeat_edges():
         # Matching two dark boundary pixels alone must not pass the check.
         assert candidate.getpixel((0,y)) == candidate.getpixel((1,y)) == candidate.getpixel((30,y))
     assert r['status'] == 'reference_only_unapproved'
+
+
+def test_wall_v2_has_no_tile_luminance_ramp_and_preserves_geometry():
+    from PIL import Image
+    folder = DEMO/'repair_candidates/back_wall_refresh_v2'
+    r = json.loads((folder/'checks.json').read_text())
+    v1 = Image.open(DEMO/'repair_candidates/back_wall_refresh_v1/hospital_wall_back_straight_01_refresh_candidate.png')
+    out = Image.open(folder/r['candidate'])
+    assert out.size == v1.size == (32,52) and out.mode == v1.mode == 'RGBA'
+    assert out.getchannel('A').tobytes() == v1.getchannel('A').tobytes()
+    assert sum(a[:3]!=b[:3] for a,b in zip(out.get_flattened_data(),v1.get_flattened_data())) == r['rgb_changed_vs_v1'] == 1108
+    colors = set()
+    for y in range(52):
+        edge = out.getpixel((0,y))
+        assert all(out.getpixel((x,y)) == edge for x in list(range(6))+list(range(26,32)))
+        if 9<=y<45:
+            row = [out.getpixel((x,y))[:3] for x in range(32)]
+            colors.update(row)
+        else:
+            assert all(out.getpixel((x,y)) == v1.getpixel((0,y)) for x in range(32))
+    assert len(colors) == 3, 'Retain restrained chromatic pixel clusters'
+    luma = [.2126*r+.7152*g+.0722*b for r,g,b in colors]
+    assert max(luma)-min(luma) < .003, 'No face lighting restart at each tile'
+    for seam in r['metrics']['v2']['each_boundary']:
+        assert seam['edge_rgb_mae'] == seam['neighborhood_rgb_mae'] == 0
