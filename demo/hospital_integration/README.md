@@ -1,6 +1,6 @@
 # Hospital integration demo
 
-Latest practical wall review: `wall_logic_refined.tscn` (F6), with connected low front-room returns, shaded doorway jambs, existing bed/cabinet and the 26x46 figure. WASD moves; F toggles furniture; G shows the grid; R resets. See `repair_candidates/wall_logic_reference_v2/findings.md` and `front_godot.png`. This is reference-only and leaves the hospital startup unchanged.
+Latest practical wall review: `wall_logic_refined.tscn` (F6), with lower side returns connected through the cut face to the upper wall border, shaded doorway jambs, existing bed/cabinet and the 26x46 figure. WASD moves; F toggles furniture; G shows the grid; R resets. See `repair_candidates/wall_logic_reference_v3/findings.md` and `front_godot.png`. V3 corrects V2's mid-face cap tips; earlier evidence is preserved. This is reference-only and leaves the hospital startup unchanged.
 
 Reference-led empty wall test: open `wall_logic_test.tscn` and press F6. It compares continuous 44px walls with the same network using a 12px front cutaway; G toggles the ground grid. See `repair_candidates/wall_logic_reference_v1/findings.md` for capture instructions and limits. This separate review scene leaves the hospital startup unchanged and has no production approval.
 

@@ -1,6 +1,6 @@
 extends "res://wall_logic_test.gd"
 ## Reuses V1 footprint connectivity; original cutaway rendering and practical room.
-const REVIEW := "res://repair_candidates/wall_logic_reference_v2/"
+const REVIEW := "res://repair_candidates/wall_logic_reference_v3/"
 const FLOOR := Color("d0c9b6")
 const TOP := Color("718b91")
 const FIGURE := Color("d9ad59")
@@ -54,6 +54,12 @@ func build_image(cutaway: bool) -> Image:
 				continue
 			var left_edge := wall_height(x - 1, y, cutaway) < h
 			var right_edge := wall_height(x + 1, y, cutaway) < h
+			# RPG cutaway convention: a south-going low boundary reaches the
+			# full wall's top border through its cut face. It must not begin as
+			# a tab midway down the plaster. Only the final full-height row owns
+			# this reveal; subsequent low rows extend it with normal depth sorting.
+			var south_h := wall_height(x, y + 1, cutaway)
+			var south_return := cutaway and h == FULL and south_h == LOW
 			# A two-pixel recess at openings, shaded independently by facing.
 			var jamb_left := wall_height(x - 2, y, cutaway) == 0 and x > 52
 			var jamb_right := wall_height(x + 2, y, cutaway) == 0 and x < 332
@@ -69,12 +75,24 @@ func build_image(cutaway: bool) -> Image:
 					color = INK
 				elif left_edge:
 					color = Color("526975")
+				if south_return:
+					color = TOP
+					if wall_height(x - 1, y + 1, cutaway) == 0:
+						color = Color("b6c7c5")
+					elif wall_height(x + 1, y + 1, cutaway) == 0:
+						color = INK
 				img.set_pixel(x, y - z, color)
 			var top := TOP
 			if left_edge or wall_height(x, y - 1, cutaway) < h:
 				top = Color("b6c7c5")
 			elif right_edge or wall_height(x, y + 1, cutaway) < h:
 				top = INK
+			if south_return:
+				top = TOP
+				if wall_height(x - 1, y + 1, cutaway) == 0:
+					top = Color("b6c7c5")
+				elif wall_height(x + 1, y + 1, cutaway) == 0:
+					top = INK
 			img.set_pixel(x, y - h, top)
 	return img
 
@@ -132,6 +150,12 @@ func review() -> void:
 	assert(empty.get_pixel(208, 36).is_equal_approx(TOP))
 	assert(empty.get_pixel(208, 132).is_equal_approx(TOP))
 	assert(empty.get_pixel(208, 224).is_equal_approx(TOP))
+	# Lower branches connect to the upper cap, not the middle of its face.
+	for x in [48, 208, 336]:
+		for y in range(132, 225):
+			assert(empty.get_pixel(x, y).is_equal_approx(TOP))
+	# Plaster beside the narrow reveal remains intact.
+	assert(empty.get_pixel(216, 150).is_equal_approx(IVORY))
 	assert(empty.save_png(REVIEW + "empty_native.png") == OK)
 	furnished = true
 	assert(blocked(Vector2i(250, 176)))
@@ -170,5 +194,5 @@ func _draw() -> void:
 				draw_line(origin + Vector2(x, 76) * 2, origin + Vector2(x, 244) * 2, Color(0.3, 0.9, 0.8, 0.35))
 			for y in range(64, 257, 32):
 				draw_line(origin + Vector2(32, y) * 2, origin + Vector2(352, y) * 2, Color(0.3, 0.9, 0.8, 0.35))
-	draw_string(font, Vector2(48, 768), "Front-room sides and front edge share a 12px cut plane. Upper-room T/cross caps retain 44px height.", HORIZONTAL_ALIGNMENT_LEFT, -1, 22, IVORY)
+	draw_string(font, Vector2(48, 768), "Lower side returns connect to the upper wall border through a continuous narrow cutaway edge.", HORIZONTAL_ALIGNMENT_LEFT, -1, 22, IVORY)
 	draw_string(font, Vector2(48, 802), "Wall ends have shaded jambs; floor and cap use distinct values. Original approved furniture, native size.", HORIZONTAL_ALIGNMENT_LEFT, -1, 22, IVORY)
