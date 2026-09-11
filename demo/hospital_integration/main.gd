@@ -14,6 +14,10 @@ const WALL_PROTOTYPE := "res://repair_candidates/back_wall_refresh_v1/hospital_w
 var wall_sprites: Array[Sprite2D] = []
 const WALL_PROTOTYPE_V2 := "res://repair_candidates/back_wall_refresh_v2/hospital_wall_back_straight_01_refresh_candidate_v2.png"
 var wall_version := 0
+const FAMILY_FOLDER := "res://repair_candidates/foundation_wall_refresh_family_v1/"
+var family_entries: Array[Dictionary] = []
+var family_textures: Dictionary = {}
+var family_enabled := false
 var door_main: Sprite2D
 var repair_active := true
 var data: Dictionary
@@ -32,6 +36,9 @@ var start := Vector2(352, 368)
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	var family: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(FAMILY_FOLDER + "checks.json"))
+	for asset in family.assets:
+		family_textures[asset.id + "__main"] = load(FAMILY_FOLDER + asset.candidate_path)
 	data = JSON.parse_string(FileAccess.get_file_as_string("res://runtime_manifest.json"))
 	world.y_sort_enabled = true
 	add_child(world)
@@ -51,6 +58,8 @@ func _ready() -> void:
 			s.texture = load(DOOR_CANDIDATE)
 		if p.asset == "hospital_wall_back_straight_01__main":
 			wall_sprites.append(s)
+		if family_textures.has(p.asset):
+			family_entries.append({"sprite": s, "original": s.texture, "candidate": family_textures[p.asset]})
 		s.centered = false
 		s.position = Vector2(p.position[0], p.position[1])
 		s.offset = Vector2(p.offset[0], p.offset[1])
@@ -75,7 +84,9 @@ func _ready() -> void:
 	hud.position = Vector2(20, 16)
 	hud.add_theme_font_size_override("font_size", 20)
 	set_door(false)
-	if "--wall-review" in OS.get_cmdline_user_args():
+	if "--family-review" in OS.get_cmdline_user_args():
+		await family_review()
+	elif "--wall-review" in OS.get_cmdline_user_args():
 		await wall_review()
 	elif "--door-review" in OS.get_cmdline_user_args():
 		await door_review()
@@ -92,7 +103,7 @@ func set_door(open: bool) -> void:
 func update_hud() -> void:
 	hud.text = "RASTALR / HOSPITAL INTEGRATION   |   Batch 13: pending human review\nWASD / arrows: move   E: door (%s)   G: grid + contacts   R: reset   1 / 2 / 3: zoom\nReception / waiting: west     Examination: glass bay     Patient room: east     Corridor: south" % ("OPEN" if door_open else "CLOSED")
 	hud.text += "\nDoor: UNAPPROVED alpha repair candidate" if repair_active else "\nDoor comparison: approved opaque original"
-	hud.text += " | V wall: " + ["approved original", "REFERENCE-ONLY v1", "REFERENCE-ONLY v2"][wall_version]
+	hud.text += " | V walls: " + ("REFERENCE-ONLY family" if family_enabled else ["approved original", "REFERENCE-ONLY v1", "REFERENCE-ONLY v2"][wall_version])
 
 func blocked(point: Vector2) -> bool:
 	var feet := Rect2(point - Vector2(9, 8), Vector2(18, 8))
@@ -127,7 +138,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	match event.physical_keycode:
 		KEY_V:
-			set_wall_prototype((wall_version + 1) % 3)
+			set_wall_family(not family_enabled)
 		KEY_G:
 			debug = not debug
 			overlay.queue_redraw()
@@ -306,4 +317,40 @@ func wall_review() -> void:
 			var sprite := wall_sprites[i]
 			assert(placement_before[i] == [sprite.position,sprite.offset,sprite.scale,sprite.rotation,sprite.z_index], "Wall placement remains unchanged")
 	print("WALL_PROTOTYPE_REVIEW_PASS: approved/v1/v2; same camera/zoom; 21 perimeter + 4 internal copies; transforms and draw anchors unchanged")
+	get_tree().quit()
+
+# All twelve candidates are loaded; only existing matching placements are overridden.
+func set_wall_family(enabled: bool) -> void:
+	family_enabled = enabled
+	wall_version = 0
+	for entry in family_entries:
+		entry.sprite.texture = entry.candidate if enabled else entry.original
+	update_hud()
+
+func family_review() -> void:
+	assert(family_textures.size() == 12)
+	var before: Array = []
+	for entry in family_entries:
+		var s: Sprite2D = entry.sprite
+		before.append([s.position, s.offset, s.scale, s.rotation, s.z_index])
+	set_door(true)
+	for enabled in [false, true]:
+		set_wall_family(enabled)
+		var label := "refreshed" if enabled else "approved"
+		await capture(FAMILY_FOLDER + "godot_" + label + ".png")
+		var regions := {
+			"back": Rect2i(608,168,512,104),
+			"left": Rect2i(120,272,40,640),
+			"right": Rect2i(1504,272,40,640),
+			"front": Rect2i(480,872,512,40),
+			"doorway": Rect2i(1080,640,424,120),
+			"northwest_corner": Rect2i(100,150,200,210),
+			"northeast_corner": Rect2i(1380,150,184,210)
+		}
+		for region in regions:
+			assert(get_viewport().get_texture().get_image().get_region(regions[region]).save_png(FAMILY_FOLDER + "godot_" + region + "_" + label + ".png") == OK)
+		for i in family_entries.size():
+			var s: Sprite2D = family_entries[i].sprite
+			assert(before[i] == [s.position,s.offset,s.scale,s.rotation,s.z_index])
+	print("WALL_FAMILY_REVIEW_PASS: 12 candidates loaded; ", family_entries.size(), " unchanged placements; identical camera/zoom")
 	get_tree().quit()

@@ -144,3 +144,31 @@ def test_wall_v2_has_no_tile_luminance_ramp_and_preserves_geometry():
     assert max(luma)-min(luma) < .003, 'No face lighting restart at each tile'
     for seam in r['metrics']['v2']['each_boundary']:
         assert seam['edge_rgb_mae'] == seam['neighborhood_rgb_mae'] == 0
+
+
+def test_foundation_family_rgb_only_and_all_variant_joins():
+    from PIL import Image
+    folder = DEMO/'repair_candidates/foundation_wall_refresh_family_v1'
+    r = json.loads((folder/'checks.json').read_text())
+    assert len(r['assets']) == 12 and r['status'] == 'reference_only_unapproved'
+    groups = {}
+    for a in r['assets']:
+        source = Image.open(ROOT/a['source_path'])
+        out = Image.open(folder/a['candidate_path'])
+        assert source.size == out.size == tuple(a['dimensions'])
+        assert source.mode == out.mode == 'RGBA'
+        assert source.getchannel('A').tobytes() == out.getchannel('A').tobytes()
+        assert a['alpha_changed_pixels'] == 0 and a['anchor'] == 'wall_center'
+        assert a['logical_footprint'] == [1,1]
+        assert hashlib.sha256((ROOT/a['source_path']).read_bytes()).hexdigest() == a['source_sha256']
+        assert hashlib.sha256((folder/a['candidate_path']).read_bytes()).hexdigest() == a['candidate_sha256']
+        assert sum(p[:3]!=q[:3] for p,q in zip(source.get_flattened_data(),out.get_flattened_data())) == a['rgb_changed_pixels']
+        groups.setdefault(a['group'],[]).append(out)
+    for group,images in groups.items():
+        vertical = group in ('left','right')
+        for a in images:
+            for b in images:
+                for q in range(a.width if vertical else a.height):
+                    pixels = [im.getpixel((q,t) if vertical else (t,q)) for im,t in [(a,30),(a,31),(b,0),(b,1)]]
+                    assert len(set(pixels)) == 1 and pixels[0][3] == 255
+    assert (folder/'hospital_wall_back_straight_01_refresh_candidate.png').read_bytes() == (DEMO/'repair_candidates/back_wall_refresh_v2/hospital_wall_back_straight_01_refresh_candidate_v2.png').read_bytes()
