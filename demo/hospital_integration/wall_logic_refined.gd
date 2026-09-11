@@ -41,11 +41,21 @@ func draw_actors(img: Image, y: int) -> void:
 	if feet.y == y:
 		img.blend_rect(person, Rect2i(0, 0, 26, 46), feet - Vector2i(13, 46))
 
+func canvas_dimensions() -> Vector2i:
+	return SIZE
+
+func floor_rectangle() -> Rect2i:
+	return Rect2i(44, 76, 296, 180)
+
+func ground_y_end() -> int:
+	return 257
+
 func build_image(cutaway: bool) -> Image:
-	var img := Image.create(SIZE.x, SIZE.y, false, Image.FORMAT_RGBA8)
+	var dimensions := canvas_dimensions()
+	var img := Image.create(dimensions.x, dimensions.y, false, Image.FORMAT_RGBA8)
 	img.fill(Color("273746"))
-	img.fill_rect(Rect2i(44, 76, 296, 180), FLOOR)
-	for y in range(76, 257):
+	img.fill_rect(floor_rectangle(), FLOOR)
+	for y in range(76, ground_y_end()):
 		if cutaway:
 			draw_actors(img, y)
 		for x in range(44, 340):
