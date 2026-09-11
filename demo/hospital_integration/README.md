@@ -1,6 +1,8 @@
 # Hospital integration demo
 
-**Current review: `solid_wall_review.tscn` (F6).** The user removed the central glass enclosure from this review scope. Its renderers and collision are excluded; examination furniture remains. See `repair_candidates/solid_wall_review_v1/overview_godot.png` and `findings.md`. Glass experiments below are historical and parked, not the next production target. Normal startup is unchanged.
+**Current review: `foreground_visibility_review.tscn` (F6).** C compares the full-height outer foreground with an opaque low cutaway; H compares architecture. The figure remains visible at the south boundary with unchanged collision. See `repair_candidates/foreground_visibility_v1/after_godot.png`, `overview_godot.png` and `findings.md`. Internal patient-room wall/header occlusion is unchanged and remains part of final architecture review. Production approval is pending; normal startup is unchanged.
+
+Previous solid-only baseline: `solid_wall_review.tscn`. The central glass enclosure and its collision remain excluded; examination furniture stays. Glass experiments below are historical and parked.
 
 Latest glass review: `hospital_glass_review.tscn` (F6) uses the actual hospital, Foundation walls and a lighter glass enclosure. O compares glass; H compares walls. See `repair_candidates/glass_enclosure_refresh_v1/candidate_godot.png`, `mapping.json` and `findings.md`. Glazing alpha/frame regions are revised only in this reference candidate; support masks, placements, openings and collision remain fixed. Production contracts/approval are unchanged.
 
