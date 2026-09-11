@@ -1,0 +1,137 @@
+{
+  "logical_id": "hospital_sliding_clinical_doors_open_01",
+  "status": "unapproved_repair_candidate",
+  "production_manifest_modified": false,
+  "source_path": "assets/architecture/hospital_sliding_clinical_doors_open_01.png",
+  "source_sha256": "7cd5a7addcfe1b126684dfbb53d5e2222f4fcbf3123db94d161ac13129a4852f",
+  "candidate_path": "repair_candidates/sliding_door_open_alpha_v1/hospital_sliding_clinical_doors_open_01_alpha_candidate.png",
+  "candidate_sha256": "1bad86a8c18069fabb1021471de5df2d4bcf66b6caf5109767feb2c49ee4b2fc",
+  "mask_path": "repair_candidates/sliding_door_open_alpha_v1/passage_alpha_mask.png",
+  "mask_sha256": "c2eca65a0bad40fe87f832eeb2d50fcd3ae34000157a4fcccc003ca600da5e9b",
+  "mask_encoding": "64x52 grayscale L; 255 changes alpha to 0; 0 preserves source RGBA",
+  "bounds_half_open_native": [
+    7,
+    14,
+    59,
+    48
+  ],
+  "native_canvas": [
+    64,
+    52
+  ],
+  "logical_footprint": [
+    2,
+    1
+  ],
+  "anchor": "wall_center",
+  "demo_anchor": [
+    608,
+    336
+  ],
+  "demo_image_offset": [
+    -32,
+    -52
+  ],
+  "geometry_reference": "references/architecture/master_validation_C7_v1/architecture_C7_validation_report.json",
+  "source_scale": 8,
+  "source_crop": [
+    384,
+    0,
+    896,
+    416
+  ],
+  "documented_clear_passage_source": [
+    416,
+    112,
+    864,
+    416
+  ],
+  "documented_clear_passage_native": [
+    4,
+    14,
+    60,
+    52
+  ],
+  "refined_mask_source": [
+    440,
+    112,
+    856,
+    384
+  ],
+  "refinement": "Direct native pixel inspection: x4..6 and x59 are inner jambs; row13 is header undersurface; rows48..51 are threshold. Only x7..58, y14..47 is recessed backing.",
+  "boundary_samples_rgba": {
+    "(6, 20)": [
+      79,
+      95,
+      105,
+      255
+    ],
+    "(7, 20)": [
+      44,
+      57,
+      65,
+      255
+    ],
+    "(58, 20)": [
+      46,
+      61,
+      69,
+      255
+    ],
+    "(59, 20)": [
+      101,
+      113,
+      123,
+      255
+    ],
+    "(32, 13)": [
+      74,
+      88,
+      100,
+      255
+    ],
+    "(32, 14)": [
+      52,
+      68,
+      77,
+      255
+    ],
+    "(32, 47)": [
+      56,
+      74,
+      83,
+      255
+    ],
+    "(32, 48)": [
+      125,
+      135,
+      142,
+      255
+    ]
+  },
+  "changed_alpha_pixels": 1768,
+  "changed_rgb_pixels": 0,
+  "outside_mask_changed_pixels": 0,
+  "parked_leaves": [
+    {
+      "role": "left_parked_leaf",
+      "source_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+      "demo_path": "art/hospital_sliding_clinical_doors_open_01__left_parked_leaf.png",
+      "sha256": "c2cdf979d9d61b07adf030ba833d410a5ecd70ed1c2f9e4293d1ea06c7fa0ace",
+      "offset_from_main": [
+        -24,
+        14
+      ]
+    },
+    {
+      "role": "right_parked_leaf",
+      "source_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+      "demo_path": "art/hospital_sliding_clinical_doors_open_01__right_parked_leaf.png",
+      "sha256": "44c5bffd5a3be8a5559638bb1a7ca6065526ed2d68c9a9b899f9bba39b198991",
+      "offset_from_main": [
+        60,
+        14
+      ]
+    }
+  ]
+}

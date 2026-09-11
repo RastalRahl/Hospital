@@ -68,3 +68,32 @@ def test_demo_walk_clearance():
             if q not in seen and clear(*q):seen.add(q);queue.append(q)
     for destination in [(128,216),(112,312),(176,312),(352,320),(400,248),(432,296),(608,248),(656,232),(656,296),(304,216)]:
         assert destination in seen, f'No walking access to {destination}'
+
+
+def test_open_door_candidate_changes_only_documented_aperture_alpha():
+    from PIL import Image
+    folder = DEMO/'repair_candidates/sliding_door_open_alpha_v1'
+    r = json.loads((folder/'repair.json').read_text())
+    original = Image.open(ROOT/r['source_path'])
+    candidate = Image.open(DEMO/r['candidate_path'])
+    mask = Image.open(DEMO/r['mask_path'])
+    assert original.size == candidate.size == mask.size == (64,52)
+    assert original.mode == candidate.mode == 'RGBA' and mask.mode == 'L'
+    assert mask.getbbox() == tuple(r['bounds_half_open_native']) == (7,14,59,48)
+    assert original.convert('RGB').tobytes() == candidate.convert('RGB').tobytes()
+    changed = 0
+    for y in range(52):
+        for x in range(64):
+            selected = 7<=x<59 and 14<=y<48
+            assert mask.getpixel((x,y)) == (255 if selected else 0)
+            a,b = original.getpixel((x,y)),candidate.getpixel((x,y))
+            assert b[3] == (0 if selected else a[3])
+            changed += a[3] != b[3]
+    assert changed == r['changed_alpha_pixels'] == 1768
+    for key in ('source','candidate','mask'):
+        root = ROOT if key == 'source' else DEMO
+        assert hashlib.sha256((root/r[key+'_path']).read_bytes()).hexdigest() == r[key+'_sha256']
+    for leaf in r['parked_leaves']:
+        assert (ROOT/leaf['source_path']).read_bytes() == (DEMO/leaf['demo_path']).read_bytes()
+        assert hashlib.sha256((DEMO/leaf['demo_path']).read_bytes()).hexdigest() == leaf['sha256']
+    assert r['status'] == 'unapproved_repair_candidate'

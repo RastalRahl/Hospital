@@ -9,6 +9,9 @@ class Figure extends Node2D:
 		draw_rect(Rect2(-8, -10, 6, 10), Color("273746"))
 		draw_rect(Rect2(2, -10, 6, 10), Color("273746"))
 
+const DOOR_CANDIDATE := "res://repair_candidates/sliding_door_open_alpha_v1/hospital_sliding_clinical_doors_open_01_alpha_candidate.png"
+var door_main: Sprite2D
+var repair_active := true
 var data: Dictionary
 var overlay := Node2D.new()
 var world := Node2D.new()
@@ -39,6 +42,9 @@ func _ready() -> void:
 			continue
 		var s := Sprite2D.new()
 		s.texture = load("res://" + data.files[p.asset].path)
+		if p.asset == "hospital_sliding_clinical_doors_open_01__main":
+			door_main = s
+			s.texture = load(DOOR_CANDIDATE)
 		s.centered = false
 		s.position = Vector2(p.position[0], p.position[1])
 		s.offset = Vector2(p.offset[0], p.offset[1])
@@ -63,7 +69,9 @@ func _ready() -> void:
 	hud.position = Vector2(20, 16)
 	hud.add_theme_font_size_override("font_size", 20)
 	set_door(false)
-	if "--smoke" in OS.get_cmdline_user_args():
+	if "--door-review" in OS.get_cmdline_user_args():
+		await door_review()
+	elif "--smoke" in OS.get_cmdline_user_args():
 		await smoke()
 
 func set_door(open: bool) -> void:
@@ -75,6 +83,7 @@ func set_door(open: bool) -> void:
 
 func update_hud() -> void:
 	hud.text = "RASTALR / HOSPITAL INTEGRATION   |   Batch 13: pending human review\nWASD / arrows: move   E: door (%s)   G: grid + contacts   R: reset   1 / 2 / 3: zoom\nReception / waiting: west     Examination: glass bay     Patient room: east     Corridor: south" % ("OPEN" if door_open else "CLOSED")
+	hud.text += "\nDoor: UNAPPROVED alpha repair candidate" if repair_active else "\nDoor comparison: approved opaque original"
 
 func blocked(point: Vector2) -> bool:
 	var feet := Rect2(point - Vector2(9, 8), Vector2(18, 8))
@@ -186,7 +195,7 @@ func smoke() -> void:
 	# Same figure on each side of back pane, no opacity or material overrides.
 	figure.position = Vector2(368,140)
 	assert(not blocked(figure.position), "Behind-glass pose must be reachable floor")
-	await capture("res://captures/layout_glass_behind.png")
+	await capture("res://.qa/repair_glass_behind.png")
 	# Verify actual viewport transmission against the supplied pane alpha.
 	var pane_texture: Texture2D = load("res://art/hospital_glass_partition_back_01__repeat.png")
 	var pane := pane_texture.get_image().get_pixel(11,8)
@@ -196,16 +205,66 @@ func smoke() -> void:
 	assert(Vector3(observed.r-expected.r,observed.g-expected.g,observed.b-expected.b).length() < 0.01, "Native glass alpha transmission")
 	figure.position = Vector2(368,176)
 	assert(not blocked(figure.position), "Front-glass pose must be reachable floor")
-	await capture("res://captures/layout_glass_front.png")
+	await capture("res://.qa/repair_glass_front.png")
 	var front := get_viewport().get_texture().get_image()
 	assert(front.get_pixelv(Vector2i(get_global_transform_with_canvas() * Vector2(363,136))).to_rgba32() == Color("e8cba7").to_rgba32(), "Figure must render in front of pane")
 	set_door(true)
 	figure.position = Vector2(608,324)
-	await capture("res://captures/layout_door_open.png")
+	await capture("res://.qa/repair_door_open.png")
 	set_door(false)
 	figure.position = start
-	await capture("res://overview.png")
+	await capture("res://.qa/repair_overview.png")
 	print("HOSPITAL_SMOKE_PASS: closed/open collision, crossing, furniture contact, glass entrance, glass pixel sorting, reception/waiting/exam/bedside walkthrough and screenshots")
 	get_tree().quit()
 
 
+
+# One bounded candidate comparison, using the existing room and Y-sort order.
+func door_review() -> void:
+	DirAccess.make_dir_recursive_absolute("res://.qa")
+	DirAccess.make_dir_recursive_absolute("res://captures/door_alpha_repair")
+	set_door(false)
+	figure.position = Vector2(608,360)
+	move_figure(Vector2(0,-64))
+	assert(figure.position.y >= 344, "Closed door blocks approach")
+	await capture("res://captures/door_alpha_repair/closed_approach.png")
+	set_door(true)
+	figure.position = Vector2(608,324)
+	assert(not blocked(figure.position))
+	repair_active = false
+	door_main.texture = load("res://art/hospital_sliding_clinical_doors_open_01__main.png")
+	update_hud()
+	await capture("res://captures/door_alpha_repair/before_opaque.png")
+	repair_active = true
+	door_main.texture = load(DOOR_CANDIDATE)
+	update_hud()
+	await capture("res://captures/door_alpha_repair/after_transparent.png")
+	var result := get_viewport().get_texture().get_image()
+	var transform := get_global_transform_with_canvas()
+	assert(result.get_pixelv(Vector2i(transform * Vector2(608,306))).to_rgba32() == Color("d9ad59").to_rgba32(), "Figure body visible through aperture")
+	# Header still occludes a head pixel; no figure Z override.
+	assert(result.get_pixelv(Vector2i(transform * Vector2(608,286))).to_rgba32() != Color("e8cba7").to_rgba32(), "Header remains in front of rear figure")
+	# Compare against the actual room with ONLY the doorway main carrier hidden.
+	door_main.visible = false
+	await capture("res://.qa/door_room_control.png")
+	var control := get_viewport().get_texture().get_image()
+	var aperture := Rect2i(Vector2i(transform * Vector2(583,298)),Vector2i(104,68))
+	assert(result.get_region(aperture).get_data() == control.get_region(aperture).get_data(), "Entire aperture reveals actual existing room")
+	door_main.visible = true
+	move_figure(Vector2(0,12))
+	assert(absf(figure.position.y-336)<0.1, "Crossing open threshold")
+	await capture("res://captures/door_alpha_repair/crossing.png")
+	move_figure(Vector2(0,24))
+	assert(absf(figure.position.y-360)<0.1, "Reach foreground")
+	await capture("res://captures/door_alpha_repair/in_front.png")
+	# Exercise a real parked-leaf overlap at its ground anchor.
+	figure.position = Vector2(568,320)
+	await capture("res://.qa/door_leaf_behind.png")
+	var rear := get_viewport().get_texture().get_image()
+	assert(rear.get_pixelv(Vector2i(transform * Vector2(568,305))).to_rgba32() != Color("d9ad59").to_rgba32(), "Parked leaf occludes rear figure")
+	figure.position = Vector2(568,348)
+	await capture("res://.qa/door_leaf_front.png")
+	var fore := get_viewport().get_texture().get_image()
+	assert(fore.get_pixelv(Vector2i(transform * Vector2(568,320))).to_rgba32() == Color("d9ad59").to_rgba32(), "Foreground figure sorts ahead of leaf")
+	print("DOOR_ALPHA_REVIEW_PASS: closed approach, open crossing, aperture room equivalence, header and leaf occlusion")
+	get_tree().quit()
