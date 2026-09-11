@@ -1,0 +1,117 @@
+{
+  "status": "reference_only_unapproved",
+  "starting_head": "18ba3c406d937ed19d2f050e0b9cbfbda78566bb",
+  "full_suite": {
+    "passed": 377,
+    "seconds": 79.27,
+    "exit_code": 0,
+    "initial_run": "366 passed / 10 failed: exact new operational state document was the only unauthorized addition; corrected named allowance and reran"
+  },
+  "focused_demo_tests": 9,
+  "godot_version": "4.7.1.stable.official.a13da4feb",
+  "godot_review": "WALL_JUNCTION_REVIEW_PASS",
+  "godot_smoke": "HOSPITAL_SMOKE_PASS with junction prototype enabled",
+  "protected_files_checked": 1040,
+  "changed_protected_files": [],
+  "user_owned_files_sha256": {
+    "demo\\hospital_integration\\project.godot": "09a194e33c8a4cd52e20a8208d9821c81de448fee98727837f52a36f2215a255",
+    "demo\\hospital_integration\\export_presets.cfg": "152113d0c786d866f1edfa8d3bb907b94b7a0a4a0542e52efb3f9ae4d63ef73b",
+    "demo\\hospital_integration\\captures\\layout_door_open.png.import": "2ee8c2068a6f0fbbc9a639891406febae536346fbe441aa27ad37bb2a4e8be73",
+    "demo\\hospital_integration\\captures\\layout_glass_behind.png.import": "424d92641c7558e044705801a123d496c6d37a370936b1103a229d789481ad1d",
+    "demo\\hospital_integration\\captures\\layout_glass_front.png.import": "f486f1cd610a436f36c1a313bca197779327fd03db27cdd28a56d547d1c55cd6"
+  },
+  "inventory": {
+    "manifest": 224,
+    "approved": 220,
+    "needs_human_review": 4
+  },
+  "scene_check": {
+    "status": "reference_only_unapproved",
+    "method": "Godot before/after RGB channel union, fixed camera at 2x; allowed mask is six explicit native carrier bounds plus HUD",
+    "changed_pixels_including_hud": 20065,
+    "changed_pixels_outside_junctions_and_hud": 0,
+    "allowed_junction_regions": [
+      {
+        "junction": "northwest",
+        "screen_bounds_half_open": [
+          120,
+          168,
+          160,
+          336
+        ]
+      },
+      {
+        "junction": "northeast",
+        "screen_bounds_half_open": [
+          1504,
+          168,
+          1544,
+          336
+        ]
+      },
+      {
+        "junction": "divider_north",
+        "screen_bounds_half_open": [
+          1080,
+          168,
+          1120,
+          336
+        ]
+      },
+      {
+        "junction": "southwest",
+        "screen_bounds_half_open": [
+          120,
+          848,
+          160,
+          912
+        ]
+      },
+      {
+        "junction": "southeast",
+        "screen_bounds_half_open": [
+          1504,
+          848,
+          1544,
+          912
+        ]
+      },
+      {
+        "junction": "divider_east",
+        "screen_bounds_half_open": [
+          1080,
+          592,
+          1120,
+          752
+        ]
+      }
+    ]
+  },
+  "capture_sha256": {
+    "divider_east_after.png": "57b9e2e52c68f7d1de32a93a1923266680b750dd2af22e77265661383a64538f",
+    "divider_east_before.png": "2f98b2d2b73cf55fc9c477dfab9ec9f3409502a1ad949848a7fec689a6ea7f57",
+    "divider_east_junction_candidate.png": "4f2daed3e39da1d67d668bacd3e2d2de239be47dfd212f6b94805aa4c0a76bd5",
+    "divider_figure_behind.png": "414ec38ec545493e104c744803b2217bc0128a1c1f3cdf10765c2331cfb26ad4",
+    "divider_figure_front.png": "cbb216f0f12c9d65da1d1bc7c181625d2941911880daae1b7b3ac8dce04f8451",
+    "divider_north_after.png": "fb85b1a4089a658d4b6ed15aa3d264eb9d779e074371276ba20aa63c9e33b441",
+    "divider_north_before.png": "5ee0377d13f6bee9a7270591cd5c5da483f15932f04533d27a12b3c20b465024",
+    "godot_after.png": "96ec42925115bac8b35e4266b3da719413faafee881de7e904ff24fc698a96a7",
+    "godot_before.png": "c7311a8a6845989027502369f07e0fa976763fb6674d6922ce7d5d7a7cd65d79",
+    "godot_unobstructed_after.png": "9146ee4cc991f862d3a352bbb0baa9f2141e13dfee87d7f9eb6b431d819d8858",
+    "godot_unobstructed_before.png": "bfc85674a668120f9410d91803bf57d37913e962acb9f50be7f33ee195203e1a",
+    "junction_review_montage.png": "3309ba1e655bbe60b143171f8d6fdec25556da7f2ec0210bad4b2bf0117b61ef",
+    "north_branch_junction_candidate.png": "821c87a5711ed2aa7397781d34ea55ab6b0ed5012451a557d0b26b8e728586d9",
+    "north_left_junction_candidate.png": "9eca7a25aad7f9cafafea32bab860c5ab508d47d0126c3872d799754208988e1",
+    "north_right_junction_candidate.png": "f5f1d9323c0a6ec4886ffa3fa9adccf119a02f0b4e0df8e6637cc8bbfe3d1f03",
+    "northeast_after.png": "ce77e95258067291ed2f5b92d56f0ca9357450949071f89c0556fd76486631bd",
+    "northeast_before.png": "8aaf5c45ce23518f2f88d0be997ebf45b5f8690a87a669e1d1838c6d7cbcc282",
+    "northwest_after.png": "56fa365ea082d10fd6a77f7f1dccacb0d5112357422b5c412b70f5d54c6de51a",
+    "northwest_before.png": "a838fab19ce1e98b70582479bbfbc5f2d8351e713ce74b90af1994daf8857f31",
+    "south_left_junction_candidate.png": "0771c0b5c51612ae78ca0e8a3c70f4a387930c7740b0e6aecba672076c9104c2",
+    "south_right_junction_candidate.png": "2d17e061394d7440fe1e7a566845789cbca1047f53234d650027d2d76abfcc3e",
+    "southeast_after.png": "4a514ebcc69e8870162aa5b20624dafd637f9c2a896c4683add058d8192dad57",
+    "southeast_before.png": "c773a959a306d0c34920ef037807b76225add72b977eb81c14f6a15896a57aea",
+    "southwest_after.png": "2f0e82274eb26a14ffa49fb4460c9ee1f3318f5be5adc858312d563c476716d0",
+    "southwest_before.png": "83321c1622f4d60db4bf500b3b33e34f509c97a80a2d1b69eb722552ae9d46f8"
+  }
+}

@@ -228,6 +228,20 @@ def test_manifest_hash_exception_requires_semantic_proof():
     assert not compare_snapshots({'counts':{'manifest':220},'sha256':old},{'counts':{'manifest':224},'sha256':new})['pass']
 
 
+def test_operational_state_allowance_is_exact_and_keeps_baseline_hashes_locked():
+    allowed = transition.AUTHORIZED_OPERATIONAL_ADDITIONS
+    assert allowed == {'docs/CODEX_PROJECT_STATE.md'}
+    old = {'assets/wall.png': 'locked'}
+    new = {**old, 'docs/CODEX_PROJECT_STATE.md': 'current operational notes'}
+    assert transition.protected_difference(old,new,allowed,semantic_pass=True)['pass']
+    for unexpected in ['docs/CODEX_PROJECT_STATE_extra.md','docs/ART_DIRECTION.md','assets/new.png']:
+        assert not transition.protected_difference(old,{**new,unexpected:'new'},allowed,semantic_pass=True)['pass']
+    assert not transition.protected_difference(old,{**new,'assets/wall.png':'changed'},allowed,semantic_pass=True)['pass']
+    # Even an allowed name stays protected if it existed in the supplied baseline.
+    assert not transition.protected_difference(new,{**new,'docs/CODEX_PROJECT_STATE.md':'changed'},allowed,semantic_pass=True)['pass']
+    assert not transition.protected_difference(new,old,allowed,semantic_pass=True)['pass']
+
+
 def test_live_transition_keeps_strict_unchanged_result_false_and_old_bytes_locked():
     q=transition.audit(ROOT)
     assert q['pass'] and not q['unchanged_state_pass'] and q['mode']=='authorized_batch13_production_transition'

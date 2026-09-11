@@ -172,3 +172,65 @@ def test_foundation_family_rgb_only_and_all_variant_joins():
                     pixels = [im.getpixel((q,t) if vertical else (t,q)) for im,t in [(a,30),(a,31),(b,0),(b,1)]]
                     assert len(set(pixels)) == 1 and pixels[0][3] == 255
     assert (folder/'hospital_wall_back_straight_01_refresh_candidate.png').read_bytes() == (DEMO/'repair_candidates/back_wall_refresh_v2/hospital_wall_back_straight_01_refresh_candidate_v2.png').read_bytes()
+
+
+def test_junction_views_connect_perpendicular_profiles_without_changing_sources():
+    from PIL import Image
+    folder = DEMO/'repair_candidates/wall_junctions_v1'
+    r = json.loads((folder/'junctions.json').read_text())
+    family = folder.parent/'foundation_wall_refresh_family_v1'
+    back = Image.open(family/'hospital_wall_back_straight_01_refresh_candidate.png')
+    front = Image.open(family/'hospital_front_wall_cutaway_01_refresh_candidate.png')
+    assert r['status'] == 'reference_only_unapproved' and r['inventory_delta'] == 0
+    assert hashlib.sha256((DEMO/'runtime_manifest.json').read_bytes()).hexdigest() == r['runtime_manifest_sha256']
+    for path, expected in r['source_sha256'].items():
+        assert hashlib.sha256((DEMO/path).read_bytes()).hexdigest() == expected
+    for a in r['assets'].values():
+        im = Image.open(folder/a['path'])
+        assert im.mode == 'RGBA' and list(im.size) == a['native_size']
+        assert set(im.getchannel('A').get_flattened_data()) == {255}
+        assert hashlib.sha256((folder/a['path']).read_bytes()).hexdigest() == a['sha256']
+        palette = set()
+        for path in a['source_paths']:
+            palette.update(Image.open(DEMO/path).get_flattened_data())
+        assert set(im.get_flattened_data()) <= palette, 'No invented light/palette or antialiasing'
+    for side, edge in [('left',19), ('right',0)]:
+        native = Image.open(family/f'hospital_wall_side_{side}_01_refresh_candidate.png')
+        north = Image.open(folder/r['assets']['north_'+side]['path'])
+        south = Image.open(folder/r['assets']['south_'+side]['path'])
+        assert north.crop((0,52,20,84)).tobytes() == native.tobytes()
+        assert south.crop((0,0,20,12)).tobytes() == native.crop((0,0,20,12)).tobytes()
+        for y in range(9):
+            assert north.getpixel((edge,y)) == back.getpixel((0,y)), 'Cap must enter back wall'
+        for y in range(20):
+            assert south.getpixel((edge,y+12)) == front.getpixel((0,y)), 'Face/base must enter front wall'
+    branch = Image.open(folder/r['assets']['north_branch']['path'])
+    for y in range(7):
+        assert all(branch.getpixel((x,y)) == back.getpixel((0,y)) for x in range(20)), 'Branch must not interrupt top cap'
+    end = Image.open(folder/r['assets']['divider_east']['path'])
+    for y in range(52):
+        assert end.getpixel((19,y+28)) == back.getpixel((0,y)), 'Entire return must meet full-height wall'
+    selected = [(s['asset'],tuple(s['position'])) for p in r['placements'] for s in p['replaces']]
+    assert len(selected) == len(set(selected)) == 7
+    for asset,position in selected:
+        assert sum(p.get('asset')==asset and tuple(p['position'])==position for p in read()['placements']) == 1
+
+
+def test_junction_collision_contacts_and_existing_room_access():
+    r = json.loads((DEMO/'repair_candidates/wall_junctions_v1/junctions.json').read_text())
+    original = [p['collision'] for p in read()['placements'] if p['collision'] and p.get('state')!='closed']
+    additions = r['collision_additions']
+    assert additions == [[24,88,8,8], [704,88,8,8], [504,320,8,16]]
+    def blocked(x,y,solids):
+        return any(x+9>l and x-9<l+w and y>t and y-8<t+h for l,t,w,h in solids)
+    for point in [(16,96),(720,96),(496,328)]:
+        assert not blocked(*point, original)
+        assert blocked(*point, original+additions)
+    start=(352,368); seen={start}; queue=deque([start])
+    while queue:
+        x,y=queue.popleft()
+        for q in [(x-4,y),(x+4,y),(x,y-4),(x,y+4)]:
+            if q not in seen and 32<=q[0]<=704 and 96<=q[1]<=408 and not blocked(*q,original+additions):
+                seen.add(q); queue.append(q)
+    for destination in [(128,216),(112,312),(176,312),(352,320),(400,248),(432,296),(608,248),(656,232),(656,296),(304,216)]:
+        assert destination in seen, f'Junction blocks previously reachable area {destination}'

@@ -1,0 +1,62 @@
+{
+  "status": "reference_only_unapproved",
+  "method": "Godot before/after RGB channel union, fixed camera at 2x; allowed mask is six explicit native carrier bounds plus HUD",
+  "changed_pixels_including_hud": 20065,
+  "changed_pixels_outside_junctions_and_hud": 0,
+  "allowed_junction_regions": [
+    {
+      "junction": "northwest",
+      "screen_bounds_half_open": [
+        120,
+        168,
+        160,
+        336
+      ]
+    },
+    {
+      "junction": "northeast",
+      "screen_bounds_half_open": [
+        1504,
+        168,
+        1544,
+        336
+      ]
+    },
+    {
+      "junction": "divider_north",
+      "screen_bounds_half_open": [
+        1080,
+        168,
+        1120,
+        336
+      ]
+    },
+    {
+      "junction": "southwest",
+      "screen_bounds_half_open": [
+        120,
+        848,
+        160,
+        912
+      ]
+    },
+    {
+      "junction": "southeast",
+      "screen_bounds_half_open": [
+        1504,
+        848,
+        1544,
+        912
+      ]
+    },
+    {
+      "junction": "divider_east",
+      "screen_bounds_half_open": [
+        1080,
+        592,
+        1120,
+        752
+      ]
+    }
+  ]
+}

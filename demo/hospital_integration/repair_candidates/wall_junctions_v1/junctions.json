@@ -1,0 +1,290 @@
+{
+  "status": "reference_only_unapproved",
+  "grid_px": 32,
+  "inventory_delta": 0,
+  "assets": {
+    "north_left": {
+      "path": "north_left_junction_candidate.png",
+      "native_size": [
+        20,
+        84
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "image_anchor": [
+        20,
+        68
+      ],
+      "source_paths": [
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_left_01_refresh_candidate.png",
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_back_straight_01_refresh_candidate.png"
+      ],
+      "status": "reference_only_unapproved",
+      "reuse_scope": "everyday_world_common",
+      "anchor": "grid",
+      "sha256": "9eca7a25aad7f9cafafea32bab860c5ab508d47d0126c3872d799754208988e1"
+    },
+    "south_left": {
+      "path": "south_left_junction_candidate.png",
+      "native_size": [
+        20,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "image_anchor": [
+        20,
+        16
+      ],
+      "source_paths": [
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_left_01_refresh_candidate.png",
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_front_wall_cutaway_01_refresh_candidate.png"
+      ],
+      "status": "reference_only_unapproved",
+      "reuse_scope": "everyday_world_common",
+      "anchor": "grid",
+      "sha256": "0771c0b5c51612ae78ca0e8a3c70f4a387930c7740b0e6aecba672076c9104c2"
+    },
+    "north_right": {
+      "path": "north_right_junction_candidate.png",
+      "native_size": [
+        20,
+        84
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "image_anchor": [
+        0,
+        68
+      ],
+      "source_paths": [
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_right_01_refresh_candidate.png",
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_back_straight_01_refresh_candidate.png"
+      ],
+      "status": "reference_only_unapproved",
+      "reuse_scope": "everyday_world_common",
+      "anchor": "grid",
+      "sha256": "f5f1d9323c0a6ec4886ffa3fa9adccf119a02f0b4e0df8e6637cc8bbfe3d1f03"
+    },
+    "south_right": {
+      "path": "south_right_junction_candidate.png",
+      "native_size": [
+        20,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "image_anchor": [
+        0,
+        16
+      ],
+      "source_paths": [
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_right_01_refresh_candidate.png",
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_front_wall_cutaway_01_refresh_candidate.png"
+      ],
+      "status": "reference_only_unapproved",
+      "reuse_scope": "everyday_world_common",
+      "anchor": "grid",
+      "sha256": "2d17e061394d7440fe1e7a566845789cbca1047f53234d650027d2d76abfcc3e"
+    },
+    "north_branch": {
+      "path": "north_branch_junction_candidate.png",
+      "native_size": [
+        20,
+        84
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "image_anchor": [
+        20,
+        68
+      ],
+      "source_paths": [
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_left_01_refresh_candidate.png",
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_back_straight_01_refresh_candidate.png"
+      ],
+      "status": "reference_only_unapproved",
+      "reuse_scope": "everyday_world_common",
+      "anchor": "grid",
+      "sha256": "821c87a5711ed2aa7397781d34ea55ab6b0ed5012451a557d0b26b8e728586d9"
+    },
+    "divider_east": {
+      "path": "divider_east_junction_candidate.png",
+      "native_size": [
+        20,
+        80
+      ],
+      "logical_footprint": [
+        1,
+        2
+      ],
+      "image_anchor": [
+        20,
+        64
+      ],
+      "source_paths": [
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_left_01_refresh_candidate.png",
+        "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_back_straight_01_refresh_candidate.png"
+      ],
+      "status": "reference_only_unapproved",
+      "reuse_scope": "everyday_world_common",
+      "anchor": "grid",
+      "sha256": "4f2daed3e39da1d67d668bacd3e2d2de239be47dfd212f6b94805aa4c0a76bd5"
+    }
+  },
+  "placements": [
+    {
+      "name": "northwest",
+      "view": "north_left",
+      "position": [
+        32,
+        112
+      ],
+      "sort_y": 112,
+      "replaces": [
+        {
+          "asset": "hospital_wall_side_left_01__main",
+          "position": [
+            32,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "name": "northeast",
+      "view": "north_right",
+      "position": [
+        704,
+        112
+      ],
+      "sort_y": 112,
+      "replaces": [
+        {
+          "asset": "hospital_wall_side_right_01__main",
+          "position": [
+            704,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "name": "divider_north",
+      "view": "north_branch",
+      "position": [
+        512,
+        112
+      ],
+      "sort_y": 112,
+      "replaces": [
+        {
+          "asset": "hospital_wall_side_left_01__main",
+          "position": [
+            512,
+            112
+          ]
+        }
+      ]
+    },
+    {
+      "name": "southwest",
+      "view": "south_left",
+      "position": [
+        32,
+        400
+      ],
+      "sort_y": 416,
+      "replaces": [
+        {
+          "asset": "hospital_wall_side_left_01__main",
+          "position": [
+            32,
+            400
+          ]
+        }
+      ]
+    },
+    {
+      "name": "southeast",
+      "view": "south_right",
+      "position": [
+        704,
+        400
+      ],
+      "sort_y": 416,
+      "replaces": [
+        {
+          "asset": "hospital_wall_side_right_01__main",
+          "position": [
+            704,
+            400
+          ]
+        }
+      ]
+    },
+    {
+      "name": "divider_east",
+      "view": "divider_east",
+      "position": [
+        512,
+        320
+      ],
+      "sort_y": 336,
+      "replaces": [
+        {
+          "asset": "hospital_wall_side_left_01__main",
+          "position": [
+            512,
+            272
+          ]
+        },
+        {
+          "asset": "hospital_wall_side_left_01__main",
+          "position": [
+            512,
+            304
+          ]
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_back_straight_01_refresh_candidate.png": "b92cfe0523a4122c693dcd1a0be9f3b75661a24f3492736e5ddfd83ef6097cfa",
+    "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_left_01_refresh_candidate.png": "8393bee583ef29c455c7f89b6bb56953ff8667d80db5b0eafa4db41423e186b1",
+    "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_wall_side_right_01_refresh_candidate.png": "d0bec21b8439955ce7490c2a233476d257f74bd1231d7ff2503624247ce5e758",
+    "repair_candidates\\foundation_wall_refresh_family_v1\\hospital_front_wall_cutaway_01_refresh_candidate.png": "46590c1837ad4d8342f29966853b9acc87f67df48ab9dcc8df29f99840644da3"
+  },
+  "runtime_manifest_sha256": "8c66d75ea51df763f657c58b11670e5ab8189b35d5cf8fa8ac6eb615c9b3824d",
+  "collision_additions": [
+    [
+      24,
+      88,
+      8,
+      8
+    ],
+    [
+      704,
+      88,
+      8,
+      8
+    ],
+    [
+      504,
+      320,
+      8,
+      16
+    ]
+  ],
+  "collision_note": "Complete missing centered 8px strip contacts only while junction mode is enabled."
+}

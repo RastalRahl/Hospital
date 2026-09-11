@@ -18,6 +18,12 @@ const FAMILY_FOLDER := "res://repair_candidates/foundation_wall_refresh_family_v
 var family_entries: Array[Dictionary] = []
 var family_textures: Dictionary = {}
 var family_enabled := false
+const JUNCTION_FOLDER := "res://repair_candidates/wall_junctions_v1/"
+var junction_data: Dictionary
+var junction_enabled := false
+var junction_sprites: Array[Sprite2D] = []
+var junction_originals: Array[Sprite2D] = []
+var placement_sprites: Array[Dictionary] = []
 var door_main: Sprite2D
 var repair_active := true
 var data: Dictionary
@@ -71,8 +77,10 @@ func _ready() -> void:
 		else:
 			anchors.append(Vector2(p.position[0], p.position[1]))
 		world.add_child(s)
+		placement_sprites.append({"placement": p, "sprite": s})
 		if p.state != "":
 			state_nodes.append({"node": s, "state": p.state})
+	build_junction_views()
 	world.add_child(figure)
 	figure.position = start
 	add_child(camera)
@@ -84,7 +92,12 @@ func _ready() -> void:
 	hud.position = Vector2(20, 16)
 	hud.add_theme_font_size_override("font_size", 20)
 	set_door(false)
-	if "--family-review" in OS.get_cmdline_user_args():
+	if "--junction-review" in OS.get_cmdline_user_args():
+		await junction_review()
+	elif "--junction-smoke" in OS.get_cmdline_user_args():
+		set_wall_junctions(true)
+		await smoke()
+	elif "--family-review" in OS.get_cmdline_user_args():
 		await family_review()
 	elif "--wall-review" in OS.get_cmdline_user_args():
 		await wall_review()
@@ -104,6 +117,7 @@ func update_hud() -> void:
 	hud.text = "RASTALR / HOSPITAL INTEGRATION   |   Batch 13: pending human review\nWASD / arrows: move   E: door (%s)   G: grid + contacts   R: reset   1 / 2 / 3: zoom\nReception / waiting: west     Examination: glass bay     Patient room: east     Corridor: south" % ("OPEN" if door_open else "CLOSED")
 	hud.text += "\nDoor: UNAPPROVED alpha repair candidate" if repair_active else "\nDoor comparison: approved opaque original"
 	hud.text += " | V walls: " + ("REFERENCE-ONLY family" if family_enabled else ["approved original", "REFERENCE-ONLY v1", "REFERENCE-ONLY v2"][wall_version])
+	hud.text += " | J junctions: " + ("REFERENCE-ONLY" if junction_enabled else "original")
 
 func blocked(point: Vector2) -> bool:
 	var feet := Rect2(point - Vector2(9, 8), Vector2(18, 8))
@@ -112,6 +126,10 @@ func blocked(point: Vector2) -> bool:
 			continue
 		if feet.intersects(s.rect):
 			return true
+	if junction_enabled:
+		for c in junction_data.collision_additions:
+			if feet.intersects(Rect2(c[0], c[1], c[2], c[3])):
+				return true
 	return false
 
 func move_figure(delta: Vector2) -> void:
@@ -137,6 +155,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	match event.physical_keycode:
+		KEY_J:
+			set_wall_junctions(not junction_enabled)
 		KEY_V:
 			set_wall_family(not family_enabled)
 		KEY_G:
@@ -165,6 +185,9 @@ func draw_debug() -> void:
 	for s in solids:
 		if s.state != "closed" or not door_open:
 			overlay.draw_rect(s.rect,Color(1,0.4,0.2,0.8),false,1)
+	if junction_enabled:
+		for c in junction_data.collision_additions:
+			overlay.draw_rect(Rect2(c[0],c[1],c[2],c[3]),Color.MAGENTA,false,1)
 	overlay.draw_rect(Rect2(figure.position-Vector2(9,8),Vector2(18,8)),Color.YELLOW,false,1)
 
 func capture(path: String) -> void:
@@ -321,6 +344,8 @@ func wall_review() -> void:
 
 # All twelve candidates are loaded; only existing matching placements are overridden.
 func set_wall_family(enabled: bool) -> void:
+	if junction_enabled:
+		set_wall_junctions(false)
 	family_enabled = enabled
 	wall_version = 0
 	for entry in family_entries:
@@ -353,4 +378,104 @@ func family_review() -> void:
 			var s: Sprite2D = family_entries[i].sprite
 			assert(before[i] == [s.position,s.offset,s.scale,s.rotation,s.z_index])
 	print("WALL_FAMILY_REVIEW_PASS: 12 candidates loaded; ", family_entries.size(), " unchanged placements; identical camera/zoom")
+	get_tree().quit()
+
+# Explicit native replacement views, not a generic connector or auto-tiling system.
+func build_junction_views() -> void:
+	junction_data = JSON.parse_string(FileAccess.get_file_as_string(JUNCTION_FOLDER + "junctions.json"))
+	for p in junction_data.placements:
+		for selected in p.replaces:
+			var matches := 0
+			for entry in placement_sprites:
+				if entry.placement.asset == selected.asset and entry.placement.position == selected.position:
+					junction_originals.append(entry.sprite)
+					matches += 1
+			assert(matches == 1, "Junction selector must resolve exactly once")
+		var view: Dictionary = junction_data.assets[p.view]
+		var s := Sprite2D.new()
+		s.texture = load(JUNCTION_FOLDER + view.path)
+		assert(s.texture != null)
+		s.centered = false
+		s.position = Vector2(p.position[0], p.sort_y)
+		s.offset = Vector2(-view.image_anchor[0], p.position[1] - p.sort_y - view.image_anchor[1])
+		s.visible = false
+		world.add_child(s)
+		junction_sprites.append(s)
+
+func set_wall_junctions(enabled: bool) -> void:
+	# Clearing the flag first avoids recursion when enabling the refreshed family.
+	junction_enabled = false
+	if enabled:
+		set_wall_family(true)
+	junction_enabled = enabled
+	for s in junction_originals:
+		s.visible = not enabled
+	for s in junction_sprites:
+		s.visible = enabled
+	update_hud()
+	overlay.queue_redraw()
+
+func junction_review() -> void:
+	assert(junction_sprites.size() == 6 and junction_originals.size() == 7)
+	var before: Array = []
+	for entry in placement_sprites:
+		var s: Sprite2D = entry.sprite
+		before.append([s.position, s.offset, s.scale, s.rotation, s.z_index])
+	var solids_before := solids.duplicate(true)
+	set_wall_family(true)
+	set_door(true)
+	for enabled in [false, true]:
+		set_wall_junctions(enabled)
+		var label := "after" if enabled else "before"
+		await capture(JUNCTION_FOLDER + "godot_" + label + ".png")
+		# Keep the furnished overview, then expose the same contacts without props
+		# for the close crops; no furniture or camera placement is changed.
+		for entry in placement_sprites:
+			if entry.placement.kind == "prop":
+				entry.sprite.visible = false
+		figure.visible = false
+		await capture(JUNCTION_FOLDER + "godot_unobstructed_" + label + ".png")
+		var result := get_viewport().get_texture().get_image()
+		var regions := {
+			"northwest": Rect2(4,36,100,100),
+			"northeast": Rect2(652,36,80,100),
+			"divider_north": Rect2(468,36,80,112),
+			"divider_east": Rect2(468,252,116,100),
+			"southwest": Rect2(4,368,100,60),
+			"southeast": Rect2(652,368,80,60)
+		}
+		for name in regions:
+			var region: Rect2 = regions[name]
+			var box := Rect2i(Vector2i(get_global_transform_with_canvas() * region.position), Vector2i(region.size * 2))
+			assert(result.get_region(box).save_png(JUNCTION_FOLDER + name + "_" + label + ".png") == OK)
+		for entry in placement_sprites:
+			if entry.placement.kind == "prop":
+				entry.sprite.visible = true
+		figure.visible = true
+		for i in placement_sprites.size():
+			var s: Sprite2D = placement_sprites[i].sprite
+			assert(before[i] == [s.position, s.offset, s.scale, s.rotation, s.z_index])
+		assert(solids == solids_before, "Existing contacts unchanged")
+	# Check the three new 8px-wide contacts at points whose foot rectangles did
+	# not touch either former wall: catches diagonal-only topology connections.
+	for point in [Vector2(16,96), Vector2(720,96), Vector2(496,328)]:
+		set_wall_junctions(false)
+		assert(not blocked(point), "Control exposes missing corner contact")
+		set_wall_junctions(true)
+		assert(blocked(point), "Junction contact closes gap")
+	# Actual Y-sort probe beside the internal return, with no z-index override.
+	figure.position = Vector2(501,330)
+	await capture(JUNCTION_FOLDER + "divider_figure_behind.png")
+	var transform := get_global_transform_with_canvas()
+	var behind := get_viewport().get_texture().get_image()
+	assert(behind.get_pixelv(Vector2i(transform * Vector2(501,310))).to_rgba32() != Color("d9ad59").to_rgba32())
+	figure.position = Vector2(501,348)
+	await capture(JUNCTION_FOLDER + "divider_figure_front.png")
+	var front := get_viewport().get_texture().get_image()
+	assert(front.get_pixelv(Vector2i(transform * Vector2(501,328))).to_rgba32() == Color("d9ad59").to_rgba32())
+	figure.position = start
+	set_wall_junctions(false)
+	assert(junction_originals.all(func(s): return s.visible))
+	assert(junction_sprites.all(func(s): return not s.visible))
+	print("WALL_JUNCTION_REVIEW_PASS: six junctions, seven exclusive replacements, unchanged original transforms/contacts, three added contacts, figure Y-sort and toggle restore")
 	get_tree().quit()
