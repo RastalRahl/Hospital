@@ -1,5 +1,7 @@
 # Hospital integration demo
 
+Reference-led empty wall test: open `wall_logic_test.tscn` and press F6. It compares continuous 44px walls with the same network using a 12px front cutaway; G toggles the ground grid. See `repair_candidates/wall_logic_reference_v1/findings.md` for capture instructions and limits. This separate review scene leaves the hospital startup unchanged and has no production approval.
+
 Godot **4.7.1.stable.official.a13da4feb**, Compatibility/OpenGL 3.3; tested on NVIDIA RTX 3050 Laptop. Independent project; no Gloam dependency. Runtime requires only this directory and Godot 4.7.1. No engine installation or asset generation occurs.
 
 From the repository root in PowerShell:

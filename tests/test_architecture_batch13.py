@@ -14,6 +14,19 @@ from rastalr_pipeline.snapshot import compare_snapshots
 ROOT=core.ROOT
 
 
+def test_local_study_additions_do_not_exempt_baseline_hashes(tmp_path):
+    local=tmp_path/'references/itch.io/pack/walls.png'
+    local.parent.mkdir(parents=True)
+    local.write_bytes(b'local study')
+    allowed=transition.local_reference_additions(tmp_path)
+    name='references/itch.io/pack/walls.png'
+    assert allowed == {name}
+    assert transition.protected_difference({}, {name:'new'}, allowed, semantic_pass=True)['pass']
+    assert not transition.protected_difference({name:'old'}, {name:'new'}, allowed, semantic_pass=True)['pass']
+    assert not transition.protected_difference({}, {'references/architecture/unexpected.png':'new'}, allowed, semantic_pass=True)['pass']
+    assert not transition.protected_difference({}, {'assets/walls.png':'new'}, allowed, semantic_pass=True)['pass']
+
+
 @pytest.fixture(scope='module')
 def assets():
     actual={a['id']:a for a in core.load_manifest()['assets']}

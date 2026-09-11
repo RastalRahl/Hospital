@@ -14,6 +14,13 @@ METADATA_CHANGES={'metadata/manifest.json','metadata/catalog.csv'}
 AUTHORIZED_OPERATIONAL_ADDITIONS={'docs/CODEX_PROJECT_STATE.md'}
 
 
+def local_reference_additions(root):
+    """User-supplied study packs only; baseline hashes remain protected."""
+    root=Path(root)
+    folder=root/'references/itch.io'
+    return {p.relative_to(root).as_posix() for p in folder.rglob('*') if p.is_file()}
+
+
 def rows(text):
     return list(csv.DictReader(io.StringIO(text)))
 
@@ -102,7 +109,7 @@ def audit(root):
     proof=semantics(json.loads(bm.read_text()),json.loads((root/'metadata/manifest.json').read_text()),rows(bc.read_text()),rows((root/'metadata/catalog.csv').read_text()),batch13.blueprints(root))
     errors=list(proof['errors'])
     if views.digest(bm)!=before['sha256']['metadata/manifest.json'] or views.digest(bc)!=before['sha256']['metadata/catalog.csv']:errors.append('Captured pre-task inventory hash mismatch')
-    delta=protected_difference(before['sha256'],current['sha256'],batch13.allowed_additions(root)|AUTHORIZED_OPERATIONAL_ADDITIONS,semantic_pass=proof['pass'])
+    delta=protected_difference(before['sha256'],current['sha256'],batch13.allowed_additions(root)|AUTHORIZED_OPERATIONAL_ADDITIONS|local_reference_additions(root),semantic_pass=proof['pass'])
     changed=delta['changed_or_missing'];unexpected=delta['unauthorized_additions']
     if changed:errors.append('Protected historical file changed or deleted')
     if unexpected:errors.append('Unauthorized output addition')
@@ -127,7 +134,7 @@ def compare_live_snapshot(baseline,current,*,allowed_addition_prefixes=(),root=N
     missing=sorted(set(old)-set(new));changed=sorted(p for p,h in old.items() if p not in METADATA_CHANGES and new.get(p)!=h)
     # Historical additions are locked by the immutable task-start snapshot;
     # the exact post-Batch13 operational document is declared separately.
-    unexpected=sorted(set(new)-set(old)-set(before['sha256'])-batch13.allowed_additions(root)-AUTHORIZED_OPERATIONAL_ADDITIONS)
+    unexpected=sorted(set(new)-set(old)-set(before['sha256'])-batch13.allowed_additions(root)-AUTHORIZED_OPERATIONAL_ADDITIONS-local_reference_additions(root))
     metadata_baseline=all(old.get(p)==before['sha256'].get(p) for p in METADATA_CHANGES if p in old)
     strict=compare_snapshots(baseline,current,allowed_addition_prefixes=allowed_addition_prefixes)
     return {'pass':proof['pass'] and not missing and not changed and not unexpected and metadata_baseline,
