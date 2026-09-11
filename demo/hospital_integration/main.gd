@@ -10,6 +10,9 @@ class Figure extends Node2D:
 		draw_rect(Rect2(2, -10, 6, 10), Color("273746"))
 
 const DOOR_CANDIDATE := "res://repair_candidates/sliding_door_open_alpha_v1/hospital_sliding_clinical_doors_open_01_alpha_candidate.png"
+const WALL_PROTOTYPE := "res://repair_candidates/back_wall_refresh_v1/hospital_wall_back_straight_01_refresh_candidate.png"
+var wall_sprites: Array[Sprite2D] = []
+var wall_prototype := false
 var door_main: Sprite2D
 var repair_active := true
 var data: Dictionary
@@ -45,6 +48,8 @@ func _ready() -> void:
 		if p.asset == "hospital_sliding_clinical_doors_open_01__main":
 			door_main = s
 			s.texture = load(DOOR_CANDIDATE)
+		if p.asset == "hospital_wall_back_straight_01__main":
+			wall_sprites.append(s)
 		s.centered = false
 		s.position = Vector2(p.position[0], p.position[1])
 		s.offset = Vector2(p.offset[0], p.offset[1])
@@ -69,7 +74,9 @@ func _ready() -> void:
 	hud.position = Vector2(20, 16)
 	hud.add_theme_font_size_override("font_size", 20)
 	set_door(false)
-	if "--door-review" in OS.get_cmdline_user_args():
+	if "--wall-review" in OS.get_cmdline_user_args():
+		await wall_review()
+	elif "--door-review" in OS.get_cmdline_user_args():
 		await door_review()
 	elif "--smoke" in OS.get_cmdline_user_args():
 		await smoke()
@@ -84,6 +91,7 @@ func set_door(open: bool) -> void:
 func update_hud() -> void:
 	hud.text = "RASTALR / HOSPITAL INTEGRATION   |   Batch 13: pending human review\nWASD / arrows: move   E: door (%s)   G: grid + contacts   R: reset   1 / 2 / 3: zoom\nReception / waiting: west     Examination: glass bay     Patient room: east     Corridor: south" % ("OPEN" if door_open else "CLOSED")
 	hud.text += "\nDoor: UNAPPROVED alpha repair candidate" if repair_active else "\nDoor comparison: approved opaque original"
+	hud.text += " | V wall: REFERENCE-ONLY prototype" if wall_prototype else " | V wall: approved original"
 
 func blocked(point: Vector2) -> bool:
 	var feet := Rect2(point - Vector2(9, 8), Vector2(18, 8))
@@ -117,6 +125,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	match event.physical_keycode:
+		KEY_V:
+			set_wall_prototype(not wall_prototype)
 		KEY_G:
 			debug = not debug
 			overlay.queue_redraw()
@@ -267,4 +277,32 @@ func door_review() -> void:
 	var fore := get_viewport().get_texture().get_image()
 	assert(fore.get_pixelv(Vector2i(transform * Vector2(568,320))).to_rgba32() == Color("d9ad59").to_rgba32(), "Foreground figure sorts ahead of leaf")
 	print("DOOR_ALPHA_REVIEW_PASS: closed approach, open crossing, aperture room equivalence, header and leaf occlusion")
+	get_tree().quit()
+
+# Reference-only RGB override. Does not modify placement or runtime manifest.
+func set_wall_prototype(enabled: bool) -> void:
+	wall_prototype = enabled
+	var texture: Texture2D = load(WALL_PROTOTYPE if enabled else "res://art/hospital_wall_back_straight_01__main.png")
+	for sprite in wall_sprites:
+		sprite.texture = texture
+	update_hud()
+
+func wall_review() -> void:
+	var folder := "res://repair_candidates/back_wall_refresh_v1/"
+	assert(wall_sprites.size() == 25, "21 perimeter and 4 internal wall copies")
+	var placement_before: Array = []
+	for sprite in wall_sprites:
+		placement_before.append([sprite.position,sprite.offset,sprite.scale,sprite.rotation,sprite.z_index])
+	set_door(true)
+	set_wall_prototype(false)
+	await capture(folder + "godot_before.png")
+	var crop := Rect2i(Vector2i(get_global_transform_with_canvas() * Vector2(256,44)),Vector2i(512,104))
+	assert(get_viewport().get_texture().get_image().get_region(crop).save_png(folder + "godot_8cell_before.png") == OK)
+	set_wall_prototype(true)
+	await capture(folder + "godot_after.png")
+	assert(get_viewport().get_texture().get_image().get_region(crop).save_png(folder + "godot_8cell_after.png") == OK)
+	for i in wall_sprites.size():
+		var sprite := wall_sprites[i]
+		assert(placement_before[i] == [sprite.position,sprite.offset,sprite.scale,sprite.rotation,sprite.z_index], "Wall placement remains unchanged")
+	print("WALL_PROTOTYPE_REVIEW_PASS: same camera/zoom; 21 perimeter + 4 internal copies; transforms and draw anchors unchanged")
 	get_tree().quit()

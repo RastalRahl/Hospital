@@ -1,0 +1,120 @@
+{
+  "id": "hospital_wall_back_straight_01",
+  "status": "reference_only_unapproved",
+  "source_path": "assets/architecture/hospital_wall_back_straight_01.png",
+  "source_sha256": "5de21497d18af52605754193c188f6555d35f09d42d9228fff31ad2fb29187e2",
+  "candidate_path": "hospital_wall_back_straight_01_refresh_candidate.png",
+  "candidate_sha256": "856755594cfe654ee5c55e2a567a8da8b3e168d5772bdd8a378ad0aeee46fea0",
+  "dimensions": [
+    32,
+    52
+  ],
+  "mode": "RGBA",
+  "alpha_changed_pixels": 0,
+  "rgb_changed_pixels": 1607,
+  "palette_colors": 34,
+  "colors_all_sampled_from_source": true,
+  "anchor": "wall_center",
+  "logical_footprint": [
+    1,
+    1
+  ],
+  "native_grid": 32,
+  "demo_image_offset": [
+    -16,
+    -52
+  ],
+  "band_rows_half_open": {
+    "cap": [
+      0,
+      8
+    ],
+    "cap_face_separator": [
+      8,
+      9
+    ],
+    "ivory_face": [
+      9,
+      45
+    ],
+    "base_separator": [
+      45,
+      46
+    ],
+    "teal_band": [
+      46,
+      51
+    ],
+    "bottom_outline": [
+      51,
+      52
+    ]
+  },
+  "face_palette_samples": [
+    [
+      8,
+      10
+    ],
+    [
+      16,
+      11
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      3,
+      25
+    ],
+    [
+      16,
+      28
+    ],
+    [
+      16,
+      30
+    ],
+    [
+      8,
+      40
+    ]
+  ],
+  "baseline": "bottom exclusive y52; demo wall anchor unchanged",
+  "repeat_counts": [
+    1,
+    4,
+    8
+  ],
+  "stride": 32,
+  "repeat_gaps": 0,
+  "repeat_overlaps": 0,
+  "opposite_edge_rgb_mismatched_rows": 0,
+  "boundary_neighborhood_mean_abs_rgb_delta": {
+    "original": 94.774,
+    "candidate": 0.0
+  },
+  "no_metadata_or_production_writes": true,
+  "godot": {
+    "version": "4.7.1.stable.official.a13da4feb",
+    "zoom": 2,
+    "perimeter_placements": 21,
+    "internal_placements": 4,
+    "placement_transforms_unchanged": true,
+    "scene_rgb_changed_pixels_excluding_hud": 150368,
+    "changed_pixels_outside_target_wall_rects_excluding_hud": 0,
+    "eight_cell_crop_px": [
+      512,
+      104
+    ]
+  },
+  "verification": {
+    "focused_tests_passed": 5,
+    "full_suite_passed": 372,
+    "full_suite_runs": 1,
+    "full_suite_seconds": 96.19,
+    "completion_smoke_runs": 1,
+    "completion_smoke": "HOSPITAL_SMOKE_PASS",
+    "wall_review": "WALL_PROTOTYPE_REVIEW_PASS"
+  }
+}

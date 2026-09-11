@@ -34,3 +34,6 @@ To capture and test the door comparison:
 ```
 
 Look for `DOOR_ALPHA_REVIEW_PASS`. `captures/door_alpha_repair/` contains closed approach, approved before, candidate behind/crossing/front and the compact `door_and_glass_review.png`. The last image combines unscaled crops from Godot captures, including the preserved Batch 13 glass-behind/front views. `build_door_review_image.py` rebuilds that review image after capture (Pillow and Windows Arial); it is not needed to run the demo. `build_door_alpha_candidate.py` reproduces the exact candidate from the repository's approved source and requires no engine or production write.
+
+
+A separate **reference-only back-wall RGB prototype** is available with **V** (approved original is the startup default). It overrides only `hospital_wall_back_straight_01` at its existing 25 placements. Nothing is propagated to production. For deterministic before/after captures, use `launch.ps1 -Godot '<Godot executable>' -WallReview`; look for `WALL_PROTOTYPE_REVIEW_PASS`. Captures, native candidate, diff/repeat diagnostics and findings are in `repair_candidates/back_wall_refresh_v1/`. The small `wall_prototype_review.zip` there contains only this prototype's evidence. Existing door/glass controls and repairs are unchanged.

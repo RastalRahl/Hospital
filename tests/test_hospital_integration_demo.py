@@ -97,3 +97,25 @@ def test_open_door_candidate_changes_only_documented_aperture_alpha():
         assert (ROOT/leaf['source_path']).read_bytes() == (DEMO/leaf['demo_path']).read_bytes()
         assert hashlib.sha256((DEMO/leaf['demo_path']).read_bytes()).hexdigest() == leaf['sha256']
     assert r['status'] == 'unapproved_repair_candidate'
+
+
+def test_wall_prototype_preserves_alpha_geometry_and_quiet_repeat_edges():
+    from PIL import Image
+    folder = DEMO/'repair_candidates/back_wall_refresh_v1'
+    r = json.loads((folder/'checks.json').read_text())
+    a = next(a for a in json.loads((ROOT/'metadata/manifest.json').read_text())['assets'] if a['id']==r['id'])
+    source = Image.open(ROOT/a['final_path'])
+    candidate = Image.open(folder/r['candidate_path'])
+    assert source.mode == candidate.mode == 'RGBA'
+    assert source.size == candidate.size == (32,52)
+    assert source.getchannel('A').tobytes() == candidate.getchannel('A').tobytes()
+    assert r['anchor'] == a['anchor'] == 'wall_center'
+    assert r['logical_footprint'] == [a['footprint_width_tiles'],a['footprint_height_tiles']] == [1,1]
+    assert hashlib.sha256((ROOT/a['final_path']).read_bytes()).hexdigest() == r['source_sha256'] == a['normalized_sha256']
+    assert sum(p[:3]!=q[:3] for p,q in zip(source.get_flattened_data(),candidate.get_flattened_data())) == r['rgb_changed_pixels']
+    assert set(candidate.get_flattened_data()) <= set(source.get_flattened_data())
+    for y in range(52):
+        assert candidate.getpixel((0,y)) == candidate.getpixel((31,y))
+        # Matching two dark boundary pixels alone must not pass the check.
+        assert candidate.getpixel((0,y)) == candidate.getpixel((1,y)) == candidate.getpixel((30,y))
+    assert r['status'] == 'reference_only_unapproved'
