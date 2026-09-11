@@ -1,79 +1,103 @@
-# Asset coverage and remaining backlog
+# Asset coverage and backlog — roadmap revision 2
 
-Verified 2026-09-11 against HEAD `5d1ae1f`, the current manifest and catalog. Product authority: [ASSET_ROADMAP.md](ASSET_ROADMAP.md). This is planning only: no proposed ID below exists in the manifest yet, no production batch is authorized, and no approval is changed.
+Reconciled 2026-09-11 from manifest/catalog at starting HEAD `2ae8aa1`. The user explicitly requested revised targets and inclusion of all existing assets. Authority: [ASSET_ROADMAP.md](ASSET_ROADMAP.md). Supersedes the prior 158-addition projection; this plan retains **224 current + 149 proposed = 373 logical assets**.
 
-## Counting and category ownership
+## Current coverage
 
-Each non-rejected manifest parent counts once in its existing primary category. Roadmap labels map to manifest keys shown below; new category keys are proposals only. Shared use is described but never counted twice. Catalog IDs, categories and statuses agree with the manifest. All 220 approved final PNG paths exist. Pending means `needs_human_review` here (all four are glass). Signed gap is target minus current; negative means over budget. Repairs, engine geometry, implementation views, states bundled within a parent, and components add zero. Existing approved state/orientation records are retained as recorded, not retroactively merged in a documentation task.
+Current counts use existing primary manifest categories. Every current ID is retained in the register below; pending glass remains pending. Shared capabilities do not earn duplicate category counts. The Signage / Decor / Safety label expands the planning remit of proposed `signage_decor`; no manifest category is changed.
 
-| Roadmap category (manifest key) | Target | Current | Approved | Pending | Signed gap |
+| Category (manifest key) | Target | Current | Approved | Pending | Gap |
 |---|---:|---:|---:|---:|---:|
-| Architecture (`architecture`) | 45 | 32 | 28 | 4 | +13 |
-| Reception / Waiting (`reception`) | 22 | 22 | 22 | 0 | +0 |
-| Patient Rooms (`patient_rooms`) | 32 | 29 | 29 | 0 | +3 |
-| Examination (`examination`) | 20 | 22 | 22 | 0 | -2 |
-| ICU (`icu`) | 20 | 19 | 19 | 0 | +1 |
-| Surgery (`surgery`) | 24 | 19 | 19 | 0 | +5 |
-| Radiology (`radiology`) | 16 | 19 | 19 | 0 | -3 |
-| Laboratory (`laboratory`) | 20 | 20 | 20 | 0 | +0 |
-| Pharmacy (`pharmacy`) | 14 | 18 | 18 | 0 | -4 |
-| Emergency (`emergency`) | 22 | 19 | 19 | 0 | +3 |
-| Exterior / Ambulance (`exterior`) | 24 | 1 | 1 | 0 | +23 |
-| Morgue (`morgue`) | 12 | 0 | 0 | 0 | +12 |
-| Staff / Admin (`staff_admin`) | 18 | 0 | 0 | 0 | +18 |
-| Cafeteria / Kitchen (`cafeteria_kitchen`) | 14 | 0 | 0 | 0 | +14 |
-| Bathrooms / Utility (`bathrooms_utility`) | 14 | 0 | 0 | 0 | +14 |
-| Signage / Decor (`signage_decor`) | 25 | 0 | 0 | 0 | +25 |
-| Inventory / UI (`inventory_ui`) | 20 | 3 | 3 | 0 | +17 |
-| Abandoned / Horror (`abandoned`) | 38 | 1 | 1 | 0 | +37 |
-| **Total** | **400** | **224** | **220** | **4** | **+176** |
+| Architecture (`architecture`) | 44 | 32 | 28 | 4 | 12 |
+| Reception / Waiting (`reception`) | 22 | 22 | 22 | 0 | 0 |
+| Patient Rooms (`patient_rooms`) | 32 | 29 | 29 | 0 | 3 |
+| Examination (`examination`) | 22 | 22 | 22 | 0 | 0 |
+| ICU (`icu`) | 20 | 19 | 19 | 0 | 1 |
+| Surgery (`surgery`) | 22 | 19 | 19 | 0 | 3 |
+| Radiology (`radiology`) | 19 | 19 | 19 | 0 | 0 |
+| Laboratory (`laboratory`) | 22 | 20 | 20 | 0 | 2 |
+| Pharmacy (`pharmacy`) | 18 | 18 | 18 | 0 | 0 |
+| Emergency (`emergency`) | 21 | 19 | 19 | 0 | 2 |
+| Exterior / Ambulance (`exterior`) | 18 | 1 | 1 | 0 | 17 |
+| Morgue (`morgue`) | 8 | 0 | 0 | 0 | 8 |
+| Staff / Admin (`staff_admin`) | 14 | 0 | 0 | 0 | 14 |
+| Cafeteria / Kitchen (`cafeteria_kitchen`) | 14 | 0 | 0 | 0 | 14 |
+| Bathrooms / Utility (`bathrooms_utility`) | 18 | 0 | 0 | 0 | 18 |
+| Signage / Decor / Safety (`signage_decor`) | 22 | 0 | 0 | 0 | 22 |
+| Inventory / UI (`inventory_ui`) | 16 | 3 | 3 | 0 | 13 |
+| Abandoned / Horror (`abandoned`) | 21 | 1 | 1 | 0 | 20 |
+| **Total** | **373** | **224** | **220** | **4** | **149** |
 
-Positive category gaps total **185**; Examination (+2 current above budget), Radiology (+3) and Pharmacy (+4) account for **9** excess assets. Filling every positive gap while retaining those assets would yield **409**, not 400. No deletion or category-budget change is proposed merely to force the total.
+All 149 additions are named below. Targets have no negative gaps and no unnamed quota. All 220 approved final files exist; catalog IDs/categories/statuses match the manifest. The target includes all four glass parents: no alternate exclusion total is used. Their inclusion does not confer approval.
 
-This audit names **158 proposed additions**, giving **382 logical assets** if all prove useful and the four parked glass parents ultimately ship. Excluding those glass parents gives **378 release candidates**. Thus plan around **158 meaningful additions (approximately 160)**, not an automatic order for 176 or 185. Proposals remain subject to native-scale visual distinction and room-use checks; marginal items should be merged or dropped. The remaining budget is headroom for demonstrated needs, not unnamed production commitments. The original 400 target and 350–450 useful finish range are unchanged.
+## Capabilities and priorities
 
-## Capabilities by category
-
-Coverage statements below are based on manifest IDs/metadata and the existing integration findings, not a fresh visual approval of every sprite.
-
-| Category | Important coverage already available | Important capabilities still missing |
+| Category | Existing coverage / reuse | New coverage and rationale |
 |---|---|---|
-| Architecture | 8 floors, 12 solid-wall records, 8 door/opening records; 4 pending glass parents. | Reliable junctions/endings and foreground visibility need repair; stairs, lifts and service/access boundaries missing. Glass parked. |
-| Reception / Waiting | Modular/accessible counters, kiosk, queue system, seating, wheelchair, water cooler, plant, sanitizer and janitorial cart. | No essential new family identified; bench/rack/plant cleanup remains. |
-| Patient Rooms | Multiple beds, bedside furniture, IV/oxygen, monitoring, curtains/screens, wardrobe, visitor chair and call panel. | Patient transfer lift, family sleeper and bedside commode. |
-| Examination | Tables/chairs, diagnostic wall equipment, ultrasound, lighting, sink, cabinets, trays and sharps disposal. | No material general-exam gap identified from inventory; assess representative room, not additional stool variants. |
-| ICU | Ventilators, monitors, pumps, suction, gas manifold, ceiling boom and isolation supplies. | Distinct bedside renal-support machine; reuse existing ward beds and monitoring. |
-| Surgery | Operating table/lights, anesthesia, electrosurgery/smoke extraction, endoscopy, instruments, scrub sink and warming. | Perfusion, suction/irrigation, positioning and scrub preparation support. |
-| Radiology | CT, MRI, PET/CT, gamma camera, mammography, DEXA, X-ray, C-arm, control and shielding. | No material imaging gap identified; shared waiting/storage assets cover support. |
-| Laboratory | Analyzers, microscopy, PCR, centrifuges, biosafety/fume hoods, bench, samples and cold storage. | No essential new family identified; shared desk/storage can furnish ancillary areas. |
-| Pharmacy | Dispensing, automation, secure/cold storage, compounding, unit-dose packaging, returns and delivery. | No essential new family identified; no more generic cabinet variants. |
-| Emergency | Trauma stretchers, crash cart, defibrillator, triage, portable X-ray, immobilization, isolation and decontamination cart. | Rapid fluid delivery, fixed decontamination fixture and airway workspace. |
-| Exterior / Ambulance | One ambulance. | Arrival/bay infrastructure, accessible approach, parking and exterior utilities; reuse ambulance before proposing another vehicle. |
-| Morgue | No dedicated assets; reuse surgery instrument trolley, lab cold-room support and admin desk where appropriate. | Body transport/storage, autopsy and washing/preparation room. |
-| Staff / Admin | No assigned assets; physician desk and visitor seating available from clinical categories. | Office workstation, records, staff lockers, meeting and break-room furnishings. |
-| Cafeteria / Kitchen | No assigned assets; meal_tray_01 is already in Inventory / UI; water cooler available. | Meal service, dining furniture, cooking/prep, cold storage and dishwashing. |
-| Bathrooms / Utility | No assigned assets; janitorial_cart_01, linen_hamper_01, sinks, recycling and waste bins exist elsewhere. | Accessible toilets/shower, housekeeping storage, laundry machines and utility sink. |
-| Signage / Decor | No assigned assets; lobby plant, information/sign stands and brochure rack already exist in Reception. | Reusable deterministic wayfinding/safety symbols, information surfaces and limited wall decor. |
-| Inventory / UI | First-aid kit, meal tray and patient-status UI. | Usable consumable/document pickups and interaction/inventory symbols. |
-| Abandoned / Horror | hospital_bed_damaged_01 only. | Reusable damage/stain overlays, distinct broken equipment and environmental storytelling; develop last. |
+| Architecture | 8 floors, 12 solid-wall records, 8 door/opening records; 4 pending glass parents. | Retain all 32 records; add 12 access, circulation, lighting and service fixtures. Fix junctions/visibility without counting technical views. |
+| Reception / Waiting | Modular/accessible counters, kiosk, queue system, seating, wheelchair, water cooler, plant, sanitizer and janitorial cart. | Existing counters, queues, seating and lobby utilities are sufficient; finish visual repairs. |
+| Patient Rooms | Multiple beds, bedside furniture, IV/oxygen, monitoring, curtains/screens, wardrobe, visitor chair and call panel. | Add lift, bedside commode and family sleeper to complete patient support; retain every bed/state already present. |
+| Examination | Tables/chairs, diagnostic wall equipment, ultrasound, lighting, sink, cabinets, trays and sharps disposal. | Retain all 22; another stool/table variant adds less value than missing support rooms. |
+| ICU | Ventilators, monitors, pumps, suction, gas manifold, ceiling boom and isolation supplies. | Add one distinct renal-support machine; reuse ward beds and existing monitors/pumps. |
+| Surgery | Operating table/lights, anesthesia, electrosurgery/smoke extraction, endoscopy, instruments, scrub sink and warming. | Add practical suction/irrigation, gowning and basin support; defer specialist perfusion and positioning apparatus. |
+| Radiology | CT, MRI, PET/CT, gamma camera, mammography, DEXA, X-ray, C-arm, control and shielding. | Retain all 19 imaging assets, including the specialized modalities already approved; no new scanners planned. |
+| Laboratory | Analyzers, microscopy, PCR, centrifuges, biosafety/fume hoods, bench, samples and cold storage. | Add eyewash and spill kit to the existing broad instrument set. |
+| Pharmacy | Dispensing, automation, secure/cold storage, compounding, unit-dose packaging, returns and delivery. | Retain all 18 dispensing/compounding/automation assets; no extra cabinets. |
+| Emergency | Trauma stretchers, crash cart, defibrillator, triage, portable X-ray, immobilization, isolation and decontamination cart. | Add rapid infuser and fixed decontamination shower; reuse respiratory and crash carts for airway support. |
+| Exterior / Ambulance | One ambulance. | One ambulance plus 17 arrival/approach/service fixtures; omit paid-parking machinery and duplicate vehicles. |
+| Morgue | No dedicated assets; reuse surgery instrument trolley, lab cold-room support and admin desk where appropriate. | Eight purpose-built clinical morgue assets; reuse desk, sink support, instruments and storage from other categories. |
+| Staff / Admin | No assigned assets; physician desk and visitor seating available from clinical categories. | Fourteen office/locker/break-room assets; reuse waiting chairs for meetings and shared signage boards. |
+| Cafeteria / Kitchen | No assigned assets; meal_tray_01 is already in Inventory / UI; water cooler available. | Fourteen service/dining/kitchen assets including meal delivery to wards; existing tray is retained in Inventory/UI. |
+| Bathrooms / Utility | No assigned assets; janitorial_cart_01, linen_hamper_01, sinks, recycling and waste bins exist elsewhere. | Increase to 18 to cover sanitation, accessibility, laundry, clean/dirty utility and compact sterile processing. |
+| Signage / Decor / Safety | No assigned assets; lobby plant, information/sign stands and brochure rack already exist in Reception. | Twenty-two reusable sign/decor/safety deliverables; text/direction variants bundled, lobby plant reused. |
+| Inventory / UI | First-aid kit, meal tray and patient-status UI. | Retain all three existing assets and add 13 distinctive pickups/UI elements; omit overlapping tiny icons. |
+| Abandoned / Horror | hospital_bed_damaged_01 only. | Retain damaged bed plus 20 reusable damage/storytelling deliverables; reduce one-off damaged furniture and similar stains. |
 
-## Priority and production gates
+P0: complete foreground visibility, wall/junction review and authorized repair promotion, followed by targeted prop cleanup. Next five content families: **architecture 12; bathrooms/utility 18; signage/decor/safety 22; staff/admin 14; combined clinical completion 11**. Then exterior 17, food service 14, morgue 8, inventory/UI 13 and abandoned 20. Larger families may be split into coherent pilots without changing counts. No generation is authorized by this document.
 
-P0 remains foreground-wall visibility, final connected solid-wall review, authorized wall/junction and sliding-door repair promotion, then known bench/rack/plant cleanup. Reuse current scripts/contracts and Godot. Glass stays parked; no new windows. D5/new generation stays blocked until cleanup is resolved.
+## Revised proposal decisions
 
-Next five new-content families after P0: **(1) architecture access/circulation (8); (2) ward + ICU completion (4); (3) surgery support (5); (4) emergency completion (3); (5) exterior ambulance arrival (12)**. The three small clinical completion groups intentionally fill real gaps rather than padding to a pilot quota; execute as a coherent 12-asset clinical batch where workflow permits. Exterior remainder follows as a separate 9-asset service-yard group.
+Compared with the prior backlog, **25 unproduced proposals are deferred and 16 new practical support assets are added**: 158 - 25 + 16 = 149. No existing manifest ID is removed. Deferred ideas are outside the current target and should not silently return as later batch obligations.
 
-Then complete Morgue, Staff/Admin, Cafeteria/Kitchen and Bathrooms/Utility; Signage/Decor follows across the complete layout, then Inventory/UI. Abandoned/Horror is last and derives from finished clean assets. No separate maternity/pediatrics/rehabilitation department is added. Existing pediatric beds/bassinet remain in Patient Rooms.
+| Deferred prior proposal | Reason |
+|---|---|
+| `heart_lung_machine_01` | Specialist capability is less valuable now than missing everyday room support. |
+| `surgical_positioning_frame_01` | Specialist capability is less valuable now than missing everyday room support. |
+| `emergency_airway_workstation_01` | Existing crash/respiratory carts cover enough of this role; avoid another cart. |
+| `ambulance_bay_wheel_guide_01` | Paid-parking/vehicle-service detail exceeds the compact arrival scope. |
+| `ambulance_wash_hose_station_01` | Paid-parking/vehicle-service detail exceeds the compact arrival scope. |
+| `parking_barrier_arm_01` | Paid-parking/vehicle-service detail exceeds the compact arrival scope. |
+| `parking_payment_station_01` | Paid-parking/vehicle-service detail exceeds the compact arrival scope. |
+| `mortuary_body_bag_01` | Reuse existing storage, work surface or covered trolley; avoid marginal specialty variants. |
+| `mortuary_preparation_cabinet_01` | Reuse existing storage, work surface or covered trolley; avoid marginal specialty variants. |
+| `mortuary_specimen_station_01` | Reuse existing storage, work surface or covered trolley; avoid marginal specialty variants. |
+| `meeting_chair_01` | Reuse existing waiting/visitor chairs for the meeting scene. |
+| `inventory_gauze_pack_01` | Reduce similar small pickups; retain a readable functional inventory set. |
+| `inventory_ointment_tube_01` | Reduce similar small pickups; retain a readable functional inventory set. |
+| `inventory_penlight_01` | Reduce similar small pickups; retain a readable functional inventory set. |
+| `inventory_prescription_01` | Reduce similar small pickups; retain a readable functional inventory set. |
+| `abandoned_supply_crate_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `abandoned_warning_beacon_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `ceiling_water_damage_overlay_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `chemical_spill_overlay_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `impact_damage_overlay_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `medicine_cabinet_broken_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `mold_patch_overlay_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `overturned_locker_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `sink_broken_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
+| `soot_overlay_01` | Limit overlapping stains and one-off damaged props; use the selected overlays and obstacles. |
 
-For each production group: inspect existing reusable alternatives at native scale before locking IDs; define footprint, anchor and independent directional needs; use one family review and early Godot proof; fix failed items only. Technical checks supplement human visual approval. All IDs below are proposed filename stems with `.png` implied. Scope **H = hospital_only**, **C = everyday_world_common**. Shared generic assets still belong to one manifest category.
+New practical support coverage: general ceiling/wall lights, ventilation grille and access reader (4); lab eyewash/spill kit (2); meal-delivery cart (1); soap/towel fixtures, clean linen rack, sluice, instrument washer and packing station (6); fire/smoke fixtures (3). These total **16** named additions to the previous proposal set.
 
-## Concrete backlog
+## Concrete remaining backlog
+
+Each ID is proposed, not ingested. **H = hospital_only; C = everyday_world_common.** Required directional/state views belong to their parent. At family preflight, inspect the nearest existing alternatives at native scale before committing to new art. A failed distinction test means reuse/revise and update the plan.
 
 ### Architecture
 
-**P1 — next family 1. 8 proposed; projected category count 40 / target 45.**
+**M1 / family 1: 12 new; target 44.**
 
-Godot/use-case proof: Connected hospital floor with stairs/lift alcove, service hatch and controlled threshold; verify anchors, collision and visibility. Junction repairs precede this batch.
+Godot proof: Connected furnished rooms with a lift/stair alcove, lit corridor and access-controlled threshold. Check foreground visibility, doorway passage and assembly from production assets.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -85,16 +109,20 @@ Godot/use-case proof: Connected hospital floor with stairs/lift alcove, service 
 | `hospital_access_gate_01` | H | Restricted ward threshold distinct from existing clinical doors. |
 | `hospital_handrail_01` | H | Accessible circulation support; unlike the existing medical equipment rail. |
 | `hospital_protective_wall_bumper_01` | H | Low crash protection for trolley corridors, separate from utility rails. |
+| `hospital_ceiling_light_01` | H | General clinical ceiling luminaire, distinct from surgical and bedside lights; states and mounting views bundled. |
+| `wall_light_fixture_01` | C | Wall-mounted circulation lighting for rooms without visible ceilings. |
+| `ventilation_grille_01` | C | Reusable wall/ceiling air grille; orientations bundled, no simulated HVAC requirement. |
+| `door_access_reader_01` | C | Door-side access control distinct from nurse call panel or check-in kiosk. |
 
 ### Reception / Waiting
 
-No new IDs proposed. Reuse the current family; complete any noted repairs without increasing inventory.
+No new IDs. Retain and test the existing family; repair without increasing the count.
 
 ### Patient Rooms
 
-**P2 — next family 2, combined ward/ICU completion. 3 proposed; projected category count 32 / target 32.**
+**M2 / family 5, clinical completion: 3 new; target 32.**
 
-Godot/use-case proof: Furnished ward room: lift fits beside bed, sleeper serves family and commode has accessible approach.
+Godot proof: Ward-room patient access: transfer lift, commode and family sleeper work alongside existing bed and visitors.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -104,13 +132,13 @@ Godot/use-case proof: Furnished ward room: lift fits beside bed, sleeper serves 
 
 ### Examination
 
-No new IDs proposed. Reuse the current family; complete any noted repairs without increasing inventory.
+No new IDs. Retain and test the existing family; repair without increasing the count.
 
 ### ICU
 
-**P2 — next family 2, combined ward/ICU completion. 1 proposed; projected category count 20 / target 20.**
+**M2 / family 5, clinical completion: 1 new; target 20.**
 
-Godot/use-case proof: Use one existing ward bed with ICU monitoring and the new machine; retain usable access.
+Godot proof: Existing ICU bedside grouping with renal-support machine; silhouette distinct from infusion stack.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -118,52 +146,55 @@ Godot/use-case proof: Use one existing ward bed with ICU monitoring and the new 
 
 ### Surgery
 
-**P3 — next family 3. 5 proposed; projected category count 24 / target 24.**
+**M2 / family 5, clinical completion: 3 new; target 22.**
 
-Godot/use-case proof: One operating room showing each new support function with existing table/anesthesia equipment; avoid clutter.
+Godot proof: Existing OR plus three support functions, preserving room movement and equipment legibility.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
-| `heart_lung_machine_01` | H | Perfusion support with reservoir/pump silhouette distinct from anesthesia. |
 | `surgical_suction_irrigation_unit_01` | H | Integrated fluid management distinct from existing general suction cart. |
-| `surgical_positioning_frame_01` | H | Independent support frame for operating-table positioning. |
 | `scrub_gowning_station_01` | H | Gown/glove preparation storage distinct from scrub sink or supply trolley. |
 | `surgical_kick_bucket_01` | H | Low mobile basin distinct from tall dual waste cart. |
 
 ### Radiology
 
-No new IDs proposed. Reuse the current family; complete any noted repairs without increasing inventory.
+No new IDs. Retain and test the existing family; repair without increasing the count.
 
 ### Laboratory
 
-No new IDs proposed. Reuse the current family; complete any noted repairs without increasing inventory.
+**M2 / family 5, clinical completion: 2 new; target 22.**
+
+Godot proof: Existing general laboratory with eyewash and accessible spill kit, no new analyzer needed.
+
+| Proposed ID | Scope | Practical use / distinction |
+|---|---|---|
+| `laboratory_eyewash_station_01` | H | Recognizable laboratory safety fixture distinct from ordinary sink. |
+| `laboratory_spill_kit_01` | H | Standalone contained spill-response kit distinct from emergency decontamination cart. |
 
 ### Pharmacy
 
-No new IDs proposed. Reuse the current family; complete any noted repairs without increasing inventory.
+No new IDs. Retain and test the existing family; repair without increasing the count.
 
 ### Emergency
 
-**P4 — next family 4. 3 proposed; projected category count 22 / target 22.**
+**M2 / family 5, clinical completion: 2 new; target 21.**
 
-Godot/use-case proof: Trauma bay plus decontamination threshold using existing triage/resuscitation furniture.
+Godot proof: Trauma bay plus fixed decontamination station; add rapid fluid equipment without duplicating carts.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
 | `emergency_rapid_infuser_01` | H | Rapid fluid-delivery apparatus distinct from IV pole and warming trolley. |
 | `emergency_decontamination_shower_01` | H | Fixed emergency wash-down station; complements existing decontamination cart. |
-| `emergency_airway_workstation_01` | H | Airway preparation surface with dedicated support, distinct from generic crash cart; merge if silhouette cannot justify it. |
 
 ### Exterior / Ambulance
 
-**P5 — next family 5 (first 12 rows); remainder P6. 21 proposed; projected category count 22 / target 24.**
+**M3 / arrival: 17 new; target 18.**
 
-Godot/use-case proof: Ambulance arrival and accessible entrance with the existing vehicle; canopy respects character visibility. First 12 rows form arrival pilot; remaining 9 form service-yard follow-up.
+Godot proof: Existing ambulance at sheltered unloading point and a walkable entrance, ramp, curb/crossing, signs and utility area. Canopy must not obscure movement.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
 | `ambulance_bay_canopy_01` | H | Covered ambulance arrival; structural legs/roof are components. |
-| `ambulance_bay_wheel_guide_01` | H | Vehicle docking alignment at unloading position. |
 | `ambulance_bay_marking_01` | H | Standalone deterministic no-parking/loading marking set; no text variations counted. |
 | `ambulance_shore_power_pedestal_01` | H | Parked emergency-vehicle support distinct from general utility cabinet. |
 | `entrance_bollard_01` | C | Protect pedestrian entrance from vehicles. |
@@ -174,21 +205,18 @@ Godot/use-case proof: Ambulance arrival and accessible entrance with the existin
 | `exterior_bench_01` | C | Weatherproof waiting seat distinct from upholstered indoor benches. |
 | `exterior_path_light_01` | C | Pedestrian arrival lighting; lit state bundled. |
 | `hospital_entrance_sign_monument_01` | H | Freestanding entrance sign support; lettering belongs to signage. |
-| `parking_payment_station_01` | C | Visitor parking payment interaction. |
-| `parking_barrier_arm_01` | C | Controlled parking access; open/closed views bundled. |
 | `parking_space_marking_01` | C | Reusable parking bay layout, not individual stripe assets. |
 | `pedestrian_crossing_marking_01` | C | Safe route from parking to entrance. |
 | `exterior_waste_container_01` | C | Weatherproof large outdoor waste unit unlike indoor bins. |
 | `service_yard_generator_01` | C | Backup utility infrastructure with distinctive generator housing. |
 | `exterior_electrical_cabinet_01` | C | Building service access separate from generator. |
-| `ambulance_wash_hose_station_01` | H | Vehicle cleaning support in service yard. |
 | `exterior_drain_channel_01` | C | Drainage along bay/approach; repeat/end views bundled. |
 
 ### Morgue
 
-**P6 — missing support spaces. 11 proposed; projected category count 11 / target 12.**
+**M3 / morgue: 8 new; target 8.**
 
-Godot/use-case proof: Clinical morgue suite: transport route into storage, autopsy work zone and wash/prep access; no graphic remains needed.
+Godot proof: Covered trolley route to body storage, preparation/wash and autopsy zones. Clinical, non-graphic presentation.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -199,16 +227,13 @@ Godot/use-case proof: Clinical morgue suite: transport route into storage, autop
 | `autopsy_extraction_unit_01` | H | Dedicated table-side ventilation support. |
 | `mortuary_wash_station_01` | H | Large body-preparation washing station, not ordinary hand basin. |
 | `mortuary_body_scale_01` | H | Trolley-compatible weighing platform distinct from patient scale. |
-| `mortuary_specimen_station_01` | H | Autopsy collection workspace distinct from laboratory analyzer. |
-| `mortuary_preparation_cabinet_01` | H | Purpose-built preparation supply storage; reject if generic cabinet suffices. |
-| `mortuary_body_bag_01` | H | Standalone closed transport bag distinct from trolley cover component. |
 | `mortuary_transfer_board_01` | H | Body transfer surface distinct from existing radiology rack. |
 
 ### Staff / Admin
 
-**P6 — missing support spaces. 15 proposed; projected category count 15 / target 18.**
+**M1 / family 4: 14 new; target 14.**
 
-Godot/use-case proof: Nurse/admin office, locker area and small meeting/break room using shared clinical desk where sufficient.
+Godot proof: Nurse/admin workspace, locker area and small break/meeting room. Reuse reception counter as nurse-station frontage and existing chairs; no separate nurse-counter SKU.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -220,7 +245,6 @@ Godot/use-case proof: Nurse/admin office, locker area and small meeting/break ro
 | `locker_room_bench_01` | C | Narrow changing bench distinct from waiting seating. |
 | `staff_coat_rack_01` | C | Personal clothing storage distinct from radiation-apron rack. |
 | `meeting_table_01` | C | Shared team/admin workspace distinct from bedside surfaces. |
-| `meeting_chair_01` | C | Stackable meeting seating; require distinct silhouette from waiting chair. |
 | `staff_break_sofa_01` | C | Shared rest seating unlike bedside sleeper. |
 | `staff_break_table_01` | C | Small low break-room surface distinct from meeting/dining tables. |
 | `office_printer_copier_01` | C | Full document output distinct from pharmacy label printer. |
@@ -230,9 +254,9 @@ Godot/use-case proof: Nurse/admin office, locker area and small meeting/break ro
 
 ### Cafeteria / Kitchen
 
-**P6 — missing support spaces. 13 proposed; projected category count 13 / target 14.**
+**M3 / food service: 14 new; target 14.**
 
-Godot/use-case proof: Compact serving line, accessible dining aisle and back-of-house prep/wash area; reuse existing meal tray.
+Godot proof: Serving line, dining aisle, prep/wash area and meal-delivery route to ward; reuse meal_tray_01.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -249,12 +273,13 @@ Godot/use-case proof: Compact serving line, accessible dining aisle and back-of-
 | `kitchen_pantry_rack_01` | C | Bulk food container shelving; use containers to distinguish from clinical racks. |
 | `commercial_dishwasher_01` | C | Dishwashing equipment distinct from autoclave. |
 | `kitchen_pot_wash_sink_01` | C | Deep multi-basin wash station distinct from clinical hand sink. |
+| `hospital_meal_delivery_cart_01` | H | Enclosed meal transport links kitchen and wards; use existing meal_tray_01, not a new tray asset. |
 
 ### Bathrooms / Utility
 
-**P6 — missing support spaces. 12 proposed; projected category count 12 / target 14.**
+**M1 / family 2: 18 new; target 18.**
 
-Godot/use-case proof: Accessible restroom/shower and utility/laundry room; reuse reception janitorial cart and ward hamper.
+Godot proof: Accessible WC/shower plus separate clean utility, dirty utility, laundry and compact processing vignettes. Reuse sinks/cabinets/cart/hamper/autoclave; show clear placement of clean and soiled items.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -270,12 +295,18 @@ Godot/use-case proof: Accessible restroom/shower and utility/laundry room; reuse
 | `utility_washing_machine_01` | C | Laundry washing function. |
 | `utility_tumble_dryer_01` | C | Separate drying appliance, not washing-machine state. |
 | `toilet_paper_dispenser_01` | C | Restroom consumable fixture unlike existing exam paper-roll holder. |
+| `wall_soap_dispenser_01` | C | Handwashing fixture distinct from sanitizer stand and glove dispenser. |
+| `paper_towel_dispenser_01` | C | Hand-drying fixture distinct from examination paper-roll holder. |
+| `clean_linen_rack_01` | H | Folded clean linen storage distinct from soiled hamper. |
+| `utility_sluice_unit_01` | H | Dirty-utility disposal/washing fixture distinct from janitorial mop sink. |
+| `instrument_washer_disinfector_01` | H | Instrument cleaning equipment for a compact processing room; reuse existing autoclave for sterilization. |
+| `sterile_packing_station_01` | H | Clean instrument inspection/packing surface distinct from OR trolley and food prep table. |
 
-### Signage / Decor
+### Signage / Decor / Safety
 
-**P7 — after support spaces. 19 proposed; projected category count 19 / target 25.**
+**M1 / family 3: 22 new; target 22.**
 
-Godot/use-case proof: Deterministic reusable symbols/sign supports applied across rooms; text/localizations are views, not new IDs. Verify legibility at native scale.
+Godot proof: Wayfinding route from entrance to ward with shared department sign kit, readable room symbols, clocks and safety fixtures. Use deterministic text/pictograms and no protected medical marks.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -298,38 +329,37 @@ Godot/use-case proof: Deterministic reusable symbols/sign supports applied acros
 | `wall_planter_01` | C | Wall-mounted greenery distinct from existing floor lobby plant. |
 | `visitor_directory_board_01` | H | Building-level map/directory distinct from directional list; map layout is a component. |
 | `room_occupancy_indicator_01` | H | Door-side available/occupied indicator; states bundled. |
+| `fire_extinguisher_station_01` | C | Reusable extinguisher and mount as one fixture; sign component is not another asset. |
+| `fire_alarm_call_point_01` | C | Wall-mounted manual alarm interaction distinct from clinical call panel. |
+| `smoke_detector_01` | C | Ceiling safety fixture with distinct mounting/silhouette. |
 
 ### Inventory / UI
 
-**P8 — after signage. 17 proposed; projected category count 20 / target 20.**
+**M4 / interaction set: 13 new; target 16.**
 
-Godot/use-case proof: Small Godot pickup/inventory overlay exercise showing selection and readable native icons; world props do not imply extra icon counts.
+Godot proof: Pickup and inventory demonstration with distinct icons, selection and objective indicators. Existing world sprites are not automatically additional icons.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
 | `inventory_bandage_roll_01` | H | Bandage pickup, distinct from complete first-aid kit. |
-| `inventory_gauze_pack_01` | H | Flat dressing packet distinct from bandage roll. |
 | `inventory_syringe_01` | H | Single-use supply icon with distinct silhouette. |
 | `inventory_exam_gloves_01` | H | Glove supply pickup, not wall-dispenser duplicate. |
 | `inventory_surgical_mask_01` | H | Wearable supply pickup. |
 | `inventory_medicine_vial_01` | H | Injectable container icon. |
 | `inventory_tablet_blister_01` | H | Tablet strip icon distinct from vial. |
 | `inventory_iv_fluid_bag_01` | H | Consumable fluid bag distinct from world IV stand. |
-| `inventory_ointment_tube_01` | H | Topical medicine container. |
 | `inventory_patient_chart_01` | H | Patient document item with abstract content. |
 | `inventory_access_card_01` | C | Restricted-door access item. |
-| `inventory_prescription_01` | H | Medication document distinct from chart; no generated readable text. |
 | `inventory_stethoscope_01` | H | Portable diagnostic equipment icon. |
-| `inventory_penlight_01` | H | Small inspection tool distinct from room examination lamp. |
 | `ui_interaction_prompt_01` | C | Reusable interact indicator with key glyph variants bundled. |
 | `ui_inventory_slot_01` | C | Inventory selection frame with normal/selected states bundled. |
 | `ui_objective_marker_01` | C | Navigation/objective marker distinct from patient-status panel. |
 
 ### Abandoned / Horror
 
-**P9 — last, built against finished clean pack. 30 proposed; projected category count 31 / target 38.**
+**M5 / bundled alternate condition: 20 new; target 21.**
 
-Godot/use-case proof: Reuse clean hospital layout to demonstrate overlay compatibility, distinct broken silhouettes and readable hazards. No gore required; states must add function or clear geometry.
+Godot proof: Apply overlays and selected broken props to a finished clean room. Keep camera/palette consistent; demonstrate distinct damage rather than recolors.
 
 | Proposed ID | Scope | Practical use / distinction |
 |---|---|---|
@@ -337,57 +367,320 @@ Godot/use-case proof: Reuse clean hospital layout to demonstrate overlay compati
 | `plaster_loss_overlay_01` | C | Exposed underlying wall material distinct from crack line. |
 | `peeling_paint_overlay_01` | C | Curling surface finish damage distinct from missing plaster. |
 | `floor_tile_break_overlay_01` | C | Localized missing/broken flooring. |
-| `ceiling_water_damage_overlay_01` | C | Overhead water-damage marks compatible with wall tops. |
 | `rust_runoff_overlay_01` | C | Metal corrosion streaks distinct from dirt. |
-| `soot_overlay_01` | C | Localized fire residue distinct from general grime. |
-| `impact_damage_overlay_01` | C | Concentrated impact crater distinct from long cracks. |
 | `floor_grime_overlay_01` | C | Reusable traffic dirt, no recolor variants counted. |
 | `wall_damp_overlay_01` | C | Vertical moisture ingress. |
 | `water_puddle_overlay_01` | C | Standing water with small contact treatment. |
 | `dried_blood_stain_overlay_01` | H | Restrained non-graphic environmental stain, one pattern family. |
-| `chemical_spill_overlay_01` | H | Distinct contained laboratory spill cue, not a puddle recolor. |
-| `mold_patch_overlay_01` | C | Clustered growth distinct from damp stain. |
 | `leaking_pipe_01` | C | Damaged utility with leak origin; liquid frames are components. |
 | `wheelchair_broken_01` | H | Deformed/missing-wheel silhouette; no grime-only duplicate. |
 | `patient_monitor_broken_01` | H | Broken housing/screen geometry, not merely powered-off monitor. |
-| `medicine_cabinet_broken_01` | H | Damaged opened storage with displaced contents. |
 | `ceiling_light_fallen_01` | C | Detached hanging fixture with visibly altered geometry. |
-| `sink_broken_01` | C | Broken basin/plumbing exposing a distinct obstacle. |
-| `abandoned_supply_crate_01` | H | Sealed forgotten clinical supplies, not generic supply cart. |
 | `discarded_medical_records_01` | H | Loose floor paperwork cluster distinct from inventory chart. |
 | `covered_equipment_01` | H | Dust-sheet storage silhouette distinct from working machine. |
 | `discarded_linen_pile_01` | H | Floor pile distinct from ward hamper or bed-state view. |
-| `overturned_locker_01` | C | Toppled obstruction; new geometry, not a rotated rendered sprite. |
 | `door_barricade_01` | C | Reusable physical blocked-door obstacle. |
 | `broken_glass_debris_01` | C | Standalone floor debris unrelated to resuming glass partitions. |
 | `hazard_tape_barrier_01` | C | Cordons an unsafe area; one logical barrier set. |
 | `exposed_cable_bundle_01` | C | Electrical hazard/obstruction distinct from stain overlay. |
-| `abandoned_warning_beacon_01` | C | Portable emergency warning light; frames/states bundled. |
 
-## Budget reconciliation and decisions
+## Retained inventory register — all 224 existing IDs
 
-- **Architecture (45):** eight proposed additions put it at 40. Its original sub-budgets sum to 45 but the current mix already has 8 floors/12 wall records versus the approximate 5/8 allocation. Do not fill the balance with more finishes, connectors or glass views. Junctions and visibility are required capabilities even when they add no IDs. Forty-five is useful headroom; it is not yet evidence that five more logical products are needed.
+This register fixes the inclusion boundary for revision 2. Approval state remains the manifest’s state; no regrouping or technical-component count is implied. Future additions join the same inventory authority.
 
-- **Examination (20), Radiology (16), Pharmacy (14):** actual 22/19/18 make these budgets low relative to the existing approved breadth. Radiology includes distinct PET/CT, gamma camera and DEXA modalities; pharmacy includes distinct automation/packaging/returns operations. Retain useful coverage and stop expansion. Examination has some overlapping stool/diagnostic coverage worth checking during final curation; do not infer that every overrun is equally valuable. Targets remain unchanged unless the user revises them.
+### Existing Architecture
 
-- **Signage/Decor (25):** proposed 19 reflects reusable department text/direction sets counted once and reuse of the existing lobby plant/sign stands. Twenty-five now looks high if met through per-label or recolor counting. Keep six slots uncommitted.
+| Existing ID | Status |
+|---|---|
+| `hospital_door_glazed_closed_01` | approved |
+| `hospital_door_single_closed_01` | approved |
+| `hospital_door_single_half_open_01` | approved |
+| `hospital_double_doors_closed_01` | approved |
+| `hospital_double_doors_half_open_01` | approved |
+| `hospital_equipment_opening_wide_01` | approved |
+| `hospital_floor_alt_01` | approved |
+| `hospital_floor_alt_02` | approved |
+| `hospital_floor_alt_03` | approved |
+| `hospital_floor_alt_04` | approved |
+| `hospital_floor_plain_01` | approved |
+| `hospital_floor_plain_02` | approved |
+| `hospital_floor_plain_03` | approved |
+| `hospital_floor_plain_04` | approved |
+| `hospital_front_wall_cutaway_01` | approved |
+| `hospital_front_wall_cutaway_02` | approved |
+| `hospital_front_wall_cutaway_03` | approved |
+| `hospital_front_wall_cutaway_04` | approved |
+| `hospital_glass_partition_back_01` | needs_human_review |
+| `hospital_glass_partition_front_cutaway_01` | needs_human_review |
+| `hospital_glass_partition_side_left_01` | needs_human_review |
+| `hospital_glass_partition_side_right_01` | needs_human_review |
+| `hospital_sliding_clinical_doors_closed_01` | approved |
+| `hospital_sliding_clinical_doors_open_01` | approved |
+| `hospital_wall_back_straight_01` | approved |
+| `hospital_wall_back_straight_02` | approved |
+| `hospital_wall_back_straight_03` | approved |
+| `hospital_wall_back_straight_04` | approved |
+| `hospital_wall_side_left_01` | approved |
+| `hospital_wall_side_left_02` | approved |
+| `hospital_wall_side_right_01` | approved |
+| `hospital_wall_side_right_02` | approved |
 
-- **Abandoned/Horror (38):** one existing plus 30 proposed gives 31. Reusable overlays provide more scene variety than one damaged copy of every clean prop. Thirty-eight looks high as a minimum quota; keep seven slots open until scene tests expose worthwhile gaps.
+### Existing Reception / Waiting
 
-- **Exterior (24):** one existing plus 21 proposed gives 22. Only one ambulance is presently justified; new technical directions/states are not extra vehicles. Keep two slots open instead of filling the approximate four-vehicle sub-budget.
+| Existing ID | Status |
+|---|---|
+| `brochure_rack_01` | approved |
+| `hand_sanitizer_stand_01` | approved |
+| `janitorial_cart_01` | approved |
+| `lobby_plant_01` | approved |
+| `queue_barrier_corner_01` | approved |
+| `queue_barrier_straight_01` | approved |
+| `queue_ticket_dispenser_01` | approved |
+| `reception_counter_accessible_01` | approved |
+| `reception_counter_corner_01` | approved |
+| `reception_counter_small_01` | approved |
+| `reception_counter_straight_01` | approved |
+| `reception_information_stand_01` | approved |
+| `reception_medical_sign_stand_01` | approved |
+| `recycling_bin_01` | approved |
+| `self_checkin_kiosk_01` | approved |
+| `waiting_bench_2seat_01` | approved |
+| `waiting_bench_3seat_01` | approved |
+| `waiting_chair_01` | approved |
+| `waiting_chair_contrast_01` | approved |
+| `waiting_chair_single_01` | approved |
+| `water_cooler_01` | approved |
+| `wheelchair_standard_01` | approved |
 
-- **Staff/Admin, Cafeteria/Kitchen, Bathrooms/Utility and Morgue:** proposed totals 15/13/12/11 intentionally reuse the physician desk, meal tray, janitorial cart, linen hamper and instrument trolley already owned elsewhere. Zero assigned assets does not mean zero reusable capability. The targets remain reasonable budgets, with shared coverage reducing new work.
+### Existing Patient Rooms
 
-The proposal leaves 27 slots unfilled in below-target categories and retains the 9 existing excess assets: 400 - 27 + 9 = 382. Do not silently rewrite roadmap targets to these projections. No category is conclusively too small in functional scope solely because its count is exceeded; final room tests decide usefulness.
+| Existing ID | Status |
+|---|---|
+| `bedside_cabinet_01` | approved |
+| `bedside_cabinet_drawers_01` | approved |
+| `bedside_reading_light_01` | approved |
+| `bedside_step_01` | approved |
+| `hospital_bassinet_01` | approved |
+| `hospital_bed_bariatric_01` | approved |
+| `hospital_bed_head_raised_01` | approved |
+| `hospital_bed_pediatric_01` | approved |
+| `hospital_bed_rails_lowered_01` | approved |
+| `hospital_bed_standard_01` | approved |
+| `hospital_bed_unmade_01` | approved |
+| `iv_stand_dual_01` | approved |
+| `linen_hamper_01` | approved |
+| `nurse_call_panel_01` | approved |
+| `overbed_table_01` | approved |
+| `oxygen_concentrator_01` | approved |
+| `oxygen_cylinder_mobile_01` | approved |
+| `patient_monitor_bedside_compact_01` | approved |
+| `patient_monitor_wall_01` | approved |
+| `patient_room_wardrobe_01` | approved |
+| `patient_room_waste_bin_01` | approved |
+| `patient_storage_cabinet_01` | approved |
+| `privacy_curtain_corner_01` | approved |
+| `privacy_curtain_folded_01` | approved |
+| `privacy_curtain_straight_01` | approved |
+| `privacy_screen_mobile_01` | approved |
+| `visitor_chair_patient_room_01` | approved |
+| `wall_medical_rail_01` | approved |
+| `wall_oxygen_panel_01` | approved |
 
-## Release work outside logical asset counts
+### Existing Examination
 
-After content/repair approval, ship production PNGs and required implementation views, stable placement/anchor metadata, architecture assembly examples, representative furnished Godot rooms, catalog/contact sheets, import/use instructions, license/credits and a complete release archive. Exclude local third-party reference packs, rejected candidates and internal review clutter. Validate the actual release contents. These deliverables and repairs do not inflate asset counts.
+| Existing ID | Status |
+|---|---|
+| `blood_pressure_monitor_01` | approved |
+| `doctor_stool_01` | approved |
+| `exam_room_sink_unit_01` | approved |
+| `exam_room_supply_cabinet_01` | approved |
+| `exam_room_wall_cabinet_01` | approved |
+| `examination_chair_adjustable_01` | approved |
+| `examination_lamp_01` | approved |
+| `examination_table_01` | approved |
+| `glove_dispenser_01` | approved |
+| `instrument_trolley_01` | approved |
+| `medical_cart_base_01` | approved |
+| `medical_stool_01` | approved |
+| `otoscope_ophthalmoscope_unit_01` | approved |
+| `paper_roll_holder_01` | approved |
+| `patient_chair_exam_room_01` | approved |
+| `patient_scale_01` | approved |
+| `physician_desk_small_01` | approved |
+| `portable_ultrasound_01` | approved |
+| `sharps_bin_01` | approved |
+| `small_medical_tray_01` | approved |
+| `thermometer_dock_01` | approved |
+| `wall_diagnostic_set_01` | approved |
 
-## Maintenance and checks
+### Existing ICU
 
-At each completed batch, recompute the table from manifest primary categories, cross-check catalog IDs/statuses, remove fulfilled proposals, and re-evaluate shared capability before naming more IDs. Update this file and CODEX_PROJECT_STATE.md; edit category targets in ASSET_ROADMAP.md only on explicit user instruction.
+| Existing ID | Status |
+|---|---|
+| `emergency_respiratory_cart_01` | approved |
+| `high_flow_oxygen_unit_01` | approved |
+| `humidifier_respiratory_unit_01` | approved |
+| `icu_bedside_supply_unit_01` | approved |
+| `icu_bedside_terminal_01` | approved |
+| `icu_ceiling_equipment_boom_01` | approved |
+| `icu_equipment_tower_01` | approved |
+| `icu_isolation_supply_cart_01` | approved |
+| `icu_monitor_advanced_01` | approved |
+| `icu_overbed_medical_rail_01` | approved |
+| `icu_storage_cabinet_01` | approved |
+| `icu_ventilator_advanced_01` | approved |
+| `infusion_pump_stack_01` | approved |
+| `iv_stand_single_01` | approved |
+| `mobile_oxygen_air_manifold_01` | approved |
+| `patient_monitor_floor_01` | approved |
+| `suction_unit_mobile_01` | approved |
+| `syringe_pump_single_01` | approved |
+| `ventilator_standard_01` | approved |
 
-Documentation checks: target sum, manifest/catalog reconciliation, all approved final paths, unique non-colliding proposed IDs, category/projection arithmetic, local links, and preservation of all pre-existing non-task files. No art-generation, ingest or approval command is part of this task.
+### Existing Surgery
 
-Completed checks: **379 tests passed in 108.37s**; focused historical-audit allowance test passed. The only non-document edits register the two explicitly requested planning-document paths in the historical addition allowlist and test that exact allowance; no asset processing or approval behavior changed. Source category targets match exactly; 158 proposed IDs are unique and absent from the manifest; all non-task baseline files remain unchanged. No Godot rerun was needed for this documentation-only product change.
+| Existing ID | Status |
+|---|---|
+| `anesthesia_machine_01` | approved |
+| `electrosurgical_smoke_evacuator_01` | approved |
+| `electrosurgical_unit_01` | approved |
+| `endoscopy_imaging_tower_01` | approved |
+| `mayo_stand_01` | approved |
+| `operating_table_01` | approved |
+| `operating_table_raised_01` | approved |
+| `patient_warming_unit_01` | approved |
+| `sterile_equipment_stand_01` | approved |
+| `sterile_supply_cart_01` | approved |
+| `surgical_instrument_table_01` | approved |
+| `surgical_instrument_trolley_01` | approved |
+| `surgical_light_ceiling_01` | approved |
+| `surgical_linen_hamper_01` | approved |
+| `surgical_scrub_sink_01` | approved |
+| `surgical_stool_01` | approved |
+| `surgical_video_recording_unit_01` | approved |
+| `surgical_waste_cart_dual_01` | approved |
+| `warming_infusion_trolley_01` | approved |
+
+### Existing Radiology
+
+| Existing ID | Status |
+|---|---|
+| `contrast_media_warmer_01` | approved |
+| `ct_mri_coil_storage_rack_01` | approved |
+| `ct_scanner_01` | approved |
+| `dexa_bone_density_scanner_01` | approved |
+| `fluoroscopy_c_arm_01` | approved |
+| `mammography_unit_01` | approved |
+| `mobile_radiation_shield_01` | approved |
+| `mri_ferromagnetic_screening_station_01` | approved |
+| `mri_safe_equipment_cart_01` | approved |
+| `mri_scanner_01` | approved |
+| `nuclear_medicine_gamma_camera_01` | approved |
+| `pet_ct_scanner_01` | approved |
+| `radiography_table_system_01` | approved |
+| `radiology_contrast_injector_01` | approved |
+| `radiology_lead_apron_rack_01` | approved |
+| `radiology_patient_step_platform_01` | approved |
+| `radiology_patient_transfer_board_rack_01` | approved |
+| `radiology_positioning_aids_cart_01` | approved |
+| `radiology_workstation_01` | approved |
+
+### Existing Laboratory
+
+| Existing ID | Status |
+|---|---|
+| `automated_chemistry_analyzer_01` | approved |
+| `cryogenic_storage_dewar_01` | approved |
+| `hematology_analyzer_01` | approved |
+| `laboratory_analyzer_01` | approved |
+| `laboratory_autoclave_01` | approved |
+| `laboratory_biosafety_cabinet_01` | approved |
+| `laboratory_biosample_cart_01` | approved |
+| `laboratory_centrifuge_01` | approved |
+| `laboratory_fume_hood_01` | approved |
+| `laboratory_handwash_sink_01` | approved |
+| `laboratory_incubator_01` | approved |
+| `laboratory_micropipette_station_01` | approved |
+| `laboratory_microscope_01` | approved |
+| `laboratory_refrigerator_01` | approved |
+| `laboratory_vortex_mixer_01` | approved |
+| `laboratory_workbench_01` | approved |
+| `pcr_thermal_cycler_01` | approved |
+| `refrigerated_centrifuge_01` | approved |
+| `specimen_storage_cabinet_01` | approved |
+| `ultra_low_freezer_01` | approved |
+
+### Existing Pharmacy
+
+| Existing ID | Status |
+|---|---|
+| `automated_medication_dispensing_cabinet_01` | approved |
+| `controlled_substance_safe_01` | approved |
+| `iv_medication_storage_rack_01` | approved |
+| `locked_medication_cart_01` | approved |
+| `medication_delivery_cart_01` | approved |
+| `medication_pickup_counter_01` | approved |
+| `medication_sorting_tray_station_01` | approved |
+| `pharmacy_clean_bench_01` | approved |
+| `pharmacy_compounding_workstation_01` | approved |
+| `pharmacy_dispensing_counter_01` | approved |
+| `pharmacy_label_printer_station_01` | approved |
+| `pharmacy_medication_shelving_01` | approved |
+| `pharmacy_refrigerator_01` | approved |
+| `pharmacy_returns_bin_station_01` | approved |
+| `prescription_will_call_rack_01` | approved |
+| `tablet_counting_station_01` | approved |
+| `unit_dose_packaging_machine_01` | approved |
+| `unit_dose_storage_cabinet_01` | approved |
+
+### Existing Emergency
+
+| Existing ID | Status |
+|---|---|
+| `crash_cart_equipped_01` | approved |
+| `emergency_blanket_warmer_01` | approved |
+| `emergency_decontamination_cart_01` | approved |
+| `emergency_defibrillator_01` | approved |
+| `emergency_isolation_transport_stretcher_01` | approved |
+| `emergency_iv_pole_loaded_01` | approved |
+| `emergency_supply_cart_01` | approved |
+| `emergency_treatment_chair_01` | approved |
+| `emergency_wall_resuscitation_panel_01` | approved |
+| `folding_stretcher_storage_rack_01` | approved |
+| `portable_xray_unit_01` | approved |
+| `stretcher_wall_dock_01` | approved |
+| `trauma_equipment_cart_01` | approved |
+| `trauma_immobilization_rack_01` | approved |
+| `trauma_overbed_table_01` | approved |
+| `trauma_stretcher_01` | approved |
+| `trauma_stretcher_raised_01` | approved |
+| `triage_vital_signs_station_01` | approved |
+| `triage_workstation_01` | approved |
+
+### Existing Exterior / Ambulance
+
+| Existing ID | Status |
+|---|---|
+| `ambulance_01` | approved |
+
+### Existing Inventory / UI
+
+| Existing ID | Status |
+|---|---|
+| `meal_tray_01` | approved |
+| `medical_inventory_first_aid_kit_01` | approved |
+| `ui_patient_status_01` | approved |
+
+### Existing Abandoned / Horror
+
+| Existing ID | Status |
+|---|---|
+| `hospital_bed_damaged_01` | approved |
+
+## Maintenance and validation
+
+At each completed batch reconcile manifest/catalog, move fulfilled proposals into current coverage and keep target = current + remaining proposed. If room review justifies adding/removing a proposal, document the rationale and target change. Never delete an existing asset to fit a budget. Preserve the approval path and old provenance when repairing. Full-pack release requirements are in ASSET_ROADMAP.md.
+
+This planning revision changes only ASSET_ROADMAP.md, ASSET_COVERAGE_STATUS.md and CODEX_PROJECT_STATE.md. Checks cover target arithmetic, complete retention of all 224 IDs, proposal uniqueness/non-collision, scopes, catalog parity, final-file existence, local links and non-task preservation. No Godot/art change requires a new capture.
+
+Completed revision-2 checks: **379 tests passed in 104.75s**. Reconciliation confirms all 224 existing IDs/statuses retained, 149 unique non-colliding proposals, 373 total target, catalog parity and all approved final paths. All pre-existing non-task files, including user-owned local changes, retain their hashes. No runtime/artwork changes or approval transitions.

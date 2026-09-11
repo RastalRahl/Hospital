@@ -4,11 +4,12 @@ Verified 2026-09-11. Operational handoff for future Codex sessions; read with `A
 
 ## Canonical product roadmap and current backlog
 
-- [ASSET_ROADMAP.md](ASSET_ROADMAP.md) restores the user-adopted **400-asset category budgets** (useful finish range 350–450). Category targets are canonical; concrete IDs are proposals, not immutable commitments. Use this roadmap plus the current manifest for all content decisions. Do not create separate maternity, pediatrics or rehabilitation departments without a roadmap revision.
-- [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) reconciles all 18 categories with current manifest/catalog counts, covered/missing capabilities, reuse scopes and prioritized proposed IDs. Current **224 / 220 approved / 4 pending**; net target gap **176**, positive category gaps **185**, existing category overruns **9**.
-- The concrete backlog proposes **158 meaningful additions**, projecting **382** including parked glass, or **378** without it. This is a planning estimate, not a target revision or batch authorization. Unfilled budgets remain headroom; no filler, duplicate shared props, technical views or components counted.
-- After current cleanup: **architecture access/circulation (8), ward + ICU completion (4), surgery support (5), emergency completion (3), exterior ambulance arrival (12)**. The small clinical groups can share one 12-asset production batch; no new production starts in this documentation task. Support spaces follow, then signage, inventory/UI and abandoned/horror last.
-- Roadmap import and coverage verified against HEAD `5d1ae1f` on 2026-09-11. Documentation checks cover counts, catalog parity, proposal uniqueness, local links and non-task file preservation. Runtime art/approval state is unchanged. This planning task passes **379 tests in 108.37s** plus the focused exact-allowance test. The two new document names were added to the historical audit’s exact addition allowlist; existing baseline hashes and unrelated-addition rejection remain enforced. Godot captures below are from the preceding implementation task; no engine/art change required a new capture.
+- The user explicitly requested target revision and inclusion of every existing asset. [ASSET_ROADMAP.md](ASSET_ROADMAP.md) revision 2 supersedes the original 400-asset category plan preserved at `2ae8aa1`.
+- New working target: **373 logical assets = all 224 existing + 149 named additions**. Includes **352 clean environment/interaction assets and 21 abandoned-condition assets**. All four existing pending glass parents remain included, parked and unapproved; no new glass/windows are planned.
+- [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) contains all 18 reconciled categories, scopes, practical room proofs, all 149 proposed IDs, and a complete retained register of all 224 current IDs. Current status remains **220 approved / 4 pending**. No negative category gaps or unnamed filler budget.
+- After cleanup, next five families: **architecture 12; bathrooms/utility 18; signage/decor/safety 22; staff/admin 14; combined clinical completion 11**. Then exterior 17, food service 14, morgue 8, inventory/UI 13 and abandoned 20. This is planning, not new production authorization.
+- Main revision: prioritize usable building/support spaces over further specialist equipment and excessive damaged variants. Retain every existing asset regardless of overlap; share counters, chairs, carts, sinks and autoclave across rooms instead of counting duplicates.
+- Revision 2 begins at `2ae8aa1`; documentation checks and **379 tests passed in 104.75s**, recorded in the coverage file. No artwork, approvals, manifest categories or demo behavior change.
 
 ## Inventory and approval boundary
 
@@ -61,7 +62,7 @@ Verified 2026-09-11. Operational handoff for future Codex sessions; read with `A
 4. Then address targeted bench proportions and brochure-rack/plant noisy pixels. Floor repetition and generalized terminal/corner/junction art are lower priority; do not reopen the architecture system routinely.
 5. Once cleanup is resolved and production authorized, execute the next five families in [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md); maintain its concrete backlog against the manifest at every completed batch. Preserve the category budgets in [ASSET_ROADMAP.md](ASSET_ROADMAP.md).
 
-Use cost-conscious iteration: existing scripts/contracts, targeted checks, full suite once per completed batch, Godot as primary practical test. No bespoke validator framework for ordinary assets or bulk generation without instruction. Work toward approximately 400 meaningful assets only after cleanup and authorization.
+Use cost-conscious iteration: existing scripts/contracts, targeted checks, full suite once per completed batch, Godot as primary practical test. No bespoke validator framework for ordinary assets or bulk generation without instruction. Work toward the revision-2 target of 373 meaningful assets only after cleanup and authorization; see the canonical roadmap and current backlog.
 
 ## Local architecture references (2026-09-11)
 

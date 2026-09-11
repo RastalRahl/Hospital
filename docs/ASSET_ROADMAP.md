@@ -1,439 +1,87 @@
-# RastalR Modern Hospital & Emergency Services
-## Original Asset-Pack Roadmap Addendum
+# RastalR Hospital asset roadmap — revision 2
 
-This file restores the product-content roadmap that was omitted from the earlier Codex handoff.
+Revised 2026-09-11 at the user’s explicit request to change targets and reassess the whole pack while including every existing asset. This is the current product roadmap and supersedes the original 400-asset category budget imported at commit `2ae8aa1`. That original remains available in Git history. This revision authorizes planning changes, not asset generation or approval.
 
-It should be treated as the **canonical category-level product plan** unless the user explicitly revises it.
+## Product definition
 
-Important distinction:
+A coherent 32 px RPG-oblique hospital environment pack: developers can build a public arrival area, clinical departments, circulation, staff and service rooms, and a restrained abandoned version of the same hospital. Existing clinical breadth is retained; new work prioritizes the ordinary spaces and fixtures that connect it into a usable building.
 
-- The original roadmap **did lock the category targets and the approximate 400-asset product scope**.
-- It **did not lock a final list of 400 immutable asset IDs**.
-- Therefore Codex should preserve the category targets below, inspect the current manifest, and maintain a concrete remaining-asset backlog that fulfills real hospital-building needs without filler.
+**Working target: 373 logical assets — all 224 existing assets plus 149 named additions.** This is a scope-derived estimate, not a quota or a claim that 224 assets are already release-ready. There is no replacement round-number minimum or speculative stretch budget. If a proposed item fails the usefulness/distinction test, revise the backlog and target explicitly rather than manufacture a substitute.
 
----
+The planned clean environment/interaction content totals **352**, and the bundled abandoned-condition set totals **21**. Both are part of this roadmap; abandoned content is produced last. All four existing glass parents stay in the 373 target and must eventually receive a separate disposition/review before release; they remain pending and parked now. Removing glass from the review layout did not delete it from product scope.
 
-# 1. Product target
+## Revised category targets
 
-Target: **about 400 meaningful logical assets**
+Targets below include every existing manifest record in its current category. No approved asset is deleted, merged, renumbered or reassigned by this plan.
 
-Acceptable finish range:
-- roughly **350–450** if the pack is genuinely complete and useful
-- absolute upper bound around **500** only if additional assets are clearly valuable
+| Category | Previous target | Current | New target | New assets | Reason |
+|---|---:|---:|---:|---:|---|
+| Architecture | 45 | 32 | 44 | 12 | Retain all 32 records; add 12 access, circulation, lighting and service fixtures. Fix junctions/visibility without counting technical views. |
+| Reception / Waiting | 22 | 22 | 22 | 0 | Existing counters, queues, seating and lobby utilities are sufficient; finish visual repairs. |
+| Patient Rooms | 32 | 29 | 32 | 3 | Add lift, bedside commode and family sleeper to complete patient support; retain every bed/state already present. |
+| Examination | 20 | 22 | 22 | 0 | Retain all 22; another stool/table variant adds less value than missing support rooms. |
+| ICU | 20 | 19 | 20 | 1 | Add one distinct renal-support machine; reuse ward beds and existing monitors/pumps. |
+| Surgery | 24 | 19 | 22 | 3 | Add practical suction/irrigation, gowning and basin support; defer specialist perfusion and positioning apparatus. |
+| Radiology | 16 | 19 | 19 | 0 | Retain all 19 imaging assets, including the specialized modalities already approved; no new scanners planned. |
+| Laboratory | 20 | 20 | 22 | 2 | Add eyewash and spill kit to the existing broad instrument set. |
+| Pharmacy | 14 | 18 | 18 | 0 | Retain all 18 dispensing/compounding/automation assets; no extra cabinets. |
+| Emergency | 22 | 19 | 21 | 2 | Add rapid infuser and fixed decontamination shower; reuse respiratory and crash carts for airway support. |
+| Exterior / Ambulance | 24 | 1 | 18 | 17 | One ambulance plus 17 arrival/approach/service fixtures; omit paid-parking machinery and duplicate vehicles. |
+| Morgue | 12 | 0 | 8 | 8 | Eight purpose-built clinical morgue assets; reuse desk, sink support, instruments and storage from other categories. |
+| Staff / Admin | 18 | 0 | 14 | 14 | Fourteen office/locker/break-room assets; reuse waiting chairs for meetings and shared signage boards. |
+| Cafeteria / Kitchen | 14 | 0 | 14 | 14 | Fourteen service/dining/kitchen assets including meal delivery to wards; existing tray is retained in Inventory/UI. |
+| Bathrooms / Utility | 14 | 0 | 18 | 18 | Increase to 18 to cover sanitation, accessibility, laundry, clean/dirty utility and compact sterile processing. |
+| Signage / Decor / Safety | 25 | 0 | 22 | 22 | Twenty-two reusable sign/decor/safety deliverables; text/direction variants bundled, lobby plant reused. |
+| Inventory / UI | 20 | 3 | 16 | 13 | Retain all three existing assets and add 13 distinctive pickups/UI elements; omit overlapping tiny icons. |
+| Abandoned / Horror | 38 | 1 | 21 | 20 | Retain damaged bed plus 20 reusable damage/storytelling deliverables; reduce one-off damaged furniture and similar stains. |
+| **Total** | **400** | **224** | **373** | **149** | Counts follow useful coverage. |
 
-Priority:
-1. usefulness for building real hospital scenes;
-2. modularity;
-3. visual consistency;
-4. meaningful variety;
-5. count.
+## What makes the pack complete
 
-Never create filler simply to hit 400.
+| Scene/use case | Required coverage and reuse | Release proof |
+|---|---|---|
+| Public arrival and waiting | Existing ambulance, reception/queue/check-in/seating plus canopy, accessible approach and directory. | Walkable arrival-to-reception route; vehicle unloading and canopy do not hide the player. |
+| Connected inpatient floor | Existing walls/floors/doors/bedrooms and curtains; new lights, stairs/lift, handrails and access controls. | L/T/cross connections, returns, endpoints, door passage and foreground visibility work in furnished rooms. Connector views do not inflate counts. |
+| Ward and ICU | Reuse current beds and monitoring; add transfer/overnight/toileting support and renal-support machine. | Furnished ward and distinct ICU bay with readable equipment and movement space. |
+| Examination and emergency | Retain current examination/triage/trauma coverage; add two emergency functions. | Complete general exam and trauma scenes without unexplained missing core fixtures. |
+| Surgery and instrument processing | Existing OR equipment and laboratory autoclave; new fluid/gowning support, washer and clean packing station. | OR plus separate compact instrument-processing vignette; reused assets documented once. |
+| Imaging, laboratory and pharmacy | Retain every specialized modality/analyzer/dispensing asset; add two lab safety items. | Representative rooms verify camera, scale, sorting and native readability; no exhaustive new equipment catalog. |
+| Staff/admin and nurse station | Existing reception counters/physician desk/chairs plus office, records, lockers and break furnishings. | Nurse/admin office, changing area and small break/meeting space can be assembled from shared assets. |
+| Sanitary and building support | New accessible WC/shower, laundry and clean/dirty utility fixtures; reuse janitorial cart, bins, hampers and cabinets. | Distinct restroom, clean supply, soiled utility and laundry layouts; no generic cart duplication. |
+| Food and mortuary services | Compact cafeteria/kitchen, meal delivery and clinical morgue set with shared support furnishings. | Serving/prep/delivery vignette and trolley/storage/preparation route. |
+| Wayfinding and interaction | Shared deterministic sign systems, boards/safety fixtures and limited pickup/UI set. | Native-scale readable navigation and a small interaction example; translations/states are bundled. |
+| Abandoned hospital | Existing damaged bed plus reusable overlays and a limited set of broken obstacles. | A clean room can become recognizably abandoned while retaining the same visual language. |
 
-Count **logical assets only**.
+These are visual/game-asset use cases, not architectural or clinical compliance claims. Keep the Godot integration demo as the primary practical test; add small reusable review layouts when a missing room needs one, not a separate bespoke validator per prop.
 
-Do **not** count separately:
-- implementation components;
-- exclusive orientation/state views belonging to one logical asset;
-- source-scale exports;
-- preview sheets;
-- trivial recolors;
-- animation frames;
-- duplicate technical masks.
+## Production sequence
 
----
+0. **Close cleanup:** foreground-wall visibility, final connected-wall review and authorized wall/door repair promotion; fix the known bench/rack/plant issues. No D5 or new generation before this is resolved. Glass remains parked until its separate review is scheduled.
+1. **Building essentials:** architecture (12), bathrooms/utility (18), signage/decor/safety (22), staff/admin (14). These are the first four content families; split larger families into coherent 12–20-asset pilots where useful.
+2. **Clinical completion:** one 11-asset family across Patient Rooms (3), ICU (1), Surgery (3), Laboratory (2), Emergency (2). This is the fifth family, not five padded batches.
+3. **Support services:** exterior/arrival (17), cafeteria/kitchen (14), morgue (8).
+4. **Interaction and complete clean-pack review:** Inventory/UI (13), all clean room examples, and resolution of the four existing glass approvals without adding glass/windows.
+5. **Alternate condition:** 20 new abandoned assets plus the existing damaged bed.
+6. **Release assembly:** package and verify every retained/approved logical parent and its required views, with examples and documentation.
 
-# 2. Locked category roadmap
+## Scope choices and boundaries
 
-| Category | Target logical assets |
-|---|---:|
-| Architecture | 45 |
-| Reception / Waiting | 22 |
-| Patient Rooms | 32 |
-| Examination | 20 |
-| ICU | 20 |
-| Surgery | 24 |
-| Radiology | 16 |
-| Laboratory | 20 |
-| Pharmacy | 14 |
-| Emergency | 22 |
-| Exterior / Ambulance | 24 |
-| Morgue | 12 |
-| Staff / Admin | 18 |
-| Cafeteria / Kitchen | 14 |
-| Bathrooms / Utility | 14 |
-| Signage / Decor | 25 |
-| Inventory / UI | 20 |
-| Abandoned / Horror | 38 |
-| **TOTAL** | **400** |
+- Shift effort from the previous backlog’s optional specialist machines, paid parking, extra meeting chair, similar tiny pickups and numerous damage variations toward general lights, sanitary fixtures, clean linen, sterile processing, safety fixtures and meal delivery. See the explicit proposal changes in [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md). Only unproduced proposals are removed.
+- No new general hospital departments are required for this release. Existing pediatric beds and bassinet remain useful within Patient Rooms; full maternity, pediatric, rehabilitation, dentistry or psychiatric departments are future scope decisions.
+- No characters/animations, surgical simulation, full city/road network, full restaurant pack or comprehensive hospital engineering simulation is included. The debug figure is a scale/testing aid.
+- No new windows or glass family expansion. Retain and later review the four existing pending glass assets; do not promote them because they appear in this roadmap.
+- Stair/lift pieces provide environment art, anchors, states and an example assembly; this does not promise a complete elevator controller or multistory game framework.
 
-These targets are planning budgets, not quotas that justify bad assets.
+## Counting, ownership and delivery
 
-A category may finish a few assets above/below target if that produces a better pack, but large deviations should be explained.
+Use [the manifest](../metadata/manifest.json) as the inventory authority and [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) for live counts, every retained ID, new IDs, scopes and room proofs. Count each logical parent once in its existing primary category. Reuse shared props freely across rooms without creating a second asset. Existing approved state records are retained as-is; new animation frames, directions, components, masks, export scales, text localizations and trivial recolors add no count.
 
----
+Every new proposal must justify a distinct silhouette or interaction/use at native scale. Prefer revision/reuse when an existing sprite does the job. Generic fixtures use `everyday_world_common`; clinical equipment uses `hospital_only`. Sign text/pictograms are deterministic and separately authored where needed. All production continues to follow AGENTS.md, transparent pixel-art rules and the explicit approval path.
 
-# 3. Intended coverage inside each category
+Release requires approved production files, declared footprints/anchors and view selection, usable architecture examples, representative furnished room scenes, catalog/contact sheets, import instructions, license/credits and a complete versioned release archive. Test the packaged files, exclude downloaded references and internal experiments, and resolve all pending intended inclusions. Counts alone never constitute release approval.
 
-These are **coverage budgets / subfamilies**, not immutable IDs.
-Use the current manifest to avoid duplicates and turn gaps into a concrete backlog.
+## Basis for reassessment
 
-## Architecture — target 45
+The existing manifest is the primary evidence for what is already covered. Hospital support-space references reinforce the need to cover more than clinical equipment: [NHS HBN 00-03](https://www.england.nhs.uk/publication/designing-generic-clinical-and-clinical-support-spaces-hbn-00-03/) describes clinical and support spaces, and [HBN 00-04](https://www.england.nhs.uk/publication/designing-stairways-lifts-and-corridors-in-healthcare-buildings-hbn-00-04/) covers circulation, stairs and lifts. [HBN 00-09, sections 3.69–3.79](https://www.england.nhs.uk/wp-content/uploads/2021/05/HBN_00-09_infection_control.pdf) distinguishes dirty utility, clean supply and linen storage.
 
-Intended coverage:
-- Floors: ~5
-- Solid wall system: ~8
-- Doors / openings: ~12
-- Glass / partitions: ~6
-- Structural details / connectors: ~6
-- Entrance / special architecture: ~8
-
-Key principle:
-Architecture is deterministic, grid-first, and tested in Godot.
-
-Do not inflate count with technical views/components.
-
-Current architecture work already includes Foundation walls/floors, Doors & Openings, and pending/staged glass. Reconcile actual current count from the manifest before planning the remaining architecture assets.
-
-## Reception / Waiting — target 22
-
-Coverage budget:
-- Reception counters / desk modules: ~5
-- Waiting seating: ~5
-- Check-in / information: ~3
-- Queue / barrier elements: ~2
-- Lobby utilities: ~4
-- Small decor / wayfinding support: ~3
-
-Examples of useful coverage:
-reception counters, accessible counter, self-check-in kiosk, visitor chair, waiting bench, brochure rack, water cooler, sanitizer, queue barrier, lobby plant.
-
-Avoid creating multiple near-identical chairs merely for count.
-
-## Patient Rooms — target 32
-
-Coverage budget:
-- Beds / bed states: ~4
-- Bedside furniture: ~5
-- Ward accessories: ~5
-- Patient-support equipment: ~5
-- Privacy / storage: ~5
-- Room utilities: ~4
-- Visitor / family furniture: ~4
-
-Useful coverage includes:
-standard hospital bed, alternate bed type/state, bedside cabinet variants, overbed table, reading light, call/power panel, IV support, patient lift/support, privacy curtain/screen, wardrobe, visitor chair, waste bin, bedside step.
-
-## Examination — target 20
-
-Coverage budget:
-- Tables / chairs / stools: ~5
-- Diagnostic devices: ~5
-- Examination lighting: ~2
-- Storage / hygiene: ~4
-- Instruments / support: ~4
-
-The category should furnish a complete general examination room without borrowing half its core equipment from unrelated categories.
-
-## ICU — target 20
-
-Coverage budget:
-- Critical-care monitoring: ~4
-- Respiratory / ventilation: ~4
-- Infusion / IV: ~4
-- Bedside support: ~4
-- Emergency / specialty support: ~4
-
-Focus on equipment that visibly distinguishes an ICU from a normal patient room.
-
-## Surgery — target 24
-
-Coverage budget:
-- OR core furniture / table / lights: ~5
-- Anesthesia / airway: ~4
-- Sterile instrument / storage: ~4
-- Electrosurgery / smoke management: ~3
-- Imaging / endoscopy: ~3
-- Specialized OR support: ~5
-
-The goal is a convincingly furnishable operating room, not a catalog of tiny surgical instruments.
-
-## Radiology — target 16
-
-Coverage budget:
-- Core imaging modalities: ~6
-- Patient positioning / support: ~3
-- Workstation / control: ~2
-- Contrast / modality accessories: ~3
-- Storage / room support: ~2
-
-Prioritize visually distinct imaging equipment and practical room support.
-
-## Laboratory — target 20
-
-Coverage budget:
-- Analyzers / core instruments: ~6
-- Benches / workstations: ~3
-- Sample handling: ~4
-- Cold / cryogenic storage: ~3
-- Safety / waste / support: ~4
-
-The set should support both a general clinical lab and some specialty-lab flavor.
-
-## Pharmacy — target 14
-
-Coverage budget:
-- Dispensing / shelving / storage: ~4
-- Automated dispensing: ~2
-- Secure / cold storage: ~2
-- Compounding / preparation: ~3
-- Counter / workstation / support: ~3
-
-Avoid duplicating generic cabinets already well covered elsewhere unless the pharmacy version is meaningfully distinct.
-
-## Emergency — target 22
-
-Coverage budget:
-- Trauma / resuscitation: ~5
-- Triage / treatment: ~4
-- Transport: ~3
-- Respiratory / infusion: ~3
-- Decontamination / isolation: ~2
-- Department support / supplies: ~5
-
-The category should support a recognizable emergency/trauma room and triage area.
-
-## Exterior / Ambulance — target 24
-
-Coverage budget:
-- Ambulances / emergency vehicle variants: ~4
-- Emergency vehicle support: ~2
-- Ambulance-bay infrastructure: ~5
-- Hospital entrance exterior: ~4
-- Parking / road / curb pieces: ~4
-- Exterior utilities / signs / support: ~5
-
-Examples:
-ambulance, alternate ambulance state/orientation only when genuinely useful, bollards, bay markings, canopy, curb/ramp, exterior bench, entrance sign support, emergency entrance fixtures, exterior waste/utilities.
-
-Do not turn this into a generic city pack.
-
-## Morgue — target 12
-
-Coverage budget:
-- Body transport / storage: ~4
-- Autopsy room: ~3
-- Prep / washing: ~2
-- Admin / storage / support: ~3
-
-Examples:
-body trolley, mortuary stretcher, body storage/refrigeration, autopsy table, instrument support, wash/prep station, storage.
-
-Keep treatment clinical and usable rather than sensational.
-
-## Staff / Admin — target 18
-
-Coverage budget:
-- Desks / computer workstations: ~5
-- Office seating / storage: ~4
-- Staff lockers / break-room: ~4
-- Meeting / admin: ~3
-- Boards / clocks / miscellaneous: ~2
-
-This category should furnish nurse/admin offices and staff-only spaces.
-
-Reuse Everyday World Common assets where appropriate instead of making hospital-branded duplicates.
-
-## Cafeteria / Kitchen — target 14
-
-Coverage budget:
-- Service counters: ~3
-- Dining tables / seating: ~4
-- Cooking / prep: ~3
-- Refrigeration / storage: ~2
-- Washing / waste: ~2
-
-This is hospital cafeteria support, not a full restaurant pack.
-
-## Bathrooms / Utility — target 14
-
-Coverage budget:
-- Toilets: ~2
-- Sinks / vanities: ~2
-- Shower / accessibility: ~3
-- Janitorial / cleaning: ~3
-- Laundry / utility: ~2
-- Small fixtures / consumables: ~2
-
-Must support accessible hospital restroom and janitorial/utility rooms.
-
-## Signage / Decor — target 25
-
-Coverage budget:
-- Department identification signs: ~5
-- Directional / wayfinding: ~5
-- Safety / regulatory pictograms: ~4
-- Wall decor: ~4
-- Clocks / boards / information: ~3
-- Plants / ambient decor: ~4
-
-Important:
-Readable sign text/pictograms should be deterministic and separated from generated artwork when needed.
-
-No fake AI text.
-
-## Inventory / UI — target 20
-
-Coverage budget:
-- Medical-consumable pickups/items: ~5
-- Medicines / containers: ~4
-- Documents / cards / paperwork: ~3
-- Equipment / inventory icons: ~4
-- Status / interaction UI: ~4
-
-These should be actual useful deliverables, not metadata disguised as asset count.
-
-Keep their visual language compatible with the pack and game use.
-
-## Abandoned / Horror — target 38
-
-Coverage budget:
-- Damage overlays: ~8
-- Grime / blood / leaks / stains: ~7
-- Broken furniture / equipment states: ~6
-- Abandoned-room props: ~5
-- Environmental-storytelling elements: ~6
-- Hazard / lighting / decal support: ~6
-
-Key rule:
-This is the **same hospital world in an abandoned/damaged state**, not a separate unrelated horror art style.
-
-Prefer reusable overlays when possible:
-- cracks;
-- peeling paint;
-- grime;
-- stains;
-- broken glass;
-- damage;
-- caution/hazard treatment.
-
-Only count an overlay as a logical asset when it is a genuinely useful standalone deliverable.
-
----
-
-# 4. Categories that were NOT part of the locked 400 roadmap
-
-Do not spontaneously create separate major categories for:
-- Maternity
-- Pediatrics
-- Rehabilitation
-
-Those were previously explored as possible directions but were **not part of the locked 400-category roadmap**.
-
-Assets useful to those settings may still appear where they naturally belong, but creating full new departments requires explicit user approval and a roadmap revision.
-
----
-
-# 5. How Codex should turn this roadmap into the remaining backlog
-
-Codex should not assume "400 - current manifest count" is enough.
-
-Create and maintain a coverage matrix with:
-
-- roadmap category;
-- target count;
-- current logical manifest count;
-- approved count;
-- pending count;
-- missing-to-target count;
-- important covered capabilities;
-- important missing capabilities;
-- proposed remaining asset IDs/names;
-- priority;
-- Godot demo/use-case that proves usefulness.
-
-Use the current `metadata/manifest.json` / catalog as the source of truth for current counts.
-
-Do not use stale handoff counts if the repository has advanced.
-
-For every proposed new asset:
-1. confirm it is not already represented by an existing logical asset;
-2. explain its practical hospital-building use;
-3. determine whether it belongs in Hospital Only or Everyday World Common;
-4. avoid near-duplicate variants;
-5. prefer assets that make a complete room/department possible.
-
----
-
-# 6. Recommended completion order
-
-After the current cleanup/production-approval phase:
-
-1. Finish remaining Architecture capabilities needed by real room building.
-2. Complete underfilled **core hospital departments** before polishing edge categories.
-3. Build missing support spaces:
-   - Exterior / Ambulance
-   - Morgue
-   - Staff / Admin
-   - Cafeteria / Kitchen
-   - Bathrooms / Utility
-4. Complete Signage / Decor.
-5. Complete Inventory / UI.
-6. Build Abandoned / Horror last, using the finished clean hospital as its base.
-
-If current manifest auditing shows that a supposedly "completed" clinical category is materially below its roadmap coverage, fill the meaningful gap rather than blindly moving on.
-
----
-
-# 7. Faster production rule
-
-The D1-D4 glass workflow was too expensive to repeat.
-
-For ordinary props:
-- plan coherent batches of about 8–20;
-- generate/create the family;
-- one visual review;
-- one extraction/QA pass;
-- stage;
-- test representative assets in Godot;
-- fix failed items only;
-- approve.
-
-For established architecture:
-- prototype one representative unit;
-- test in Godot;
-- approve visual language;
-- propagate across family;
-- one family QA/integration pass;
-- stage/approve.
-
-Use targeted tests while iterating.
-Run full suite once at completed batch/task boundaries.
-
-Godot integration should happen **early**, not after hours of isolated validation.
-
----
-
-# 8. Persistent documentation
-
-Codex should place this roadmap into the repository as a concise canonical planning file, recommended path:
-
-`docs/ASSET_ROADMAP.md`
-
-Then update `docs/CODEX_PROJECT_STATE.md` to reference it.
-
-Codex should maintain a second generated/current file if useful, for example:
-
-`docs/ASSET_COVERAGE_STATUS.md`
-
-That file should be computed/reconciled from the manifest and show current counts and the concrete remaining backlog.
-
-Do not overwrite this original roadmap merely because current counts differ.
-Roadmap changes require explicit user approval.
-
-
-## Repository reconciliation note — 2026-09-11
-
-Imported from the user-supplied roadmap addendum; replacement-character punctuation normalized to en dashes. Category targets above are unchanged. The ZIP’s companion update prompt is not a separate task instruction. The user explicitly adopted this document’s category-level targets. Concrete IDs remain proposals, maintained in [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) against the current [manifest](../metadata/manifest.json).
-
-The latest user direction parks glass and removes it from the solid-wall review. The glass budget does not authorize resuming it or adding windows. Complete current cleanup before new production. Existing orientation/state records remain in the audited manifest total; future technical views, frames and components add no logical count.
+The proposed pixel-art families and counts are our product-design judgment informed by that coverage, not counts prescribed by those sources. The local itch.io references remain construction/camera references; their pixels are not included in the pack.
