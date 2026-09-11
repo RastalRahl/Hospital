@@ -1,0 +1,538 @@
+{
+  "glaze_alpha": 56,
+  "opaque_samples_after": 2348,
+  "opaque_samples_before": 5752,
+  "placements": [
+    {
+      "candidate": "hospital_glass_partition_back_01__repeat_at_272_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__repeat",
+        "collision": [
+          256.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          272.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__repeat.png",
+      "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    {
+      "candidate": "hospital_glass_partition_back_01__repeat_at_304_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__repeat",
+        "collision": [
+          288.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          304.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__repeat.png",
+      "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    {
+      "candidate": "hospital_glass_partition_back_01__repeat_at_336_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__repeat",
+        "collision": [
+          320.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          336.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__repeat.png",
+      "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    {
+      "candidate": "hospital_glass_partition_back_01__repeat_at_368_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__repeat",
+        "collision": [
+          352.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          368.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__repeat.png",
+      "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    {
+      "candidate": "hospital_glass_partition_back_01__repeat_at_400_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__repeat",
+        "collision": [
+          384.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          400.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__repeat.png",
+      "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    {
+      "candidate": "hospital_glass_partition_back_01__repeat_at_432_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__repeat",
+        "collision": [
+          416.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          432.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__repeat.png",
+      "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+    },
+    {
+      "candidate": "hospital_glass_partition_back_01__main_at_464_148.png",
+      "placement": {
+        "asset": "hospital_glass_partition_back_01__main",
+        "collision": [
+          448.0,
+          140.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -28.0
+        ],
+        "position": [
+          464.0,
+          148.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_back_01__main.png",
+      "source_sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_left_01__corner_repeat_at_256_160.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_left_01__corner_repeat",
+        "collision": [
+          252.0,
+          144.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -4.0,
+          -40.0
+        ],
+        "position": [
+          256.0,
+          160.0
+        ],
+        "sort_y": 144.0,
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_left_01__corner_repeat.png",
+      "source_sha256": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_left_01__repeat_at_256_192.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_left_01__repeat",
+        "collision": [
+          252.0,
+          176.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -4.0,
+          -16.0
+        ],
+        "position": [
+          256.0,
+          192.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_left_01__repeat.png",
+      "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_left_01__repeat_at_256_224.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_left_01__repeat",
+        "collision": [
+          252.0,
+          208.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -4.0,
+          -16.0
+        ],
+        "position": [
+          256.0,
+          224.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_left_01__repeat.png",
+      "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_left_01__repeat_at_256_256.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_left_01__repeat",
+        "collision": [
+          252.0,
+          240.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -4.0,
+          -16.0
+        ],
+        "position": [
+          256.0,
+          256.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_left_01__repeat.png",
+      "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_left_01__main_at_256_288.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_left_01__main",
+        "collision": [
+          252.0,
+          272.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -4.0,
+          -16.0
+        ],
+        "position": [
+          256.0,
+          288.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_left_01__main.png",
+      "source_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_right_01__corner_repeat_at_480_160.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_right_01__corner_repeat",
+        "collision": [
+          476.0,
+          144.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -8.0,
+          -40.0
+        ],
+        "position": [
+          480.0,
+          160.0
+        ],
+        "sort_y": 144.0,
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_right_01__corner_repeat.png",
+      "source_sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_right_01__repeat_at_480_192.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_right_01__repeat",
+        "collision": [
+          476.0,
+          176.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -8.0,
+          -16.0
+        ],
+        "position": [
+          480.0,
+          192.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_right_01__repeat.png",
+      "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_right_01__repeat_at_480_224.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_right_01__repeat",
+        "collision": [
+          476.0,
+          208.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -8.0,
+          -16.0
+        ],
+        "position": [
+          480.0,
+          224.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_right_01__repeat.png",
+      "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_right_01__repeat_at_480_256.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_right_01__repeat",
+        "collision": [
+          476.0,
+          240.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -8.0,
+          -16.0
+        ],
+        "position": [
+          480.0,
+          256.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_right_01__repeat.png",
+      "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+    },
+    {
+      "candidate": "hospital_glass_partition_side_right_01__main_at_480_288.png",
+      "placement": {
+        "asset": "hospital_glass_partition_side_right_01__main",
+        "collision": [
+          476.0,
+          272.0,
+          8.0,
+          32.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -8.0,
+          -16.0
+        ],
+        "position": [
+          480.0,
+          288.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_side_right_01__main.png",
+      "source_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642"
+    },
+    {
+      "candidate": "hospital_glass_partition_front_cutaway_01__repeat_at_272_304.png",
+      "placement": {
+        "asset": "hospital_glass_partition_front_cutaway_01__repeat",
+        "collision": [
+          256.0,
+          300.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -4.0
+        ],
+        "position": [
+          272.0,
+          304.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_front_cutaway_01__repeat.png",
+      "source_sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5"
+    },
+    {
+      "candidate": "hospital_glass_partition_front_cutaway_01__main_at_304_304.png",
+      "placement": {
+        "asset": "hospital_glass_partition_front_cutaway_01__main",
+        "collision": [
+          288.0,
+          300.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -4.0
+        ],
+        "position": [
+          304.0,
+          304.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_front_cutaway_01__main.png",
+      "source_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131"
+    },
+    {
+      "candidate": "hospital_glass_partition_front_cutaway_01__repeat_at_400_304.png",
+      "placement": {
+        "asset": "hospital_glass_partition_front_cutaway_01__repeat",
+        "collision": [
+          384.0,
+          300.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -4.0
+        ],
+        "position": [
+          400.0,
+          304.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_front_cutaway_01__repeat.png",
+      "source_sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5"
+    },
+    {
+      "candidate": "hospital_glass_partition_front_cutaway_01__repeat_at_432_304.png",
+      "placement": {
+        "asset": "hospital_glass_partition_front_cutaway_01__repeat",
+        "collision": [
+          416.0,
+          300.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -4.0
+        ],
+        "position": [
+          432.0,
+          304.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_front_cutaway_01__repeat.png",
+      "source_sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5"
+    },
+    {
+      "candidate": "hospital_glass_partition_front_cutaway_01__main_at_464_304.png",
+      "placement": {
+        "asset": "hospital_glass_partition_front_cutaway_01__main",
+        "collision": [
+          448.0,
+          300.0,
+          32.0,
+          8.0
+        ],
+        "kind": "glass",
+        "offset": [
+          -16.0,
+          -4.0
+        ],
+        "position": [
+          464.0,
+          304.0
+        ],
+        "state": ""
+      },
+      "source": "art/hospital_glass_partition_front_cutaway_01__main.png",
+      "source_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131"
+    }
+  ],
+  "reference_only": true
+}

@@ -210,6 +210,10 @@ func key(code: Key) -> void:
 	event.pressed = true
 	_unhandled_key_input(event)
 
+func glass_probe_pixel() -> Color:
+	var pane_texture: Texture2D = load("res://art/hospital_glass_partition_back_01__repeat.png")
+	return pane_texture.get_image().get_pixel(11, 8)
+
 func smoke() -> void:
 	DirAccess.make_dir_recursive_absolute("res://.qa")
 	DirAccess.make_dir_recursive_absolute("res://captures")
@@ -251,8 +255,7 @@ func smoke() -> void:
 	assert(not blocked(figure.position), "Behind-glass pose must be reachable floor")
 	await capture("res://.qa/repair_glass_behind.png")
 	# Verify actual viewport transmission against the supplied pane alpha.
-	var pane_texture: Texture2D = load("res://art/hospital_glass_partition_back_01__repeat.png")
-	var pane := pane_texture.get_image().get_pixel(11,8)
+	var pane := glass_probe_pixel()
 	var expected := Color("d9ad59").lerp(Color(pane.r,pane.g,pane.b,1),pane.a)
 	var behind := get_viewport().get_texture().get_image()
 	var observed := behind.get_pixelv(Vector2i(get_global_transform_with_canvas() * Vector2(363,128)))

@@ -1,5 +1,7 @@
 # Hospital integration demo
 
+Latest glass review: `hospital_glass_review.tscn` (F6) uses the actual hospital, Foundation walls and a lighter glass enclosure. O compares glass; H compares walls. See `repair_candidates/glass_enclosure_refresh_v1/candidate_godot.png`, `mapping.json` and `findings.md`. Glazing alpha/frame regions are revised only in this reference candidate; support masks, placements, openings and collision remain fixed. Production contracts/approval are unchanged.
+
 Latest actual-hospital architecture review: open `hospital_foundation_review.tscn` and press F6. H compares original walls with the coherent full-height Foundation candidate; the existing furnished hospital, doors/glass and movement remain active. See `repair_candidates/hospital_foundation_integration_v1/candidate_godot.png` and `findings.md`. The near-front view exposes significant figure occlusion, so production promotion remains on hold. Normal F5 startup is unchanged.
 
 Latest material review: `foundation_reference_rooms.tscn` (F6) compares plain and Foundation-finished connected rooms at identical geometry/poses. Existing V2 cap/plaster/base pixels supply the finish. See `repair_candidates/foundation_connected_finish_v1/corridor_godot.png` and `findings.md`. Production approval and the full-front versus low-front camera decision remain pending.
