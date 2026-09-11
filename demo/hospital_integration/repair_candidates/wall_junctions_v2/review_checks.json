@@ -1,0 +1,54 @@
+{
+  "status": "reference_only_unapproved",
+  "comparison": "fresh Godot V1 vs V2; same camera, placements, collisions and furnished scene",
+  "method": "RGB channel union, allowed bounds derived from native V1/V2 RGB diff boxes; HUD excluded",
+  "changed_pixels_including_hud": 10128,
+  "changed_pixels_outside_refinement_and_hud": 0,
+  "allowed_regions": [
+    {
+      "junction": "northwest",
+      "screen_bounds_half_open": [
+        120,
+        168,
+        160,
+        272
+      ]
+    },
+    {
+      "junction": "northeast",
+      "screen_bounds_half_open": [
+        1504,
+        168,
+        1544,
+        272
+      ]
+    },
+    {
+      "junction": "divider_north",
+      "screen_bounds_half_open": [
+        1080,
+        182,
+        1120,
+        272
+      ]
+    },
+    {
+      "junction": "southwest",
+      "screen_bounds_half_open": [
+        122,
+        864,
+        136,
+        878
+      ]
+    },
+    {
+      "junction": "southeast",
+      "screen_bounds_half_open": [
+        1528,
+        864,
+        1542,
+        878
+      ]
+    }
+  ]
+}

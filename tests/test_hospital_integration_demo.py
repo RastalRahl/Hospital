@@ -234,3 +234,43 @@ def test_junction_collision_contacts_and_existing_room_access():
                 seen.add(q); queue.append(q)
     for destination in [(128,216),(112,312),(176,312),(352,320),(400,248),(432,296),(608,248),(656,232),(656,296),(304,216)]:
         assert destination in seen, f'Junction blocks previously reachable area {destination}'
+
+
+def test_junction_v2_keeps_geometry_and_connects_plaster_without_tall_trim():
+    from PIL import Image
+    old_folder = DEMO/'repair_candidates/wall_junctions_v1'
+    folder = DEMO/'repair_candidates/wall_junctions_v2'
+    old = json.loads((old_folder/'junctions.json').read_text())
+    new = json.loads((folder/'junctions.json').read_text())
+    for key in ('placements','collision_additions','grid_px','inventory_delta','runtime_manifest_sha256','source_sha256'):
+        assert new[key] == old[key], 'Refinement cannot change geometry, contact or source contracts'
+    family = folder.parent/'foundation_wall_refresh_family_v1'
+    back = Image.open(family/'hospital_wall_back_straight_01_refresh_candidate.png')
+    front = Image.open(family/'hospital_front_wall_cutaway_01_refresh_candidate.png')
+    for name,a in new['assets'].items():
+        assert {k:v for k,v in a.items() if k!='sha256'} == {k:v for k,v in old['assets'][name].items() if k!='sha256'}
+        p,q = old_folder/a['path'],folder/a['path']
+        before,after = Image.open(p),Image.open(q)
+        check = next(c for c in new['refinement']['checks'] if c['view']==name)
+        assert hashlib.sha256(p.read_bytes()).hexdigest() == check['v1_sha256'] == old['assets'][name]['sha256']
+        assert hashlib.sha256(q.read_bytes()).hexdigest() == check['v2_sha256'] == a['sha256']
+        assert before.mode == after.mode == 'RGBA' and before.size == after.size
+        assert before.getchannel('A').tobytes() == after.getchannel('A').tobytes()
+        palette = set()
+        for path in a['source_paths']:
+            palette.update(Image.open(DEMO/path).get_flattened_data())
+        assert set(after.get_flattened_data()) <= palette
+        if name.startswith('north_'):
+            # The wall face must cross the former post continuously, without
+            # vertical cap bands or a dark seam against the back wall.
+            interior = range(2,20) if name=='north_left' else range(18) if name=='north_right' else range(20)
+            for y in range(9,45):
+                assert all(after.getpixel((x,y)) == back.getpixel((0,y)) for x in interior)
+            assert before.crop((0,52,20,84)).tobytes() == after.crop((0,52,20,84)).tobytes()
+        elif name.startswith('south_'):
+            interior = range(1,20) if name=='south_left' else range(19)
+            for y in range(12,32):
+                assert all(after.getpixel((x,y)) == front.getpixel((0,y-12)) for x in interior), 'No slate nib may project into the ivory front cap'
+            assert before.crop((0,0,20,8)).tobytes() == after.crop((0,0,20,8)).tobytes()
+        else:
+            assert p.read_bytes() == q.read_bytes(), 'Lower divider must stay byte-identical'

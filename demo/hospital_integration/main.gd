@@ -18,7 +18,9 @@ const FAMILY_FOLDER := "res://repair_candidates/foundation_wall_refresh_family_v
 var family_entries: Array[Dictionary] = []
 var family_textures: Dictionary = {}
 var family_enabled := false
-const JUNCTION_FOLDER := "res://repair_candidates/wall_junctions_v1/"
+const JUNCTION_V1_FOLDER := "res://repair_candidates/wall_junctions_v1/"
+const JUNCTION_FOLDER := "res://repair_candidates/wall_junctions_v2/"
+var junction_version := 2
 var junction_data: Dictionary
 var junction_enabled := false
 var junction_sprites: Array[Sprite2D] = []
@@ -96,6 +98,10 @@ func _ready() -> void:
 		await junction_review()
 	elif "--junction-smoke" in OS.get_cmdline_user_args():
 		set_wall_junctions(true)
+		key(KEY_K)
+		assert(junction_version == 1, "K selects preserved V1")
+		key(KEY_K)
+		assert(junction_version == 2, "K restores refined V2")
 		await smoke()
 	elif "--family-review" in OS.get_cmdline_user_args():
 		await family_review()
@@ -117,7 +123,7 @@ func update_hud() -> void:
 	hud.text = "RASTALR / HOSPITAL INTEGRATION   |   Batch 13: pending human review\nWASD / arrows: move   E: door (%s)   G: grid + contacts   R: reset   1 / 2 / 3: zoom\nReception / waiting: west     Examination: glass bay     Patient room: east     Corridor: south" % ("OPEN" if door_open else "CLOSED")
 	hud.text += "\nDoor: UNAPPROVED alpha repair candidate" if repair_active else "\nDoor comparison: approved opaque original"
 	hud.text += " | V walls: " + ("REFERENCE-ONLY family" if family_enabled else ["approved original", "REFERENCE-ONLY v1", "REFERENCE-ONLY v2"][wall_version])
-	hud.text += " | J junctions: " + ("REFERENCE-ONLY" if junction_enabled else "original")
+	hud.text += " | J junctions: " + (("REFERENCE V%d (K compare)" % junction_version) if junction_enabled else "original")
 
 func blocked(point: Vector2) -> bool:
 	var feet := Rect2(point - Vector2(9, 8), Vector2(18, 8))
@@ -155,6 +161,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo:
 		return
 	match event.physical_keycode:
+		KEY_K:
+			if junction_enabled:
+				set_junction_version(3 - junction_version)
 		KEY_J:
 			set_wall_junctions(not junction_enabled)
 		KEY_V:
@@ -415,6 +424,17 @@ func set_wall_junctions(enabled: bool) -> void:
 	update_hud()
 	overlay.queue_redraw()
 
+func set_junction_version(version: int) -> void:
+	assert(version == 1 or version == 2)
+	junction_version = version
+	var folder := JUNCTION_FOLDER if version == 2 else JUNCTION_V1_FOLDER
+	for i in junction_sprites.size():
+		var view: Dictionary = junction_data.assets[junction_data.placements[i].view]
+		var texture: Texture2D = load(folder + view.path)
+		assert(texture != null)
+		junction_sprites[i].texture = texture
+	update_hud()
+
 func junction_review() -> void:
 	assert(junction_sprites.size() == 6 and junction_originals.size() == 7)
 	var before: Array = []
@@ -424,9 +444,10 @@ func junction_review() -> void:
 	var solids_before := solids.duplicate(true)
 	set_wall_family(true)
 	set_door(true)
-	for enabled in [false, true]:
-		set_wall_junctions(enabled)
-		var label := "after" if enabled else "before"
+	set_wall_junctions(true)
+	for version in [1, 2]:
+		set_junction_version(version)
+		var label := "after" if version == 2 else "before"
 		await capture(JUNCTION_FOLDER + "godot_" + label + ".png")
 		# Keep the furnished overview, then expose the same contacts without props
 		# for the close crops; no furniture or camera placement is changed.
@@ -477,5 +498,5 @@ func junction_review() -> void:
 	set_wall_junctions(false)
 	assert(junction_originals.all(func(s): return s.visible))
 	assert(junction_sprites.all(func(s): return not s.visible))
-	print("WALL_JUNCTION_REVIEW_PASS: six junctions, seven exclusive replacements, unchanged original transforms/contacts, three added contacts, figure Y-sort and toggle restore")
+	print("WALL_JUNCTION_REVIEW_PASS: V1/V2 RGB comparison, six junctions, seven exclusive replacements, unchanged original transforms/contacts, three added contacts, figure Y-sort and toggle restore")
 	get_tree().quit()

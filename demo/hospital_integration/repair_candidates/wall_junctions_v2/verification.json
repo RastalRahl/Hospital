@@ -1,0 +1,109 @@
+{
+  "status": "reference_only_unapproved",
+  "starting_head": "9740fae2fa9ad8042d4d85433fa5d36944080bfd",
+  "full_suite": {
+    "passed": 378,
+    "seconds": 55.81,
+    "exit_code": 0,
+    "runs_this_refinement": 1
+  },
+  "focused_demo_tests": 10,
+  "godot_version": "4.7.1.stable.official.a13da4feb",
+  "godot_review": "WALL_JUNCTION_REVIEW_PASS: V1/V2 comparison",
+  "godot_smoke": "HOSPITAL_SMOKE_PASS with V2 enabled; K switches to V1 and back before walkthrough",
+  "protected_files_checked": 1073,
+  "changed_protected_files": [],
+  "user_owned_files_sha256": {
+    "demo/hospital_integration/project.godot": "09a194e33c8a4cd52e20a8208d9821c81de448fee98727837f52a36f2215a255",
+    "demo/hospital_integration/export_presets.cfg": "152113d0c786d866f1edfa8d3bb907b94b7a0a4a0542e52efb3f9ae4d63ef73b",
+    "demo/hospital_integration/captures/layout_door_open.png.import": "2ee8c2068a6f0fbbc9a639891406febae536346fbe441aa27ad37bb2a4e8be73",
+    "demo/hospital_integration/captures/layout_glass_behind.png.import": "424d92641c7558e044705801a123d496c6d37a370936b1103a229d789481ad1d",
+    "demo/hospital_integration/captures/layout_glass_front.png.import": "f486f1cd610a436f36c1a313bca197779327fd03db27cdd28a56d547d1c55cd6"
+  },
+  "inventory": {
+    "manifest": 224,
+    "approved": 220,
+    "needs_human_review": 4
+  },
+  "scene_check": {
+    "status": "reference_only_unapproved",
+    "comparison": "fresh Godot V1 vs V2; same camera, placements, collisions and furnished scene",
+    "method": "RGB channel union, allowed bounds derived from native V1/V2 RGB diff boxes; HUD excluded",
+    "changed_pixels_including_hud": 10128,
+    "changed_pixels_outside_refinement_and_hud": 0,
+    "allowed_regions": [
+      {
+        "junction": "northwest",
+        "screen_bounds_half_open": [
+          120,
+          168,
+          160,
+          272
+        ]
+      },
+      {
+        "junction": "northeast",
+        "screen_bounds_half_open": [
+          1504,
+          168,
+          1544,
+          272
+        ]
+      },
+      {
+        "junction": "divider_north",
+        "screen_bounds_half_open": [
+          1080,
+          182,
+          1120,
+          272
+        ]
+      },
+      {
+        "junction": "southwest",
+        "screen_bounds_half_open": [
+          122,
+          864,
+          136,
+          878
+        ]
+      },
+      {
+        "junction": "southeast",
+        "screen_bounds_half_open": [
+          1528,
+          864,
+          1542,
+          878
+        ]
+      }
+    ]
+  },
+  "capture_sha256": {
+    "divider_east_after.png": "57b9e2e52c68f7d1de32a93a1923266680b750dd2af22e77265661383a64538f",
+    "divider_east_before.png": "57b9e2e52c68f7d1de32a93a1923266680b750dd2af22e77265661383a64538f",
+    "divider_east_junction_candidate.png": "4f2daed3e39da1d67d668bacd3e2d2de239be47dfd212f6b94805aa4c0a76bd5",
+    "divider_figure_behind.png": "62e0bfe56d687889b9197d5e29b469add94d1622d34ccd42d9e69ad48ee1492d",
+    "divider_figure_front.png": "ce5dd3377a70a0a85a14d899fdc77e01fe56ac2081bc2c4af7302543bddb6864",
+    "divider_north_after.png": "d14a6d09cb8398c4c2907b22eda4d735cdba7ca8d55e721c2d08105885efafeb",
+    "divider_north_before.png": "fb85b1a4089a658d4b6ed15aa3d264eb9d779e074371276ba20aa63c9e33b441",
+    "godot_after.png": "dc2f5159f3cc88ed32900ed16fbba07399e55ce93fe1e011d67e1aff0f0ba54c",
+    "godot_before.png": "9eae6ad2fb31c338a6ef3aeadca15c41219e12466dd1d92cfc8cf686b7b08643",
+    "godot_unobstructed_after.png": "6db9c1be43f30c7eae92cd9d1b32aeb38e941bbd89c595f44cc1d09ef5ce9572",
+    "godot_unobstructed_before.png": "c05692954f67ce285542cb0b070e686d400b6482f699b7faf062fac7bd7dc4e0",
+    "junction_refinement_review.png": "760007ad8c74b866034bbc231658141161002aa4ca17ab6bbf9550beb02d110f",
+    "north_branch_junction_candidate.png": "e5cabf1c4b4824b1f966bb837ae92f9aa32b37d0f62bb4cc0e7fe0ac97f0bf30",
+    "north_left_junction_candidate.png": "0e3032da659f1fb44009e596d728c3f1106b7fa2b32c96ebc30b0c38c5b1ae17",
+    "north_right_junction_candidate.png": "9d591e78e35bd1b828862e5abe57e6debd05ca627cf7a9dfc241bee874165606",
+    "northeast_after.png": "780fa6a66985965b20d2da3c9bcce418590bb45b7cc9cc453fa2f5476cd1f3a6",
+    "northeast_before.png": "ce77e95258067291ed2f5b92d56f0ca9357450949071f89c0556fd76486631bd",
+    "northwest_after.png": "49d8c8a3eaac7933f0804a7e4b5f6deeacf91cddaef0ce9abc1c0f6829f889b3",
+    "northwest_before.png": "56fa365ea082d10fd6a77f7f1dccacb0d5112357422b5c412b70f5d54c6de51a",
+    "south_left_junction_candidate.png": "c495f046f48801ae11f9f7bdc81abfdfcfcd3ab221e263ed6970c19700c3c44b",
+    "south_right_junction_candidate.png": "fccd1304b75ff6e66eadbe0716cab5c1365efe105b828c6650a415953f6f6c92",
+    "southeast_after.png": "ec97035d7dbdb4e36e49d8ee2016e5a08c075246277c6c0e96ed7e4a1d519248",
+    "southeast_before.png": "4a514ebcc69e8870162aa5b20624dafd637f9c2a896c4683add058d8192dad57",
+    "southwest_after.png": "e98174cde9c09d1a6c13553ce0c55983007638b90c9c6315f5d5c459e3c6fdfb",
+    "southwest_before.png": "2f0e82274eb26a14ffa49fb4460c9ee1f3318f5be5adc858312d563c476716d0"
+  }
+}
