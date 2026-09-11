@@ -1,0 +1,18 @@
+; Self-contained Godot 4 integration. Native art is never transformed.
+config_version=5
+[application]
+config/name="RastalR Hospital Integration"
+run/main_scene="res://main.tscn"
+[display]
+window/size/viewport_width=1664
+window/size/viewport_height=1088
+window/size/window_width_override=1664
+window/size/window_height_override=1088
+[debug]
+file_logging/enable_file_logging=false
+[rendering]
+2d/snap/snap_2d_transforms_to_pixel=true
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.094, 0.137, 0.192, 1)

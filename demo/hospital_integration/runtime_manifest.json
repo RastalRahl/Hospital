@@ -1,0 +1,6858 @@
+{
+  "baseline": "9a95eba055324f87a7f62ffcda859e1949b207eb",
+  "inventory": {
+    "manifest": 224,
+    "approved": 220,
+    "needs_human_review": 4
+  },
+  "grid": 32,
+  "files": {
+    "hospital_floor_plain_01__main": {
+      "logical_id": "hospital_floor_plain_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_floor_plain_01.png",
+      "path": "art/hospital_floor_plain_01__main.png",
+      "approval_status": "approved",
+      "sha256": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+      "native_size": [
+        32,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_wall_back_straight_01__main": {
+      "logical_id": "hospital_wall_back_straight_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_wall_back_straight_01.png",
+      "path": "art/hospital_wall_back_straight_01__main.png",
+      "approval_status": "approved",
+      "sha256": "5de21497d18af52605754193c188f6555d35f09d42d9228fff31ad2fb29187e2",
+      "native_size": [
+        32,
+        52
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_front_wall_cutaway_01__main": {
+      "logical_id": "hospital_front_wall_cutaway_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_front_wall_cutaway_01.png",
+      "path": "art/hospital_front_wall_cutaway_01__main.png",
+      "approval_status": "approved",
+      "sha256": "ac005a89292b249107fcd5ede2bd2de31c945658c3aebe9fe2b2d4c90c15a06f",
+      "native_size": [
+        32,
+        20
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_wall_side_left_01__main": {
+      "logical_id": "hospital_wall_side_left_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_wall_side_left_01.png",
+      "path": "art/hospital_wall_side_left_01__main.png",
+      "approval_status": "approved",
+      "sha256": "f547ff495ca25f3da2b48fbc89b0c4b33c0738b04b3c859ec602d3e2901f027b",
+      "native_size": [
+        20,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_wall_side_right_01__main": {
+      "logical_id": "hospital_wall_side_right_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_wall_side_right_01.png",
+      "path": "art/hospital_wall_side_right_01__main.png",
+      "approval_status": "approved",
+      "sha256": "cf7e8eb6a56945214e85bff417d3b4fc335e55f0a4c309f48d2bb98d0e7d4e17",
+      "native_size": [
+        20,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_sliding_clinical_doors_closed_01__main": {
+      "logical_id": "hospital_sliding_clinical_doors_closed_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_sliding_clinical_doors_closed_01.png",
+      "path": "art/hospital_sliding_clinical_doors_closed_01__main.png",
+      "approval_status": "approved",
+      "sha256": "36053dc913f421f3f22c5a646c39d8527c91ee75767c1990197ed43c55e2da68",
+      "native_size": [
+        64,
+        52
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_sliding_clinical_doors_open_01__main": {
+      "logical_id": "hospital_sliding_clinical_doors_open_01",
+      "role": "main",
+      "source_path": "assets/architecture/hospital_sliding_clinical_doors_open_01.png",
+      "path": "art/hospital_sliding_clinical_doors_open_01__main.png",
+      "approval_status": "approved",
+      "sha256": "7cd5a7addcfe1b126684dfbb53d5e2222f4fcbf3123db94d161ac13129a4852f",
+      "native_size": [
+        64,
+        52
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_sliding_clinical_doors_open_01__left_parked_leaf": {
+      "logical_id": "hospital_sliding_clinical_doors_open_01",
+      "role": "left_parked_leaf",
+      "source_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_left_parked_leaf_01.png",
+      "path": "art/hospital_sliding_clinical_doors_open_01__left_parked_leaf.png",
+      "approval_status": "approved",
+      "sha256": "c2cdf979d9d61b07adf030ba833d410a5ecd70ed1c2f9e4293d1ea06c7fa0ace",
+      "native_size": [
+        28,
+        38
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_sliding_clinical_doors_open_01__right_parked_leaf": {
+      "logical_id": "hospital_sliding_clinical_doors_open_01",
+      "role": "right_parked_leaf",
+      "source_path": "assets/architecture/components/hospital_sliding_clinical_doors_open_01/hospital_sliding_clinical_doors_open_right_parked_leaf_01.png",
+      "path": "art/hospital_sliding_clinical_doors_open_01__right_parked_leaf.png",
+      "approval_status": "approved",
+      "sha256": "44c5bffd5a3be8a5559638bb1a7ca6065526ed2d68c9a9b899f9bba39b198991",
+      "native_size": [
+        28,
+        38
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "wall_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_back_01__repeat": {
+      "logical_id": "hospital_glass_partition_back_01",
+      "role": "repeat",
+      "source_path": "staging/pending/normalized/views/hospital_glass_partition_back_01/repeat_01.png",
+      "path": "art/hospital_glass_partition_back_01__repeat.png",
+      "approval_status": "needs_human_review",
+      "sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+      "native_size": [
+        32,
+        28
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_back_01__main": {
+      "logical_id": "hospital_glass_partition_back_01",
+      "role": "main",
+      "source_path": "staging/pending/normalized/hospital_glass_partition_back_01.png",
+      "path": "art/hospital_glass_partition_back_01__main.png",
+      "approval_status": "needs_human_review",
+      "sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "native_size": [
+        32,
+        28
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_side_left_01__corner_repeat": {
+      "logical_id": "hospital_glass_partition_side_left_01",
+      "role": "corner_repeat",
+      "source_path": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/corner_repeat_01.png",
+      "path": "art/hospital_glass_partition_side_left_01__corner_repeat.png",
+      "approval_status": "needs_human_review",
+      "sha256": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+      "native_size": [
+        12,
+        56
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_side_left_01__repeat": {
+      "logical_id": "hospital_glass_partition_side_left_01",
+      "role": "repeat",
+      "source_path": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/repeat_01.png",
+      "path": "art/hospital_glass_partition_side_left_01__repeat.png",
+      "approval_status": "needs_human_review",
+      "sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "native_size": [
+        12,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_side_left_01__main": {
+      "logical_id": "hospital_glass_partition_side_left_01",
+      "role": "main",
+      "source_path": "staging/pending/normalized/hospital_glass_partition_side_left_01.png",
+      "path": "art/hospital_glass_partition_side_left_01__main.png",
+      "approval_status": "needs_human_review",
+      "sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "native_size": [
+        12,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_side_right_01__corner_repeat": {
+      "logical_id": "hospital_glass_partition_side_right_01",
+      "role": "corner_repeat",
+      "source_path": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/corner_repeat_01.png",
+      "path": "art/hospital_glass_partition_side_right_01__corner_repeat.png",
+      "approval_status": "needs_human_review",
+      "sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+      "native_size": [
+        12,
+        56
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_side_right_01__repeat": {
+      "logical_id": "hospital_glass_partition_side_right_01",
+      "role": "repeat",
+      "source_path": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/repeat_01.png",
+      "path": "art/hospital_glass_partition_side_right_01__repeat.png",
+      "approval_status": "needs_human_review",
+      "sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "native_size": [
+        12,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_side_right_01__main": {
+      "logical_id": "hospital_glass_partition_side_right_01",
+      "role": "main",
+      "source_path": "staging/pending/normalized/hospital_glass_partition_side_right_01.png",
+      "path": "art/hospital_glass_partition_side_right_01__main.png",
+      "approval_status": "needs_human_review",
+      "sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "native_size": [
+        12,
+        32
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_front_cutaway_01__repeat": {
+      "logical_id": "hospital_glass_partition_front_cutaway_01",
+      "role": "repeat",
+      "source_path": "staging/pending/normalized/views/hospital_glass_partition_front_cutaway_01/repeat_01.png",
+      "path": "art/hospital_glass_partition_front_cutaway_01__repeat.png",
+      "approval_status": "needs_human_review",
+      "sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5",
+      "native_size": [
+        32,
+        12
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_glass_partition_front_cutaway_01__main": {
+      "logical_id": "hospital_glass_partition_front_cutaway_01",
+      "role": "main",
+      "source_path": "staging/pending/normalized/hospital_glass_partition_front_cutaway_01.png",
+      "path": "art/hospital_glass_partition_front_cutaway_01__main.png",
+      "approval_status": "needs_human_review",
+      "sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131",
+      "native_size": [
+        32,
+        12
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "architecture_grid",
+      "reuse_scope": "hospital_only"
+    },
+    "reception_counter_small_01__main": {
+      "logical_id": "reception_counter_small_01",
+      "role": "main",
+      "source_path": "assets/reception/reception_counter_small_01.png",
+      "path": "art/reception_counter_small_01__main.png",
+      "approval_status": "approved",
+      "sha256": "7f50567b0a8550fd547d10292acfddb2b73ac195ee5f85d71c68ae743837aa84",
+      "native_size": [
+        58,
+        57
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "waiting_bench_2seat_01__main": {
+      "logical_id": "waiting_bench_2seat_01",
+      "role": "main",
+      "source_path": "assets/reception/waiting_bench_2seat_01.png",
+      "path": "art/waiting_bench_2seat_01__main.png",
+      "approval_status": "approved",
+      "sha256": "2ff89c068a2a6ded4869fff110020005b1936e6afead6eb26438c000719023bb",
+      "native_size": [
+        52,
+        50
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "waiting_chair_01__main": {
+      "logical_id": "waiting_chair_01",
+      "role": "main",
+      "source_path": "assets/reception/waiting_chair_01.png",
+      "path": "art/waiting_chair_01__main.png",
+      "approval_status": "approved",
+      "sha256": "9038c9e0de37ec14e1f36ad5e7671c22405d79745c4d4d6aaf972f113950dbde",
+      "native_size": [
+        40,
+        48
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "lobby_plant_01__main": {
+      "logical_id": "lobby_plant_01",
+      "role": "main",
+      "source_path": "assets/reception/lobby_plant_01.png",
+      "path": "art/lobby_plant_01__main.png",
+      "approval_status": "approved",
+      "sha256": "f34139d2ae2fb245f0f8fc6747a325b3928177f5044a0db6052d21c9dc2931e8",
+      "native_size": [
+        42,
+        59
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "water_cooler_01__main": {
+      "logical_id": "water_cooler_01",
+      "role": "main",
+      "source_path": "assets/reception/water_cooler_01.png",
+      "path": "art/water_cooler_01__main.png",
+      "approval_status": "approved",
+      "sha256": "8b7923f8c4cf67936a197efd440b95a8caa6a54635e63fdd5c9f687124ab027b",
+      "native_size": [
+        35,
+        65
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "brochure_rack_01__main": {
+      "logical_id": "brochure_rack_01",
+      "role": "main",
+      "source_path": "assets/reception/brochure_rack_01.png",
+      "path": "art/brochure_rack_01__main.png",
+      "approval_status": "approved",
+      "sha256": "196439e88266fc9351da0d6f68302e5064a985a5495a59eb60f2df584c320ba7",
+      "native_size": [
+        42,
+        65
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "hand_sanitizer_stand_01__main": {
+      "logical_id": "hand_sanitizer_stand_01",
+      "role": "main",
+      "source_path": "assets/reception/hand_sanitizer_stand_01.png",
+      "path": "art/hand_sanitizer_stand_01__main.png",
+      "approval_status": "approved",
+      "sha256": "d23ab135cc5f3b98ac757a7274ad741e0dc6a148e13da784833688b26c970fe6",
+      "native_size": [
+        23,
+        61
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "self_checkin_kiosk_01__main": {
+      "logical_id": "self_checkin_kiosk_01",
+      "role": "main",
+      "source_path": "assets/reception/self_checkin_kiosk_01.png",
+      "path": "art/self_checkin_kiosk_01__main.png",
+      "approval_status": "approved",
+      "sha256": "a64ab0cebf1e8810827bf1774938916877613ec70af0a030649d3892b85c5b6d",
+      "native_size": [
+        32,
+        57
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "examination_table_01__main": {
+      "logical_id": "examination_table_01",
+      "role": "main",
+      "source_path": "assets/examination/examination_table_01.png",
+      "path": "art/examination_table_01__main.png",
+      "approval_status": "approved",
+      "sha256": "6eb515addc45508657e4831008a5e8beb194938b7c938eb366f0a9e33b684fb4",
+      "native_size": [
+        57,
+        60
+      ],
+      "logical_footprint": [
+        1,
+        2
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "hospital_only"
+    },
+    "doctor_stool_01__main": {
+      "logical_id": "doctor_stool_01",
+      "role": "main",
+      "source_path": "assets/examination/doctor_stool_01.png",
+      "path": "art/doctor_stool_01__main.png",
+      "approval_status": "approved",
+      "sha256": "2bd28c8bd2caa8d7f3714dbfcc66f748a13ba1c192b3014d998523a29570fc97",
+      "native_size": [
+        45,
+        45
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "examination_lamp_01__main": {
+      "logical_id": "examination_lamp_01",
+      "role": "main",
+      "source_path": "assets/examination/examination_lamp_01.png",
+      "path": "art/examination_lamp_01__main.png",
+      "approval_status": "approved",
+      "sha256": "bf2d7986b3137f01b408ed19bebe01b91b7330f188da647e81284521022b730c",
+      "native_size": [
+        57,
+        61
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "hospital_only"
+    },
+    "exam_room_sink_unit_01__main": {
+      "logical_id": "exam_room_sink_unit_01",
+      "role": "main",
+      "source_path": "assets/examination/exam_room_sink_unit_01.png",
+      "path": "art/exam_room_sink_unit_01__main.png",
+      "approval_status": "approved",
+      "sha256": "334fb8882fb4de3013c09b53aa97e2797fdfd3d5bc05ea747296947cc252f62b",
+      "native_size": [
+        45,
+        61
+      ],
+      "logical_footprint": [
+        2,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "exam_room_supply_cabinet_01__main": {
+      "logical_id": "exam_room_supply_cabinet_01",
+      "role": "main",
+      "source_path": "assets/examination/exam_room_supply_cabinet_01.png",
+      "path": "art/exam_room_supply_cabinet_01__main.png",
+      "approval_status": "approved",
+      "sha256": "9035c4c769fa95f4c4bb3d15f337b005b8448465fcb9eb8db53df614c1f68606",
+      "native_size": [
+        52,
+        63
+      ],
+      "logical_footprint": [
+        1,
+        2
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "patient_scale_01__main": {
+      "logical_id": "patient_scale_01",
+      "role": "main",
+      "source_path": "assets/examination/patient_scale_01.png",
+      "path": "art/patient_scale_01__main.png",
+      "approval_status": "approved",
+      "sha256": "9d71d850f30c24fd74b15898dfc51ed7a169236859b8aa86a153626efa66cc01",
+      "native_size": [
+        34,
+        63
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "hospital_only"
+    },
+    "hospital_bed_standard_01__main": {
+      "logical_id": "hospital_bed_standard_01",
+      "role": "main",
+      "source_path": "assets/patient_rooms/hospital_bed_standard_01.png",
+      "path": "art/hospital_bed_standard_01__main.png",
+      "approval_status": "approved",
+      "sha256": "7ca74a1f273d1881c710c441a73bb3bd5006e72acdac4b2c4021ecbd5fe12ee9",
+      "native_size": [
+        48,
+        64
+      ],
+      "logical_footprint": [
+        1,
+        2
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "hospital_only"
+    },
+    "bedside_cabinet_01__main": {
+      "logical_id": "bedside_cabinet_01",
+      "role": "main",
+      "source_path": "assets/patient_rooms/bedside_cabinet_01.png",
+      "path": "art/bedside_cabinet_01__main.png",
+      "approval_status": "approved",
+      "sha256": "62c5decd09bbbb5a0d18cb1b0e16178e522b9f3da47db4f38a6bb4f052c82993",
+      "native_size": [
+        35,
+        43
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "hospital_only"
+    },
+    "visitor_chair_patient_room_01__main": {
+      "logical_id": "visitor_chair_patient_room_01",
+      "role": "main",
+      "source_path": "assets/patient_rooms/visitor_chair_patient_room_01.png",
+      "path": "art/visitor_chair_patient_room_01__main.png",
+      "approval_status": "approved",
+      "sha256": "35e67c927655da11dcaf1b36ff4957c91973784a1d02387e3430fbf65277da7c",
+      "native_size": [
+        48,
+        56
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "iv_stand_single_01__main": {
+      "logical_id": "iv_stand_single_01",
+      "role": "main",
+      "source_path": "assets/icu/iv_stand_single_01.png",
+      "path": "art/iv_stand_single_01__main.png",
+      "approval_status": "approved",
+      "sha256": "4f10686120d7761818982cc36ac0c129e289e265b6e899aa312130f174d27255",
+      "native_size": [
+        33,
+        64
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "hospital_only"
+    },
+    "patient_room_wardrobe_01__main": {
+      "logical_id": "patient_room_wardrobe_01",
+      "role": "main",
+      "source_path": "assets/patient_rooms/patient_room_wardrobe_01.png",
+      "path": "art/patient_room_wardrobe_01__main.png",
+      "approval_status": "approved",
+      "sha256": "c234c89fe0f40e887fdacf8d9c9c494cceb30a13fa7e42f8d05c85d2ecb67c60",
+      "native_size": [
+        49,
+        65
+      ],
+      "logical_footprint": [
+        1,
+        2
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    },
+    "patient_room_waste_bin_01__main": {
+      "logical_id": "patient_room_waste_bin_01",
+      "role": "main",
+      "source_path": "assets/patient_rooms/patient_room_waste_bin_01.png",
+      "path": "art/patient_room_waste_bin_01__main.png",
+      "approval_status": "approved",
+      "sha256": "782cada74911eb695e7f3aa13f4dd60a3873139e118be1cb8f62dbc0b7383e2c",
+      "native_size": [
+        35,
+        51
+      ],
+      "logical_footprint": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "reuse_scope": "everyday_world_common"
+    }
+  },
+  "placements": [
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        112
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        144
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        176
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        208
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        240
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        272
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        304
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        336
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        368
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        400
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        48,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        80,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        112,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        144,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        176,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        208,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        240,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        272,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        304,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        336,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        368,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        400,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        432,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        464,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        496,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        528,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        560,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        592,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        624,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        656,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        688,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        720,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        752,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_floor_plain_01__main",
+      "position": [
+        784,
+        432
+      ],
+      "offset": [
+        -16,
+        -16
+      ],
+      "kind": "floor",
+      "state": "",
+      "collision": null
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        48,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        32,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        48,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        32,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        80,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        64,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        80,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        64,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        112,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        96,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        112,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        96,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        144,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        128,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        144,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        128,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        176,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        160,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        176,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        160,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        208,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        192,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        208,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        192,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        240,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        224,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        240,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        224,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        272,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        256,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        272,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        256,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        304,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        288,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        304,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        288,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        336,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        320,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        336,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        320,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        368,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        352,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        368,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        352,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        400,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        384,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        400,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        384,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        432,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        416,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        432,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        416,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        464,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        448,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        464,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        448,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        496,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        480,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        496,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        480,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        528,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        512,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        528,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        512,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        560,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        544,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        560,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        544,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        592,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        576,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        592,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        576,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        624,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        608,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        624,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        608,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        656,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        640,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        656,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        640,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        688,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        672,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        688,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        672,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        720,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        704,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        720,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        704,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        752,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        736,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        752,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        736,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        784,
+        96
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        768,
+        88,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_front_wall_cutaway_01__main",
+      "position": [
+        784,
+        448
+      ],
+      "offset": [
+        -16,
+        -20
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        768,
+        440,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        112
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        96,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        112
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        96,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        144
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        128,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        144
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        128,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        176
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        160,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        176
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        160,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        208
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        192,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        208
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        192,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        240
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        224,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        240
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        224,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        272
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        256,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        272
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        256,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        304
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        288,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        304
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        288,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        336
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        320,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        336
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        320,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        368
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        352,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        368
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        352,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        400
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        384,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        400
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        384,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        32,
+        432
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        24,
+        416,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_right_01__main",
+      "position": [
+        800,
+        432
+      ],
+      "offset": [
+        0,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        800,
+        416,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        592,
+        336
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        576,
+        328,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        624,
+        336
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        608,
+        328,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        720,
+        336
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        704,
+        328,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        752,
+        336
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        736,
+        328,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_back_straight_01__main",
+      "position": [
+        784,
+        336
+      ],
+      "offset": [
+        -16,
+        -52
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        768,
+        328,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        112
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        96,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        144
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        128,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        176
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        160,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        208
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        192,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        240
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        224,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        272
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        256,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_wall_side_left_01__main",
+      "position": [
+        576,
+        304
+      ],
+      "offset": [
+        -20,
+        -16
+      ],
+      "kind": "wall",
+      "state": "",
+      "collision": [
+        568,
+        288,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_sliding_clinical_doors_closed_01__main",
+      "position": [
+        672,
+        336
+      ],
+      "offset": [
+        -32,
+        -52
+      ],
+      "kind": "door",
+      "state": "closed",
+      "collision": [
+        644,
+        328,
+        56,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_sliding_clinical_doors_open_01__main",
+      "position": [
+        672,
+        336
+      ],
+      "offset": [
+        -32,
+        -52
+      ],
+      "kind": "door",
+      "state": "open",
+      "collision": null
+    },
+    {
+      "asset": "hospital_sliding_clinical_doors_open_01__left_parked_leaf",
+      "position": [
+        672,
+        336
+      ],
+      "offset": [
+        -56,
+        -38
+      ],
+      "kind": "door",
+      "state": "open",
+      "collision": null
+    },
+    {
+      "asset": "hospital_sliding_clinical_doors_open_01__right_parked_leaf",
+      "position": [
+        672,
+        336
+      ],
+      "offset": [
+        28,
+        -38
+      ],
+      "kind": "door",
+      "state": "open",
+      "collision": null
+    },
+    {
+      "kind": "contact",
+      "position": [
+        640,
+        332
+      ],
+      "collision": [
+        640,
+        328,
+        4,
+        8
+      ],
+      "state": ""
+    },
+    {
+      "kind": "contact",
+      "position": [
+        700,
+        332
+      ],
+      "collision": [
+        700,
+        328,
+        4,
+        8
+      ],
+      "state": ""
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__repeat",
+      "position": [
+        336,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        320,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__repeat",
+      "position": [
+        368,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        352,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__repeat",
+      "position": [
+        400,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        384,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__repeat",
+      "position": [
+        432,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        416,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__repeat",
+      "position": [
+        464,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        448,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__repeat",
+      "position": [
+        496,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        480,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_back_01__main",
+      "position": [
+        528,
+        148
+      ],
+      "offset": [
+        -16,
+        -28
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        512,
+        140,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_left_01__corner_repeat",
+      "position": [
+        320,
+        160
+      ],
+      "offset": [
+        -4,
+        -40
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        316,
+        144,
+        8,
+        32
+      ],
+      "sort_y": 144
+    },
+    {
+      "asset": "hospital_glass_partition_side_left_01__repeat",
+      "position": [
+        320,
+        192
+      ],
+      "offset": [
+        -4,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        316,
+        176,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_left_01__repeat",
+      "position": [
+        320,
+        224
+      ],
+      "offset": [
+        -4,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        316,
+        208,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_left_01__repeat",
+      "position": [
+        320,
+        256
+      ],
+      "offset": [
+        -4,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        316,
+        240,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_left_01__main",
+      "position": [
+        320,
+        288
+      ],
+      "offset": [
+        -4,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        316,
+        272,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_right_01__corner_repeat",
+      "position": [
+        544,
+        160
+      ],
+      "offset": [
+        -8,
+        -40
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        540,
+        144,
+        8,
+        32
+      ],
+      "sort_y": 144
+    },
+    {
+      "asset": "hospital_glass_partition_side_right_01__repeat",
+      "position": [
+        544,
+        192
+      ],
+      "offset": [
+        -8,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        540,
+        176,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_right_01__repeat",
+      "position": [
+        544,
+        224
+      ],
+      "offset": [
+        -8,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        540,
+        208,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_right_01__repeat",
+      "position": [
+        544,
+        256
+      ],
+      "offset": [
+        -8,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        540,
+        240,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_side_right_01__main",
+      "position": [
+        544,
+        288
+      ],
+      "offset": [
+        -8,
+        -16
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        540,
+        272,
+        8,
+        32
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_front_cutaway_01__repeat",
+      "position": [
+        336,
+        304
+      ],
+      "offset": [
+        -16,
+        -4
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        320,
+        300,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_front_cutaway_01__main",
+      "position": [
+        368,
+        304
+      ],
+      "offset": [
+        -16,
+        -4
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        352,
+        300,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_front_cutaway_01__repeat",
+      "position": [
+        464,
+        304
+      ],
+      "offset": [
+        -16,
+        -4
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        448,
+        300,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_front_cutaway_01__repeat",
+      "position": [
+        496,
+        304
+      ],
+      "offset": [
+        -16,
+        -4
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        480,
+        300,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "hospital_glass_partition_front_cutaway_01__main",
+      "position": [
+        528,
+        304
+      ],
+      "offset": [
+        -16,
+        -4
+      ],
+      "kind": "glass",
+      "state": "",
+      "collision": [
+        512,
+        300,
+        32,
+        8
+      ]
+    },
+    {
+      "asset": "reception_counter_small_01__main",
+      "position": [
+        144,
+        224
+      ],
+      "offset": [
+        -29.0,
+        -57
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        118.0,
+        200,
+        52,
+        24
+      ]
+    },
+    {
+      "asset": "waiting_bench_2seat_01__main",
+      "position": [
+        112,
+        320
+      ],
+      "offset": [
+        -26.0,
+        -50
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        88.0,
+        296,
+        48,
+        24
+      ]
+    },
+    {
+      "asset": "waiting_chair_01__main",
+      "position": [
+        208,
+        320
+      ],
+      "offset": [
+        -20.0,
+        -48
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        194.0,
+        300,
+        28,
+        20
+      ]
+    },
+    {
+      "asset": "lobby_plant_01__main",
+      "position": [
+        80,
+        160
+      ],
+      "offset": [
+        -21.0,
+        -59
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        69.0,
+        142,
+        22,
+        18
+      ]
+    },
+    {
+      "asset": "water_cooler_01__main",
+      "position": [
+        256,
+        160
+      ],
+      "offset": [
+        -17.5,
+        -65
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        244.0,
+        140,
+        24,
+        20
+      ]
+    },
+    {
+      "asset": "brochure_rack_01__main",
+      "position": [
+        256,
+        256
+      ],
+      "offset": [
+        -21.0,
+        -65
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        243.0,
+        238,
+        26,
+        18
+      ]
+    },
+    {
+      "asset": "hand_sanitizer_stand_01__main",
+      "position": [
+        288,
+        352
+      ],
+      "offset": [
+        -11.5,
+        -61
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        280.0,
+        338,
+        16,
+        14
+      ]
+    },
+    {
+      "asset": "self_checkin_kiosk_01__main",
+      "position": [
+        80,
+        240
+      ],
+      "offset": [
+        -16.0,
+        -57
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        68.0,
+        220,
+        24,
+        20
+      ]
+    },
+    {
+      "asset": "examination_table_01__main",
+      "position": [
+        400,
+        240
+      ],
+      "offset": [
+        -28.5,
+        -60
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        381.0,
+        192,
+        38,
+        48
+      ]
+    },
+    {
+      "asset": "doctor_stool_01__main",
+      "position": [
+        464,
+        264
+      ],
+      "offset": [
+        -22.5,
+        -45
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        451.0,
+        244,
+        26,
+        20
+      ]
+    },
+    {
+      "asset": "examination_lamp_01__main",
+      "position": [
+        352,
+        208
+      ],
+      "offset": [
+        -28.5,
+        -61
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        341.0,
+        190,
+        22,
+        18
+      ]
+    },
+    {
+      "asset": "exam_room_sink_unit_01__main",
+      "position": [
+        464,
+        192
+      ],
+      "offset": [
+        -22.5,
+        -61
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        446.0,
+        168,
+        36,
+        24
+      ]
+    },
+    {
+      "asset": "exam_room_supply_cabinet_01__main",
+      "position": [
+        528,
+        400
+      ],
+      "offset": [
+        -26.0,
+        -63
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        508.0,
+        374,
+        40,
+        26
+      ]
+    },
+    {
+      "asset": "patient_scale_01__main",
+      "position": [
+        352,
+        272
+      ],
+      "offset": [
+        -17.0,
+        -63
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        341.0,
+        252,
+        22,
+        20
+      ]
+    },
+    {
+      "asset": "hospital_bed_standard_01__main",
+      "position": [
+        672,
+        224
+      ],
+      "offset": [
+        -24.0,
+        -64
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        654.0,
+        172,
+        36,
+        52
+      ]
+    },
+    {
+      "asset": "bedside_cabinet_01__main",
+      "position": [
+        736,
+        192
+      ],
+      "offset": [
+        -17.5,
+        -43
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        722.0,
+        170,
+        28,
+        22
+      ]
+    },
+    {
+      "asset": "visitor_chair_patient_room_01__main",
+      "position": [
+        736,
+        272
+      ],
+      "offset": [
+        -24.0,
+        -56
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        720.0,
+        248,
+        32,
+        24
+      ]
+    },
+    {
+      "asset": "iv_stand_single_01__main",
+      "position": [
+        624,
+        192
+      ],
+      "offset": [
+        -16.5,
+        -64
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        614.0,
+        176,
+        20,
+        16
+      ]
+    },
+    {
+      "asset": "patient_room_wardrobe_01__main",
+      "position": [
+        768,
+        144
+      ],
+      "offset": [
+        -24.5,
+        -65
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        749.0,
+        118,
+        38,
+        26
+      ]
+    },
+    {
+      "asset": "patient_room_waste_bin_01__main",
+      "position": [
+        608,
+        272
+      ],
+      "offset": [
+        -17.5,
+        -51
+      ],
+      "kind": "prop",
+      "state": "",
+      "collision": [
+        596.0,
+        254,
+        24,
+        18
+      ]
+    }
+  ]
+}
