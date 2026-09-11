@@ -1,0 +1,43 @@
+{
+  "pass": true,
+  "errors": [],
+  "expected_counts": {
+    "manifest": 220,
+    "approved": 220,
+    "needs_human_review": 0
+  },
+  "observed_counts": {
+    "manifest": 224,
+    "approved": 220,
+    "needs_human_review": 4
+  },
+  "metadata_changes": [
+    "metadata/catalog.csv",
+    "metadata/manifest.json"
+  ],
+  "catalog_policy": "Same columns; exact old values; one row per parent, alternatives excluded",
+  "mode": "authorized_batch13_production_transition",
+  "unchanged_state_pass": false,
+  "protected_file_count": 2436,
+  "unchanged_protected_file_count": 2434,
+  "changed_or_missing_protected_files": [],
+  "unauthorized_additions": [],
+  "authorized_new_ids": [
+    "hospital_glass_partition_back_01",
+    "hospital_glass_partition_side_left_01",
+    "hospital_glass_partition_side_right_01",
+    "hospital_glass_partition_front_cutaway_01"
+  ],
+  "native_view_count": 12,
+  "output_derivation": {
+    "pass": true,
+    "errors": [],
+    "methods": [
+      "Exact output hash ledger",
+      "Native runs and placements reassembled through metadata",
+      "Separate source-over recomposition",
+      "Four immutable validation scene controls",
+      "Exact package member derivation"
+    ]
+  }
+}

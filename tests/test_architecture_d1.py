@@ -6,6 +6,7 @@ from PIL import Image
 import validate_architecture_d0 as d0
 import validate_architecture_d1 as d1
 from rastalr_pipeline.snapshot import compare_snapshots
+from rastalr_pipeline.production_transition import compare_live_snapshot
 
 
 @pytest.fixture(scope="module")
@@ -159,4 +160,4 @@ def test_snapshot_allows_only_authorized_new_files_and_never_weakens_old_hashes(
 def test_original_package_and_task_historical_files_are_unchanged():
     assert d1.package_integrity()["pass"]
     baseline=d0.read_json(d1.OUT/"production_before.json")
-    assert compare_snapshots(baseline,d1.task_snapshot(),allowed_addition_prefixes=d0.AUTHORIZED_REFERENCE_ADDITIONS)["pass"]
+    assert compare_live_snapshot(baseline,d1.task_snapshot(),allowed_addition_prefixes=d0.AUTHORIZED_REFERENCE_ADDITIONS)["pass"]

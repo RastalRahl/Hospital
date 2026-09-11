@@ -7,6 +7,7 @@ import validate_architecture_d2 as history
 import validate_architecture_d2_v2 as side
 import validate_architecture_d4 as d4
 from rastalr_pipeline.snapshot import compare_snapshots
+from rastalr_pipeline.production_transition import compare_live_snapshot
 
 
 @pytest.fixture(scope='module')
@@ -116,10 +117,10 @@ def test_narrow_d4_addition_permission_keeps_existing_hashes_mandatory(tmp_path,
 
 
 def test_all_historical_bytes_and_production_counts_unchanged():
-    q=compare_snapshots(d0.read_json(d4.OUT/'production_before.json'),history.snapshot(),allowed_addition_prefixes=(d4.PREFIX,
+    q=compare_live_snapshot(d0.read_json(d4.OUT/'production_before.json'),history.snapshot(),allowed_addition_prefixes=(d4.PREFIX,
         'references/architecture/master_validation_D4_appearance_v1/'))
     assert q['pass'] and q['protected_file_count']==2022
-    assert q['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}
+    assert q['observed_counts']=={'manifest':224,'approved':220,'needs_human_review':4}
 
 
 def test_contract_proposal_and_source_hashes_still_match():

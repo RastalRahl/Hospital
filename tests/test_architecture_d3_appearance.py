@@ -9,6 +9,7 @@ import validate_architecture_d2_appearance as d2app
 import validate_architecture_d3 as d3
 import validate_architecture_d3_appearance as app
 from rastalr_pipeline.snapshot import compare_snapshots
+from rastalr_pipeline.production_transition import compare_live_snapshot
 
 
 @pytest.fixture(scope='module')
@@ -116,8 +117,8 @@ def test_authorized_additions_keep_exact_hash_protection(tmp_path,action,allowed
 
 
 def test_all_historical_production_files_and_counts_unchanged():
-    q=compare_snapshots(d0.read_json(app.OUT/'production_before.json'),history.snapshot(),allowed_addition_prefixes=(app.PREFIX,
+    q=compare_live_snapshot(d0.read_json(app.OUT/'production_before.json'),history.snapshot(),allowed_addition_prefixes=(app.PREFIX,
         'references/architecture/master_validation_D4_v1/',
         'references/architecture/master_validation_D4_appearance_v1/'))
     assert q['pass'] and q['protected_file_count']==1810
-    assert q['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}
+    assert q['observed_counts']=={'manifest':224,'approved':220,'needs_human_review':4}

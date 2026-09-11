@@ -8,6 +8,7 @@ import validate_architecture_d2_v2 as side
 import validate_architecture_d4 as d4
 import validate_architecture_d4_appearance as app
 from rastalr_pipeline.snapshot import compare_snapshots
+from rastalr_pipeline.production_transition import compare_live_snapshot
 
 
 @pytest.fixture(scope='module')
@@ -129,6 +130,6 @@ def test_authorized_additions_preserve_existing_hashes_in_allowed_tree(tmp_path,
 
 
 def test_all_historical_bytes_and_production_counts_are_preserved():
-    q=compare_snapshots(d0.read_json(app.OUT/'production_before.json'),history.snapshot(),allowed_addition_prefixes=(app.PREFIX,))
+    q=compare_live_snapshot(d0.read_json(app.OUT/'production_before.json'),history.snapshot(),allowed_addition_prefixes=(app.PREFIX,))
     assert q['pass'] and q['protected_file_count']==2145
-    assert q['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}
+    assert q['observed_counts']=={'manifest':224,'approved':220,'needs_human_review':4}

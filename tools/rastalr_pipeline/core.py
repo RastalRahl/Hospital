@@ -380,6 +380,9 @@ def _batch_assets(batch_path: str | Path) -> list[dict[str, Any]]:
 
 
 def _validate_batch_item(item: dict[str, Any]) -> None:
+    if item.get("views") is not None:
+        from .views import validate_schema
+        validate_schema(item)
     missing = [key for key in ("source", "category", "asset_type") if not item.get(key)]
     if missing:
         raise ValueError(f"Batch asset missing required field(s): {', '.join(missing)}")
@@ -440,6 +443,14 @@ def _validate_batch_item(item: dict[str, Any]) -> None:
 
 def ingest_batch(batch_path: str | Path, *, force: bool = False) -> list[dict[str, Any]]:
     """Crop configured source images into traceable pending raw files and register them."""
+    items = _batch_assets(batch_path)
+    if any("views" in item for item in items):
+        from .views import ingest
+        if not all(item.get("ingestion_mode") == "validated_native_copy" for item in items):
+            raise ValueError("Exclusive native-copy batches must not mix legacy crop ingestion")
+        for item in items:
+            _validate_batch_item(item)
+        return ingest(__import__(__name__, fromlist=["ROOT"]), items)
     manifest = load_manifest()
     ingested: list[dict[str, Any]] = []
     for item in _batch_assets(batch_path):
@@ -554,6 +565,12 @@ def normalize_pending(
             continue
         if asset.get("approval_status") == "approved" or not asset.get("staging_path"):
             continue
+        if asset.get("ingestion_mode") == "validated_native_copy":
+            from .views import qa_asset
+            if qa_asset(ROOT, asset)["status"] != "pass":
+                raise ValueError("Already-native exclusive view failed QA; refusing normalization/repair")
+            normalized.append(asset["id"])
+            continue
         raw_path = repo_path(asset["staging_path"])
         if not raw_path.is_file():
             raise FileNotFoundError(f"Missing staged raw image for {asset['id']}: {raw_path}")
@@ -660,6 +677,10 @@ def approve_assets(asset_ids: Iterable[str], *, human_qa_disposition: str | None
     if missing:
         raise ValueError(f"Cannot approve missing asset(s): {', '.join(missing)}")
     approved: list[str] = []
+    from .views import promotion_plan, promote
+    # Validate every requested exclusive parent's views before any file is copied.
+    view_plans = {asset_id: promotion_plan(ROOT, by_id[asset_id]) for asset_id in requested
+                  if by_id[asset_id].get("views") and by_id[asset_id].get("approval_status") != "approved"}
     for asset_id in requested:
         asset = by_id[asset_id]
         if asset.get("approval_status") == "approved":
@@ -676,6 +697,11 @@ def approve_assets(asset_ids: Iterable[str], *, human_qa_disposition: str | None
             asset["human_qa_reviewed_at"] = datetime.now(timezone.utc).isoformat()
         elif qa_status != "pass":
             raise ValueError(f"Cannot approve {asset_id}; technical QA status is {qa_status!r}.")
+        if asset_id in view_plans:
+            promote(ROOT, asset, view_plans[asset_id])
+            asset["updated_at"] = datetime.now(timezone.utc).isoformat()
+            approved.append(asset_id)
+            continue
         source = repo_path(asset.get("normalized_path", ""))
         if not source.is_file():
             raise FileNotFoundError(f"Cannot approve {asset_id}; normalized image is missing: {source}")
@@ -762,13 +788,21 @@ def _architecture_component_qa_report(
     return report
 
 
-def run_qa() -> dict[str, Any]:
+def run_qa(*, asset_ids: Iterable[str] | None = None, write_reports: bool = True) -> dict[str, Any]:
     manifest = load_manifest()
+    selected = set(asset_ids) if asset_ids is not None else None
     reports: list[dict[str, Any]] = []
     for asset in manifest["assets"]:
+        if selected is not None and asset["id"] not in selected:
+            continue
         raw_path = repo_path(asset.get("staging_path", ""))
         image_path = repo_path(asset.get("normalized_path") or asset.get("staging_path", ""))
-        if not raw_path.is_file() or not image_path.is_file():
+        if asset.get("qa_profile") == "architecture_glass":
+            from .views import qa_asset
+            report = qa_asset(ROOT, asset)
+            for name, result in report.get("views", {}).items():
+                asset["views"][name]["qa_status"] = result["status"]
+        elif not raw_path.is_file() or not image_path.is_file():
             missing = raw_path if not raw_path.is_file() else image_path
             report = {"status": "fail", "issues": [{"code": "missing_staged_file", "severity": "error", "message": str(missing)}]}
         elif asset.get("normalization_mode") == "architecture_grid_preserving":
@@ -843,12 +877,15 @@ def run_qa() -> dict[str, Any]:
     manifest["assets"].sort(key=lambda entry: entry["id"])
     save_manifest(manifest)
     near_duplicates = find_near_duplicates(manifest["assets"])
+    if selected is not None:
+        near_duplicates = [m for m in near_duplicates if m["first"] in selected or m["second"] in selected]
     result = {
         "generated_at": datetime.now(timezone.utc).isoformat(), "assets_checked": len(reports),
         "status_counts": dict(Counter(report["status"] for report in reports)), "assets": reports,
         "near_duplicates": near_duplicates,
     }
-    write_qa_reports(result)
+    if write_reports:
+        write_qa_reports(result)
     return result
 
 
@@ -962,6 +999,9 @@ def create_review_bundle(batch_path: str | Path) -> Path:
         for asset in assets:
             normalized = repo_path(asset["normalized_path"])
             archive.write(normalized, f"normalized/{asset['filename']}")
+            for name, view in asset.get("views", {}).items():
+                if name != asset.get("default_view"):
+                    archive.write(repo_path(view["normalized_path"]), f"normalized/views/{asset['id']}/{Path(view['normalized_path']).name}")
             if asset.get("qa_status") == "warning":
                 raw = repo_path(asset["staging_path"])
                 archive.write(raw, f"raw_warnings/{asset['filename']}")

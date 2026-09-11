@@ -1,0 +1,316 @@
+Continue in the existing Hospital repository and conversation.
+Read AGENTS.md first and follow it.
+
+TASK
+Architecture Production Batch 13: Modular Glass Partitions (D1-D4).
+Stage the validated artwork as production candidates and STOP for human
+visual review. This is ingestion/staging, not another reference-validation
+round and not final approval.
+
+BASELINE AND AUTHORIZATION
+Latest completed D4 appearance-validation commit:
+a1ac6cb6f1bc9522a269af91c6c992bbc4a34324
+Recorded complete suite: 305 passed.
+Expected current inventory: 220 manifest / 220 approved / 0 needs_human_review.
+Verify HEAD, worktree, inventory and the actual baseline suite before writing.
+Do not reset to the pinned commit if newer legitimate work exists.
+If these four assets are already staged, verify and finish idempotently rather
+than creating duplicates. Report other starting-state conflicts before mutation.
+Preserve unrelated user changes. No force-push or published-history rewrite.
+
+SUCCESSFUL STAGING MUST END AT
+- Manifest: 224 logical entries.
+- Approved: 220.
+- Needs human review: 4, exactly the four IDs below.
+- Catalog: 224 logical rows.
+- Batch 13: NEEDS_HUMAN_REVIEW, or the repository's equivalent spelling.
+- Twelve native implementation-view PNGs associated with four logical assets.
+No asset or implementation view is approved in this task.
+
+1. READ THE COMMITTED INPUTS AND PRODUCTION PIPELINE
+
+Read the machine-readable and human-readable PASS reports in:
+- references/architecture/master_validation_D1_v1/
+- references/architecture/master_validation_D2_appearance_v1/
+- references/architecture/master_validation_D3_appearance_v1/
+- references/architecture/master_validation_D4_appearance_v1/
+
+Read the corresponding authoritative contracts in:
+- references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json
+- references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json
+- references/architecture/master_validation_D3_v1/d3_geometry_alpha_contract_proposed.json
+- references/architecture/master_validation_D4_v1/d4_geometry_alpha_contract_proposed.json
+
+Discover the exact validated native and source-scale PNG paths from the reports
+and preserved packages. Do not ask for uploads or use old flat scaffolds.
+
+Inspect metadata/manifest.json, metadata/catalog.csv, Batch 11/12 metadata,
+relevant pipeline/schema/ingestion/QA/catalog/preview/bundle/approval code,
+and the existing geometry and historical-snapshot tests.
+
+The current task authorizes staging these reviewed designs. It does not
+retroactively change a historical proposed contract to approved, or authorize
+recording a human production approval. Preserve all historical contracts,
+validation reports, packaged inputs and snapshots unchanged.
+
+2. EXACT LOGICAL ASSETS AND IMPLEMENTATION VIEWS
+
+Create exactly these four logical IDs, category architecture:
+
+D1: hospital_glass_partition_back_01
+  main, repeat: 32x28 native.
+  cell anchor [16,20]; image anchor [16,28]; cell-relative origin [0,-8].
+  source export 256x224; horizontal stride [32,0].
+
+D2: hospital_glass_partition_side_left_01
+  main, repeat: 12x32; source 96x256.
+    cell anchor [16,16]; image anchor [4,16]; origin [12,0].
+  corner_main, corner_repeat: 12x56; source 96x448.
+    cell anchor [16,16]; image anchor [4,40]; origin [12,-24].
+  depth stride [0,32].
+
+D3: hospital_glass_partition_side_right_01
+  main, repeat: 12x32; source 96x256.
+    cell anchor [16,16]; image anchor [8,16]; origin [8,0].
+  corner_main, corner_repeat: 12x56; source 96x448.
+    cell anchor [16,16]; image anchor [8,40]; origin [8,-24].
+  depth stride [0,32].
+
+D4: hospital_glass_partition_front_cutaway_01
+  main, repeat: 32x12 native; source 256x96.
+  cell anchor [16,16]; image anchor [16,4]; origin [0,12].
+  horizontal stride [32,0].
+
+Use half-open rectangles [left, top, right, bottom).
+Keep D1's different cell anchor; do not normalize it to [16,16].
+Every logical footprint is 1x1, independent of image dimensions or overhang.
+If a stated value conflicts with the committed PASS evidence, report and stop
+rather than guessing or altering the artwork.
+
+There are 2 + 4 + 4 + 2 = 12 native views: four default mains plus eight
+alternatives. Source-scale exports, preview images and alternate views are not
+additional logical assets. Existing Batch 12 components remain unchanged.
+
+3. STAGE EXISTING ART WITHOUT REDRAWING OR RENORMALIZING IT
+
+Stage byte-for-byte copies of the twelve validated native PNGs under the
+repository's pending-production conventions. Use stable lowercase snake_case
+filenames and deterministic per-parent alternative-view locations.
+
+The default main file can use the logical asset's filename. A main view record
+may point to that same file; do not create a duplicate main copy just to fill
+out a views list. Record each source-to-staged path and SHA-256 mapping.
+
+Preserve RGBA, dimensions, all RGB and alpha pixels, transparent RGB where
+present, numeric anchors, source provenance and validated view relationships.
+No repaint, flip, warp, trim, padding, centering, quantization or re-encoding.
+No crop from any montage and no new generative artwork.
+
+Normalization remains architecture_grid_preserving. Working-source provenance
+has source_scale 8. The copied native files are already native: DO NOT shrink
+them by eight again. Independently check their equality to the exact
+nearest-neighbor reduction of the corresponding original 8x exports.
+
+Do not place these files in approved production directories yet. Preserve the
+normal pending -> technical QA -> human review -> explicit promotion workflow.
+
+4. REPRESENT EXCLUSIVE VIEWS, NOT ADDITIVE DOOR OVERLAYS
+
+The existing Batch 12 components model describes additive pieces. D1-D4's
+alternate views replace one another; they must never all be composited together.
+
+Use the smallest backward-compatible manifest extension needed, preferably an
+optional named views collection with default_view and explicit exclusive
+selection semantics. An equivalent representation is acceptable only if it
+cannot be confused with additive components and is documented/tested.
+
+For each view store its role/name, staged path, dimensions, image anchor,
+cell anchor, cell-relative render origin, alpha-region contract, source/native
+provenance, validation reference, hash and technical QA result.
+
+For each parent preserve normal metadata: ID, category/subcategory, footprint,
+reuse scope according to existing definitions, normalization, source scale,
+approval status, tags, structural role and provenance. Do not create an
+unsupported reuse-scope spelling or infer footprint from alpha bounds.
+
+Selection semantics:
+- D1/D4: main for a standalone panel or last cell, repeat otherwise.
+- D2/D3: first cell at a reviewed back corner uses corner_main when also final,
+  or corner_repeat when followed by another side cell. Subsequent side cells
+  use repeat until the final main. Straight runs without a back corner do not
+  use corner views.
+- Main/repeat/corner alternatives are selected once per logical placement.
+- Keep existing terminal-pane width differences and four-pixel supports.
+- Side runs ending at D4 keep the validated terminal support/shoulders.
+
+Add a small reusable view resolver/assembler driven by manifest metadata and
+placement context. Do not hardcode pending paths, filenames or one scene's
+absolute coordinates into previews. Missing/invalid required views must fail
+clearly, not silently fall back to another orientation.
+
+Update only the relevant schema validation, ingestion, path resolution, QA,
+preview, catalog and bundle handling. Keep existing assets and Batch 12 additive
+component behavior backward-compatible. Catalog stays one row per parent;
+view_count may be a separate field, not component_count or inventory count.
+
+Ensure the future explicit-approval path will promote all of a parent's views
+and update their paths together. Test this in an isolated temporary project,
+including a missing-view failure before any partial move. DO NOT call approval
+on the real four assets in this task.
+
+5. USE GLASS-SPECIFIC PRODUCTION QA
+
+The old full-box Architecture check does not validate glass and rejects valid
+transparent regions in corner carriers. Do not weaken it globally or label the
+glass as a generic masked_overlay merely to obtain PASS.
+
+Implement an opt-in contract/region-aware glass QA route used by the actual
+production pipeline for every Batch 13 view. Check the file's true mode before
+any conversion, exact dimensions, required opaque frame, translucent pane,
+declared exterior, and numeric placement metadata.
+
+D1 must retain its full per-pixel alpha map with pane values 150/210 and frame
+255. D2/D3/D4 pane alpha is 150, frame 255, and undeclared corner exterior is 0.
+Native file identity with the validated source is also required.
+
+Reports must separate fully transparent, partially transparent and opaque
+pixels. A tight glass module with no alpha-zero pixels is not an opaque image;
+a positive minimum alpha does not mean fully opaque either.
+
+Preserve continuation relationships and corner-body equality exactly.
+Test transmission on separate light/dark/colored backgrounds and with a
+separately toggled object. A flattened montage is not evidence of alpha.
+
+6. TEST THE ACTUAL STAGED FILES THROUGH PRODUCTION METADATA
+
+Reconstruct from staged paths resolved from the new manifest/views metadata,
+not from historical source directories or screenshots. Reject missing staged
+files rather than silently loading the reference originals.
+
+Reuse pure geometry/checking helpers where practical, without executing old
+scripts that overwrite historical reports. Refactor parameter passing only as
+needed so production tests can supply staged images and output directories.
+
+Required layouts:
+- One/two/four-cell D1 and D4 horizontal runs.
+- One/two/four-cell D2 and D3 straight and corner-starting runs.
+- Local 2x1, standard 4x2, independently relocated +32,+32 4x2, and 3x3
+  complete enclosures using actual staged D1-D4 views.
+- Context with unchanged approved Batch 11 walls/floors using the already
+  validated connection arrangements.
+
+For the same saved geometry/backgrounds, compare staged structures and
+reconstructed scenes against the committed validated originals pixel-for-pixel.
+Measure all four corners independently: back contacts should retain 48 opaque
+pixels each, front contacts 32 each. Require zero unexpected overlap, hidden
+or stacked glass, missing contacts and clipped nonzero pixels in these layouts.
+Keep background/object layers separate and preserve the declared draw order.
+
+This proves the documented straight runs, rectangular enclosures and local
+corner configurations. Do not claim arbitrary L/T/cross junctions, engine
+collision/navigation support, an entrance or animated glass. No new junction,
+door or geometry design belongs in this task.
+
+7. ADAPT HISTORICAL SNAPSHOT GUARDS FOR AN AUTHORIZED PRODUCTION TRANSITION
+
+Important: this task intentionally changes manifest/catalog and production
+counts. Existing D0-D4 live snapshot tests reject those changes; allowing only
+a new reference directory is not enough for production staging.
+
+Keep every historical snapshot, report, source archive and protected artwork
+hash unchanged. Keep the strict unchanged-state comparator as the default and
+continue testing its rejection of unauthorized changes.
+
+Implement the smallest explicit production-transition mechanism needed:
+- Capture the pre-task inventory and protected-file evidence before writes.
+- Declare the exact four new IDs, pending statuses, and named Batch 13 outputs.
+- Permit manifest/catalog byte changes ONLY after semantic checks prove that
+  the existing 220 entries, statuses and prior catalog values are preserved and
+  exactly the four authorized pending entries were added.
+- If new optional catalog columns are needed, validate unchanged old-column
+  values and empty/default new values for old rows; document formatting changes.
+- Enumerate other authorized aggregate outputs and validate their derivation.
+- Keep every old production PNG, old component, canonical file, validation
+  input, historical record and snapshot immutable.
+- Reject unauthorized additions, deletions, old-entry changes, a fifth new ID,
+  an alternate view counted as inventory, or automatic approval of a new asset.
+
+It is authorized to adapt tests that compare historical snapshots with the
+LIVE tree to use this explicit bounded transition. Preserve old unchanged-task
+invariants in historical/temporary fixtures and add live Batch 13 checks.
+Do not blindly replace every literal 220 with 224, skip/xfail preservation
+tests, refresh old hashes, broadly exempt manifest/catalog/references, or
+fabricate an unchanged-state PASS when those metadata files actually changed.
+
+Report expected metadata changes separately from unchanged protected files.
+Make repeat staging idempotent: no duplicate entries, repeated sections,
+changed artwork, or artificial timestamp churn. Report every necessary test
+adaptation and its protective replacement.
+
+8. REVIEW OUTPUTS AND USAGE DOCUMENTATION
+
+Create, following repository conventions:
+- metadata/production_batch_13_architecture_glass_partitions.json
+- metadata/architecture_glass_partitions_batch_13_qa.json
+- metadata/architecture_glass_partitions_batch_13_qa.md
+- previews/contact_sheets/production_batch_13_architecture_glass_partitions_review.png
+- previews/architecture/production_batch_13_architecture_glass_partitions_qa_montage.png
+- release/production_batch_13_architecture_glass_partitions_review_bundle.zip
+- A short usage guide for this family's view selection, numeric anchor formula,
+  fixed-lighting orientation rules, draw order and supported layout limits.
+
+The compact QA montage must use actual staged files and show all four logical
+assets, useful alternate views, a finished enclosure, readable close-ups of all
+four corners and separate-background/object transmission. Use integer zooms,
+readable external labels, and no labels baked into the candidate PNGs.
+
+The review ZIP should include the twelve native views, relevant metadata,
+usage guide, QA and review images, with resolvable package-relative paths.
+Do not include the whole repository, all original transfer archives or duplicate
+source-scale exports as extra marketed assets. No extra art needs generating.
+
+Mark all current Batch 13 review records NEEDS_HUMAN_REVIEW. Leave historical
+proposed contracts as history; reference their exact versions in batch metadata.
+ChatGPT's previous appearance review is not final human production approval.
+
+9. REGRESSIONS, COMPLETION AND GIT
+
+Run the complete suite and report the actual new total and exit code; baseline
+305 is not a target to manufacture. Add focused tests for:
+- Exclusive view selection and exactly four logical inventory entries.
+- All staged paths, twelve native hashes, source round-trips and numeric anchors.
+- Failed QA on opaque/holey glass, wrong dimensions/mode or broken contacts.
+- Incorrect/missing terminal or corner view, one-pixel placement drift,
+  doubled support and overlapping translucent layers.
+- A missing/corrupted staged alternate file, with no source-path fallback.
+- Existing Batch 12 additive-overlay behavior remains unchanged.
+- Isolated full-view promotion and safe failure, never real approval.
+- Authorized production transition, plus rejected modification/deletion,
+  unauthorized inventory changes and unintended approval.
+- Repeat staging is idempotent.
+
+Do not run a generic approve-all command. Do not promote any view early.
+On failure, preserve approved artwork and report exact blockers; do not create
+misleading PASS/review records or commit unrelated experiments.
+
+After successful staging and tests, follow AGENTS.md to commit the intended
+work and push on the actual current branch. Report the SHA, push result and
+actual worktree state; do not erase unrelated work to claim a clean tree.
+
+FINAL RESPONSE
+Report:
+- Batch 13 state: NEEDS_HUMAN_REVIEW.
+- Four logical IDs, their view names, and all twelve staged native paths.
+- The schema/view-selection and glass-QA changes made.
+- Measured source/staged hash equality, dimensions, anchors and alpha results.
+- Actual staged repeat/enclosure/corner/transmission results.
+- Preservation of old assets/records and the authorized metadata transition.
+- Tests added/adapted, complete suite result and idempotence result.
+- Counts before/after: 220/220/0 -> 224/220/4; catalog 224 rows.
+- Contact sheet, QA montage, usage guide and review ZIP paths.
+- Commit SHA, push result, actual worktree state and blockers, if any.
+
+STOP AFTER STAGING FOR HUMAN REVIEW.
+Do not approve Batch 13, generate more artwork, begin D5, or repair unrelated
+Architecture geometry. Final production approval requires a separate explicit
+user instruction after review of the STAGED files.

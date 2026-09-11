@@ -1,0 +1,19 @@
+{
+  "command": "python tools/build_architecture_glass_partitions_batch_13.py --verify-idempotence",
+  "pass": true,
+  "compared_files": 2721,
+  "changed_or_added_or_deleted": [],
+  "counts_before": {
+    "manifest": 224,
+    "approved": 220,
+    "needs_human_review": 4
+  },
+  "counts_after": {
+    "manifest": 224,
+    "approved": 220,
+    "needs_human_review": 4
+  },
+  "before_hash_map_sha256": "383b7075825695d3b135af922772152021ab85a27b0110f86ad1510a3e3237a9",
+  "after_hash_map_sha256": "383b7075825695d3b135af922772152021ab85a27b0110f86ad1510a3e3237a9",
+  "exception": "Only this idempotence evidence file is excluded from comparing itself. No timestamp fields are refreshed."
+}

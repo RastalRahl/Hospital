@@ -1,0 +1,98 @@
+[
+  {
+    "id": "hospital_glass_partition_back_01",
+    "view": "main",
+    "source": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+    "staged": "staging/pending/normalized/hospital_glass_partition_back_01.png",
+    "source_sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+    "staged_sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502"
+  },
+  {
+    "id": "hospital_glass_partition_back_01",
+    "view": "repeat",
+    "source": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_back_01/repeat_01.png",
+    "source_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+    "staged_sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174"
+  },
+  {
+    "id": "hospital_glass_partition_side_left_01",
+    "view": "main",
+    "source": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+    "staged": "staging/pending/normalized/hospital_glass_partition_side_left_01.png",
+    "source_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "staged_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642"
+  },
+  {
+    "id": "hospital_glass_partition_side_left_01",
+    "view": "repeat",
+    "source": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/repeat_01.png",
+    "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "staged_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+  },
+  {
+    "id": "hospital_glass_partition_side_left_01",
+    "view": "corner_main",
+    "source": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/corner_main_01.png",
+    "source_sha256": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+    "staged_sha256": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d"
+  },
+  {
+    "id": "hospital_glass_partition_side_left_01",
+    "view": "corner_repeat",
+    "source": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/corner_repeat_01.png",
+    "source_sha256": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+    "staged_sha256": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a"
+  },
+  {
+    "id": "hospital_glass_partition_side_right_01",
+    "view": "main",
+    "source": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+    "staged": "staging/pending/normalized/hospital_glass_partition_side_right_01.png",
+    "source_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "staged_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642"
+  },
+  {
+    "id": "hospital_glass_partition_side_right_01",
+    "view": "repeat",
+    "source": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/repeat_01.png",
+    "source_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "staged_sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f"
+  },
+  {
+    "id": "hospital_glass_partition_side_right_01",
+    "view": "corner_main",
+    "source": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/corner_main_01.png",
+    "source_sha256": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+    "staged_sha256": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef"
+  },
+  {
+    "id": "hospital_glass_partition_side_right_01",
+    "view": "corner_repeat",
+    "source": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/corner_repeat_01.png",
+    "source_sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+    "staged_sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2"
+  },
+  {
+    "id": "hospital_glass_partition_front_cutaway_01",
+    "view": "main",
+    "source": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png",
+    "staged": "staging/pending/normalized/hospital_glass_partition_front_cutaway_01.png",
+    "source_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131",
+    "staged_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131"
+  },
+  {
+    "id": "hospital_glass_partition_front_cutaway_01",
+    "view": "repeat",
+    "source": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png",
+    "staged": "staging/pending/normalized/views/hospital_glass_partition_front_cutaway_01/repeat_01.png",
+    "source_sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5",
+    "staged_sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5"
+  }
+]

@@ -1,0 +1,1284 @@
+{
+  "name": "Production Batch13: Architecture Glass Partitions",
+  "status": "needs_human_review",
+  "view_semantics": "exclusive",
+  "logical_asset_count": 4,
+  "native_view_count": 12,
+  "validation_baseline": "a1ac6cb6f1bc9522a269af91c6c992bbc4a34324",
+  "assets": [
+    {
+      "id": "hospital_glass_partition_back_01",
+      "filename": "hospital_glass_partition_back_01.png",
+      "category": "architecture",
+      "subcategory": "glass_partition",
+      "asset_type": "hospital_glass_partition_back",
+      "variant": 1,
+      "orientation": "back",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "architecture_grid",
+      "tags": [
+        "architecture",
+        "glass",
+        "fixed_partition",
+        "modular",
+        "grid_32",
+        "D1",
+        "batch_13"
+      ],
+      "normalization_mode": "architecture_grid_preserving",
+      "ingestion_mode": "validated_native_copy",
+      "already_native": true,
+      "qa_profile": "architecture_glass",
+      "view_semantics": "exclusive",
+      "default_view": "main",
+      "view_selection_kind": "horizontal",
+      "repeat_stride_native": [
+        32,
+        0
+      ],
+      "family_member": "D1",
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "raw_qa_status": "pass",
+      "raw_qa_issues": [],
+      "staging_path": "staging/pending/normalized/hospital_glass_partition_back_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_glass_partition_back_01.png",
+      "final_path": "",
+      "perceptual_hash": "",
+      "geometry_contract": "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json",
+      "geometry_contract_sha256": "4e45d342cee783d44acb1d91d04c16b2fb60303042ed9a4cd4cf40fc727dd0f2",
+      "validation_reference": "references/architecture/master_validation_D1_v1/d1_validation_report.json",
+      "architecture_structural_role": "north_back_glass",
+      "architecture_provenance": {
+        "validation_commit": "a1ac6cb6f1bc9522a269af91c6c992bbc4a34324",
+        "contract": "references/architecture/master_validation_D0_v1/d1_geometry_alpha_contract.json",
+        "report": "references/architecture/master_validation_D1_v1/d1_validation_report.json",
+        "authorization": "Batch13 staging only; no human production approval"
+      },
+      "notes": "Validated native bytes copied unchanged; exclusive implementation views belong to one logical asset. Awaiting staged-file human review.",
+      "views": {
+        "main": {
+          "name": "main",
+          "role": "main",
+          "normalized_path": "staging/pending/normalized/hospital_glass_partition_back_01.png",
+          "final_path": "",
+          "dimensions": [
+            32,
+            28
+          ],
+          "cell_anchor": [
+            16,
+            20
+          ],
+          "image_anchor": [
+            16,
+            28
+          ],
+          "render_origin": [
+            0,
+            -8
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+          "source_8x": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+          "source_8x_dimensions": [
+            256,
+            224
+          ],
+          "sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+          "source_8x_sha256": "0362cbf1b4d8ac3a605a7e39a98288ad6f6a20ec7d860239da8fb22a0894f28e",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                4,
+                28
+              ],
+              [
+                28,
+                0,
+                32,
+                28
+              ],
+              [
+                4,
+                0,
+                28,
+                5
+              ],
+              [
+                4,
+                23,
+                28,
+                28
+              ]
+            ],
+            "pane": [
+              [
+                4,
+                5,
+                28,
+                23
+              ]
+            ],
+            "pane_values": [
+              150,
+              210
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D1_v1/d1_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "repeat": {
+          "name": "repeat",
+          "role": "repeat",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_back_01/repeat_01.png",
+          "final_path": "",
+          "dimensions": [
+            32,
+            28
+          ],
+          "cell_anchor": [
+            16,
+            20
+          ],
+          "image_anchor": [
+            16,
+            28
+          ],
+          "render_origin": [
+            0,
+            -8
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+          "source_8x": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_source_8x.png",
+          "source_8x_dimensions": [
+            256,
+            224
+          ],
+          "sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+          "source_8x_sha256": "ebe91b5d154720a7fd561b952391abf075cf4adc2db28a7454b88060f6aa6dab",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                4,
+                28
+              ],
+              [
+                4,
+                0,
+                32,
+                5
+              ],
+              [
+                4,
+                23,
+                32,
+                28
+              ]
+            ],
+            "pane": [
+              [
+                4,
+                5,
+                32,
+                23
+              ]
+            ],
+            "pane_values": [
+              150,
+              210
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D1_v1/d1_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        }
+      },
+      "source": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+      "source_sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "working_source": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_source_8x.png",
+      "source_dimensions": {
+        "width": 32,
+        "height": 28
+      },
+      "canvas_width": 32,
+      "canvas_height": 28,
+      "expected_native_dimensions": [
+        32,
+        28
+      ],
+      "normalized_sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "crop": null,
+      "normalization_exception": {
+        "kind": "validated_native_copy",
+        "trim_applied": false,
+        "padding_applied": 0,
+        "source_scale_applied": 1,
+        "reason": "Already-native validated PNG; source_scale8 records working export provenance only"
+      }
+    },
+    {
+      "id": "hospital_glass_partition_side_left_01",
+      "filename": "hospital_glass_partition_side_left_01.png",
+      "category": "architecture",
+      "subcategory": "glass_partition",
+      "asset_type": "hospital_glass_partition_side_left",
+      "variant": 1,
+      "orientation": "side_left",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "architecture_grid",
+      "tags": [
+        "architecture",
+        "glass",
+        "fixed_partition",
+        "modular",
+        "grid_32",
+        "D2",
+        "batch_13"
+      ],
+      "normalization_mode": "architecture_grid_preserving",
+      "ingestion_mode": "validated_native_copy",
+      "already_native": true,
+      "qa_profile": "architecture_glass",
+      "view_semantics": "exclusive",
+      "default_view": "main",
+      "view_selection_kind": "side",
+      "repeat_stride_native": [
+        0,
+        32
+      ],
+      "family_member": "D2",
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "raw_qa_status": "pass",
+      "raw_qa_issues": [],
+      "staging_path": "staging/pending/normalized/hospital_glass_partition_side_left_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_glass_partition_side_left_01.png",
+      "final_path": "",
+      "perceptual_hash": "",
+      "geometry_contract": "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json",
+      "geometry_contract_sha256": "a6a6cc6e9a80e82fcf71619b9fc5245f7402fbca0c7eb178e84d9d1ac2b7c73b",
+      "validation_reference": "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json",
+      "architecture_structural_role": "west_side_glass_cutaway",
+      "architecture_provenance": {
+        "validation_commit": "a1ac6cb6f1bc9522a269af91c6c992bbc4a34324",
+        "contract": "references/architecture/master_validation_D2_v2/d2_geometry_alpha_contract_proposed.json",
+        "report": "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json",
+        "authorization": "Batch13 staging only; no human production approval"
+      },
+      "notes": "Validated native bytes copied unchanged; exclusive implementation views belong to one logical asset. Awaiting staged-file human review.",
+      "views": {
+        "main": {
+          "name": "main",
+          "role": "main",
+          "normalized_path": "staging/pending/normalized/hospital_glass_partition_side_left_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            32
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            4,
+            16
+          ],
+          "render_origin": [
+            12,
+            0
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+          "source_8x": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            256
+          ],
+          "sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+          "source_8x_sha256": "647c0da6742e8c2dcc9f6c707f8f90b98ef4047edc5dca0bf237deaffdd43baa",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                2,
+                32
+              ],
+              [
+                10,
+                0,
+                12,
+                32
+              ],
+              [
+                2,
+                0,
+                10,
+                4
+              ],
+              [
+                2,
+                28,
+                10,
+                32
+              ]
+            ],
+            "pane": [
+              [
+                2,
+                4,
+                10,
+                28
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "repeat": {
+          "name": "repeat",
+          "role": "repeat",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/repeat_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            32
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            4,
+            16
+          ],
+          "render_origin": [
+            12,
+            0
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+          "source_8x": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            256
+          ],
+          "sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+          "source_8x_sha256": "0b502433115f38283ce15c826c40a09c88418a770fd42716111dd2fc9559792a",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                2,
+                32
+              ],
+              [
+                10,
+                0,
+                12,
+                32
+              ],
+              [
+                2,
+                0,
+                10,
+                4
+              ]
+            ],
+            "pane": [
+              [
+                2,
+                4,
+                10,
+                32
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "corner_main": {
+          "name": "corner_main",
+          "role": "corner_main",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/corner_main_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            56
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            4,
+            40
+          ],
+          "render_origin": [
+            12,
+            -24
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+          "source_8x": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            448
+          ],
+          "sha256": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+          "source_8x_sha256": "c97509b2f14820443b43218498902adb828cfb405e2d08af9672ba59608df280",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                8,
+                4
+              ],
+              [
+                0,
+                4,
+                2,
+                24
+              ],
+              [
+                0,
+                24,
+                12,
+                28
+              ],
+              [
+                0,
+                28,
+                2,
+                56
+              ],
+              [
+                10,
+                28,
+                12,
+                56
+              ],
+              [
+                2,
+                52,
+                10,
+                56
+              ]
+            ],
+            "pane": [
+              [
+                2,
+                4,
+                4,
+                24
+              ],
+              [
+                2,
+                28,
+                10,
+                52
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "corner_repeat": {
+          "name": "corner_repeat",
+          "role": "corner_repeat",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_side_left_01/corner_repeat_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            56
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            4,
+            40
+          ],
+          "render_origin": [
+            12,
+            -24
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+          "source_8x": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            448
+          ],
+          "sha256": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+          "source_8x_sha256": "a715ee4bf1cec78a297f240dfe40d12ec6b4011152bb098b4f95b0a4ccbaa296",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                8,
+                4
+              ],
+              [
+                0,
+                4,
+                2,
+                24
+              ],
+              [
+                0,
+                24,
+                12,
+                28
+              ],
+              [
+                0,
+                28,
+                2,
+                56
+              ],
+              [
+                10,
+                28,
+                12,
+                56
+              ]
+            ],
+            "pane": [
+              [
+                2,
+                4,
+                4,
+                24
+              ],
+              [
+                2,
+                28,
+                10,
+                56
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D2_appearance_v1/d2_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        }
+      },
+      "source": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+      "source_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "working_source": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_source_8x.png",
+      "source_dimensions": {
+        "width": 12,
+        "height": 32
+      },
+      "canvas_width": 12,
+      "canvas_height": 32,
+      "expected_native_dimensions": [
+        12,
+        32
+      ],
+      "normalized_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "crop": null,
+      "normalization_exception": {
+        "kind": "validated_native_copy",
+        "trim_applied": false,
+        "padding_applied": 0,
+        "source_scale_applied": 1,
+        "reason": "Already-native validated PNG; source_scale8 records working export provenance only"
+      }
+    },
+    {
+      "id": "hospital_glass_partition_side_right_01",
+      "filename": "hospital_glass_partition_side_right_01.png",
+      "category": "architecture",
+      "subcategory": "glass_partition",
+      "asset_type": "hospital_glass_partition_side_right",
+      "variant": 1,
+      "orientation": "side_right",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "architecture_grid",
+      "tags": [
+        "architecture",
+        "glass",
+        "fixed_partition",
+        "modular",
+        "grid_32",
+        "D3",
+        "batch_13"
+      ],
+      "normalization_mode": "architecture_grid_preserving",
+      "ingestion_mode": "validated_native_copy",
+      "already_native": true,
+      "qa_profile": "architecture_glass",
+      "view_semantics": "exclusive",
+      "default_view": "main",
+      "view_selection_kind": "side",
+      "repeat_stride_native": [
+        0,
+        32
+      ],
+      "family_member": "D3",
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "raw_qa_status": "pass",
+      "raw_qa_issues": [],
+      "staging_path": "staging/pending/normalized/hospital_glass_partition_side_right_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_glass_partition_side_right_01.png",
+      "final_path": "",
+      "perceptual_hash": "",
+      "geometry_contract": "references/architecture/master_validation_D3_v1/d3_geometry_alpha_contract_proposed.json",
+      "geometry_contract_sha256": "66549dd3c655ba341a5a00bf30d7bc483b5af1f6c857c7623778b7f43e0d2c00",
+      "validation_reference": "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json",
+      "architecture_structural_role": "east_side_glass_cutaway",
+      "architecture_provenance": {
+        "validation_commit": "a1ac6cb6f1bc9522a269af91c6c992bbc4a34324",
+        "contract": "references/architecture/master_validation_D3_v1/d3_geometry_alpha_contract_proposed.json",
+        "report": "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json",
+        "authorization": "Batch13 staging only; no human production approval"
+      },
+      "notes": "Validated native bytes copied unchanged; exclusive implementation views belong to one logical asset. Awaiting staged-file human review.",
+      "views": {
+        "main": {
+          "name": "main",
+          "role": "main",
+          "normalized_path": "staging/pending/normalized/hospital_glass_partition_side_right_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            32
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            8,
+            16
+          ],
+          "render_origin": [
+            8,
+            0
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+          "source_8x": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            256
+          ],
+          "sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+          "source_8x_sha256": "647c0da6742e8c2dcc9f6c707f8f90b98ef4047edc5dca0bf237deaffdd43baa",
+          "alpha_regions": {
+            "frame": [
+              [
+                10,
+                0,
+                12,
+                32
+              ],
+              [
+                0,
+                0,
+                2,
+                32
+              ],
+              [
+                2,
+                0,
+                10,
+                4
+              ],
+              [
+                2,
+                28,
+                10,
+                32
+              ]
+            ],
+            "pane": [
+              [
+                2,
+                4,
+                10,
+                28
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "repeat": {
+          "name": "repeat",
+          "role": "repeat",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/repeat_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            32
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            8,
+            16
+          ],
+          "render_origin": [
+            8,
+            0
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+          "source_8x": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            256
+          ],
+          "sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+          "source_8x_sha256": "0b502433115f38283ce15c826c40a09c88418a770fd42716111dd2fc9559792a",
+          "alpha_regions": {
+            "frame": [
+              [
+                10,
+                0,
+                12,
+                32
+              ],
+              [
+                0,
+                0,
+                2,
+                32
+              ],
+              [
+                2,
+                0,
+                10,
+                4
+              ]
+            ],
+            "pane": [
+              [
+                2,
+                4,
+                10,
+                32
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "corner_main": {
+          "name": "corner_main",
+          "role": "corner_main",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/corner_main_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            56
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            8,
+            40
+          ],
+          "render_origin": [
+            8,
+            -24
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+          "source_8x": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            448
+          ],
+          "sha256": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+          "source_8x_sha256": "d537c408c562e5575cfe8338bafdd0cda7a2897f40d9cd5b55011fd28c398608",
+          "alpha_regions": {
+            "frame": [
+              [
+                4,
+                0,
+                12,
+                4
+              ],
+              [
+                10,
+                4,
+                12,
+                24
+              ],
+              [
+                0,
+                24,
+                12,
+                28
+              ],
+              [
+                10,
+                28,
+                12,
+                56
+              ],
+              [
+                0,
+                28,
+                2,
+                56
+              ],
+              [
+                2,
+                52,
+                10,
+                56
+              ]
+            ],
+            "pane": [
+              [
+                8,
+                4,
+                10,
+                24
+              ],
+              [
+                2,
+                28,
+                10,
+                52
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "corner_repeat": {
+          "name": "corner_repeat",
+          "role": "corner_repeat",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_side_right_01/corner_repeat_01.png",
+          "final_path": "",
+          "dimensions": [
+            12,
+            56
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            8,
+            40
+          ],
+          "render_origin": [
+            8,
+            -24
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+          "source_8x": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_source_8x.png",
+          "source_8x_dimensions": [
+            96,
+            448
+          ],
+          "sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+          "source_8x_sha256": "bb27a0d8ebe3d310562529c587fd66311d63c17d017cc5d3dcc719becd2bab12",
+          "alpha_regions": {
+            "frame": [
+              [
+                4,
+                0,
+                12,
+                4
+              ],
+              [
+                10,
+                4,
+                12,
+                24
+              ],
+              [
+                0,
+                24,
+                12,
+                28
+              ],
+              [
+                10,
+                28,
+                12,
+                56
+              ],
+              [
+                0,
+                28,
+                2,
+                56
+              ]
+            ],
+            "pane": [
+              [
+                8,
+                4,
+                10,
+                24
+              ],
+              [
+                2,
+                28,
+                10,
+                56
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D3_appearance_v1/d3_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        }
+      },
+      "source": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+      "source_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "working_source": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_source_8x.png",
+      "source_dimensions": {
+        "width": 12,
+        "height": 32
+      },
+      "canvas_width": 12,
+      "canvas_height": 32,
+      "expected_native_dimensions": [
+        12,
+        32
+      ],
+      "normalized_sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "crop": null,
+      "normalization_exception": {
+        "kind": "validated_native_copy",
+        "trim_applied": false,
+        "padding_applied": 0,
+        "source_scale_applied": 1,
+        "reason": "Already-native validated PNG; source_scale8 records working export provenance only"
+      }
+    },
+    {
+      "id": "hospital_glass_partition_front_cutaway_01",
+      "filename": "hospital_glass_partition_front_cutaway_01.png",
+      "category": "architecture",
+      "subcategory": "glass_partition",
+      "asset_type": "hospital_glass_partition_front_cutaway",
+      "variant": 1,
+      "orientation": "front_cutaway",
+      "state": "clean",
+      "reuse_scope": "hospital_only",
+      "native_grid": 32,
+      "source_scale": 8,
+      "footprint_width_tiles": 1,
+      "footprint_height_tiles": 1,
+      "anchor": "architecture_grid",
+      "tags": [
+        "architecture",
+        "glass",
+        "fixed_partition",
+        "modular",
+        "grid_32",
+        "D4",
+        "batch_13"
+      ],
+      "normalization_mode": "architecture_grid_preserving",
+      "ingestion_mode": "validated_native_copy",
+      "already_native": true,
+      "qa_profile": "architecture_glass",
+      "view_semantics": "exclusive",
+      "default_view": "main",
+      "view_selection_kind": "horizontal",
+      "repeat_stride_native": [
+        32,
+        0
+      ],
+      "family_member": "D4",
+      "approval_status": "needs_human_review",
+      "qa_status": "pass",
+      "qa_issues": [],
+      "raw_qa_status": "pass",
+      "raw_qa_issues": [],
+      "staging_path": "staging/pending/normalized/hospital_glass_partition_front_cutaway_01.png",
+      "normalized_path": "staging/pending/normalized/hospital_glass_partition_front_cutaway_01.png",
+      "final_path": "",
+      "perceptual_hash": "",
+      "geometry_contract": "references/architecture/master_validation_D4_v1/d4_geometry_alpha_contract_proposed.json",
+      "geometry_contract_sha256": "e0ba95ed8b9ad029181ac58b28750b0b8313e87e26b86983b9f9170dbe057115",
+      "validation_reference": "references/architecture/master_validation_D4_appearance_v1/d4_appearance_validation_report.json",
+      "architecture_structural_role": "south_front_glass_cutaway",
+      "architecture_provenance": {
+        "validation_commit": "a1ac6cb6f1bc9522a269af91c6c992bbc4a34324",
+        "contract": "references/architecture/master_validation_D4_v1/d4_geometry_alpha_contract_proposed.json",
+        "report": "references/architecture/master_validation_D4_appearance_v1/d4_appearance_validation_report.json",
+        "authorization": "Batch13 staging only; no human production approval"
+      },
+      "notes": "Validated native bytes copied unchanged; exclusive implementation views belong to one logical asset. Awaiting staged-file human review.",
+      "views": {
+        "main": {
+          "name": "main",
+          "role": "main",
+          "normalized_path": "staging/pending/normalized/hospital_glass_partition_front_cutaway_01.png",
+          "final_path": "",
+          "dimensions": [
+            32,
+            12
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            16,
+            4
+          ],
+          "render_origin": [
+            0,
+            12
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png",
+          "source_8x": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png",
+          "source_8x_dimensions": [
+            256,
+            96
+          ],
+          "sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131",
+          "source_8x_sha256": "de7e908ddd847b219c86915154fe6f18b37d0ab1e8217ffe36784e816dca593d",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                32,
+                4
+              ],
+              [
+                0,
+                10,
+                32,
+                12
+              ],
+              [
+                0,
+                4,
+                4,
+                10
+              ],
+              [
+                28,
+                4,
+                32,
+                10
+              ]
+            ],
+            "pane": [
+              [
+                4,
+                4,
+                28,
+                10
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D4_appearance_v1/d4_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        },
+        "repeat": {
+          "name": "repeat",
+          "role": "repeat",
+          "normalized_path": "staging/pending/normalized/views/hospital_glass_partition_front_cutaway_01/repeat_01.png",
+          "final_path": "",
+          "dimensions": [
+            32,
+            12
+          ],
+          "cell_anchor": [
+            16,
+            16
+          ],
+          "image_anchor": [
+            16,
+            4
+          ],
+          "render_origin": [
+            0,
+            12
+          ],
+          "normalization_mode": "architecture_grid_preserving",
+          "source_scale": 8,
+          "native_scale": 1,
+          "source_native": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png",
+          "source_8x": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_source_8x.png",
+          "source_8x_dimensions": [
+            256,
+            96
+          ],
+          "sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5",
+          "source_8x_sha256": "70cb5fbe6aec3186dcd55611a62576f2d6debadc88565983bf8eda58113e946b",
+          "alpha_regions": {
+            "frame": [
+              [
+                0,
+                0,
+                32,
+                4
+              ],
+              [
+                0,
+                10,
+                32,
+                12
+              ],
+              [
+                0,
+                4,
+                4,
+                10
+              ]
+            ],
+            "pane": [
+              [
+                4,
+                4,
+                32,
+                10
+              ]
+            ],
+            "pane_values": [
+              150
+            ],
+            "exterior": 0
+          },
+          "validation_reference": "references/architecture/master_validation_D4_appearance_v1/d4_appearance_validation_report.json",
+          "qa_reference": "metadata/architecture_glass_partitions_batch_13_qa.json",
+          "qa_status": "pass"
+        }
+      },
+      "source": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png",
+      "source_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131",
+      "working_source": "references/architecture/master_validation_D4_appearance_v1/sources/package/candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png",
+      "source_dimensions": {
+        "width": 32,
+        "height": 12
+      },
+      "canvas_width": 32,
+      "canvas_height": 12,
+      "expected_native_dimensions": [
+        32,
+        12
+      ],
+      "normalized_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131",
+      "crop": null,
+      "normalization_exception": {
+        "kind": "validated_native_copy",
+        "trim_applied": false,
+        "padding_applied": 0,
+        "source_scale_applied": 1,
+        "reason": "Already-native validated PNG; source_scale8 records working export provenance only"
+      }
+    }
+  ]
+}

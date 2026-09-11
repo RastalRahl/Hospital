@@ -1,0 +1,4 @@
+/.gitattributes -text
+/production_batch_13_architecture_glass_partitions.json -text
+/architecture_glass_partitions_batch_13_qa.json -text
+/architecture_glass_partitions_batch_13_qa.md -text

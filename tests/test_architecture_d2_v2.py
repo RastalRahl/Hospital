@@ -6,6 +6,7 @@ import validate_architecture_d1 as d1
 import validate_architecture_d2 as v1
 import validate_architecture_d2_v2 as v2
 from rastalr_pipeline.snapshot import compare_snapshots
+from rastalr_pipeline.production_transition import compare_live_snapshot
 
 
 @pytest.fixture(scope='module')
@@ -107,13 +108,13 @@ def test_v2_additions_never_exempt_historical_files(tmp_path,action,allowed):
 
 def test_all_production_and_historical_d2_v1_files_preserved():
     before=d0.read_json(v2.OUT/'production_before.json')
-    report=compare_snapshots(before,v1.snapshot(),allowed_addition_prefixes=(v2.PREFIX,
+    report=compare_live_snapshot(before,v1.snapshot(),allowed_addition_prefixes=(v2.PREFIX,
         'references/architecture/master_validation_D2_appearance_v1/',
         'references/architecture/master_validation_D3_v1/',
         'references/architecture/master_validation_D3_appearance_v1/',
         'references/architecture/master_validation_D4_v1/',
         'references/architecture/master_validation_D4_appearance_v1/'))
     assert report['pass'] and report['protected_file_count']==1435
-    assert report['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}
+    assert report['observed_counts']=={'manifest':224,'approved':220,'needs_human_review':4}
     historical=[p for p in before['sha256'] if p.startswith('references/architecture/master_validation_D2_v1/')]
     assert len(historical)==len([p for p in v1.OUT.rglob('*') if p.is_file()])

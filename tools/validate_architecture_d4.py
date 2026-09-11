@@ -157,21 +157,28 @@ def front_corner(front, vertical, edge, south, right, cell, origin):
                  'front_cell':list(cell),'front_origin':list(origin),'image_anchor':[16,4]},conformance_to=STATUS)
 
 
-def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None, *, artifact_dir=ART):
+def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None, *, artifact_dir=ART, resolved_runs=None):
     x0=64+delta[0]; top=36+delta[1]; north=top+24; east=x0+32*width; south=north+32*depth
     size=(east+48,south+56); cell=[x0,south-16]; origin=[x0,south-4]
     if defect=='anchor_1px': origin[1]+=1
     if defect=='baseline_confusion': cell[1]+=4;origin[1]+=4
-    dm=d1.load(d1.PACKAGE/'candidate'/d1.VIEW_FILES['main']);dr=d1.load(d1.PACKAGE/'candidate'/d1.VIEW_FILES['repeat'])
-    back,_,_=d1.assemble(dm,dr,width)
-    left,_,_=side.assemble({n:d2app.candidate(n) for n in d3.NAMES},depth,corner=True)
-    right,_,_=side.assemble({n:d3app.candidate(n) for n in d3.NAMES},depth,corner=True)
-    front,pp,coverage=assemble(views,width)
+    if resolved_runs is None:
+        dm=d1.load(d1.PACKAGE/'candidate'/d1.VIEW_FILES['main']);dr=d1.load(d1.PACKAGE/'candidate'/d1.VIEW_FILES['repeat'])
+        back,_,_=d1.assemble(dm,dr,width)
+        left,_,_=side.assemble({n:d2app.candidate(n) for n in d3.NAMES},depth,corner=True)
+        right,_,_=side.assemble({n:d3app.candidate(n) for n in d3.NAMES},depth,corner=True)
+        front,pp,coverage=assemble(views,width)
+    else:
+        back,left,right,front=[resolved_runs[n][0] for n in ('d1','d2','d3','d4')]
+        _,placements,coverage,origin=resolved_runs['d4'];cell=placements[0]['cell']
+        pp=[[p['origin'][j]-origin[j] for j in range(2)] for p in placements]
     if defect=='missing_contact': front.putpixel((6,2),(0,0,0,0))
     if defect=='wrong_side_terminal':
         wrong={n:d3app.candidate(n) for n in d3.NAMES};wrong['main']=wrong['repeat'];wrong['corner_main']=wrong['corner_repeat']
         right,_,_=side.assemble(wrong,depth,corner=True)
     sources={'d1':(back,[x0,top]),'d2':(left,[x0-4,top]),'d3':(right,[east-8,top]),'d4':(front,origin)}
+    if resolved_runs is not None:
+        sources={n:(r[0],r[3]) for n,r in resolved_runs.items()}
     layers={};clip=0
     for name,(im,pos) in sources.items():
         layer=Image.new('RGBA',size);layer.alpha_composite(im,tuple(pos));layers[name]=layer
