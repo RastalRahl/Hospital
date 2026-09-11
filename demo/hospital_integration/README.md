@@ -1,5 +1,7 @@
 # Hospital integration demo
 
+Latest material review: `foundation_reference_rooms.tscn` (F6) compares plain and Foundation-finished connected rooms at identical geometry/poses. Existing V2 cap/plaster/base pixels supply the finish. See `repair_candidates/foundation_connected_finish_v1/corridor_godot.png` and `findings.md`. Production approval and the full-front versus low-front camera decision remain pending.
+
 Latest connected-room review: `connected_reference_rooms.tscn` (F6). Two furnished rooms and a deeper connecting corridor exercise L/T/cross caps, two room doorways and a front exit under the same full-height convention. See `repair_candidates/connected_reference_rooms_v1/corridor_crossing_godot.png` and `findings.md`. WASD/F/G/R controls remain; this is a separate reference scene, not production integration.
 
 Latest single-reference baseline: open `reference_room.tscn` and press F6. This small room follows the complete visible wall convention of SmallBurg's supplied `cosy_house.png`, including a full front face. All walls use one 44px height; mixed-height reveals are inactive. See `repair_candidates/single_reference_room_v1/room_godot.png` and `findings.md`. This tests a coherent alternative and its front-wall occlusion tradeoff; the production low-front policy is unchanged.

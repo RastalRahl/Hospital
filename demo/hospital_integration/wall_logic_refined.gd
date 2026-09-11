@@ -50,6 +50,12 @@ func floor_rectangle() -> Rect2i:
 func ground_y_end() -> int:
 	return 257
 
+func face_material(_x: int, _y: int, _z: int, color: Color) -> Color:
+	return color
+
+func cap_material(_x: int, _y: int, color: Color) -> Color:
+	return color
+
 func build_image(cutaway: bool) -> Image:
 	var dimensions := canvas_dimensions()
 	var img := Image.create(dimensions.x, dimensions.y, false, Image.FORMAT_RGBA8)
@@ -91,7 +97,7 @@ func build_image(cutaway: bool) -> Image:
 						color = Color("b6c7c5")
 					elif wall_height(x + 1, y + 1, cutaway) == 0:
 						color = INK
-				img.set_pixel(x, y - z, color)
+				img.set_pixel(x, y - z, face_material(x, y, z, color))
 			var top := TOP
 			if left_edge or wall_height(x, y - 1, cutaway) < h:
 				top = Color("b6c7c5")
@@ -103,7 +109,7 @@ func build_image(cutaway: bool) -> Image:
 					top = Color("b6c7c5")
 				elif wall_height(x + 1, y + 1, cutaway) == 0:
 					top = INK
-			img.set_pixel(x, y - h, top)
+			img.set_pixel(x, y - h, cap_material(x, y, top))
 	return img
 
 func refresh() -> void:
