@@ -2,6 +2,14 @@
 
 Verified 2026-09-11. Operational handoff for future Codex sessions; read with `AGENTS.md`. Codex owns planning, implementation, review preparation, QA, Godot integration and Git delivery. Human visual/production decisions stay with the user, directly in Codex.
 
+## Canonical product roadmap and current backlog
+
+- [ASSET_ROADMAP.md](ASSET_ROADMAP.md) restores the user-adopted **400-asset category budgets** (useful finish range 350–450). Category targets are canonical; concrete IDs are proposals, not immutable commitments. Use this roadmap plus the current manifest for all content decisions. Do not create separate maternity, pediatrics or rehabilitation departments without a roadmap revision.
+- [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) reconciles all 18 categories with current manifest/catalog counts, covered/missing capabilities, reuse scopes and prioritized proposed IDs. Current **224 / 220 approved / 4 pending**; net target gap **176**, positive category gaps **185**, existing category overruns **9**.
+- The concrete backlog proposes **158 meaningful additions**, projecting **382** including parked glass, or **378** without it. This is a planning estimate, not a target revision or batch authorization. Unfilled budgets remain headroom; no filler, duplicate shared props, technical views or components counted.
+- After current cleanup: **architecture access/circulation (8), ward + ICU completion (4), surgery support (5), emergency completion (3), exterior ambulance arrival (12)**. The small clinical groups can share one 12-asset production batch; no new production starts in this documentation task. Support spaces follow, then signage, inventory/UI and abandoned/horror last.
+- Roadmap import and coverage verified against HEAD `5d1ae1f` on 2026-09-11. Documentation checks cover counts, catalog parity, proposal uniqueness, local links and non-task file preservation. Runtime art/approval state is unchanged. This planning task passes **379 tests in 108.37s** plus the focused exact-allowance test. The two new document names were added to the historical audit’s exact addition allowlist; existing baseline hashes and unrelated-addition rejection remain enforced. Godot captures below are from the preceding implementation task; no engine/art change required a new capture.
+
 ## Inventory and approval boundary
 
 - Verified manifest: **224 logical assets / 220 approved / 4 needs_human_review**. Catalog: **224 rows**.
@@ -51,6 +59,7 @@ Verified 2026-09-11. Operational handoff for future Codex sessions; read with `A
 2. After visual acceptance and production authorization, consolidate the door alpha repair, solid-wall revisions and formal junction-view integration using existing conventions. Preserve old versions/provenance and record approval accurately; do not silently promote reference-only files. Glass approval is a separate parked task.
 3. Point the stable demo at authorized production assets; use existing contracts/scripts, targeted preflight, one full suite, one Godot smoke and one final integration capture. Inventory remains **224 / 220 approved / 4 pending** until separately authorized glass approval.
 4. Then address targeted bench proportions and brochure-rack/plant noisy pixels. Floor repetition and generalized terminal/corner/junction art are lower priority; do not reopen the architecture system routinely.
+5. Once cleanup is resolved and production authorized, execute the next five families in [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md); maintain its concrete backlog against the manifest at every completed batch. Preserve the category budgets in [ASSET_ROADMAP.md](ASSET_ROADMAP.md).
 
 Use cost-conscious iteration: existing scripts/contracts, targeted checks, full suite once per completed batch, Godot as primary practical test. No bespoke validator framework for ordinary assets or bulk generation without instruction. Work toward approximately 400 meaningful assets only after cleanup and authorization.
 

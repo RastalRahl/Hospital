@@ -9,9 +9,9 @@ from .snapshot import compare_snapshots
 from . import batch13, views
 
 METADATA_CHANGES={'metadata/manifest.json','metadata/catalog.csv'}
-# User-requested operational handoff, introduced after Batch13. This permits
+# User-requested operational handoff and roadmap, introduced after Batch13. This permits
 # only the named addition; protected_difference still locks every baseline hash.
-AUTHORIZED_OPERATIONAL_ADDITIONS={'docs/CODEX_PROJECT_STATE.md'}
+AUTHORIZED_OPERATIONAL_ADDITIONS={'docs/CODEX_PROJECT_STATE.md','docs/ASSET_ROADMAP.md','docs/ASSET_COVERAGE_STATUS.md'}
 
 
 def local_reference_additions(root):
