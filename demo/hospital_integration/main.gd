@@ -21,7 +21,7 @@ var anchors: Array[Vector2] = []
 var debug := false
 var door_open := false
 var zoom_level := 2
-var start := Vector2(416, 400)
+var start := Vector2(352, 368)
 
 func _ready() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -55,7 +55,7 @@ func _ready() -> void:
 	world.add_child(figure)
 	figure.position = start
 	add_child(camera)
-	camera.position = Vector2(416, 248)
+	camera.position = Vector2(368, 232)
 	camera.zoom = Vector2.ONE * zoom_level
 	var ui := CanvasLayer.new()
 	add_child(ui)
@@ -100,7 +100,7 @@ func move_figure(delta: Vector2) -> void:
 func _physics_process(delta: float) -> void:
 	var direction := Vector2(float(Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT)) - float(Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT)), float(Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN)) - float(Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP)))
 	move_figure(direction.normalized() * 100.0 * delta)
-	camera.position = Vector2(416, 248) if zoom_level < 3 else figure.position.snapped(Vector2.ONE)
+	camera.position = Vector2(368, 232) if zoom_level < 3 else figure.position.snapped(Vector2.ONE)
 	if debug:
 		overlay.queue_redraw()
 
@@ -115,7 +115,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			figure.position = start
 		KEY_E:
 			# Do not close a solid through the reference figure.
-			if not door_open or not Rect2(635, 320, 74, 24).has_point(figure.position):
+			if not door_open or not Rect2(571, 320, 74, 24).has_point(figure.position):
 				set_door(not door_open)
 		KEY_1, KEY_2, KEY_3:
 			zoom_level = event.physical_keycode - KEY_0
@@ -124,10 +124,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 func draw_debug() -> void:
 	if not debug:
 		return
-	for x in range(32, 801, 32):
-		overlay.draw_line(Vector2(x,96), Vector2(x,448), Color(0.2,0.5,0.7,0.4))
-	for y in range(96, 449, 32):
-		overlay.draw_line(Vector2(32,y), Vector2(800,y), Color(0.2,0.5,0.7,0.4))
+	for x in range(32, 705, 32):
+		overlay.draw_line(Vector2(x,96), Vector2(x,416), Color(0.2,0.5,0.7,0.4))
+	for y in range(96, 417, 32):
+		overlay.draw_line(Vector2(32,y), Vector2(704,y), Color(0.2,0.5,0.7,0.4))
 	for a in anchors:
 		overlay.draw_line(a-Vector2(3,0),a+Vector2(3,0),Color.CYAN)
 		overlay.draw_line(a-Vector2(0,3),a+Vector2(0,3),Color.CYAN)
@@ -149,6 +149,7 @@ func key(code: Key) -> void:
 
 func smoke() -> void:
 	DirAccess.make_dir_recursive_absolute("res://.qa")
+	DirAccess.make_dir_recursive_absolute("res://captures")
 	key(KEY_3)
 	assert(zoom_level == 3 and camera.zoom == Vector2(3,3))
 	key(KEY_2)
@@ -159,34 +160,52 @@ func smoke() -> void:
 	figure.position = Vector2(80,400)
 	key(KEY_R)
 	assert(figure.position == start)
-	assert(blocked(Vector2(672,336)), "Closed door must collide")
+	assert(blocked(Vector2(608,336)), "Closed door must collide")
 	set_door(true)
-	assert(not blocked(Vector2(672,336)), "Open passage must clear")
-	figure.position = Vector2(672,360)
+	assert(not blocked(Vector2(608,336)), "Open passage must clear")
+	figure.position = Vector2(608,360)
 	move_figure(Vector2(0,-64))
 	assert(absf(figure.position.y - 296) < 0.1, "Open door crossing")
 	set_door(false)
-	figure.position = Vector2(672,360)
+	figure.position = Vector2(608,360)
 	move_figure(Vector2(0,-64))
 	assert(figure.position.y >= 344, "Closed door blocks crossing")
-	assert(blocked(Vector2(400,220)), "Bed/table floor contact")
-	assert(not blocked(Vector2(416,320)), "Glass entrance is traversable")
-	assert(blocked(Vector2(368,304)), "Glass trim collision")
-	figure.position = Vector2(400,288)
+	assert(blocked(Vector2(368,220)), "Bed/table floor contact")
+	assert(not blocked(Vector2(352,320)), "Glass entrance is traversable")
+	assert(blocked(Vector2(304,304)), "Glass trim collision")
+	figure.position = Vector2(352,288)
 	move_figure(Vector2(0,64))
 	assert(absf(figure.position.y - 352) < 0.1, "Walk through glass entrance")
-	# Same figure on each side of back pane, no opacity or material overrides.
-	figure.position = Vector2(432,136)
-	await capture("res://.qa/glass_behind.png")
-	figure.position = Vector2(432,176)
-	await capture("res://.qa/glass_front.png")
+	# Explicit walkthrough of this layout, using the same movement/collision code.
 	set_door(true)
-	figure.position = Vector2(672,324)
-	await capture("res://.qa/door_open.png")
+	figure.position = start
+	for point in [Vector2(112,368), Vector2(112,312), Vector2(232,312), Vector2(232,216), Vector2(128,216), Vector2(232,216), Vector2(232,368), Vector2(352,368), Vector2(352,280), Vector2(352,368), Vector2(608,368), Vector2(608,248)]:
+		move_figure(point - figure.position)
+		assert(figure.position.distance_to(point) < 0.1, "Walkthrough target %s reached %s" % [point,figure.position])
+	set_door(false)
+	# Same figure on each side of back pane, no opacity or material overrides.
+	figure.position = Vector2(368,140)
+	assert(not blocked(figure.position), "Behind-glass pose must be reachable floor")
+	await capture("res://captures/layout_glass_behind.png")
+	# Verify actual viewport transmission against the supplied pane alpha.
+	var pane_texture: Texture2D = load("res://art/hospital_glass_partition_back_01__repeat.png")
+	var pane := pane_texture.get_image().get_pixel(11,8)
+	var expected := Color("d9ad59").lerp(Color(pane.r,pane.g,pane.b,1),pane.a)
+	var behind := get_viewport().get_texture().get_image()
+	var observed := behind.get_pixelv(Vector2i(get_global_transform_with_canvas() * Vector2(363,128)))
+	assert(Vector3(observed.r-expected.r,observed.g-expected.g,observed.b-expected.b).length() < 0.01, "Native glass alpha transmission")
+	figure.position = Vector2(368,176)
+	assert(not blocked(figure.position), "Front-glass pose must be reachable floor")
+	await capture("res://captures/layout_glass_front.png")
+	var front := get_viewport().get_texture().get_image()
+	assert(front.get_pixelv(Vector2i(get_global_transform_with_canvas() * Vector2(363,136))).to_rgba32() == Color("e8cba7").to_rgba32(), "Figure must render in front of pane")
+	set_door(true)
+	figure.position = Vector2(608,324)
+	await capture("res://captures/layout_door_open.png")
 	set_door(false)
 	figure.position = start
 	await capture("res://overview.png")
-	print("HOSPITAL_SMOKE_PASS: closed/open collision, crossing, furniture contact, glass entrance, glass front/behind and door screenshots")
+	print("HOSPITAL_SMOKE_PASS: closed/open collision, crossing, furniture contact, glass entrance, glass pixel sorting, reception/waiting/exam/bedside walkthrough and screenshots")
 	get_tree().quit()
 
 

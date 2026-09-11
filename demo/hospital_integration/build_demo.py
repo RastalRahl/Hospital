@@ -36,35 +36,37 @@ def place(id,x,y,offset=None,collision=None,kind='prop',state='',view=None):
 
 # Foundation placement follows Batch11 reconstruction: north 52px above floor,
 # shallow sides outside floor; south carrier extends 20px inward from floor end.
-for y in range(96,448,32):
- for x in range(32,800,32): place('hospital_floor_plain_01',x+16,y+16,[-16,-16],kind='floor')
-for x in range(32,800,32):
+for y in range(96,416,32):
+ for x in range(32,704,32): place('hospital_floor_plain_01',x+16,y+16,[-16,-16],kind='floor')
+for x in range(32,704,32):
  place('hospital_wall_back_straight_01',x+16,96,[-16,-52],[x,88,32,8],kind='wall')
- place('hospital_front_wall_cutaway_01',x+16,448,[-16,-20],[x,440,32,8],kind='wall')
-for y in range(96,448,32):
+ place('hospital_front_wall_cutaway_01',x+16,416,[-16,-20],[x,408,32,8],kind='wall')
+for y in range(96,416,32):
  place('hospital_wall_side_left_01',32,y+16,[-20,-16],[24,y,8,32],kind='wall')
- place('hospital_wall_side_right_01',800,y+16,[0,-16],[800,y,8,32],kind='wall')
+ place('hospital_wall_side_right_01',704,y+16,[0,-16],[704,y,8,32],kind='wall')
 # Patient room divider, with one two-cell north-facing sliding module.
-for x in [576,608,704,736,768]: place('hospital_wall_back_straight_01',x+16,336,[-16,-52],[x,328,32,8],kind='wall')
-for y in range(96,320,32): place('hospital_wall_side_left_01',576,y+16,[-20,-16],[568,y,8,32],kind='wall')
+for x in [512,544,640,672]: place('hospital_wall_back_straight_01',x+16,336,[-16,-52],[x,328,32,8],kind='wall')
+for y in range(96,320,32): place('hospital_wall_side_left_01',512,y+16,[-20,-16],[504,y,8,32],kind='wall')
 for state in ['closed','open']:
- place('hospital_sliding_clinical_doors_'+state+'_01',672,336,[-32,-52],[644,328,56,8] if state=='closed' else None,kind='door',state=state)
+ place('hospital_sliding_clinical_doors_'+state+'_01',608,336,[-32,-52],[580,328,56,8] if state=='closed' else None,kind='door',state=state)
 # Fixed jamb contacts remain with both states.
-for x in [640,700]:
+for x in [576,636]:
  placements.append({'kind':'contact','position':[x,332],'collision':[x,328,4,8],'state':''})
 # Glass back + independently authored sides, run alternatives replace each other.
-for i in range(7): place('hospital_glass_partition_back_01',320+i*32,128,collision=[320+i*32,140,32,8],kind='glass',view={'index':i,'count':7})
-for side,x in [('left',304),('right',528)]:
+for i in range(7): place('hospital_glass_partition_back_01',256+i*32,128,collision=[256+i*32,140,32,8],kind='glass',view={'index':i,'count':7})
+for side,x in [('left',240),('right',464)]:
  for i in range(5):
   place('hospital_glass_partition_side_'+side+'_01',x,144+i*32,collision=[x+12,144+i*32,8,32],kind='glass',view={'index':i,'count':5,'back_corner':True})
   if i==0: placements[-1]['sort_y']=144 # North return before D1, as authored.
 # South runs leave a 64px entrance; D4 owns corner trim. No invented junction.
-for start,count in [(320,2),(448,3)]:
+for start,count in [(256,2),(384,3)]:
  for i in range(count):place('hospital_glass_partition_front_cutaway_01',start+i*32,288,collision=[start+i*32,300,32,8],kind='glass',view={'index':i,'count':count})
+# Reception counter/check-in station above one compact waiting row. Perimeter
+# amenities stay against the north edge. Examination storage stays inside glass.
 props=[
-('reception_counter_small_01',144,224,52,24),('waiting_bench_2seat_01',112,320,48,24),('waiting_chair_01',208,320,28,20),('lobby_plant_01',80,160,22,18),('water_cooler_01',256,160,24,20),('brochure_rack_01',256,256,26,18),('hand_sanitizer_stand_01',288,352,16,14),('self_checkin_kiosk_01',80,240,24,20),
-('examination_table_01',400,240,38,48),('doctor_stool_01',464,264,26,20),('examination_lamp_01',352,208,22,18),('exam_room_sink_unit_01',464,192,36,24),('exam_room_supply_cabinet_01',528,400,40,26),('patient_scale_01',352,272,22,20),
-('hospital_bed_standard_01',672,224,36,52),('bedside_cabinet_01',736,192,28,22),('visitor_chair_patient_room_01',736,272,32,24),('iv_stand_single_01',624,192,20,16),('patient_room_wardrobe_01',768,144,38,26),('patient_room_waste_bin_01',608,272,24,18)]
+('reception_counter_small_01',128,192,52,24),('waiting_bench_2seat_01',112,288,48,24),('waiting_chair_01',176,288,28,20),('lobby_plant_01',224,144,22,18),('water_cooler_01',64,144,24,20),('brochure_rack_01',208,248,26,18),('hand_sanitizer_stand_01',288,352,16,14),('self_checkin_kiosk_01',208,192,24,20),
+('examination_table_01',368,248,38,48),('doctor_stool_01',432,272,26,20),('examination_lamp_01',312,240,22,18),('exam_room_sink_unit_01',432,192,36,24),('exam_room_supply_cabinet_01',304,192,40,26),('patient_scale_01',288,280,22,20),
+('hospital_bed_standard_01',608,224,36,52),('bedside_cabinet_01',656,208,28,22),('visitor_chair_patient_room_01',656,272,32,24),('iv_stand_single_01',568,208,20,16),('patient_room_wardrobe_01',672,144,38,26),('patient_room_waste_bin_01',544,272,24,18)]
 for id,x,y,w,d in props:place(id,x,y,collision=[x-w/2,y-d,w,d])
 (OUT/'runtime_manifest.json').write_text(json.dumps({'baseline':'9a95eba055324f87a7f62ffcda859e1949b207eb','inventory':{'manifest':224,'approved':220,'needs_human_review':4},'grid':32,'files':files,'placements':placements},indent=2)+'\n')
 print(f'{len(files)} PNG files; {len(props)} prop types; {len(placements)} placements')

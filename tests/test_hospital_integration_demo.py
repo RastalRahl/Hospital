@@ -60,11 +60,11 @@ def test_demo_walk_clearance():
     # practical access around the furnishings, not tall-image bounding boxes.
     solids = [p['collision'] for p in read()['placements'] if p['collision'] and p.get('state')!='closed']
     def clear(x,y):
-        return 32<=x<=800 and 96<=y<=440 and not any(x+9>l and x-9<l+w and y>t and y-8<t+h for l,t,w,h in solids)
-    start=(416,400); seen={start}; queue=deque([start])
+        return 32<=x<=704 and 96<=y<=408 and not any(x+9>l and x-9<l+w and y>t and y-8<t+h for l,t,w,h in solids)
+    start=(352,368); seen={start}; queue=deque([start])
     while queue:
         x,y=queue.popleft()
         for q in [(x-4,y),(x+4,y),(x,y-4),(x,y+4)]:
             if q not in seen and clear(*q):seen.add(q);queue.append(q)
-    for destination in [(144,244),(112,344),(208,344),(416,320),(432,240),(464,288),(672,252),(736,216),(736,300)]:
+    for destination in [(128,216),(112,312),(176,312),(352,320),(400,248),(432,296),(608,248),(656,232),(656,296),(304,216)]:
         assert destination in seen, f'No walking access to {destination}'
