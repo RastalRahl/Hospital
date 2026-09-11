@@ -1,0 +1,756 @@
+{
+  "checks": {
+    "archive": {
+      "expected": "49eff147020dc8505e44935c010ea73117d04800c92ac040b251a1e4bd07a292",
+      "observed": "49eff147020dc8505e44935c010ea73117d04800c92ac040b251a1e4bd07a292",
+      "method": "SHA-256 versus immutable original archive hash",
+      "units": "native_px",
+      "pass": true
+    },
+    "members": {
+      "expected": [
+        "CODEX_PROMPT.txt",
+        "PACKAGE_CONTENTS.md",
+        "SHA256SUMS.txt",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_source_8x.png",
+        "previews/d4_locked_appearance_review.png",
+        "previews/d4_scaffold_enclosure.png",
+        "previews/enclosure_additional_size_D1_layer.png",
+        "previews/enclosure_additional_size_D2_layer.png",
+        "previews/enclosure_additional_size_D3_layer.png",
+        "previews/enclosure_additional_size_D4_layer.png",
+        "previews/enclosure_additional_size_background.png",
+        "previews/enclosure_additional_size_object_composite.png",
+        "previews/enclosure_additional_size_object_layer.png",
+        "previews/enclosure_additional_size_scene.png",
+        "previews/enclosure_additional_size_southeast.png",
+        "previews/enclosure_additional_size_southwest.png",
+        "previews/enclosure_additional_size_structure.png",
+        "previews/enclosure_original_D1_layer.png",
+        "previews/enclosure_original_D2_layer.png",
+        "previews/enclosure_original_D3_layer.png",
+        "previews/enclosure_original_D4_layer.png",
+        "previews/enclosure_original_background.png",
+        "previews/enclosure_original_object_composite.png",
+        "previews/enclosure_original_object_layer.png",
+        "previews/enclosure_original_scene.png",
+        "previews/enclosure_original_southeast.png",
+        "previews/enclosure_original_southwest.png",
+        "previews/enclosure_original_structure.png",
+        "previews/enclosure_relocated_D1_layer.png",
+        "previews/enclosure_relocated_D2_layer.png",
+        "previews/enclosure_relocated_D3_layer.png",
+        "previews/enclosure_relocated_D4_layer.png",
+        "previews/enclosure_relocated_background.png",
+        "previews/enclosure_relocated_object_composite.png",
+        "previews/enclosure_relocated_object_layer.png",
+        "previews/enclosure_relocated_scene.png",
+        "previews/enclosure_relocated_southeast.png",
+        "previews/enclosure_relocated_southwest.png",
+        "previews/enclosure_relocated_structure.png",
+        "previews/run_1_colored_background.png",
+        "previews/run_1_colored_composite.png",
+        "previews/run_1_dark_background.png",
+        "previews/run_1_dark_composite.png",
+        "previews/run_1_light_background.png",
+        "previews/run_1_light_composite.png",
+        "previews/run_1_native.png",
+        "previews/run_1_object_background.png",
+        "previews/run_1_object_composite.png",
+        "previews/run_1_object_layer.png",
+        "previews/run_2_colored_background.png",
+        "previews/run_2_colored_composite.png",
+        "previews/run_2_dark_background.png",
+        "previews/run_2_dark_composite.png",
+        "previews/run_2_light_background.png",
+        "previews/run_2_light_composite.png",
+        "previews/run_2_native.png",
+        "previews/run_2_object_background.png",
+        "previews/run_2_object_composite.png",
+        "previews/run_2_object_layer.png",
+        "previews/run_4_colored_background.png",
+        "previews/run_4_colored_composite.png",
+        "previews/run_4_dark_background.png",
+        "previews/run_4_dark_composite.png",
+        "previews/run_4_light_background.png",
+        "previews/run_4_light_composite.png",
+        "previews/run_4_native.png",
+        "previews/run_4_object_background.png",
+        "previews/run_4_object_composite.png",
+        "previews/run_4_object_layer.png",
+        "reports/d4_candidate_spec.json",
+        "reports/d4_local_checks.json",
+        "reports/d4_local_checks.md",
+        "reports/reference_sources.json",
+        "reports/reproducibility.json",
+        "sources/d4_main_native.png",
+        "sources/d4_repeat_native.png",
+        "sources/hospital_floor_plain_01.png",
+        "sources/rastalr_D1_glass_partition_back_locked_v1_native.png",
+        "sources/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+        "sources/southeast_clean.png",
+        "sources/southwest_clean.png",
+        "tools/build_d4_appearance.py"
+      ],
+      "observed": [
+        "CODEX_PROMPT.txt",
+        "PACKAGE_CONTENTS.md",
+        "SHA256SUMS.txt",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png",
+        "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_source_8x.png",
+        "previews/d4_locked_appearance_review.png",
+        "previews/d4_scaffold_enclosure.png",
+        "previews/enclosure_additional_size_D1_layer.png",
+        "previews/enclosure_additional_size_D2_layer.png",
+        "previews/enclosure_additional_size_D3_layer.png",
+        "previews/enclosure_additional_size_D4_layer.png",
+        "previews/enclosure_additional_size_background.png",
+        "previews/enclosure_additional_size_object_composite.png",
+        "previews/enclosure_additional_size_object_layer.png",
+        "previews/enclosure_additional_size_scene.png",
+        "previews/enclosure_additional_size_southeast.png",
+        "previews/enclosure_additional_size_southwest.png",
+        "previews/enclosure_additional_size_structure.png",
+        "previews/enclosure_original_D1_layer.png",
+        "previews/enclosure_original_D2_layer.png",
+        "previews/enclosure_original_D3_layer.png",
+        "previews/enclosure_original_D4_layer.png",
+        "previews/enclosure_original_background.png",
+        "previews/enclosure_original_object_composite.png",
+        "previews/enclosure_original_object_layer.png",
+        "previews/enclosure_original_scene.png",
+        "previews/enclosure_original_southeast.png",
+        "previews/enclosure_original_southwest.png",
+        "previews/enclosure_original_structure.png",
+        "previews/enclosure_relocated_D1_layer.png",
+        "previews/enclosure_relocated_D2_layer.png",
+        "previews/enclosure_relocated_D3_layer.png",
+        "previews/enclosure_relocated_D4_layer.png",
+        "previews/enclosure_relocated_background.png",
+        "previews/enclosure_relocated_object_composite.png",
+        "previews/enclosure_relocated_object_layer.png",
+        "previews/enclosure_relocated_scene.png",
+        "previews/enclosure_relocated_southeast.png",
+        "previews/enclosure_relocated_southwest.png",
+        "previews/enclosure_relocated_structure.png",
+        "previews/run_1_colored_background.png",
+        "previews/run_1_colored_composite.png",
+        "previews/run_1_dark_background.png",
+        "previews/run_1_dark_composite.png",
+        "previews/run_1_light_background.png",
+        "previews/run_1_light_composite.png",
+        "previews/run_1_native.png",
+        "previews/run_1_object_background.png",
+        "previews/run_1_object_composite.png",
+        "previews/run_1_object_layer.png",
+        "previews/run_2_colored_background.png",
+        "previews/run_2_colored_composite.png",
+        "previews/run_2_dark_background.png",
+        "previews/run_2_dark_composite.png",
+        "previews/run_2_light_background.png",
+        "previews/run_2_light_composite.png",
+        "previews/run_2_native.png",
+        "previews/run_2_object_background.png",
+        "previews/run_2_object_composite.png",
+        "previews/run_2_object_layer.png",
+        "previews/run_4_colored_background.png",
+        "previews/run_4_colored_composite.png",
+        "previews/run_4_dark_background.png",
+        "previews/run_4_dark_composite.png",
+        "previews/run_4_light_background.png",
+        "previews/run_4_light_composite.png",
+        "previews/run_4_native.png",
+        "previews/run_4_object_background.png",
+        "previews/run_4_object_composite.png",
+        "previews/run_4_object_layer.png",
+        "reports/d4_candidate_spec.json",
+        "reports/d4_local_checks.json",
+        "reports/d4_local_checks.md",
+        "reports/reference_sources.json",
+        "reports/reproducibility.json",
+        "sources/d4_main_native.png",
+        "sources/d4_repeat_native.png",
+        "sources/hospital_floor_plain_01.png",
+        "sources/rastalr_D1_glass_partition_back_locked_v1_native.png",
+        "sources/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+        "sources/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+        "sources/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+        "sources/southeast_clean.png",
+        "sources/southwest_clean.png",
+        "tools/build_d4_appearance.py"
+      ],
+      "method": "Enumerate extracted files",
+      "units": "native_px",
+      "pass": true
+    },
+    "member_bytes": {
+      "expected": [],
+      "observed": [],
+      "method": "Exact bytes versus original archive",
+      "units": "native_px",
+      "pass": true
+    },
+    "initial_hashes": {
+      "expected": [],
+      "observed": [],
+      "method": "Every immutable extraction hash",
+      "units": "native_px",
+      "pass": true
+    },
+    "supplied_checksums": {
+      "expected": [],
+      "observed": [],
+      "method": "Independently measure supplied checksum claims",
+      "units": "native_px",
+      "pass": true
+    },
+    "reference_names": {
+      "expected": [
+        "d4_main_native.png",
+        "d4_repeat_native.png",
+        "hospital_floor_plain_01.png",
+        "rastalr_D1_glass_partition_back_locked_v1_native.png",
+        "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+        "southeast_clean.png",
+        "southwest_clean.png"
+      ],
+      "observed": [
+        "d4_main_native.png",
+        "d4_repeat_native.png",
+        "hospital_floor_plain_01.png",
+        "rastalr_D1_glass_partition_back_locked_v1_native.png",
+        "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+        "rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+        "rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+        "southeast_clean.png",
+        "southwest_clean.png"
+      ],
+      "method": "Compare independently established repository reference map",
+      "units": "native_px",
+      "pass": true
+    },
+    "d4_main_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/d4_main_native.png",
+        "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+        "7cd390152cee226e0e672406fe268d3dcd553683"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/d4_main_native.png",
+        "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+        "7cd390152cee226e0e672406fe268d3dcd553683"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "d4_main_native.png_package": {
+      "expected": "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+      "observed": "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "d4_main_native.png_checkout": {
+      "expected": "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+      "observed": "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "d4_repeat_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/d4_repeat_native.png",
+        "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+        "7749eadcdf1bc125be93ef9b0cd9836ad562c2d3"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/d4_repeat_native.png",
+        "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+        "7749eadcdf1bc125be93ef9b0cd9836ad562c2d3"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "d4_repeat_native.png_package": {
+      "expected": "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+      "observed": "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "d4_repeat_native.png_checkout": {
+      "expected": "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+      "observed": "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "southwest_clean.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/artifacts/southwest_clean.png",
+        "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+        "37c12cd5d4ce21bb65bc0117369e6a0d50e8adfd"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/artifacts/southwest_clean.png",
+        "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+        "37c12cd5d4ce21bb65bc0117369e6a0d50e8adfd"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "southwest_clean.png_package": {
+      "expected": "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+      "observed": "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "southwest_clean.png_checkout": {
+      "expected": "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+      "observed": "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "southeast_clean.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/artifacts/southeast_clean.png",
+        "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+        "2869bc0e1969edbc32b5314fcda51fd90e17a998"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D4_v1/artifacts/southeast_clean.png",
+        "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+        "2869bc0e1969edbc32b5314fcda51fd90e17a998"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "southeast_clean.png_package": {
+      "expected": "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+      "observed": "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "southeast_clean.png_checkout": {
+      "expected": "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+      "observed": "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+        "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+        "52f3a8fb7bb6ce670e1d47c8591d3e0e7ae9afe9"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+        "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+        "52f3a8fb7bb6ce670e1d47c8591d3e0e7ae9afe9"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_native.png_package": {
+      "expected": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "observed": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_native.png_checkout": {
+      "expected": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "observed": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+        "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+        "1c18eb9d03cf706e7abdaa087d39b10be9f2d1fc"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+        "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+        "1c18eb9d03cf706e7abdaa087d39b10be9f2d1fc"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png_package": {
+      "expected": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+      "observed": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png_checkout": {
+      "expected": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+      "observed": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_main_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+        "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+        "9c223072f1eb11eb9f0184d15beb1b609738c098"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+        "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+        "9c223072f1eb11eb9f0184d15beb1b609738c098"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_main_native.png_package": {
+      "expected": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "observed": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_main_native.png_checkout": {
+      "expected": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "observed": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+        "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+        "8031d111276bef1ffa3190904178ddb385d04430"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+        "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+        "8031d111276bef1ffa3190904178ddb385d04430"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png_package": {
+      "expected": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "observed": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png_checkout": {
+      "expected": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "observed": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+        "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+        "0b708e960b5dd608a324d9e0fddb002d285f1e6a"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+        "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+        "0b708e960b5dd608a324d9e0fddb002d285f1e6a"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png_package": {
+      "expected": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+      "observed": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png_checkout": {
+      "expected": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+      "observed": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+        "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+        "78841c1ac95e8e26222056712803a4f1464937a2"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+        "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+        "78841c1ac95e8e26222056712803a4f1464937a2"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png_package": {
+      "expected": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+      "observed": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png_checkout": {
+      "expected": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+      "observed": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_main_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+        "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+        "9c223072f1eb11eb9f0184d15beb1b609738c098"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+        "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+        "9c223072f1eb11eb9f0184d15beb1b609738c098"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_main_native.png_package": {
+      "expected": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "observed": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_main_native.png_checkout": {
+      "expected": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "observed": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+        "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+        "8031d111276bef1ffa3190904178ddb385d04430"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+        "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+        "8031d111276bef1ffa3190904178ddb385d04430"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png_package": {
+      "expected": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "observed": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png_checkout": {
+      "expected": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "observed": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+        "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+        "06313f5166c44d87bc4c771a3e3f294b98d960ef"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+        "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+        "06313f5166c44d87bc4c771a3e3f294b98d960ef"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png_package": {
+      "expected": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+      "observed": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png_checkout": {
+      "expected": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+      "observed": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+        "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+        "56611e4d1cdc8155c7f8b872f1ed63573eb39f37"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+        "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+        "56611e4d1cdc8155c7f8b872f1ed63573eb39f37"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png_package": {
+      "expected": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+      "observed": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png_checkout": {
+      "expected": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+      "observed": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "hospital_floor_plain_01.png_reference": {
+      "expected": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "assets/architecture/hospital_floor_plain_01.png",
+        "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+        "e4b7c1e6708af1d2ae648b0787d651fbf9ac2814"
+      ],
+      "observed": [
+        "2ec243597e60f55435983d2de6a64592273d5f6f",
+        "assets/architecture/hospital_floor_plain_01.png",
+        "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+        "e4b7c1e6708af1d2ae648b0787d651fbf9ac2814"
+      ],
+      "method": "Compare package claims to independently read pinned Git object",
+      "units": "native_px",
+      "pass": true
+    },
+    "hospital_floor_plain_01.png_package": {
+      "expected": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+      "observed": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+      "method": "Exact PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "hospital_floor_plain_01.png_checkout": {
+      "expected": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+      "observed": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+      "method": "Current PNG bytes against pinned commit",
+      "units": "native_px",
+      "pass": true
+    },
+    "contract_git_blob": {
+      "expected": "f8d9fb67256addda31ed6f94f0e08004c0d8ccf2",
+      "observed": "f8d9fb67256addda31ed6f94f0e08004c0d8ccf2",
+      "method": "Compute pinned contract Git blob SHA-1",
+      "units": "native_px",
+      "pass": true
+    },
+    "contract_pinned_bytes": {
+      "expected": "e0ba95ed8b9ad029181ac58b28750b0b8313e87e26b86983b9f9170dbe057115",
+      "observed": "e0ba95ed8b9ad029181ac58b28750b0b8313e87e26b86983b9f9170dbe057115",
+      "method": "Exact text bytes; no newline normalization required for D4",
+      "units": "native_px",
+      "pass": true
+    },
+    "contract_checkout_hash": {
+      "expected": "e0ba95ed8b9ad029181ac58b28750b0b8313e87e26b86983b9f9170dbe057115",
+      "observed": "e0ba95ed8b9ad029181ac58b28750b0b8313e87e26b86983b9f9170dbe057115",
+      "method": "Immutable task-start checkout hash",
+      "units": "native_px",
+      "pass": true
+    }
+  },
+  "pass": true,
+  "member_count": 93,
+  "pinned_references": 15,
+  "newline_normalization": false
+}

@@ -125,6 +125,7 @@ def test_D3_additions_never_exempt_existing_files(tmp_path,action,allowed):
 def test_current_task_preserves_every_historical_hash_and_count():
     q=compare_snapshots(d0.read_json(d3.OUT/'production_before.json'),historical.snapshot(),allowed_addition_prefixes=(d3.PREFIX,
         'references/architecture/master_validation_D3_appearance_v1/',
-        'references/architecture/master_validation_D4_v1/'))
+        'references/architecture/master_validation_D4_v1/',
+        'references/architecture/master_validation_D4_appearance_v1/'))
     assert q['pass'] and q['protected_file_count']==1688
     assert q['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}

@@ -1,0 +1,107 @@
+{
+  "d4_main_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D4_v1/d4_main_native.png",
+    "sha256": "ce01136538cf55aafd7a87d19fcc2c1695a332f9d5ed596055ed86f2208f3265",
+    "git_blob_sha1": "7cd390152cee226e0e672406fe268d3dcd553683"
+  },
+  "d4_repeat_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D4_v1/d4_repeat_native.png",
+    "sha256": "7fafe08eb8b7e391a4952c4d4b2191792e8ada30c404d42c9326f78725214a6f",
+    "git_blob_sha1": "7749eadcdf1bc125be93ef9b0cd9836ad562c2d3"
+  },
+  "southwest_clean.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D4_v1/artifacts/southwest_clean.png",
+    "sha256": "2319aebb54cd973cd07bb67ac2590398ff96baa1c041dbc7808ffc99f718c26d",
+    "git_blob_sha1": "37c12cd5d4ce21bb65bc0117369e6a0d50e8adfd"
+  },
+  "southeast_clean.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D4_v1/artifacts/southeast_clean.png",
+    "sha256": "f8c7482af2909e308c0738cfcb4843de202ee093117198a95aecd72fe0b0f54b",
+    "git_blob_sha1": "2869bc0e1969edbc32b5314fcda51fd90e17a998"
+  },
+  "rastalr_D1_glass_partition_back_locked_v1_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_native.png",
+    "sha256": "849156bcc03d94f6ddad3583afa0986015581cf2c87d7fc7e9d7aa7cb496d502",
+    "git_blob_sha1": "52f3a8fb7bb6ce670e1d47c8591d3e0e7ae9afe9"
+  },
+  "rastalr_D1_glass_partition_back_locked_v1_repeat_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D1_v1/sources/package/candidate/rastalr_D1_glass_partition_back_locked_v1_repeat_native.png",
+    "sha256": "7b272d00e68165bad1fc9bdc60bbb8f6a07574052f17c972622a8fe30374d174",
+    "git_blob_sha1": "1c18eb9d03cf706e7abdaa087d39b10be9f2d1fc"
+  },
+  "rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_main_native.png",
+    "sha256": "3e69f64284eeddccb9540523b3aa3eab14f90b62cb658cb79a5447be1287a37d",
+    "git_blob_sha1": "0b708e960b5dd608a324d9e0fddb002d285f1e6a"
+  },
+  "rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_corner_repeat_native.png",
+    "sha256": "c8e74cc59287389332b487dd6ff3c821ede12a7e3416c6f933ce40e6edc2114a",
+    "git_blob_sha1": "78841c1ac95e8e26222056712803a4f1464937a2"
+  },
+  "rastalr_D2_glass_partition_side_left_locked_v1_main_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_main_native.png",
+    "sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "git_blob_sha1": "9c223072f1eb11eb9f0184d15beb1b609738c098"
+  },
+  "rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D2_appearance_v1/sources/package/candidate/rastalr_D2_glass_partition_side_left_locked_v1_repeat_native.png",
+    "sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "git_blob_sha1": "8031d111276bef1ffa3190904178ddb385d04430"
+  },
+  "rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_main_native.png",
+    "sha256": "3a05defee442a3c07488ac25b1cdbd6292d1380b094caec310bcc6df1add86ef",
+    "git_blob_sha1": "06313f5166c44d87bc4c771a3e3f294b98d960ef"
+  },
+  "rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_corner_repeat_native.png",
+    "sha256": "c6497902a5b00ddf423c7030c858c969ecb9734256544ca930560525d791b4c2",
+    "git_blob_sha1": "56611e4d1cdc8155c7f8b872f1ed63573eb39f37"
+  },
+  "rastalr_D3_glass_partition_side_right_locked_v1_main_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_main_native.png",
+    "sha256": "d3ee5c43e47e6ecbfb9f579173c6157bd220581750d9f7bd30b01d3064c66642",
+    "git_blob_sha1": "9c223072f1eb11eb9f0184d15beb1b609738c098"
+  },
+  "rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "references/architecture/master_validation_D3_appearance_v1/sources/package/candidate/rastalr_D3_glass_partition_side_right_locked_v1_repeat_native.png",
+    "sha256": "718e85329fc6f046ec81300fa7ccca4545638707074187632ed92d1fe625080f",
+    "git_blob_sha1": "8031d111276bef1ffa3190904178ddb385d04430"
+  },
+  "hospital_floor_plain_01.png": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "path": "assets/architecture/hospital_floor_plain_01.png",
+    "sha256": "276e8df4bce4413abbaceb63a2bc126fae7aec202b4332d4190fdf312d1069a6",
+    "git_blob_sha1": "e4b7c1e6708af1d2ae648b0787d651fbf9ac2814"
+  }
+}

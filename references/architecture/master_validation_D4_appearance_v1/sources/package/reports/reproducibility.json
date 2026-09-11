@@ -1,0 +1,11 @@
+{
+  "scope": "Two builds in this environment; all four candidate PNG files",
+  "candidate_files": 4,
+  "byte_identical": true,
+  "sha256": {
+    "rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png": "de7e908ddd847b219c86915154fe6f18b37d0ab1e8217ffe36784e816dca593d",
+    "rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5",
+    "rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_source_8x.png": "70cb5fbe6aec3186dcd55611a62576f2d6debadc88565983bf8eda58113e946b",
+    "rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131"
+  }
+}

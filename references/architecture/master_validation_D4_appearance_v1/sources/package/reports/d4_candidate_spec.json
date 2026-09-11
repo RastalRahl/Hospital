@@ -1,0 +1,85 @@
+{
+  "planning_id": "hospital_glass_partition_front_cutaway_01",
+  "status": "REFERENCE_ONLY_APPEARANCE_CANDIDATE",
+  "authority": {
+    "repository": "RastalRahl/Hospital",
+    "commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+    "contract_path": "references/architecture/master_validation_D4_v1/d4_geometry_alpha_contract_proposed.json",
+    "contract_git_blob_sha1": "f8d9fb67256addda31ed6f94f0e08004c0d8ccf2"
+  },
+  "normalization": "architecture_grid_preserving",
+  "logical_grid": 32,
+  "source_scale": 8,
+  "logical_footprint": [
+    1,
+    1
+  ],
+  "cell_anchor": [
+    16,
+    16
+  ],
+  "image_anchor": [
+    16,
+    4
+  ],
+  "origin_relative_to_cell": [
+    0,
+    12
+  ],
+  "alpha_policy": {
+    "frame": 255,
+    "pane": 150,
+    "exterior": 0,
+    "unchanged_from_scaffold": true
+  },
+  "art_change": "RGB-only pixel painting inside the existing D4 geometry. No D1 flip or crop. Same established family palette.",
+  "views": {
+    "main": {
+      "native_file": "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png",
+      "source_file": "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png",
+      "native_dimensions": [
+        32,
+        12
+      ],
+      "source_dimensions": [
+        256,
+        96
+      ],
+      "scaffold_file": "sources/d4_main_native.png",
+      "candidate_sha256": "cea3793edd00b24515ff1b6d4a01c9f5ad9f187d0a0d3b99f51705bf53ef1131"
+    },
+    "repeat": {
+      "native_file": "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png",
+      "source_file": "candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_source_8x.png",
+      "native_dimensions": [
+        32,
+        12
+      ],
+      "source_dimensions": [
+        256,
+        96
+      ],
+      "scaffold_file": "sources/d4_repeat_native.png",
+      "candidate_sha256": "889e5b7cf7ef1d76ac6fb2daf947e563da951b0fb0e298fbc4187a6097630af5"
+    }
+  },
+  "relationships": {
+    "repeat": "Copy main; extend native column27 ONLY through [28,4,32,10). All other RGBA pixels unchanged.",
+    "selection": "One view per cell; repeat until final main. These are alternatives, not stacked components.",
+    "logical_count": 1
+  },
+  "front_corners": {
+    "opaque_contact_area_each": 32,
+    "D1_D2_D3_source_edits": false,
+    "masks": [],
+    "layer_order": [
+      "background",
+      "object",
+      "D2",
+      "D3",
+      "D1",
+      "D4"
+    ]
+  },
+  "review_limits": "Foreground cutaway, 6px pane and 4px exposed shoulders. Enclosure tests only; no entrance, all-direction topology, or production approval implied."
+}

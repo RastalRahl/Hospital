@@ -1,0 +1,433 @@
+{
+  "status": "LOCAL_CANDIDATE_CHECKS_PASS",
+  "scope": "Local saved-file checks only; repository suite not run. No production or human approval.",
+  "pinned_geometry_commit": "2ec243597e60f55435983d2de6a64592273d5f6f",
+  "geometry_reconstruction_against_committed_corner_crops": {
+    "southwest": 0,
+    "southeast": 0
+  },
+  "files": {
+    "main": {
+      "native_dimensions": [
+        32,
+        12
+      ],
+      "export_dimensions": [
+        256,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 384,
+      "alpha_contract_violations": 0,
+      "invisible_rgba_changes": 0,
+      "export_block_errors": 0,
+      "roundtrip_errors": 0,
+      "alpha_histogram": {
+        "150": 144,
+        "255": 240
+      },
+      "pass": true
+    },
+    "repeat": {
+      "native_dimensions": [
+        32,
+        12
+      ],
+      "export_dimensions": [
+        256,
+        96
+      ],
+      "mode": "RGBA",
+      "alpha_changed_pixels": 0,
+      "rgb_changed_pixels": 384,
+      "alpha_contract_violations": 0,
+      "invisible_rgba_changes": 0,
+      "export_block_errors": 0,
+      "roundtrip_errors": 0,
+      "alpha_histogram": {
+        "150": 168,
+        "255": 216
+      },
+      "pass": true
+    }
+  },
+  "relationships": {
+    "changed_outside_extension": 0,
+    "extension_pixel_errors": 0
+  },
+  "repeats": {
+    "1": {
+      "geometry": {
+        "origins_match": true,
+        "frame_violations": 0,
+        "pane_violations": 0,
+        "shared_support_spans": [
+          [
+            0,
+            4
+          ],
+          [
+            28,
+            32
+          ]
+        ],
+        "single_layer_violations": 0,
+        "selected_view_pixel_errors": 0,
+        "supports_match": true,
+        "pass": true
+      },
+      "transmission": {
+        "pane_pixels": 144,
+        "responsive_pane_pixels": 144,
+        "responsive_frame_pixels": 0,
+        "object_samples": 72,
+        "object_responses": 72,
+        "source_over_errors": 0,
+        "pass": true
+      }
+    },
+    "2": {
+      "geometry": {
+        "origins_match": true,
+        "frame_violations": 0,
+        "pane_violations": 0,
+        "shared_support_spans": [
+          [
+            0,
+            4
+          ],
+          [
+            32,
+            36
+          ],
+          [
+            60,
+            64
+          ]
+        ],
+        "single_layer_violations": 0,
+        "selected_view_pixel_errors": 0,
+        "supports_match": true,
+        "pass": true
+      },
+      "transmission": {
+        "pane_pixels": 312,
+        "responsive_pane_pixels": 312,
+        "responsive_frame_pixels": 0,
+        "object_samples": 72,
+        "object_responses": 72,
+        "source_over_errors": 0,
+        "pass": true
+      }
+    },
+    "4": {
+      "geometry": {
+        "origins_match": true,
+        "frame_violations": 0,
+        "pane_violations": 0,
+        "shared_support_spans": [
+          [
+            0,
+            4
+          ],
+          [
+            32,
+            36
+          ],
+          [
+            64,
+            68
+          ],
+          [
+            96,
+            100
+          ],
+          [
+            124,
+            128
+          ]
+        ],
+        "single_layer_violations": 0,
+        "selected_view_pixel_errors": 0,
+        "supports_match": true,
+        "pass": true
+      },
+      "transmission": {
+        "pane_pixels": 648,
+        "responsive_pane_pixels": 648,
+        "responsive_frame_pixels": 0,
+        "object_samples": 72,
+        "object_responses": 72,
+        "source_over_errors": 0,
+        "pass": true
+      }
+    }
+  },
+  "enclosures": {
+    "original": {
+      "southwest": {
+        "intentional_opaque": 32,
+        "expected_opaque_area": 32,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "southeast": {
+        "intentional_opaque": 32,
+        "expected_opaque_area": 32,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "northwest": {
+        "intentional_opaque": 48,
+        "expected_opaque_area": 48,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "northeast": {
+        "intentional_opaque": 48,
+        "expected_opaque_area": 48,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "anchor_matches": true,
+      "D4_measured_top": 120,
+      "D4_measured_base": 132,
+      "ground_centerline_y": 124,
+      "cell_origin": [
+        64,
+        108
+      ],
+      "render_origin": [
+        64,
+        120
+      ],
+      "source_layer_pixel_errors": 0,
+      "D1_final_pixel_errors": 0,
+      "clipped_nonzero_pixels": 0,
+      "D4_final_composite_pixel_errors": 0,
+      "object_pane_samples": 72,
+      "object_responses": 72,
+      "pass": true,
+      "dimensions_cells": [
+        4,
+        2
+      ],
+      "reloaded_structure_errors": 0,
+      "D1_D2_D3_layer_changes": 0,
+      "off_D4_scene_changes": 0
+    },
+    "relocated": {
+      "southwest": {
+        "intentional_opaque": 32,
+        "expected_opaque_area": 32,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "southeast": {
+        "intentional_opaque": 32,
+        "expected_opaque_area": 32,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "northwest": {
+        "intentional_opaque": 48,
+        "expected_opaque_area": 48,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "northeast": {
+        "intentional_opaque": 48,
+        "expected_opaque_area": 48,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "anchor_matches": true,
+      "D4_measured_top": 152,
+      "D4_measured_base": 164,
+      "ground_centerline_y": 156,
+      "cell_origin": [
+        96,
+        140
+      ],
+      "render_origin": [
+        96,
+        152
+      ],
+      "source_layer_pixel_errors": 0,
+      "D1_final_pixel_errors": 0,
+      "clipped_nonzero_pixels": 0,
+      "D4_final_composite_pixel_errors": 0,
+      "object_pane_samples": 72,
+      "object_responses": 72,
+      "pass": true,
+      "dimensions_cells": [
+        4,
+        2
+      ],
+      "reloaded_structure_errors": 0,
+      "D1_D2_D3_layer_changes": 0,
+      "off_D4_scene_changes": 0
+    },
+    "additional_size": {
+      "southwest": {
+        "intentional_opaque": 32,
+        "expected_opaque_area": 32,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "southeast": {
+        "intentional_opaque": 32,
+        "expected_opaque_area": 32,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "northwest": {
+        "intentional_opaque": 48,
+        "expected_opaque_area": 48,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "northeast": {
+        "intentional_opaque": 48,
+        "expected_opaque_area": 48,
+        "unexpected_overlap": 0,
+        "missing_contact": 0,
+        "stacked_glass": 0,
+        "hidden_glass": 0,
+        "pass": true
+      },
+      "anchor_matches": true,
+      "D4_measured_top": 152,
+      "D4_measured_base": 164,
+      "ground_centerline_y": 156,
+      "cell_origin": [
+        64,
+        140
+      ],
+      "render_origin": [
+        64,
+        152
+      ],
+      "source_layer_pixel_errors": 0,
+      "D1_final_pixel_errors": 0,
+      "clipped_nonzero_pixels": 0,
+      "D4_final_composite_pixel_errors": 0,
+      "object_pane_samples": 72,
+      "object_responses": 72,
+      "pass": true,
+      "dimensions_cells": [
+        3,
+        3
+      ],
+      "reloaded_structure_errors": 0,
+      "D1_D2_D3_layer_changes": 0,
+      "off_D4_scene_changes": 0
+    }
+  },
+  "independent_relocation_errors": 0,
+  "negative_controls": {
+    "repeat_displaced_1px": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "origins_match"
+    },
+    "frame_hole": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "frame_violations"
+    },
+    "opaque_pane": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "pane_violations"
+    },
+    "pane_hole": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "pane_violations"
+    },
+    "doubled_support": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "supports_match"
+    },
+    "missing_terminal": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "supports_match"
+    },
+    "stacked_glass": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true,
+      "check": "single_layer_violations"
+    },
+    "anchor_displaced_1px": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true
+    },
+    "baseline_confusion_4px": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true
+    },
+    "wrong_side_terminal": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true
+    },
+    "missing_front_contact": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true
+    },
+    "source_subpixel": {
+      "valid_control_pass": true,
+      "intended_failure_observed": true,
+      "rejected": true
+    }
+  },
+  "protected_local_source_count": 15,
+  "changed_local_sources": []
+}

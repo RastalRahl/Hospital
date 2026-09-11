@@ -1,0 +1,230 @@
+Continue in this same Hospital repository and conversation.
+
+TASK: Independent reference-only D4 locked appearance validation.
+
+Read AGENTS.md. No artwork generation, production ingestion, or approval.
+
+BASELINE AND SCOPE
+
+Geometry authority commit:
+2ec243597e60f55435983d2de6a64592273d5f6f
+
+Contract:
+references/architecture/master_validation_D4_v1/d4_geometry_alpha_contract_proposed.json
+Expected Git blob SHA-1: f8d9fb67256addda31ed6f94f0e08004c0d8ccf2
+
+Last recorded full suite: 269 passed. Verify the actual starting state.
+Expected production: 220 manifest / 220 approved / 0 needs human review.
+Preserve unrelated legitimate work; do not reset to the baseline commit.
+
+ChatGPT has inspected both saved front-corner images, reproduced them using
+the actual D1-D4 files, and reviewed the locked D4 appearance. This is
+supporting geometry/appearance review for independent validation. It is NOT
+human production approval. Historical proposed contracts and review records
+must remain unchanged.
+
+INPUT PACKAGE
+
+rastalr_D4_locked_appearance_review_bundle.zip
+
+Preserve the original archive and every extracted member byte-for-byte under:
+references/architecture/master_validation_D4_appearance_v1/sources/
+
+Use a separate artifacts/reports location for newly computed results.
+Inspect the package scripts before considering execution. Prefer your existing
+repository helpers. Package reports are supporting context, not measurements
+to copy or tests to treat as independently passed.
+
+The package contains these real candidate files:
+- candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_native.png
+- candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_native.png
+- candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_main_source_8x.png
+- candidate/rastalr_D4_glass_partition_front_cutaway_locked_v1_repeat_source_8x.png
+
+Two mutually exclusive implementation views belong to ONE future logical asset:
+hospital_glass_partition_front_cutaway_01
+Use repeat for every cell followed by another panel, and main for the final
+cell or a standalone panel. Never stack these views or register two assets.
+
+Do not crop any sprite out of a montage. Native files are the artwork.
+
+AUTHORITATIVE INPUTS
+
+Read the committed D4 proposed contract, geometry validator/report and tests.
+Also read the established D1, D2 and D3 appearance-validation reports and actual
+validated artwork. Use their current immutable candidate paths as identified
+by the reports. Do not substitute their older flat scaffolds.
+
+Package reports/reference_sources.json maps each packaged reference to a
+repository path and pinned commit. Verify all 15 reference copies against the
+committed file bytes, including the two D4 scaffolds, two clean corner crops,
+D1/D2/D3 candidates and approved floor. The contract itself is intentionally
+referenced rather than duplicated in this package; read it from the repository.
+
+Preserve actual checkout hashes. If pinned text comparison requires normalizing
+Git line endings, limit that normalization to the comparison and record it;
+never modify historical text files to make a hash check pass. PNG comparisons
+are exact byte comparisons without normalization.
+
+1. FILE AND GEOMETRY CHECKS
+
+Read saved PNGs without silently converting or repairing them.
+Both native views must be 32x12 RGBA. Both source exports must be 256x96 RGBA.
+Verify EVERY 8x8 export block as well as the nearest-neighbor native round-trip.
+A correct round-trip alone can miss a corrupted unsampled subpixel.
+
+Use half-open rectangles [left, top, right, bottom).
+- Logical grid: 32.
+- Source scale: 8.
+- Cell anchor: [16,16].
+- Image anchor: [16,4].
+- Render origin relative to cell: [0,12].
+- Footprint: [1,1].
+- Horizontal stride: [32,0].
+- Normalization: architecture_grid_preserving.
+
+Main frame:
+[0,0,32,4), [0,10,32,12), [0,4,4,10), [28,4,32,10).
+Main pane: [4,4,28,10).
+Repeat omits only the right closing post; pane becomes [4,4,32,10).
+
+Frame alpha=255; pane alpha=150. Tight native carriers have no exterior pixels
+inside their bounds. Do not flag intentional frame contact at a carrier edge
+as generic prop clipping. Do not add padding, trim, or change dimensions.
+
+Independently compare to the corresponding D4 scaffolds:
+- Expected alpha changes: 0 for both views.
+- Expected RGB changes: 384 for both views.
+- Main expected histogram: 150 -> 144 pixels; 255 -> 240 pixels.
+- Repeat expected histogram: 150 -> 168 pixels; 255 -> 216 pixels.
+
+These are expected values, not observations to hardcode.
+
+2. VIEW RELATIONSHIP
+
+The repeat view must equal the main view everywhere except [28,4,32,10).
+Within that region, each RGBA pixel is copied from main native column 27 at
+the same y. Verify the relationship, including RGB values, from saved files.
+The upper trim and lower rail remain byte-identical between the views.
+
+D4 appearance changes are RGB-only. Do not compare its colors to flat scaffold
+colors as a pass requirement. Compare geometry and alpha to the contract,
+then check internal RGB relationships against the supplied candidate.
+
+3. REPEATS AND TRANSPARENCY
+
+Assemble actual saved one-, two-, and four-cell runs at 32 px stride.
+Measure frame contact, four-pixel shared supports, end closure, exact selected
+views, pane alpha, layer coverage and absence of cumulative displacement.
+No doubled supports, stacked translucent panes, or shortened stride.
+
+Use separate light, dark and colored backgrounds and a toggled object behind
+the pane. Check source-over compositing, response at every declared pane pixel,
+and frame invariance. Keep background, object, structure and flattened scene
+files separate. The package's flattened preview is not alpha evidence.
+
+4. FRONT CORNERS AND COMPLETE ENCLOSURE
+
+Rebuild the actual D1-D4 enclosure using the validated D1/D2/D3 files unchanged.
+Retain correct side terminal/main selection. No masks or extra corner pieces.
+
+Use the committed D4 geometry rules, keeping centerline, strip and visible
+image edges distinct. For side south endpoint S:
+- Side terminal support: [S-4,S).
+- D4 trim: [S-4,S).
+- D4 glass face: [S,S+6).
+- Lower rail: [S+6,S+8).
+- Ground strip: [S-4,S+4).
+- D4 cell y=S-16, image origin y=S-4.
+
+Draw order: background, test object, D2, D3, D1, D4.
+D4 owns the inward 8x4 frame contact at each front corner. The existing side
+terminal keeps its outward 4 px shoulder. Do not erase those shoulders.
+
+Check south-west and south-east independently:
+- Each derived expected intentional opaque overlap is 32 pixels.
+- No unexpected overlap, missing contacts, hidden or stacked glass.
+- Correct side endpoint and front anchor.
+- No nonzero source pixels clipped outside the scene.
+
+Check the existing back corners independently as well. Each retains its
+48-pixel declared opaque contact and existing return behavior.
+
+Test original 4x2, independently relocated +32,+32, and additional 3x3 layouts.
+Preserve D1/D2/D3 INPUT LAYERS byte-identically. At the front corners, D4
+intentionally changes final composited pixels over the declared opaque side
+contacts. Do not mistake that approved draw-order behavior for a source edit.
+D1's final rendered pixels should remain unchanged.
+
+Compare each appearance scene against the same assembly using the D4 scaffold.
+All changed scene pixels must be inside D4's declared rendered coverage.
+
+The local source-corner reproduction used a 2x1 layout and matches the committed
+36x36 south-west and south-east crops exactly. Reproduce this separately if
+useful for confirming registration; do not treat those flattened crops as art.
+
+The closed enclosure tests contacts. It does not imply an entrance, walkable
+access, full-height foreground glass or all-direction L/T/cross support.
+
+5. REGRESSION AND NEGATIVE CONTROLS
+
+Reuse the existing measurable D4 and family helpers. Add focused candidate
+checks rather than another independent duplicate pipeline.
+
+Run relevant valid controls and deliberately broken fixtures for:
+- Repeat or anchor shifted 1 px.
+- Ground-centerline/baseline confusion.
+- Broken frame or missing required front-corner contact.
+- Opaque glass and zero-alpha pane hole.
+- Doubled shared support and missing terminal closure.
+- Incorrect side terminal selection.
+- Overlapping translucent panes.
+- One corrupted export subpixel that a round-trip would miss.
+- RGB corruption outside the permitted repeat continuation.
+
+Each test must derive failure from real pixels or actual placement data.
+Expected, observed, derived and visual findings remain explicitly distinct.
+No automated test supplies human approval. Do not silently repair failed inputs.
+
+6. PRESERVATION
+
+Capture before/after counts and protected-file hashes for THIS task.
+Preserve manifest/catalog bytes, approved artwork, all D1/D2/D3 files,
+D4 geometry sources and historical reports/contracts/snapshots unchanged.
+
+Extend existing allowed-addition safeguards only for the new named D4 appearance
+workspace. Do not weaken checks, refresh historical baseline hashes, broadly
+exempt references, or permit changes to old files under an allowed prefix.
+Existing hashes remain mandatory. Package archive and all member bytes must
+also remain unchanged.
+
+7. OUTPUT, TESTS, GIT
+
+Create in master_validation_D4_appearance_v1:
+- d4_appearance_validation_report.json and .md
+- geometry/alpha/view-relationship evidence
+- actual repeat and separate-background evidence
+- separate front-corner and full-enclosure evidence
+- original/relocated/additional-size assemblies
+- artifacts/d4_appearance_review_montage.png
+- package/preservation checks
+- captured complete test-suite output
+
+Run python -m pytest -q. Record the actual total, command, exit code and baseline.
+Do not claim 269 or a projected new count unless it was actually observed.
+
+Follow AGENTS.md to commit and push successful intended validation work.
+Preserve unrelated changes. No force-push or history rewriting.
+
+FINAL RESPONSE
+
+Report PASS/FAIL, exact measured file/alpha/RGB results, repeat and transparency
+results, both front contacts and retained back contacts, preservation, full-suite
+result, report/montage paths, commit SHA, push result and actual worktree status.
+Clearly name blockers and do not silently downgrade a failed requirement.
+
+STOP AFTER REFERENCE-ONLY D4 APPEARANCE VALIDATION.
+Do not repaint, alter geometry, ingest D1-D4, grant human or production approval,
+create Batch 13, begin D5, or repair unrelated junctions.
+A successful validation prepares the family for a SEPARATE Batch 13 staging
+and final human-review task; it does not authorize that task yet.

@@ -111,7 +111,8 @@ def test_all_production_and_historical_d2_v1_files_preserved():
         'references/architecture/master_validation_D2_appearance_v1/',
         'references/architecture/master_validation_D3_v1/',
         'references/architecture/master_validation_D3_appearance_v1/',
-        'references/architecture/master_validation_D4_v1/'))
+        'references/architecture/master_validation_D4_v1/',
+        'references/architecture/master_validation_D4_appearance_v1/'))
     assert report['pass'] and report['protected_file_count']==1435
     assert report['observed_counts']=={'manifest':220,'approved':220,'needs_human_review':0}
     historical=[p for p in before['sha256'] if p.startswith('references/architecture/master_validation_D2_v1/')]

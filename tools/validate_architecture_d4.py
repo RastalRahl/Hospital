@@ -157,7 +157,7 @@ def front_corner(front, vertical, edge, south, right, cell, origin):
                  'front_cell':list(cell),'front_origin':list(origin),'image_anchor':[16,4]},conformance_to=STATUS)
 
 
-def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None):
+def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None, *, artifact_dir=ART):
     x0=64+delta[0]; top=36+delta[1]; north=top+24; east=x0+32*width; south=north+32*depth
     size=(east+48,south+56); cell=[x0,south-16]; origin=[x0,south-4]
     if defect=='anchor_1px': origin[1]+=1
@@ -176,7 +176,7 @@ def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None):
     for name,(im,pos) in sources.items():
         layer=Image.new('RGBA',size);layer.alpha_composite(im,tuple(pos));layers[name]=layer
         clip+=sum(a[3]>0 and not(0<=x+pos[0]<size[0] and 0<=y+pos[1]<size[1]) for y in range(im.height) for x in range(im.width) for a in [im.getpixel((x,y))])
-        if label: layers[name]=saved(ART/f'{label}_{name}_layer.png',layer)
+        if label: layers[name]=saved(artifact_dir/f'{label}_{name}_layer.png',layer)
     structure=Image.new('RGBA',size)
     for name in ('d2','d3','d1','d4'):structure.alpha_composite(layers[name])
     bg=Image.new('RGBA',size,(225,226,213,255));floor=d1.load(ROOT/'assets/architecture/hospital_floor_plain_01.png')
@@ -184,7 +184,7 @@ def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None):
         for x in range(x0,east,32): bg.alpha_composite(floor,(x,y))
     obj=Image.new('RGBA',size);obj.paste((245,183,34,255),(x0+10,south-12,x0+22,south+8))
     if label:
-        structure=saved(ART/f'{label}_structure.png',structure);bg=saved(ART/f'{label}_background.png',bg);obj=saved(ART/f'{label}_object_layer.png',obj)
+        structure=saved(artifact_dir/f'{label}_structure.png',structure);bg=saved(artifact_dir/f'{label}_background.png',bg);obj=saved(artifact_dir/f'{label}_object_layer.png',obj)
     clean=Image.alpha_composite(bg,structure);with_obj=Image.alpha_composite(Image.alpha_composite(bg,obj),structure)
     checks={
         'southwest':front_corner(layers['d4'],layers['d2'],x0,south,False,cell,origin),
@@ -211,9 +211,9 @@ def enclosure(views, width=4, depth=2, delta=(0,0), defect=None, label=None):
     for name,cx,cy,mask in [('southwest',x0,south,'ne'),('southeast',east,south,'nw'),('northwest',x0,north,'se'),('northeast',east,north,'sw')]:
         required=Image.new('RGBA',size);required.alpha_composite(d1.load(d0.CANON/f'topology_{mask}.png'),(cx-16,cy-16))
         checks[name+'_ground']=evidence(0,sum(a[3]>0 and b[3]==0 for a,b in zip(required.get_flattened_data(),ground.get_flattened_data())),'Compare separate ground mask with canonical elbow pixels')
-        if label:saved(ART/f'{label}_{name}_required_ground.png',required)
+        if label:saved(artifact_dir/f'{label}_{name}_required_ground.png',required)
     if label:
-        saved(ART/f'{label}_ground.png',ground);clean=saved(ART/f'{label}_clean.png',clean);saved(ART/f'{label}_object_composite.png',with_obj)
+        saved(artifact_dir/f'{label}_ground.png',ground);clean=saved(artifact_dir/f'{label}_clean.png',clean);saved(artifact_dir/f'{label}_object_composite.png',with_obj)
     return d1.group(checks,derived={'size_cells':[width,depth],'west':x0,'east':east,'north_centerline':north,'south_centerline':south,
         'D1_origin':[x0,top],'D2_origin':[x0-4,top],'D3_origin':[east-8,top],'D4_cell':cell,'D4_origin':origin},
         computed={'object_pane_samples':total,'object_responses':responses}),clean,structure

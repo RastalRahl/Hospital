@@ -133,6 +133,7 @@ def test_task_preserves_all_production_d0_d1_history_and_authorities():
                                                         "references/architecture/master_validation_D2_appearance_v1/",
                                                         "references/architecture/master_validation_D3_v1/",
                                                         "references/architecture/master_validation_D3_appearance_v1/",
-                                                        "references/architecture/master_validation_D4_v1/"))
+                                                        "references/architecture/master_validation_D4_v1/",
+                                                        "references/architecture/master_validation_D4_appearance_v1/"))
     assert report["pass"]
     assert report["observed_counts"]=={"manifest":220,"approved":220,"needs_human_review":0}
