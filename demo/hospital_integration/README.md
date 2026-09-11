@@ -1,5 +1,7 @@
 # Hospital integration demo
 
+Latest single-reference baseline: open `reference_room.tscn` and press F6. This small room follows the complete visible wall convention of SmallBurg's supplied `cosy_house.png`, including a full front face. All walls use one 44px height; mixed-height reveals are inactive. See `repair_candidates/single_reference_room_v1/room_godot.png` and `findings.md`. This tests a coherent alternative and its front-wall occlusion tradeoff; the production low-front policy is unchanged.
+
 Latest practical wall review: `wall_logic_refined.tscn` (F6), with lower side returns connected through the cut face to the upper wall border, shaded doorway jambs, existing bed/cabinet and the 26x46 figure. WASD moves; F toggles furniture; G shows the grid; R resets. See `repair_candidates/wall_logic_reference_v3/findings.md` and `front_godot.png`. V3 corrects V2's mid-face cap tips; earlier evidence is preserved. This is reference-only and leaves the hospital startup unchanged.
 
 Reference-led empty wall test: open `wall_logic_test.tscn` and press F6. It compares continuous 44px walls with the same network using a 12px front cutaway; G toggles the ground grid. See `repair_candidates/wall_logic_reference_v1/findings.md` for capture instructions and limits. This separate review scene leaves the hospital startup unchanged and has no production approval.
