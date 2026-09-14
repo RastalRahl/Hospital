@@ -8,7 +8,7 @@ A coherent 32 px RPG-oblique hospital environment pack: developers can build a p
 
 **Working target: 373 logical assets — all 224 existing assets plus 149 named additions.** This is a scope-derived estimate, not a quota or a claim that 224 assets are already release-ready. There is no replacement round-number minimum or speculative stretch budget. If a proposed item fails the usefulness/distinction test, revise the backlog and target explicitly rather than manufacture a substitute.
 
-The planned clean environment/interaction content totals **352**, and the bundled abandoned-condition set totals **21**. Both are part of this roadmap; abandoned content is produced last. All four existing glass parents stay in the 373 target and must eventually receive a separate disposition/review before release; they remain pending and parked now. Removing glass from the review layout did not delete it from product scope.
+The planned clean environment/interaction content totals **352**, and the bundled abandoned-condition set totals **21**. Both are part of this roadmap; abandoned content is produced last. All four existing glass parents stay in the 373 target and must eventually receive a separate disposition/review before release; they remain pending and parked now. Removing glass from the review layout did not delete it from product scope. The current inventory also has a documented **144-asset perspective-repair program** in [PERSPECTIVE_REPAIR_PLAN.md](PERSPECTIVE_REPAIR_PLAN.md); revisions do not increase the logical target.
 
 ## Revised category targets
 
@@ -56,13 +56,14 @@ These are visual/game-asset use cases, not architectural or clinical compliance 
 
 ## Production sequence
 
-0. **Close cleanup:** foreground-wall visibility, final connected-wall review and authorized wall/door repair promotion; fix the known bench/rack/plant issues. No D5 or new generation before this is resolved. Glass remains parked until its separate review is scheduled.
-1. **Building essentials:** architecture (12), bathrooms/utility (18), signage/decor/safety (22), staff/admin (14). These are the first four content families; split larger families into coherent 12–20-asset pilots where useful.
-2. **Clinical completion:** one 11-asset family across Patient Rooms (3), ICU (1), Surgery (3), Laboratory (2), Emergency (2). This is the fifth family, not five padded batches.
-3. **Support services:** exterior/arrival (17), cafeteria/kitchen (14), morgue (8).
-4. **Interaction and complete clean-pack review:** Inventory/UI (13), all clean room examples, and resolution of the four existing glass approvals without adding glass/windows.
-5. **Alternate condition:** 20 new abandoned assets plus the existing damaged bed.
-6. **Release assembly:** package and verify every retained/approved logical parent and its required views, with examples and documentation.
+0. **Close architecture cleanup:** foreground-wall visibility, final connected-wall review and authorized wall/door repair promotion. Glass remains parked until its separate review is scheduled.
+1. **Unify the current pack:** approve the three-asset camera calibration, then complete perspective repair batches R1–R9 and the retained-asset scale exceptions in [PERSPECTIVE_REPAIR_PLAN.md](PERSPECTIVE_REPAIR_PLAN.md). This covers 144 redraws without adding logical assets. Do not begin new generation until this pass is resolved.
+2. **Building essentials:** architecture (12), bathrooms/utility (18), signage/decor/safety (22), staff/admin (14). These are the first four new-content families; split larger families into coherent 12–20-asset pilots where useful.
+3. **Clinical completion:** one 11-asset family across Patient Rooms (3), ICU (1), Surgery (3), Laboratory (2), Emergency (2). This is the fifth new-content family, not five padded batches.
+4. **Support services:** exterior/arrival (17), cafeteria/kitchen (14), morgue (8).
+5. **Interaction and complete clean-pack review:** Inventory/UI (13), all clean room examples, and resolution of the four existing glass approvals without adding glass/windows.
+6. **Alternate condition:** 20 new abandoned assets plus the existing damaged bed.
+7. **Release assembly:** package and verify every retained/approved logical parent and its required views, with examples and documentation.
 
 ## Scope choices and boundaries
 
@@ -74,7 +75,7 @@ These are visual/game-asset use cases, not architectural or clinical compliance 
 
 ## Counting, ownership and delivery
 
-Use [the manifest](../metadata/manifest.json) as the inventory authority and [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) for live counts, every retained ID, new IDs, scopes and room proofs. Count each logical parent once in its existing primary category. Reuse shared props freely across rooms without creating a second asset. Existing approved state records are retained as-is; new animation frames, directions, components, masks, export scales, text localizations and trivial recolors add no count.
+Use [the manifest](../metadata/manifest.json) as the inventory authority, [ASSET_COVERAGE_STATUS.md](ASSET_COVERAGE_STATUS.md) for live counts and future IDs, and [PERSPECTIVE_REPAIR_PLAN.md](PERSPECTIVE_REPAIR_PLAN.md) for the complete current-inventory camera disposition. Count each logical parent once in its existing primary category. Reuse shared props freely across rooms without creating a second asset. Existing approved state records are retained as-is; new animation frames, directions, components, masks, export scales, text localizations and trivial recolors add no count.
 
 Every new proposal must justify a distinct silhouette or interaction/use at native scale. Prefer revision/reuse when an existing sprite does the job. Generic fixtures use `everyday_world_common`; clinical equipment uses `hospital_only`. Sign text/pictograms are deterministic and separately authored where needed. All production continues to follow AGENTS.md, transparent pixel-art rules and the explicit approval path.
 

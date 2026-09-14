@@ -30,6 +30,12 @@ Current counts use existing primary manifest categories. Every current ID is ret
 
 All 149 additions are named below. Targets have no negative gaps and no unnamed quota. All 220 approved final files exist; catalog IDs/categories/statuses match the manifest. The target includes all four glass parents: no alternate exclusion total is used. Their inclusion does not confer approval.
 
+## Existing-inventory perspective debt
+
+Native PNG and room-reference review assigns all 224 current logical assets in [PERSPECTIVE_REPAIR_PLAN.md](PERSPECTIVE_REPAIR_PLAN.md): **144 require camera/perspective repair in nine batches; 80 retain their current perspective language**. Retention does not waive scale, clipping, architecture-art or approval issues. These repairs add no assets and do not change the 373 target or the 149-asset gap.
+
+Current production order is: finish architecture cleanup; approve the three-asset camera calibration; complete repair batches R1–R9; then begin the new-content families below. The first perspective batch is **R1 public arrival/reception (17)**. No artwork or approval transition is authorized by this planning record.
+
 ## Capabilities and priorities
 
 | Category | Existing coverage / reuse | New coverage and rationale |
@@ -53,7 +59,7 @@ All 149 additions are named below. Targets have no negative gaps and no unnamed 
 | Inventory / UI | First-aid kit, meal tray and patient-status UI. | Retain all three existing assets and add 13 distinctive pickups/UI elements; omit overlapping tiny icons. |
 | Abandoned / Horror | hospital_bed_damaged_01 only. | Retain damaged bed plus 20 reusable damage/storytelling deliverables; reduce one-off damaged furniture and similar stains. |
 
-P0: complete foreground visibility, wall/junction review and authorized repair promotion, followed by targeted prop cleanup. Next five content families: **architecture 12; bathrooms/utility 18; signage/decor/safety 22; staff/admin 14; combined clinical completion 11**. Then exterior 17, food service 14, morgue 8, inventory/UI 13 and abandoned 20. Larger families may be split into coherent pilots without changing counts. No generation is authorized by this document.
+P0: complete foreground visibility, wall/junction review and authorized repair promotion. P1: execute the perspective calibration and all nine repair batches in [PERSPECTIVE_REPAIR_PLAN.md](PERSPECTIVE_REPAIR_PLAN.md). After that, the next five new-content families are **architecture 12; bathrooms/utility 18; signage/decor/safety 22; staff/admin 14; combined clinical completion 11**. Then exterior 17, food service 14, morgue 8, inventory/UI 13 and abandoned 20. Larger families may be split into coherent pilots without changing counts. No generation is authorized by this document.
 
 ## Revised proposal decisions
 
