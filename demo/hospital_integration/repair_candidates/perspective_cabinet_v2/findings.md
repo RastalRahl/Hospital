@@ -1,6 +1,6 @@
 # Bedside cabinet V2 art-pilot findings
 
-Status: **NEEDS HUMAN VISUAL REVIEW**. This is a reference-only replacement for the rejected V1 art treatment. The approved `bedside_cabinet_01` production PNG, staging files, manifest record and approval state are unchanged.
+Status: **REJECTED AS A RELEASE ART BASELINE; RETAINED AS ITERATION EVIDENCE**. Human follow-up found the top rim too heavy, the silhouette too diagram-like, the internal outlines too dominant and the cupboard detail too noisy. The approved `bedside_cabinet_01` production PNG, staging files, manifest record and approval state are unchanged.
 
 ## Why V2 exists
 
@@ -34,6 +34,6 @@ BEDSIDE_CABINET_V2_BUILD_PASS: native art pilot; 13 opaque colors; hard alpha; a
 BEDSIDE_CABINET_ART_REVIEW_PASS: approved, V1 and V2 share feet; V2 rendered beside adult, bed and chair at integer scale
 ```
 
-## Codex assessment
+## Superseded assessment
 
-V2 fixes the specific failure in V1: it reads as a finished piece of pixel furniture rather than a diagram. It preserves the corrected camera and appropriate bedside scale while recovering material, hardware, asymmetrical lighting and silhouette detail. This is a credible visual-language pilot for the remaining calibration assets, pending human acceptance.
+V2 improved material identity over V1, but it did not meet the release art bar. Its geometry remains useful for comparing the successive corrections. V3 replaces it as the active human-review candidate.

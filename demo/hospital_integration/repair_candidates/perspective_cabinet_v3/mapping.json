@@ -1,0 +1,44 @@
+{
+  "status": "needs_human_review",
+  "logical_id": "bedside_cabinet_01",
+  "scope": "reference-only V3 art pilot; production and approval unchanged",
+  "references": [
+    {
+      "label": "approved",
+      "path": "assets/patient_rooms/bedside_cabinet_01.png",
+      "sha256": "62c5decd09bbbb5a0d18cb1b0e16178e522b9f3da47db4f38a6bb4f052c82993"
+    },
+    {
+      "label": "v1_geometry",
+      "path": "demo/hospital_integration/repair_candidates/perspective_calibration_v1/bedside_cabinet_01_perspective_candidate.png",
+      "sha256": "ebd144c37df0d33c0c432737753f07957ceed57cd05c4a76aad22b743a4df617"
+    },
+    {
+      "label": "v2_rejected",
+      "path": "demo/hospital_integration/repair_candidates/perspective_cabinet_v2/bedside_cabinet_01_art_candidate_v2.png",
+      "sha256": "70c8789986e0f84f0543e64b7f26d8edbe3dbb812c92608ec7b3121bf1d17ed6"
+    }
+  ],
+  "candidate": {
+    "path": "demo/hospital_integration/repair_candidates/perspective_cabinet_v3/bedside_cabinet_01_art_candidate_v3.png",
+    "sha256": "a8dc0dca4766fe6caf02f8d0323fb444224ac66c22fd352d2e75bb3b52d7941a",
+    "dimensions": [
+      32,
+      36
+    ],
+    "alpha_bbox": [
+      2,
+      3,
+      30,
+      35
+    ],
+    "opaque_palette_size": 11,
+    "partial_alpha_pixels": 0,
+    "logical_footprint_tiles": [
+      1,
+      1
+    ],
+    "anchor": "bottom_center"
+  },
+  "approval_status_changed": false
+}
