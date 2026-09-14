@@ -24,6 +24,8 @@ Before batch R1, make one small Godot calibration scene using the existing integ
 
 Human acceptance of those three fixes the camera/face proportions for the remaining batches. Do not reinterpret the entire pack from each individual source sprite. Use the downloaded packs only for room-construction logic; author original RastalR pixels.
 
+Calibration V1 is now implemented as a reference-only candidate in [`demo/hospital_integration/repair_candidates/perspective_calibration_v1`](../demo/hospital_integration/repair_candidates/perspective_calibration_v1/findings.md). Its deterministic native sprites use hard alpha and a controlled palette; the separate Godot scene compares them with the approved versions, adult, bed and chair. Status remains **needs human visual review**. Production art and approvals are unchanged.
+
 ## Repair batches
 
 Each batch is a coherent revision family. During iteration, use native-scale contact sheets and a furnished Godot room; run targeted manifest/alpha/integration checks. Run the full suite once when the batch is complete. Recheck logical footprint, anchor and adult-relative scale while the sprite is open, but do not change metadata merely to excuse an oversized drawing.

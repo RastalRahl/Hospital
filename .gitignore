@@ -31,3 +31,10 @@ Desktop.ini
 *_backup.zip
 *.tmp
 *.bak
+
+# Godot editor sidecars generated while opening reference-only review scenes.
+# Runtime art import files already tracked under demo/hospital_integration/art
+# remain tracked; user-owned capture sidecars stay visible as untracked work.
+.qa/
+demo/hospital_integration/*.gd.uid
+demo/hospital_integration/repair_candidates/**/*.png.import

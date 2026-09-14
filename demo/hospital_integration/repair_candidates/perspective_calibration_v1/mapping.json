@@ -1,0 +1,76 @@
+{
+  "status": "needs_human_review",
+  "scope": "reference-only perspective calibration; production and approvals unchanged",
+  "camera": "rectangular-grid RPG oblique; depth recedes upward; no default right-side face",
+  "assets": [
+    {
+      "logical_id": "reception_counter_straight_01",
+      "approved_path": "assets/reception/reception_counter_straight_01.png",
+      "approved_sha256": "f4fc1403163cfb4ea26e3ed8e86442c4e3ad1d29a12d41badeb2c805b2a7d213",
+      "candidate_path": "demo/hospital_integration/repair_candidates/perspective_calibration_v1/reception_counter_straight_01_perspective_candidate.png",
+      "candidate_sha256": "d88229d29308a3590e7843ba8e332df8befb38699df0b90fe1589c4c57f0a781",
+      "candidate_dimensions": [
+        72,
+        38
+      ],
+      "candidate_alpha_bbox": [
+        4,
+        4,
+        68,
+        37
+      ],
+      "logical_footprint_tiles": [
+        2,
+        1
+      ],
+      "anchor": "bottom_center",
+      "approval_status_changed": false
+    },
+    {
+      "logical_id": "bedside_cabinet_01",
+      "approved_path": "assets/patient_rooms/bedside_cabinet_01.png",
+      "approved_sha256": "62c5decd09bbbb5a0d18cb1b0e16178e522b9f3da47db4f38a6bb4f052c82993",
+      "candidate_path": "demo/hospital_integration/repair_candidates/perspective_calibration_v1/bedside_cabinet_01_perspective_candidate.png",
+      "candidate_sha256": "ebd144c37df0d33c0c432737753f07957ceed57cd05c4a76aad22b743a4df617",
+      "candidate_dimensions": [
+        32,
+        36
+      ],
+      "candidate_alpha_bbox": [
+        5,
+        4,
+        27,
+        35
+      ],
+      "logical_footprint_tiles": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "approval_status_changed": false
+    },
+    {
+      "logical_id": "medical_cart_base_01",
+      "approved_path": "assets/examination/medical_cart_base_01.png",
+      "approved_sha256": "be0f578478b9334433e81d56d0749460a5f2ec24cfd2cfe21faa3c4daefabfd8",
+      "candidate_path": "demo/hospital_integration/repair_candidates/perspective_calibration_v1/medical_cart_base_01_perspective_candidate.png",
+      "candidate_sha256": "be3081d5d814e540cb49b628eafd3b6a7ba66e9164375a9fe53ca4ec3e896ca6",
+      "candidate_dimensions": [
+        36,
+        42
+      ],
+      "candidate_alpha_bbox": [
+        5,
+        3,
+        31,
+        41
+      ],
+      "logical_footprint_tiles": [
+        1,
+        1
+      ],
+      "anchor": "bottom_center",
+      "approval_status_changed": false
+    }
+  ]
+}
