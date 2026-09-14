@@ -1,6 +1,6 @@
 # Perspective calibration V1 findings
 
-Status: **NEEDS HUMAN VISUAL REVIEW**. These are reference-only repair candidates for three existing logical assets. Production PNGs, staging files, manifest records and approval states are unchanged.
+Status: **REJECTED AS AN ART BASELINE; RETAINED AS GEOMETRY REFERENCE**. The user found V1 more perspective-consistent but ugly. These three reference-only candidates remain useful for camera, scale and anchor comparison, but must not be propagated as the visual language for R1–R9. Production PNGs, staging files, manifest records and approval states are unchanged. A richer bedside-cabinet successor is documented in [`perspective_cabinet_v2`](../perspective_cabinet_v2/findings.md).
 
 ## Result
 
@@ -46,4 +46,4 @@ python demo/hospital_integration/repair_candidates/perspective_calibration_v1/bu
 
 ## Codex assessment
 
-The three candidates now share one usable camera and physical scale. The counter is a good modular baseline, the bedside cabinet no longer competes with the bed, and the cart remains distinguishable without relying on a turned side face. This is the correct direction for R1–R9. Human acceptance of this calibration is still required before applying it to the remaining 141 perspective repairs or changing production approval state.
+The three candidates share a useful camera and physical scale, but their primitive treatment is below the pack's release-quality art bar. Preserve them only as technical references. Do not apply V1 styling to the remaining 141 perspective repairs or change production approval state.
