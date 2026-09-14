@@ -1,6 +1,6 @@
 # Bedside cabinet V3 art-pilot findings
 
-Status: **NEEDS HUMAN VISUAL REVIEW**. V3 is a reference-only candidate. The approved `bedside_cabinet_01` production PNG, staging files, manifest record and approval state are unchanged.
+Status: **REJECTED AS A RELEASE ART BASELINE; RETAINED AS ITERATION EVIDENCE**. V3 corrected V2's excessive internal detail, but follow-up review found its top still slab-like, its body generic and its drawer too dominant. The approved `bedside_cabinet_01` production PNG, staging files, manifest record and approval state are unchanged.
 
 ## What changed after V2
 
@@ -32,6 +32,6 @@ BEDSIDE_CABINET_V3_BUILD_PASS: 32x36 native sprite; 11 opaque colors; hard alpha
 BEDSIDE_CABINET_V3_REVIEW_PASS: four cabinet states rendered beside adult, bed and chair at integer scale
 ```
 
-## Codex assessment
+## Superseded assessment
 
-V3 is the first cabinet revision that clears the internal art-quality threshold for human review. The simpler silhouette, calmer door and larger color clusters remain readable at native scale and sit comfortably beside the adult and bed. It is still a compact, functional cabinet rather than a decorative hero prop; that restraint is appropriate for a modular hospital pack. Do not propagate it to the counter or cart until the user accepts this visual direction.
+V3 established the calmer outline and cluster direction, but it did not clear the release bar. V4 replaces it as the active human-review candidate.

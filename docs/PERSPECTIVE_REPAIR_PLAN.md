@@ -24,7 +24,7 @@ Before batch R1, make one small Godot calibration scene using the existing integ
 
 Human acceptance of those three fixes the camera/face proportions for the remaining batches. Do not reinterpret the entire pack from each individual source sprite. Use the downloaded packs only for room-construction logic; author original RastalR pixels.
 
-Calibration V1 is preserved as a reference-only geometry study in [`perspective_calibration_v1`](../demo/hospital_integration/repair_candidates/perspective_calibration_v1/findings.md). The user rejected its crude art treatment and then rejected V2's heavy, diagram-like detail treatment. The simplified bedside-cabinet V3 is now ready for human review in [`perspective_cabinet_v3`](../demo/hospital_integration/repair_candidates/perspective_cabinet_v3/findings.md). If accepted, apply V3's exterior-weighted outlines, calm surfaces and larger cluster language to new counter/cart art while retaining V1's camera constraints. Production art and approvals remain unchanged.
+Calibration V1 is preserved as a reference-only geometry study in [`perspective_calibration_v1`](../demo/hospital_integration/repair_candidates/perspective_calibration_v1/findings.md). The user rejected its crude art treatment, V2's heavy diagram-like detail and V3's slab-like generic form. The bedside-cabinet V4 is now ready for human review in [`perspective_cabinet_v4`](../demo/hospital_integration/repair_candidates/perspective_cabinet_v4/findings.md). If accepted, apply V4's single-surface construction, exterior-weighted outlines, warm quiet planes and purposeful base silhouettes to new counter/cart art while retaining V1's camera constraints. Production art and approvals remain unchanged.
 
 ## Repair batches
 
